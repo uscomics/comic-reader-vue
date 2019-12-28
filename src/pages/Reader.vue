@@ -2,7 +2,6 @@
 // https://pagekit-forum.org/forum/thread/123-how-to-bind-the-src-in-an-img/
 // https://stackoverflow.com/questions/44700257/hide-a-component-in-vue-js
 // https://dev.to/samolabams/understanding-vuejs-lifecycle-hooks-5ejk
-// https://www.flaticon.com/
 <template>
   <q-page class="flex flex-center">
     <canvas id="page-canvas" class="page" width="1275" height="1650"/>
@@ -10,6 +9,9 @@
   </q-page>
 </template>
 <script>
+import Cart from '../data/cart'
+import Favorite from '../data/favorite'
+import HTTP from '../util/http'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
 import QueuedUserMessage from '../util/queued-user-message'
@@ -43,6 +45,10 @@ export default {
     Queue.register(this, Messages.READER_NAV_BAR_HOME, this.home)
     Queue.register(this, Messages.READER_NAV_BAR_NEXT_PAGE, this.nextPage)
     Queue.register(this, Messages.READER_NAV_BAR_LAST_PAGE, this.lastPage)
+    Queue.register(this, Messages.READER_NAV_BAR_REMOVE_FROM_CART, this.addToCart)
+    Queue.register(this, Messages.READER_NAV_BAR_ADD_TO_CART, this.removeFromCart)
+    Queue.register(this, Messages.READER_NAV_BAR_REMOVE_FROM_FAVORITES, this.addToFavorites)
+    Queue.register(this, Messages.READER_NAV_BAR_ADD_TO_FAVORITES, this.removeFromFavorites)
     window.addEventListener('mousemove', this.updateNavBarTime)
     this.intervalId = setInterval(() => { this.updateNavBarVisible() }, 300)
     this.updateNavBarButtons()
@@ -72,6 +78,34 @@ export default {
     home (event) {
       clearInterval(this.intervalId)
       if (this.$route.path !== 'index') this.$router.push({ path: 'index' }).catch(() => {})
+    },
+    async addToCart () {
+      let url = this.$store.state.main.urlBase + 'user/cart/add/data'
+      let cart = new Cart(this.$store.state.main.username, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)
+      let cartResponse = await cart.postToServer(url)
+      HTTP.hasErrors(cartResponse)
+      this.$store.commit('main/ADD_CART', this.$store.state.main.currentBook)
+    },
+    async removeFromCart () {
+      let url = this.$store.state.main.urlBase + 'user/cart/delete/data'
+      let cart = new Cart(this.$store.state.main.username, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)
+      let cartResponse = await cart.postToServer(url)
+      HTTP.hasErrors(cartResponse)
+      this.$store.commit('main/REMOVE_CART', this.$store.state.main.currentBook)
+    },
+    async addToFavorites () {
+      let url = this.$store.state.main.urlBase + 'user/favorites/add/data'
+      let favorite = new Favorite(this.$store.state.main.username, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)
+      let favoriteResponse = await favorite.postToServer(url)
+      HTTP.hasErrors(favoriteResponse)
+      this.$store.commit('main/ADD_FAVORITE', this.$store.state.main.currentBook)
+    },
+    async removeFromFavorites () {
+      let url = this.$store.state.main.urlBase + 'user/favorites/delete/data'
+      let favorite = new Favorite(this.$store.state.main.username, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)
+      let favoriteResponse = await favorite.postToServer(url)
+      HTTP.hasErrors(favoriteResponse)
+      this.$store.commit('main/REMOVE_FAVORITE', this.$store.state.main.currentBook)
     },
     nextPage (event) {
       this.currentPage++

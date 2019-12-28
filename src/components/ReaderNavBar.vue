@@ -98,19 +98,17 @@ export default {
       this.lastEnabled = enabled
     },
     toggleCart () {
-      let currentBook = this.$store.state.main.currentBook
-      if (Issue.hasBook(this.$store.state.main.cart, currentBook.id, currentBook.issue)) {
-        this.$store.commit('main/REMOVE_CART', currentBook)
+      if (Issue.hasBook(this.$store.state.main.cart, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)) {
+        Queue.broadcast(Messages.READER_NAV_BAR_REMOVE_FROM_CART)
       } else {
-        this.$store.commit('main/ADD_CART', currentBook)
+        Queue.broadcast(Messages.READER_NAV_BAR_ADD_TO_CART)
       }
     },
     toggleFavorite () {
-      let currentBook = this.$store.state.main.currentBook
-      if (Issue.hasBook(this.$store.state.main.favorites, currentBook.id, currentBook.issue)) {
-        this.$store.commit('main/REMOVE_FAVORITE', currentBook)
+      if (Issue.hasBook(this.$store.state.main.favorites, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)) {
+        Queue.broadcast(Messages.READER_NAV_BAR_REMOVE_FROM_FAVORITES)
       } else {
-        this.$store.commit('main/ADD_FAVORITE', currentBook)
+        Queue.broadcast(Messages.READER_NAV_BAR_ADD_TO_FAVORITES)
       }
     },
     setProgress (progress) {

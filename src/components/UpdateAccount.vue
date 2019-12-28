@@ -8,9 +8,9 @@
       <!--     Last Name    Email -->
       <div class="update-account-row">
         <div class="update-account-column update-account-half-width">
-          <q-input id="username" v-on:focus="setHelpText('Minimum 5 characters. Letter, number, dash, or underscore.')" v-model="username" slabel="User Name" />
-          <q-input id="firstName" v-on:focus="setHelpText('Optional.')" label="First Name" />
-          <q-input id="lastName" v-on:focus="setHelpText('Optional.')" label="Last Name" />
+          <q-input id="username" v-on:focus="setHelpText('Minimum 5 characters. Letter, number, dash, or underscore.')" v-model="username" label="User Name" />
+          <q-input id="firstName" v-on:focus="setHelpText('Optional.')" v-model="firstName" label="First Name" />
+          <q-input id="lastName" v-on:focus="setHelpText('Optional.')" v-model="lastName" label="Last Name" />
         </div>
         <div class="update-account-column update-account-half-width">
           <q-input id="password" v-on:focus="setHelpText('Minimum 5 characters.')" v-model="password" type="password" label="Password" />

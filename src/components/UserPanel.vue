@@ -129,6 +129,7 @@ export default {
     doFavoritesBookSelected(book) {
       let pages = [ book.cover ]
       pages = pages.concat(book.preview)
+      pages = pages.concat('EndofPreview.jpg')
       let preview = { id: book.id, issue: book.issue, pages: pages }
       this.$store.commit('main/SET_CURRENT_BOOK', preview)
       if (this.$route.path !== '/reader') this.$router.push({ path: '/reader' }).catch(() => {})

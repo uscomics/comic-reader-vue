@@ -67,14 +67,20 @@ export default {
       }
     },
     async signIn () {
+      console.log('A')
       let url = this.$store.state.main.urlBase + 'user/authenticate'
+      console.log('B')
       let account = new Account(this.username, this.password, null, null, null, this.rememberMe, null)
+      console.log('C')
       let result = await account.signInToServer(url)
+      console.log('D')
       if (HTTP.hasErrors(result)) {
+        console.log('E')
         this.$store.commit('main/SIGN_OUT')
         this.$store.commit('main/SET_USER_PANEL_STATE', UserState.SIGN_IN)
         return
       }
+      console.log('F')
       let msg = UserMessages.getMessage(UserMessages.LANGUAGE.en_US, UserMessages.SUCCESS_SIGN_IN)
       let successMsg = new QueuedUserMessage(msg, UserMessages.SOUND_SUCCESS, 0, false)
       Queue.broadcast(Messages.USER_MESSAGE, successMsg)

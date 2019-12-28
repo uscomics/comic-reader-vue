@@ -20,6 +20,7 @@
 </template>
 <script>
 
+import Issue from '../data/issue'
 import Queue from '../util/queue'
 export default {
   name: 'ItemList',
@@ -50,14 +51,7 @@ export default {
       Queue.broadcast(this.clickedMessage, book)
     },
     getBook(item) {
-      let bookInfo = this.$store.state.main.bookInfo
-      if (!bookInfo || !bookInfo.length) return
-      for (let i = 0; i < bookInfo.length; i++) {
-        let book = bookInfo[i]
-        if (book.id !== item.id || book.issue !== item.issue) continue
-        return book
-      }
-      return null
+      return Issue.getBook(this.$store.state.main.bookInfo, item.id, item.issue)
     },
     getPrice (item) {
       let book = this.getBook(item)
