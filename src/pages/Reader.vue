@@ -83,28 +83,28 @@ export default {
       let url = this.$store.state.main.urlBase + 'user/cart/add/data'
       let cart = new Cart(this.$store.state.main.username, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)
       let cartResponse = await cart.postToServer(url)
-      HTTP.hasErrors(cartResponse)
+      if (HTTP.hasErrors(cartResponse)) return
       this.$store.commit('main/ADD_CART', this.$store.state.main.currentBook)
     },
     async removeFromCart () {
       let url = this.$store.state.main.urlBase + 'user/cart/delete/data'
       let cart = new Cart(this.$store.state.main.username, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)
       let cartResponse = await cart.postToServer(url)
-      HTTP.hasErrors(cartResponse)
+      if (HTTP.hasErrors(cartResponse)) return
       this.$store.commit('main/REMOVE_CART', this.$store.state.main.currentBook)
     },
     async addToFavorites () {
       let url = this.$store.state.main.urlBase + 'user/favorites/add/data'
       let favorite = new Favorite(this.$store.state.main.username, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)
       let favoriteResponse = await favorite.postToServer(url)
-      HTTP.hasErrors(favoriteResponse)
+      if (HTTP.hasErrors(favoriteResponse)) return
       this.$store.commit('main/ADD_FAVORITE', this.$store.state.main.currentBook)
     },
     async removeFromFavorites () {
       let url = this.$store.state.main.urlBase + 'user/favorites/delete/data'
       let favorite = new Favorite(this.$store.state.main.username, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)
       let favoriteResponse = await favorite.postToServer(url)
-      HTTP.hasErrors(favoriteResponse)
+      if (HTTP.hasErrors(favoriteResponse)) return
       this.$store.commit('main/REMOVE_FAVORITE', this.$store.state.main.currentBook)
     },
     nextPage (event) {
