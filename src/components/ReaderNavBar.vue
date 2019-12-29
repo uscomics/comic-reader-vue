@@ -4,19 +4,19 @@
   <div class="reader-nav-bar-control column justify-between items-center content-center">
     <div class="reader-nav-bar">
       <div>
-        <q-btn class="nav-button" :class="$mq" rounded color="white" text-color="black" icon="first_page" :disable=!firstEnabled v-on:click="firstPage"/>
-        <q-btn class="nav-button" :class="$mq" rounded color="white" text-color="black" icon="chevron_left" :disable=!previousEnabled v-on:click="previousPage"/>
+        <q-btn class="nav-button" rounded color="white" text-color="black" icon="first_page" :disable=!firstEnabled v-on:click="firstPage"/>
+        <q-btn class="nav-button" rounded color="white" text-color="black" icon="chevron_left" :disable=!previousEnabled v-on:click="previousPage"/>
       </div>
       <div>
         <div class="row">
-          <q-btn class="nav-button" :class="$mq" rounded color="white" text-color="black" icon="arrow_upward" v-on:click="home"/>
-          <q-btn v-if="2==$store.state.main.readerState" class="nav-button" :class="$mq" rounded color="white" v-bind:text-color="favoritesColor" icon="favorite" :disable=!favoritesDisabled v-on:click="toggleFavorite"/>
-          <q-btn v-if="2==$store.state.main.readerState" class="nav-button" :class="$mq" rounded color="white" v-bind:text-color="cartColor" icon="shopping_cart" :disable=!cartDisabled v-on:click="toggleCart"/>
+          <q-btn class="nav-button" rounded color="white" text-color="black" icon="arrow_upward" v-on:click="home"/>
+          <q-btn v-if="2==$store.state.main.readerState" class="nav-button" rounded color="white" v-bind:text-color="favoritesColor" icon="favorite" :disable=!favoritesDisabled v-on:click="toggleFavorite"/>
+          <q-btn v-if="2==$store.state.main.readerState" class="nav-button" rounded color="white" v-bind:text-color="cartColor" icon="shopping_cart" :disable=!cartDisabled v-on:click="toggleCart"/>
         </div>
       </div>
       <div>
-        <q-btn class="nav-button" :class="$mq" rounded color="white" text-color="black" icon="chevron_right" :disable=!nextEnabled v-on:click="nextPage"/>
-        <q-btn class="nav-button" :class="$mq" rounded color="white" text-color="black" icon="last_page" :disable=!lastEnabled v-on:click="lastPage"/>
+        <q-btn class="nav-button" rounded color="white" text-color="black" icon="chevron_right" :disable=!nextEnabled v-on:click="nextPage"/>
+        <q-btn class="nav-button" rounded color="white" text-color="black" icon="last_page" :disable=!lastEnabled v-on:click="lastPage"/>
       </div>
     </div>
   </div>
@@ -136,32 +136,22 @@ export default {
 .rotate-180 {
   transform: rotate(180deg);
 }
-.nav-button {
-  &.desktop {
-    width: 50px;
-    height: 50px;
-    font-size: medium;
-  }
-  &.laptop {
-    width: 50px;
-    height: 50px;
-    font-size: medium;
-  }
-  &.tablet {
-    width: 50px;
-    height: 50px;
-    font-size: medium;
-  }
-  &.mobile {
-    width: 30px;
-    height: 30px;
-    font-size: small;
-  }
-}
 .progress-background {
   position: absolute;
   height: 30px;
   width: 100%;
   background-color: lightgrey;
+}
+.nav-button {
+  width: 50px;
+  height: 50px;
+  font-size: medium;
+}
+@media only screen and (max-width: 450px) {
+.nav-button {
+  width: 30px;
+  height: 30px;
+  font-size: small;
+}
 }
 </style>

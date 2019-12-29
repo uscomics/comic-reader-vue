@@ -15,7 +15,7 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer ref="rightDrawer" v-model="right" side="right" no-swipe-backdrop overlay elevated>
+    <q-drawer ref="rightDrawer" v-model="right" side="right" no-swipe-backdrop elevated>
       <ResetPassword v-if="$store.state.main.userPanelState === stateResetPassword"/>
       <SignIn v-else-if="$store.state.main.userPanelState === stateSignIn"/>
       <SignUp v-else-if="$store.state.main.userPanelState === stateSignUp"/>
@@ -67,7 +67,7 @@ export default {
     let bookInfo = await Issue.getBooksFromServer(this.$store.state.main.urlBase + 'comics/', JSON.parse(storeBooks.body))
     Issue.sortBooks(bookInfo, Issue.SORT_BY_NAME)
     this.$store.commit('main/SET_BOOK_INFO', bookInfo)
-    setTimeout(() => { this.showDrawer() }, 1500)
+    this.showDrawer()
   },
   computed: {
     stateResetPassword () {

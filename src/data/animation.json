@@ -1,0 +1,25 @@
+{
+  "characters": [
+    {
+      "name": "Gold Venus",
+      "image": "../statics/rive/gold-venus.png",
+      "width": 341,
+      "height": 910,
+      "position": "cf"
+    },
+    {
+      "name": "Captain Æther",
+      "image": "../statics/rive/captain-aether.png",
+      "width": 751,
+      "height": 910,
+      "position": "lr"
+    },
+    {
+      "name": "Whisper Witch",
+      "image": "../statics/rive/whisper-witch.png",
+      "width": 683,
+      "height": 910,
+      "position": "rr"
+    }
+  ]
+}

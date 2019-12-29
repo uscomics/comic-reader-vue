@@ -40,6 +40,7 @@ export default {
       return
     }
     Queue.broadcast(Messages.HIDE_HEADER)
+    Queue.broadcast(Messages.HIDE_DRAWER)
     Queue.register(this, Messages.READER_NAV_BAR_FIRST_PAGE, this.firstPage)
     Queue.register(this, Messages.READER_NAV_BAR_PREVIOUS_PAGE, this.previousPage)
     Queue.register(this, Messages.READER_NAV_BAR_HOME, this.home)
