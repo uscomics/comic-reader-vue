@@ -1,0 +1,83 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/wdoE1YY.png",
+    	"https://i.imgur.com/l1QicBD.png"
+		],
+	"personalInfo" : {
+		"realName" : "John Perry",
+		"height" : "6'1\"",
+		"weight" : "220 lbs.",
+		"eyes" : "Hazel",
+		"hair" : "Brown",
+		"citizenship" : "U.S.A.",
+		"placeOfBirth" : "Glen Cove, New York",
+		"firstAppearance" : "Gold Venus #1",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Boxing", 
+			"rank": 8
+		},
+		{
+			"name": "Evasive Driving", 
+			"rank": 8
+		},
+		{
+			"name": "Defensive Combat Driving", 
+			"rank": 8
+		},
+		{
+			"name": "Offensive Combat Driving", 
+			"rank": 9
+		},
+		{
+			"name": "Detective", 
+			"rank": 9
+		},
+		{
+			"name": "Super Agent Combat Training", 
+			"rank": 9
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Police Detective John Perry's father was killed by an unknown bomber, as was his partner, Paul Marley. John fulfilled his partner's final request of taking care of his daughter Tabitha.",
+			"Frustrated at the lack of progress tracking down the bomber and inspired by the success of Gold Venus fighting the Japanese in Asia, John decided to don a heroic costume to instill fear into the hearts of the local underworld. This, he hoped, would generate a lead on the identity of the bomber.",
+			"Shortly after taking up the Black Fury persona John tracks down the bomber, who called himself the Clown, and defeats him with the help of Tabitha.",
+			"John continued to fight crime in his Black Fury persona, with Tabitha insisting she help him. Their activities gain the notice of the U.S. government, who recruit the pair for training at a special facility known as Camp X. They received standard Camp X training and gadgets as well as a mansion headquarters and a specially equipped Auburn Speedster car. After their training they are assigned to work with the Washington D.C. police force."
+		],
+		"originPicThumb" : "https://i.imgur.com/KyHKw3T.jpg",
+		"originPic" : "https://i.imgur.com/KyHKw3T.jpg"
+		},
+	"goldenAge" : {
+		"createdBy" : "Dennis Neville",
+		"firstGoldenAgeAppearance" : "Fantastic Comics #17",
+		"year" : "1940",
+		"thenAndNowPicThumb" : "https://i.imgur.com/Zq8eAfj.png",
+		"thenAndNowPic" : "https://i.imgur.com/Zq8eAfj.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "AuburnSpeedster",
+			"pic" : "http://i.imgur.com/ped62N6.png",
+			"name" : "Auburn Speedster (Black Fury)"
+		},
+		{
+			"bio" : "CampX",
+			"pic" : "http://i.imgur.com/Ofw9E8W.png",
+			"name" : "Camp X"
+		},
+		{
+			"bio" : "KidFury",
+			"pic" : "https://i.imgur.com/DCR1cWk.png",
+			"name" : "Kid Fury"
+		},
+		{
+			"bio" : "Ragman",
+			"pic" : "http://i.imgur.com/9SQDHyA.png",
+			"name" : "Ragman"
+		}
+		]
+}

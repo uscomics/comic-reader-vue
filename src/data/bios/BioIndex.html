@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Biographies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="../css/USComics.css">
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/Parse/min.js"></script>
+	<script type="text/javascript" src="../js/ParseUser.js" ></script>
+</head>
+<body onLoad="new Customer().load();">
+    <header>
+        <a href="../index.html"><img id="usComicsIcon" src="../images/U.S.Comics Icon 152x152.png" alt="U.S. Comics"/></a>      
+        <ul id="headerControl1">
+            <li class="menuItem"><a class="menuLink" id="userLogin" href="../customer/Login.html">Login</a></li>
+            <li class="menuItem"><a class="menuLink" id="userRegister" href="../customer/Register.html">Sign Up</a></li>
+        </ul>
+        <ul id="headerControl2">
+            <li class="menuItem"><a class="menuLink" id="userAccountName" href="../customer/Account.html">Account</a></li>
+            <li class="menuItem"><a class="menuLink" id="userLogout" href="../index.html" onclick="logOutUser()">Log Out</a></li>
+        </ul>
+    </header>
+
+    <table>
+    	<caption><img src="https://i.imgur.com/TXlyJOv.png"/></caption>
+        <tr>
+            <td><a href="Bio.html?bio=BioAtoman"><img class="bioThumb" id="heroThumb1" src="https://i.imgur.com/rxHlfb9.png" title="Atoman"><span class="bioTitle">Atoman</span></a></td>
+            <td><a href="Bio.html?bio=BioBlackFury"><img class="bioThumb" id="heroThumb2" src="https://i.imgur.com/rb4rb7c.png" title="Black Fury"><span class="bioTitle">Black Fury</span></a></td>
+            <td><a href="Bio.html?bio=BioCaptainÆther"><img class="bioThumb" id="heroThumb3" src="https://i.imgur.com/WtuQkSt.png" title="Captain Æther"><span class="bioTitle">Captain Æther</span></a></td>
+            <td><a href="Bio.html?bio=BioDreamtime"><img class="bioThumb" id="heroThumb4" src="https://i.imgur.com/O95F5z9.png" title="Dreamtime"><span class="bioTitle">Dreamtime</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioDrFrost"><img class="bioThumb" id="heroThumb5" src="https://i.imgur.com/jGmBcYg.png" title="Dr. Frost"><span class="bioTitle">Dr. Frost</span></a></td>
+            <td><a href="Bio.html?bio=BioFireworks"><img class="bioThumb" id="heroThumb6" src="https://i.imgur.com/FkYIj27.png" title="Fireworks"><span class="bioTitle">Fireworks</span></a></td>
+            <td><a href="Bio.html?bio=BioFlag"><img class="bioThumb" id="heroThumb7" src="https://i.imgur.com/TSV9ynR.png" title="The Flag"><span class="bioTitle">The Flag</span></a></td>
+            <td><a href="Bio.html?bio=BioGoldVenus"><img class="bioThumb" id="heroThumb8" src="https://i.imgur.com/CfgUJ7w.png" title="Gold Venus"><span class="bioTitle">Gold Venus</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioGreenSorceress"><img class="bioThumb" id="heroThumb9" src="https://i.imgur.com/2myI0mp.png" title="Green Sorceress"><span class="bioTitle">Green Sorceress</span></a></td>
+            <td><a href="Bio.html?bio=BioHeap"><img class="bioThumb" id="heroThumb10" src="https://i.imgur.com/jrAp36h.png" title="The Heap"><span class="bioTitle">The Heap</span></a></td>
+            <td><a href="Bio.html?bio=BioKidFury"><img class="bioThumb" id="heroThumb11" src="https://i.imgur.com/DCR1cWk.png" title="Kid Fury"><span class="bioTitle">Kid Fury</span></a></td>
+            <td><a href="Bio.html?bio=BioKnur"><img class="bioThumb" id="heroThumb12" src="https://i.imgur.com/my75KPp.png" title="Knur"><span class="bioTitle">Knur</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioLegendsEurope"><img class="bioThumb" id="heroThumb13" src="https://i.imgur.com/TSV9ynR.png" title="The Legends Europe"><span class="bioTitle">The Legends Europe</span></a></td>
+            <td><a href="Bio.html?bio=BioLegendsPacific"><img class="bioThumb" id="heroThumb14" src="https://i.imgur.com/KxDASPU.png" title="The Legends Pacific"><span class="bioTitle">The Legends Pacific</span></a></td>
+            <td><a href="Bio.html?bio=BioManOMetal"><img class="bioThumb" id="heroThumb15" src="https://i.imgur.com/KxDASPU.png" title="Man O' Metal"><span class="bioTitle">Man O' Metal</span></a></td>
+            <td><a href="Bio.html?bio=BioMissMuscles"><img class="bioThumb" id="heroThumb16" src="https://i.imgur.com/ib4lzqt.png" title="Miss Muscles"><span class="bioTitle">Miss Muscles</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioMrNobody"><img class="bioThumb" id="heroThumb17" src="https://i.imgur.com/fkZEJFx.png" title="Mr. Nobody"><span class="bioTitle">Mr. Nobody</span></a></td>
+            <td><a href="Bio.html?bio=BioRobotGirl"><img class="bioThumb" id="heroThumb18" src="https://i.imgur.com/w86AbX3.png" title="Robot Girl"><span class="bioTitle">Robot Girl</span></a></td>
+            <td><a href="Bio.html?bio=BioShark"><img class="bioThumb" id="heroThumb19" src="https://i.imgur.com/wXZYR5Z.png" title="The Shark"><span class="bioTitle">The Shark</span></a></td>
+            <td><a href="Bio.html?bio=BioSilverStreak"><img class="bioThumb" id="heroThumb20" src="https://i.imgur.com/zS1bMaF.png" title="Silver Streak"><span class="bioTitle">Silver Streak</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioSteamtrain"><img class="bioThumb" id="heroThumb21" src="https://i.imgur.com/vZuR6rC.png" title="Steam Train"><span class="bioTitle">Steam Train</span></a></td>
+            <td><a href="Bio.html?bio=BioStellaObscura"><img class="bioThumb" id="heroThumb22" src="https://i.imgur.com/boyniS4.png" title="Stella Obscura"><span class="bioTitle">Stella Obscura</span></a></td>
+            <td><a href="Bio.html?bio=BioStraightArrow"><img class="bioThumb" id="heroThumb23" src="https://i.imgur.com/srzS31r.png" title="Straight Arrow"><span class="bioTitle">Straight Arrow</span></a></td>
+            <td><a href="Bio.html?bio=BioStrongman"><img class="bioThumb" id="heroThumb24" src="https://i.imgur.com/LCI3GfK.png" title="Strongman"><span class="bioTitle">Strongman</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioSuperAgents"><img class="bioThumb" id="heroThumb25" src="https://i.imgur.com/rxHlfb9.png" title="Super Agents"><span class="bioTitle">Super Agents</span></a></td>
+            <td><a href="Bio.html?bio=BioTrickArrow"><img class="bioThumb" id="heroThumb26" src="https://i.imgur.com/AVkE0fF.png" title="Trick Arrow"><span class="bioTitle">Trick Arrow</span></a></td>
+            <td><a href="Bio.html?bio=BioUndercoverGirl"><img class="bioThumb" id="heroThumb27" src="https://i.imgur.com/iXr94yS.png" title="Undercover Girl"><span class="bioTitle">Undercover Girl</span></a></td>
+            <td><a href="Bio.html?bio=BioWhisperWitch"><img class="bioThumb" id="heroThumb28" src="https://i.imgur.com/BiXRLrB.png" title="Whisper Witch"><span class="bioTitle">Whisper Witch</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioWildBoy"><img class="bioThumb" id="heroThumb29" src="https://i.imgur.com/T9QhDjQ.png" title="Wild Boy"><span class="bioTitle">Wild Boy</span></a></td>
+            <td><a href="Bio.html?bio=BioWraith"><img class="bioThumb" id="heroThumb30" src="https://i.imgur.com/eJdogQx.png" title="The Wraith"><span class="bioTitle">The Wraith</span></a></td>
+            <td><a href="Bio.html?bio=BioYinYang"><img class="bioThumb" id="heroThumb31" src="https://i.imgur.com/FNA26bk.png" title="Yin Yang"><span class="bioTitle">Yin Yang</span></a></td>
+        </tr>
+    </table>
+    
+    <table>
+    	<caption><img src="https://i.imgur.com/hf830GY.png"/></caption>
+        <tr>
+            <td><a href="Bio.html?bio=BioAgentX"><img class="bioThumb" id="villianThumb1" src="https://i.imgur.com/XICt6Rj.png" title="Agent X"><span class="bioTitle">Agent X</span></a></td>
+            <td><a href="Bio.html?bio=BioAgyo"><img class="bioThumb" id="villianThumb2" src="https://i.imgur.com/hXyLEqK.png" title="Agyo"><span class="bioTitle">Agyo</span></a></td>
+            <td><a href="Bio.html?bio=BioAnimals"><img class="bioThumb" id="villianThumb3" src="https://i.imgur.com/gRbHlkb.png" title="The Animals"><span class="bioTitle">The Animals</span></a></td>
+            <td><a href="Bio.html?bio=BioAntQueen"><img class="bioThumb" id="villianThumb4" src="https://i.imgur.com/gRbHlkb.png" title="Ant Queen"><span class="bioTitle">Ant Queen</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioBeast"><img class="bioThumb" id="villianThumb5" src="https://i.imgur.com/JmpqduZ.png" title="The Beast"><span class="bioTitle">The Beast</span></a></td>
+            <td><a href="Bio.html?bio=BioBlackKnight"><img class="bioThumb" id="villianThumb6" src="https://i.imgur.com/ak55n3C.png" title="BlackKnight"><span class="bioTitle">The Black Kight</span></a></td>
+            <td><a href="Bio.html?bio=BioBlackPhantom"><img class="bioThumb" id="villianThumb7" src="https://i.imgur.com/GSpr3Qz.png" title="Black Phantom"><span class="bioTitle">Black Phantom</span></a></td>
+            <td><a href="Bio.html?bio=BioBlackRat"><img class="bioThumb" id="villianThumb8" src="https://i.imgur.com/abBbjYQ.png" title="Black Rat"><span class="bioTitle">Black Rat</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioBloodDragon"><img class="bioThumb" id="villianThumb9" src="https://i.imgur.com/Hky36qA.png" title="Blood Dragon"><span class="bioTitle">Blood Dragon</span></a></td>
+            <td><a href="Bio.html?bio=BioBloodDragons"><img class="bioThumb" id="villianThumb10" src="https://i.imgur.com/Nx8xz7y.png" title="Blood Dragons"><span class="bioTitle">Blood Dragons</span></a></td>
+            <td><a href="Bio.html?bio=BioBloodFang"><img class="bioThumb" id="villianThumb11" src="https://i.imgur.com/LROiZrz.png" title="Blood Fang"><span class="bioTitle">Blood Fang</span></a></td>
+            <td><a href="Bio.html?bio=BioBrownSugar"><img class="bioThumb" id="villianThumb12" src="https://i.imgur.com/43i7X38.png" title="Brown Sugar"><span class="bioTitle">Brown Sugar</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioCaptainBlitzkrieg"><img class="bioThumb" id="villianThumb13" src="https://i.imgur.com/of66WKm.png" title="Captain Blitzkrieg"><span class="bioTitle">Captain Blitzkrieg</span></a></td>
+            <td><a href="Bio.html?bio=BioCaptainNippon"><img class="bioThumb" id="villianThumb14" src="https://i.imgur.com/y5Y2vFQ.png" title="Captain Nippon"><span class="bioTitle">Captain Nippon</span></a></td>
+            <td><a href="Bio.html?bio=BioChi"><img class="bioThumb" id="villianThumb15" src="https://i.imgur.com/x6dRzMy.png" title="Chi"><span class="bioTitle">Chi</span></a></td>
+            <td><a href="Bio.html?bio=BioChiefSkullface"><img class="bioThumb" id="villianThumb16" src="https://i.imgur.com/63RNt39.png" title="Chief Skullface"><span class="bioTitle">Chief Skullface</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioClaw"><img class="bioThumb" id="villianThumb17" src="https://i.imgur.com/6MDPQZU.png" title="The Claw"><span class="bioTitle">The Claw</span></a></td>
+            <td><a href="Bio.html?bio=BioClown"><img class="bioThumb" id="villianThumb18" src="https://i.imgur.com/llBwUQR.png" title="The Clown"><span class="bioTitle">The Clown</span></a></td>
+            <td><a href="Bio.html?bio=BioCollective"><img class="bioThumb" id="villianThumb19" src="https://i.imgur.com/tSzs09G.png" title="Collective"><span class="bioTitle">Collective</span></a></td>
+            <td><a href="Bio.html?bio=BioCommissars"><img class="bioThumb" id="villianThumb20" src="https://i.imgur.com/tSzs09G.png" title="The Commissars"><span class="bioTitle">The Commissars</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioCountessSiroon"><img class="bioThumb" id="villianThumb21" src="https://i.imgur.com/MRoJ9Ch.png" title="Countess Siroon"><span class="bioTitle">Countess Siroon</span></a></td>
+            <td><a href="Bio.html?bio=BioDrCreator"><img class="bioThumb" id="villianThumb22" src="https://i.imgur.com/1nESiZ0.png" title="Dr. Creator"><span class="bioTitle">Dr. Creator</span></a></td>
+            <td><a href="Bio.html?bio=BioDrDeath"><img class="bioThumb" id="villianThumb23" src="https://i.imgur.com/6xmAHDo.png" title="Dr. Death"><span class="bioTitle">Dr. Death</span></a></td>
+            <td><a href="Bio.html?bio=BioDrEternity"><img class="bioThumb" id="villianThumb24" src="https://i.imgur.com/aVCkOxA.png" title="Dr. Eternity"><span class="bioTitle">Dr. Eternity</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioEbonLich"><img class="bioThumb" id="villianThumb25" src="https://i.imgur.com/NYLQK7m.png" title="Ebon Lich"><span class="bioTitle">Ebon Lich</span></a></td>
+            <td><a href="Bio.html?bio=BioElderDragon"><img class="bioThumb" id="villianThumb26" src="https://i.imgur.com/4LRccop.png" title="Elder Dragon"><span class="bioTitle">Elder Dragon</span></a></td>
+            <td><a href="Bio.html?bio=BioFleshlessOnes"><img class="bioThumb" id="villianThumb27" src="https://i.imgur.com/XQpxngT.png" title="The Fleshless Ones"><span class="bioTitle">The Fleshless Ones</span></a></td>
+            <td><a href="Bio.html?bio=BioFu"><img class="bioThumb" id="villianThumb28" src="https://i.imgur.com/fv8n19J.png" title="Fu"><span class="bioTitle">Fu</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioGeisha"><img class="bioThumb" id="villianThumb29" src="https://i.imgur.com/cq8SyJ3.png" title="Geisha"><span class="bioTitle">Geisha</span></a></td>
+            <td><a href="Bio.html?bio=BioGeneralSato"><img class="bioThumb" id="villianThumb30" src="https://i.imgur.com/oousGz3.png" title="General Sato"><span class="bioTitle">General Sato</span></a></td>
+            <td><a href="Bio.html?bio=BioGodai"><img class="bioThumb" id="villianThumb31" src="https://i.imgur.com/m611PrS.png" title="Godai"><span class="bioTitle">Godai</span></a></td>
+            <td><a href="Bio.html?bio=BioGodaiNoRenkinjutsushi"><img class="bioThumb" id="villianThumb32" src="https://i.imgur.com/m611PrS.png" title="Godai No Renkinjutsushi"><span class="bioTitle">Godai No Renkinjutsushi</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioGorillaWithAHumanBrain"><img class="bioThumb" id="villianThumb33" src="https://i.imgur.com/qfqTPgI.png" title="Gorilla With A Human Brain"><span class="bioTitle">Gorilla With A Human Brain</span></a></td>
+            <td><a href="Bio.html?bio=BioGreenGhoul"><img class="bioThumb" id="villianThumb34" src="https://i.imgur.com/xar87s3.png" title="Green Ghoul"><span class="bioTitle">Green Ghoul</span></a></td>
+            <td><a href="Bio.html?bio=BioGreenMummy"><img class="bioThumb" id="villianThumb35" src="https://i.imgur.com/5FcIqcG.png" title="The Green Mummy"><span class="bioTitle">The Green Mummy</span></a></td>
+            <td><a href="Bio.html?bio=BioGuardiansOfTheBeyond"><img class="bioThumb" id="villianThumb36" src="https://i.imgur.com/NYLQK7m.png" title="The Guardians Of The Beyond"><span class="bioTitle">The Guardians Of The Beyond</span></a></td>
+        </tr>
+    
+        
+        <tr>
+            <td><a href="Bio.html?bio=BioHassan"><img class="bioThumb" id="villianThumb37" src="https://i.imgur.com/ZA7Cr9p.png" title="Hassan"><span class="bioTitle">Hassan</span></a></td>
+            <td><a href="Bio.html?bio=BioIllumiNaughty"><img class="bioThumb" id="villianThumb38" src="https://i.imgur.com/9jk7BN3.png" title="IllumiNaughty"><span class="bioTitle">IllumiNaughty</span></a></td>
+            <td><a href="Bio.html?bio=BioImperials"><img class="bioThumb" id="villianThumb39" src="https://i.imgur.com/y5Y2vFQ.png" title="The Imperials"><span class="bioTitle">The Imperials</span></a></td>
+            <td><a href="Bio.html?bio=BioIzanamiGoddess"><img class="bioThumb" id="villianThumb40" src="https://i.imgur.com/koNNvoO.png" title="Izanami (Goddess)"><span class="bioTitle">Izanami (Goddess)</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioKa"><img class="bioThumb" id="villianThumb41" src="https://i.imgur.com/I29PENh.png" title="Ka"><span class="bioTitle">Ka</span></a></td>
+            <td><a href="Bio.html?bio=BioKu"><img class="bioThumb" id="villianThumb42" src="https://i.imgur.com/w0clyVP.png" title="Ku"><span class="bioTitle">Ku</span></a></td>
+            <td><a href="Bio.html?bio=BioLadyJane"><img class="bioThumb" id="villianThumb43" src="https://i.imgur.com/9jk7BN3.png" title="Lady Jane"><span class="bioTitle">Lady Jane</span></a></td>
+            <td><a href="Bio.html?bio=BioLithium"><img class="bioThumb" id="villianThumb44" src="https://i.imgur.com/DFbS5KF.png" title="Lithium"><span class="bioTitle">Lithium</span></a></td>
+        </tr>
+        <tr>
+            <td><a href="Bio.html?bio=BioLordNox"><img class="bioThumb" id="villianThumb45" src="https://i.imgur.com/JSesZWe.png" title="Lord Nox"><span class="bioTitle">Lord Nox</span></a></td>
+            <td><a href="Bio.html?bio=BioMarbella"><img class="bioThumb" id="villianThumb46" src="https://i.imgur.com/G3doyVh.png" title="Marbella"><span class="bioTitle">Marbella</span></a></td>
+            <td><a href="Bio.html?bio=BioMiko"><img class="bioThumb" id="villianThumb47" src="https://i.imgur.com/O1DToG0.png" title="Miko"><span class="bioTitle">Miko</span></a></td>
+            <td><a href="Bio.html?bio=BioMorrigan"><img class="bioThumb" id="villianThumb48" src="https://i.imgur.com/NYuBgGL.png" title="The Morrigan"><span class="bioTitle">The Morrigan</span></a></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/kmTKy50.png"
+		],
+	"personalInfo" : {
+		"realName" : "Gary Kennedy",
+		"height" : "6'0\"",
+		"weight" : "223 lbs.",
+		"eyes" : "Green",
+		"hair" : "Black",
+		"citizenship" : "United Kingdom",
+		"placeOfBirth" : "Lichfield, England",
+		"firstAppearance" : "The Legends Europe #1",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Super Strength", 
+			"rank": 4
+		},
+		{
+			"name": "Flight", 
+			"rank": 7
+		},
+		{
+			"name": "Possession", 
+			"rank": 8
+		},
+		{
+			"name": "Manipulate Life Force", 
+			"rank": 9
+		},
+		{
+			"name": "Invisibility", 
+			"rank": 10
+		},
+		{
+			"name": "Intangibility", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Police Officers Gary Kennedy and his brother were killed by criminals. Gary vowed to return from the dead to avenge his brother's death. Weeks later, at the witching hour, he rose from his grave as a ghost with super strength when solid, the ability to fly, possess people as a ghost, or become invisible. He also possesses the ability to drain or reinforce the life force of others. The Wraith is a member of the Legends Europe."
+		],
+		"originPicThumb" : "https://i.imgur.com/kEDLIn9.jpg",
+		"originPic" : "https://i.imgur.com/kEDLIn9.jpg"
+		},
+	"goldenAge" : {
+		"createdBy" : "Paul Devlln",
+		"firstGoldenAgeAppearance" : "Mystery Men #17",
+		"year" : "1941",
+		"thenAndNowPicThumb" : "https://i.imgur.com/AKmXm2o.png",
+		"thenAndNowPic" : "https://i.imgur.com/AKmXm2o.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "LegendsEurope",
+			"pic" : "https://i.imgur.com/TSV9ynR.png",
+			"name" : "The Legends Europe"
+		}
+		]
+}

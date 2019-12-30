@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Atoman Bio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="../css/USComics.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">s
+    <script type="text/javascript" src="../js/Parse/min.js"></script>
+	<script type="text/javascript" src="../js/ParseUser.js" ></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script></head>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../js/server.js"></script>
+
+<body onLoad="loadUser();">
+	<section id="content" data-role="page" class="bioPage">
+    <header>
+        <a href="../index.html" data-ajax="false"><img id="usComicsIcon" src="../images/U.S.Comics Icon 152x152.png" title="U.S. Comics"/></a>      
+    	<a href="BioIndex.html" data-ajax="false"><img id="biosUSComicsIcon" src="../images/icons/Bios.png" title="Biographies"/></a>      
+        <ul id="headerControl1">
+            <li class="menuItem"><a class="menuLink" id="userLogin" href="../customer/Login.html">Login</a></li>
+            <li class="menuItem"><a class="menuLink" id="userRegister" href="../customer/Register.html">Sign Up</a></li>
+        </ul>
+        <ul id="headerControl2">
+            <li class="menuItem"><a class="menuLink" id="userAccountName" href="../customer/Account.html">Account</a></li>
+            <li class="menuItem"><a class="menuLink" id="userLogout" href="../index.html" onclick="logOutUser()">Log Out</a></li>
+        </ul>
+    </header>
+    
+        <div style = "width: 100%; align-content: center;">
+    <section class="bioImage">
+    	<img class="bioImage" src="http://i.imgur.com/OEhDpQK.png"/>
+    </section>
+    <div id="bioPersonalInfo" data-role="collapsible" data-collapsed="false" class="bioTitleBar">
+		<h3>Personal Info</h3>
+      	<div id="bioPersonalInfoContent" class="bioContent">
+            <table class="bioPersonalInfoTable">
+                <tr class="bioPersonalInfoTableRow">
+                    <td class="bioPersonalInfoTableTitleCell">Real Name</td>
+                    <td class="bioPersonalInfoTableDataCell">Barry Dale</td>
+                </tr>
+                <tr class="bioPersonalInfoTableRow">
+                    <td class="bioPersonalInfoTableTitleCell">Height</td>
+                    <td class="bioPersonalInfoTableDataCell">6'0"</td>
+                </tr>
+                <tr class="bioPersonalInfoTableRow">
+                    <td class="bioPersonalInfoTableTitleCell">Weight</td>
+                    <td class="bioPersonalInfoTableDataCell">195 lbs.</td>
+                </tr>
+                <tr class="bioPersonalInfoTableRow">
+                    <td class="bioPersonalInfoTableTitleCell">Eyes</td>
+                    <td class="bioPersonalInfoTableDataCell">Blue</td>
+                </tr>
+                <tr class="bioPersonalInfoTableRow">
+                    <td class="bioPersonalInfoTableTitleCell">Hair</td>
+                    <td class="bioPersonalInfoTableDataCell">Blonde</td>
+                </tr>
+                <tr class="bioPersonalInfoTableRow">
+                    <td class="bioPersonalInfoTableTitleCell">Citizenship</td>
+                    <td class="bioPersonalInfoTableDataCell">U.S.A.</td>
+                </tr>
+                <tr class="bioPersonalInfoTableRow">
+                    <td class="bioPersonalInfoTableTitleCell">Place of Birth</td>
+                    <td class="bioPersonalInfoTableDataCell">Orlando, Florida</td>
+                </tr>
+                <tr class="bioPersonalInfoTableRow">
+                    <td class="bioPersonalInfoTableTitleCell">First Appearance</td>
+                    <td class="bioPersonalInfoTableDataCell">The Legends Europe #1</td>
+                </tr>
+              <tr class="bioPersonalInfoTableRow">
+                    <td class="bioPersonalInfoTableTitleCell">Era</td>
+                    <td class="bioPersonalInfoTableDataCell">1960s</td>
+              </tr>
+            </table>
+        </div>
+    </div>
+    <div id="bioSkills" data-role="collapsible" class="bioTitleBar">
+		<h3>Skills</h3>
+      	<div id="bioSkillsContent" class="bioContent">
+            <ul class="graph">
+                <li class="power8">Super Agent Combat Training: 8</li>
+                <li class="power10">Absorb Energy: 10</li>
+                <li class="power10">Release Energy: 10</li>
+                <li class="power10">Energy Blast: 10</li>
+                <li class="power10">Atom Control: 10</li>
+                <li class="power10">Atomic Immortality: 10</li>
+            </ul>
+       	</div>
+    </div>
+    <div id="bioOrigin" data-role="collapsible" class="bioTitleBar">
+        <h3>Origin</h3>
+        <div id="bioOriginContent" class="bioContent">
+        <span class="originStoryText">Barry Dale was a P.O.W. being held in Hiroshima. Just before the atomic bomb was dropped on the city, the Gold Venus freed him. However, as the two were rushing to a makeshift bunker, the bomb was dropped and Dale was hit by a large dose of radiation.<br/><br/>
+
+Several years after the war ended, Dale noticed he was not aging. Later still he learns how to absorb energy from his environment and how to rearrange atoms. Inspired by the heroics of Gold Venus, Dale decides to use his powers to help others. The U.S. Government immediately takes notice. Dale is recruited to Camp X as one of its final students and then joins the team known as the Super Agents.</span><br/>
+			<a href="#popupOrigin" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="http://i.imgur.com/UvXiTHk.png" alt="Origin" title="Origin" style="width:30%"></a>
+			<div data-role="popup" id="popupOrigin" data-overlay-theme="b" data-theme="b" data-corners="false">
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="http://i.imgur.com/UvXiTHk.png" style="max-height:512px;">
+			</div>
+            <br/><span class="compareThenAndNowLabel">Tap image to read origin story.</span>
+        </div>
+    </div>
+    <div id="bioGoldenAge" data-role="collapsible" class="bioTitleBar">
+        <h3>Golden Age</h3>
+        <div id="bioGoldenAgeContent" class="bioContent">
+            <table class="goldenAgeTable">
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Created By</td>
+            	<td class="bioPersonalInfoTableDataCell">Ken Crossen and Jerry Robinson</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">First Appearance</td>
+            	<td class="bioPersonalInfoTableDataCell">Atoman #1</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Year</td>
+            	<td class="bioPersonalInfoTableDataCell">1946</td>
+            </tr>
+            </table>
+			<a href="#popupThenAndNow" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="http://i.imgur.com/erB3yZN.png" alt="Then And Now" title="Then And Now" style="width:30%"></a>
+			<div data-role="popup" id="popupThenAndNow" data-overlay-theme="b" data-theme="b" data-corners="false">
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="http://i.imgur.com/erB3yZN.png" style="max-height:512px;">
+			</div>
+            <br/><span class="compareThenAndNowLabel">Tap image to compare Golden Age and Modern versions.</span>
+        </div>
+    </div>
+    <div id="bioSeeAlso" data-role="collapsible" class="bioTitleBar">
+		<h3>See Also</h3>
+      	<div id="bioSeeAlsoContent" class="bioContent">
+            <div class="ui-grid-b">
+                <div class="ui-block-a"><a href="BioCampX.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbCampX.png" title="Camp X"><span class="bioTitle">Camp X</span></a></div>
+                <div class="ui-block-b"><a href="BioGoldVenus.html"><img class="bioThumb" id="heroThumb3" src="../images/icons/ThumbGoldVenus.png" title="Gold Venus"><span class="bioTitle">Gold Venus</span></a></div>
+                <div class="ui-block-c"><a href="BioSuperAgents.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbAtoman.png" title="Super Agents"><span class="bioTitle">Super Agents</span></a></div>
+            </div>
+       	</div>
+    </div>
+        </div>
+    </section>
+    
+</body>
+</html>

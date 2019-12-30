@@ -1,0 +1,51 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/LEybYmJ.png"
+		],
+	"personalInfo" : {
+		"realName" : "Ka",
+		"height" : "5'10\"",
+		"weight" : "237 lbs.",
+		"eyes" : "Orange",
+		"hair" : "None",
+		"citizenship" : "N/A",
+		"placeOfBirth" : "Mount Kasa, Japan",
+		"firstAppearance" : "The Legends Pacific #3",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Animate Fire", 
+			"rank": 10
+		},
+		{
+			"name": "Fire Blast", 
+			"rank": 10
+		},
+		{
+			"name": "Summon Fire", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Ka is an elemental golem created and controlled by Godai No Renkinjutsushi. Together with other similarly created golems, they form the Godai.",
+            "Ka is the Japanese word for fire, and Ka controls fire completely."
+		],
+		"originPicThumb" : "https://i.imgur.com/k5RCu5G.jpg",
+		"originPic" : "https://i.imgur.com/k5RCu5G.jpg"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Godai",
+			"pic" : "https://i.imgur.com/m611PrS.png",
+			"name" : "Godai"
+		},
+		{
+			"bio" : "GodaiNoRenkinjutsushi",
+			"pic" : "https://i.imgur.com/m611PrS.png",
+			"name" : "Godai No Renkinjutsushi"
+		}
+		]
+}

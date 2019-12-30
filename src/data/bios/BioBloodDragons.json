@@ -1,0 +1,68 @@
+{
+"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/WHsydlx.png"
+		],
+	"origin" : {
+		"story" : [
+			"Introduction",
+			"The Blood Dragons are a Japanese covert para-military group. They are named in honor of the beast known as Blood Dragon. The group consists of cells and it is believed there are many cells scattered throughout the Pacific. The structure of the Blood Dragons organization is summarized as follows:",
+			"Leadership",
+			"Leadership consists of high-level military officers that set the broad goals of the Blood Dragons operations. Known leaders: General Tadao Sato , leader and founder of the Blood Dragons, and Colonel Daiki Yamato.",
+			"Special Agents",
+			"Special Agents are highly trained operatives assigned tasks such as espionage and assassination. They are by far the most dangerous of the Blood Dragons and answer only to the group's leadership. Known Special Agents are Agent X , and Miko.",
+			"Ninjas",
+			"The Blood Dragons have provided Ninja training to their best fighters. The Ninjas for an elite fighting force within the organization.",
+			"Covert Operatives And Civilians",
+			"Operatives dressed as civilians as well as actual civilians perform covert operations for the Blood Dragons as opportunities present themselves."
+		],
+		"storyHeaders" : [true, false, true, false, true, false, true, false, true, false],
+		"originExtraPic" : "https://i.imgur.com/tyreUUU.jpg",
+		"originExtraText" : "The Blood Dragons are based on the real life Black Dragon Society and the Golden Age comics Black Dragon Society."
+        },
+	"goldenAge" : {
+		"createdBy" : "Uchida Ryohei (Real Life)",
+		"firstGoldenAgeAppearance" : "Big Shot Comics #26",
+		"year" : "1901 (Real Life) 1940 (Golden Age Comics)",
+		"thenAndNowPicThumb" : "https://i.imgur.com/P2PD2f8.png",
+		"thenAndNowPic" : "https://i.imgur.com/P2PD2f8.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "AgentX",
+			"pic" : "https://i.imgur.com/XICt6Rj.png",
+			"name" : "Agent X"
+		},
+		{
+			"bio" : "BloodDragon",
+			"pic" : "https://i.imgur.com/Hky36qA.png",
+			"name" : "Blood Dragon"
+		},
+		{
+			"bio" : "ColonelYamato",
+			"pic" : "https://i.imgur.com/lqENtSd.png",
+			"name" : "Colonel Yamato"
+		},
+		{
+			"bio" : "GeneralSato",
+			"pic" : "https://i.imgur.com/oousGz3.png",
+			"name" : "General Sato"
+		},
+		{
+			"bio" : "Miko",
+			"pic" : "https://i.imgur.com/O1DToG0.png",
+			"name" : "Miko"
+		},
+		{
+			"bio" : "Underground",
+			"pic" : "https://i.imgur.com/yvvyN1v.png",
+			"name" : "The Underground"
+		},
+		{
+			"bio" : "http://en.wikipedia.org/wiki/Black_Dragon_Society",
+			"pic" : "https://i.imgur.com/0zF2LNd.png",
+			"name" : "Black Dragon Society At Wikipedia"
+		}
+        
+		]
+}

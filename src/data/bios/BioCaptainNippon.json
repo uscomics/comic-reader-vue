@@ -1,0 +1,62 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/9gM7lxr.png"
+		],
+	"personalInfo" : {
+		"realName" : "Dai Asano",
+		"height" : "5'11\"",
+		"weight" : "230 lbs.",
+		"eyes" : "Black",
+		"hair" : "Black",
+		"citizenship" : "Japan",
+		"placeOfBirth" : "Kyoto, Japan",
+		"firstAppearance" : "The Legends Pacific #2",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Flight", 
+			"rank": 9
+		},
+		{
+			"name": "Super Speed", 
+			"rank": 9
+		},
+		{
+			"name": "Damage Resistance", 
+			"rank": 10
+		},
+		{
+			"name": "Super Strength", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Captain Nippon is a Dream Warrior, someone who was given his powers in a dream. In this dream Dai Asano met with legendary samurai Miyamoto Musashi. Musashi explained that Asano had been called upon to join the ranks of Japan's great warriors and upon awakening should travel immediately to the Emporer's Palace.",
+			"At the Palace, Asano met others who would form the group known as The Imperials. Emperor Hirohito chose Captain Nippon to lead The Imperials."
+		],
+		"originPicThumb" : "https://i.imgur.com/EsmZqp3.jpg",
+		"originPic" : "https://i.imgur.com/EsmZqp3.jpg"
+		},
+	"goldenAge" : {
+		"createdBy" : "Otto Binder and Al Carreno",
+		"firstGoldenAgeAppearance" : "Captain Marvel Jr. #2",
+		"year" : "1942",
+		"thenAndNowPicThumb" : "https://i.imgur.com/gob0xtT.png",
+		"thenAndNowPic" : "https://i.imgur.com/gob0xtT.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Imperials",
+			"pic" : "https://i.imgur.com/y5Y2vFQ.png",
+			"name" : "The Imperials"
+		},
+		{
+			"bio" : "MiyamotoMusashi",
+			"pic" : "https://i.imgur.com/gut51K1.png",
+			"name" : "Miyamoto Musashi"
+		}
+		]
+}

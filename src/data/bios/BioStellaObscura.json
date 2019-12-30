@@ -1,0 +1,46 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/Wif4OWk.png"
+		],
+	"personalInfo" : {
+		"realName" : "Luana Jones",
+		"height" : "5'7\"",
+		"weight" : "124 lbs.",
+		"eyes" : "Brown",
+		"hair" : "Black",
+		"citizenship" : "U.S.A.",
+		"placeOfBirth" : "Rio Rancho, New Mexico",
+		"firstAppearance" : "Ye Olde Whisper Witch #3",
+		"era" : "1800s"
+		},
+	"skills" : [
+		{
+			"name": "Summon Dark Bio-Matter", 
+			"rank": 9
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Stella Obscura is an alternate universe's version of Luana Jones, the girlfriend of Captain Æther. In her universe Captain Æther was killed and she took a job in a saloon and called herself Stella Obscura.",
+			"Superbrain kidnapped and tortured Stella. Using his mental powers, he brought her under his control. His scientists then gave her the ability to generate and control Dark Bio-Mater, a substance that entangles its victims and drains their life force in a matter of minutes. Stella later broke free of Superbrain's mind control."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "CaptainÆther",
+			"pic" : "https://i.imgur.com/WtuQkSt.png",
+			"name" : "Captain Æther"
+		},
+		{
+			"bio" : "Luana",
+			"pic" : "https://i.imgur.com/xW0JuP2.png",
+			"name" : "Luana Jones"
+		},
+		{
+			"bio" : "Superbrain",
+			"pic" : "https://i.imgur.com/SMVRKro.png",
+			"name" : "Superbrain"
+		}
+		]
+}

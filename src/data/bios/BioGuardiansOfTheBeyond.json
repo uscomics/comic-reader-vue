@@ -1,0 +1,38 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/VbyaAKX.png"
+		],
+	"origin" : {
+		"story" : [
+			"The Guardians of the Beyond are individuals assigned the task of guarding entrances to the Beyond. Known Guardians are the Black Knight, the Ebon Lich, the Elder Dragon, and Plague."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		},
+		{
+			"bio" : "BlackKnight",
+			"pic" : "https://i.imgur.com/ak55n3C.png",
+			"name" : "Black Knight"
+		},
+		{
+			"bio" : "EbonLich",
+			"pic" : "https://i.imgur.com/NYLQK7m.png",
+			"name" : "Ebon Lich"
+		},
+		{
+			"bio" : "ElderDragon",
+			"pic" : "https://i.imgur.com/4LRccop.png",
+			"name" : "Elder Dragon"
+		},
+		{
+			"bio" : "Plague",
+			"pic" : "https://i.imgur.com/HBaiQYn.png",
+			"name" : "Plague"
+		}
+		]
+}

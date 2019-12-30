@@ -1,0 +1,55 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/QAfm8zE.png"
+		],
+	"personalInfo" : {
+		"realName" : "Mya San",
+		"height" : "5'7\"",
+		"weight" : "115 lbs.",
+		"eyes" : "Black",
+		"hair" : "Bald",
+		"citizenship" : "Burma",
+		"placeOfBirth" : "Ta-Kaw, Shan",
+		"firstAppearance" : "Gold Venus #3",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Summon Lightning", 
+			"rank": 9
+		},
+		{
+			"name": "Summon Thunderstorms", 
+			"rank": 9
+		},
+		{
+			"name": "Summon Monsoon", 
+			"rank": 9
+		},
+		{
+			"name": "Summon Rains", 
+			"rank": 9
+		},
+		{
+			"name": "Summon Winds", 
+			"rank": 9
+		},
+		{
+			"name": "Wind Flight", 
+			"rank": 9
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Mya San is a female shaman possessing the ability to control storms and lightning. She was given the title Miko by Japanese soldiers in Burma. Miko is the Japanese word for 'Magic Woman'. Miko is a member of the Blood Dragons."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "BloodDragons",
+			"pic" : "https://i.imgur.com/Nx8xz7y.png",
+			"name" : "The Blood Dragons"
+		}
+		]
+}

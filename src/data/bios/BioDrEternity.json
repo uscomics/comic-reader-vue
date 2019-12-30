@@ -1,0 +1,103 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/vFf6qG3.png"
+		],
+	"personalInfo" : {
+		"realName" : "Unknown",
+		"height" : "5'11\"",
+		"weight" : "175 lbs.",
+		"eyes" : "Brown",
+		"hair" : "White",
+		"citizenship" : "U.S.A.",
+		"placeOfBirth" : "Unknown",
+		"firstAppearance" : "Gold Venus #4",
+		"era" : "Renaissance, World War II"
+		},
+	"skills" : [
+		{
+			"name": "Super Strength", 
+			"rank": 4
+		},
+		{
+			"name": "Magical Flight", 
+			"rank": 6
+		},
+		{
+			"name": "Spell Of Paralysis", 
+			"rank": 7
+		},
+		{
+			"name": "Summon Hands Of Binding", 
+			"rank": 7
+		},
+		{
+			"name": "Summon Beyond Portal", 
+			"rank": 10
+		},
+		{
+			"name": "Parasitic Beyond Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Dr. Eternity is a sorcerer who has managed to achieve immortality using a special wax that allows him to transfer a person's soul energies to himself. The soul stealing must be done by performing a ritual in the Beyond . Each person's soul he steals extends his life expectancy and increases his health and physical strength. He has lived this way for 1500 years and at any given time has the strength of approximately 10 men. The person who's soul is stolen dies. Dr. Eternity keeps the wax-covered corpses of his victims in a personal collection.",
+			"Additionally, Dr. Eternity is one of the few people who is able to open a portal to the Beyond. He also has skills at various other spells.",
+            "Renaissance Era",
+            "Dr. Eternity assisted Isaac Newton in unlocking the power of the comet stone. Along with Lord Nox, he also transfer some of that power along with power from the Beyond to the Nox Eternity Crystals.",
+            "World War II Era",
+            "During World War II, Dr. Eternity was the sometines foe, sometimes ally of the Black Fury and his battles against the creatures of the Beyond."
+		],
+		"storyHeaders" : [false, false, true, false, true, false]
+		},
+	"goldenAge" : {
+		"createdBy" : "Unknown",
+		"firstGoldenAgeAppearance" : "Master Comics #22",
+		"year" : "1942",
+		"thenAndNowPicThumb" : "https://i.imgur.com/CdVvflM.png",
+		"thenAndNowPic" : "https://i.imgur.com/CdVvflM.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		},
+		{
+			"bio" : "BlackFury",
+			"pic" : "https://i.imgur.com/rb4rb7c.png",
+			"name" : "Black Fury"
+		},
+		{
+			"bio" : "CometStoneWhisperWitch",
+			"pic" : "https://i.imgur.com/C365asE.png",
+			"name" : "Comet Stone (Whisper Witch)"
+		},
+		{
+			"bio" : "IsaacNewton",
+			"pic" : "https://i.imgur.com/dtPXBRg.png",
+			"name" : "Isaac Newton"
+		},
+		{
+			"bio" : "LordNox",
+			"pic" : "https://i.imgur.com/JSesZWe.png",
+			"name" : "Lord Nox"
+		},
+		{
+			"bio" : "NoxEternityCrystals",
+			"pic" : "https://i.imgur.com/tYMaArn.png",
+			"name" : "Nox Eternity Crystals"
+		},
+		{
+			"bio" : "SoulWaxDrEternity",
+			"pic" : "https://i.imgur.com/oPrklls.png",
+			"name" : "Soul Wax (Dr. Eternity)"
+		},
+		{
+			"bio" : "WhisperWitch",
+			"pic" : "https://i.imgur.com/BiXRLrB.png",
+			"name" : "Whisper Witch"
+		}
+		]
+}

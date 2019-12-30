@@ -1,0 +1,51 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/6fObt3x.png"
+		],
+	"personalInfo" : {
+		"realName" : "Chi",
+		"height" : "7'7\"",
+		"weight" : "992 lbs.",
+		"eyes" : "Grey",
+		"hair" : "None",
+		"citizenship" : "N/A",
+		"placeOfBirth" : "Mount Kasa, Japan",
+		"firstAppearance" : "The Legends Pacific #3",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Super Strength", 
+			"rank": 6
+		},
+		{
+			"name": "Animate Earth", 
+			"rank": 10
+		},
+		{
+			"name": "Summon Earth", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Chi is an elemental golem created and controlled by Godai No Renkinjutsushi. Together with other similarly created golems, they form the Godai.",
+			"Chi is the Japanese word for earth, and Chi controls earth completely."
+		],
+		"originPicThumb" : "https://i.imgur.com/k5RCu5G.jpg",
+		"originPic" : "https://i.imgur.com/k5RCu5G.jpg"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Godai",
+			"pic" : "https://i.imgur.com/m611PrS.png",
+			"name" : "Godai"
+		},
+		{
+			"bio" : "GodaiNoRenkinjutsushi",
+			"pic" : "https://i.imgur.com/m611PrS.png",
+			"name" : "Godai No Renkinjutsushi"
+		}
+		]
+}

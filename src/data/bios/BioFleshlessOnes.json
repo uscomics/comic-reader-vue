@@ -1,0 +1,51 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/mQispnO.png"
+		],
+	"personalInfo" : {
+		"realName" : "Fleshless Ones",
+		"height" : "Approximately 5'10\"",
+		"weight" : "Approximately 25 lbs.",
+		"eyes" : "None",
+		"hair" : "None",
+		"citizenship" : "Beyond",
+		"placeOfBirth" : "Beyond",
+		"firstAppearance" : "Gold Venus #3",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Strength ", 
+			"rank": 7
+		},
+		{
+			"name": "Impersonation", 
+			"rank": 10
+		},
+		{
+			"name": "Beyond Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+            "The Fleshless Ones are beings from the Beyond that appear as skeletons. They capture humans and steal their flesh so that the can infiltrate human society and turn all of humanity into their slaves.",
+            "The Fleshless Ones are immortal, like all creatures from the Beyond. If their bodies are severely damaged or destroyed, their spirit will return to the Beyond where the body can regenerate."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "Sheldon Moldoff",
+		"firstGoldenAgeAppearance" : "Worlds of Fear # 10",
+		"year" : "1953",
+		"thenAndNowPicThumb" : "https://i.imgur.com/coUpAKp.png",
+		"thenAndNowPic" : "https://i.imgur.com/coUpAKp.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		}
+		]
+}

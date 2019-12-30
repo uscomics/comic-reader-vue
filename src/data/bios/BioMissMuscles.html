@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Miss Muscles Bio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="../css/USComics.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">s
+    <script type="text/javascript" src="../js/Parse/min.js"></script>
+	<script type="text/javascript" src="../js/ParseUser.js" ></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script></head>
+</head>
+
+<body onLoad="loadUser()">
+	<section id="content" data-role="page" class="bioPage">
+    <header>
+        <a href="../index.html" data-ajax="false"><img id="usComicsIcon" src="../images/U.S.Comics Icon 152x152.png" title="U.S. Comics"/></a>      
+    	<a href="BioIndex.html" data-ajax="false"><img id="biosUSComicsIcon" src="../images/icons/Bios.png" title="Biographies"/></a>      
+        <ul id="headerControl1">
+            <li class="menuItem"><a class="menuLink" id="userLogin" href="../customer/Login.html">Login</a></li>
+            <li class="menuItem"><a class="menuLink" id="userRegister" href="../customer/Register.html">Sign Up</a></li>
+        </ul>
+        <ul id="headerControl2">
+            <li class="menuItem"><a class="menuLink" id="userAccountName" href="../customer/Account.html">Account</a></li>
+            <li class="menuItem"><a class="menuLink" id="userLogout" href="../index.html" onclick="logOutUser()">Log Out</a></li>
+        </ul>
+    </header>
+    
+    <section class="bioImage">
+    	<img class="bioImage" src="http://i.imgur.com/aAj5LKc.png"/>
+    </section>
+    <div id="bioPersonalInfo" data-role="collapsible" data-collapsed="false" class="bioTitleBar">
+		<h3>Personal Info</h3>
+      	<div id="bioPersonalInfoContent" class="bioContent">
+        <table class="bioPersonalInfoTable">
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Real Name</td>
+            	<td class="bioPersonalInfoTableDataCell">Vicki Savage</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Height</td>
+            	<td class="bioPersonalInfoTableDataCell">5'11"</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Weight</td>
+            	<td class="bioPersonalInfoTableDataCell">245 lbs.</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Eyes</td>
+            	<td class="bioPersonalInfoTableDataCell">Blue</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Hair</td>
+            	<td class="bioPersonalInfoTableDataCell">Blonde</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Citizenship</td>
+            	<td class="bioPersonalInfoTableDataCell">U.S.A.</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Place of Birth</td>
+            	<td class="bioPersonalInfoTableDataCell">Santa Monica, California</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">First Appearance</td>
+            	<td class="bioPersonalInfoTableDataCell">Legends Europe #1</td>
+            </tr>
+          <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Era</td>
+            	<td class="bioPersonalInfoTableDataCell">World War II</td>
+          </tr>
+        </table>
+        </div>
+    </div>
+    <div id="bioSkills" data-role="collapsible" class="bioTitleBar">
+		<h3>Skills</h3>
+      	<div id="bioSkillsContent" class="bioContent">
+            <ul class="graph">
+                <li class="power9">Super Agent Combat Training: 9</li>
+            </ul>
+       	</div>
+    </div>
+    <div id="bioOrigin" data-role="collapsible" class="bioTitleBar">
+        <h3>Origin</h3>
+        <div id="bioOriginContent" class="bioContent">
+        <span class="originStoryText">Vicki Savage is a weight lifter from Muscle Beach in Santa Monica, California. She was sometimes seen dating young starlets from Hollywood, which in turn landed her a role in a small film as a super agent who battled Hitler. The film role lead to her being chosen to be an actual super agent. She was sent to Camp X and received super agent training and was assigned to the European branch of the Legends.<br/></span>
+			<a href="#popupOrigin" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="http://i.imgur.com/I7AMUR0.jpg" alt="Origin" title="Origin" style="width:30%"></a>
+			<div data-role="popup" id="popupOrigin" data-overlay-theme="b" data-theme="b" data-corners="false">
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="http://i.imgur.com/I7AMUR0.jpg" style="max-height:512px;">
+			</div>
+            <br/><span class="compareThenAndNowLabel">Tap image to read origin story.</span>
+        </div>
+    </div>
+    <div id="bioGoldenAge" data-role="collapsible" class="bioTitleBar">
+        <h3>Golden Age</h3>
+        <div id="bioGoldenAgeContent" class="bioContent">
+            <table class="goldenAgeTable">
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Created By</td>
+            	<td class="bioPersonalInfoTableDataCell">Jerry Siegel and Bill Fraccio</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">First Appearance</td>
+            	<td class="bioPersonalInfoTableDataCell">Mr. Muscles #22</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Year</td>
+            	<td class="bioPersonalInfoTableDataCell">1956</td>
+            </tr>
+            </table>
+			<a href="#popupThenAndNow" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="http://i.imgur.com/gCnfrt0.png" alt="Then And Now" title="Then And Now" style="width:30%"></a>
+			<div data-role="popup" id="popupThenAndNow" data-overlay-theme="b" data-theme="b" data-corners="false">
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="http://i.imgur.com/gCnfrt0.png" style="max-height:512px;">
+			</div>
+        </div>
+    </div>
+    <div id="bioSeeAlso" data-role="collapsible" class="bioTitleBar">
+		<h3>See Also</h3>
+      	<div id="bioSeeAlsoContent" class="bioContent">
+            <div class="ui-grid-b">
+                <div class="ui-block-a"><a href="BioCampX.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbCampX.png" title="Camp X"><span class="bioTitle">Camp X</span></a></div>
+                <div class="ui-block-c"><a href="BioLegendsEurope.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbFlag.png" title="The Legends Europe"><span class="bioTitle">The Legends Europe</span></a></div>
+            </div>
+       	</div>
+    </div>
+ 
+    </section>
+
+    <div id="dialogContent">
+      <iframe id="dialogFrame"></iframe>
+    </div>
+</body>
+</html>

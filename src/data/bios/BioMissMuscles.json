@@ -1,0 +1,51 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"http://i.imgur.com/aAj5LKc.png"
+		],
+	"personalInfo" : {
+		"realName" : "Vicki Savage",
+		"height" : "5'11\"",
+		"weight" : "245 lbs.",
+		"eyes" : "Blue",
+		"hair" : "Blonde",
+		"citizenship" : "U.S.A.",
+		"placeOfBirth" : "Santa Monica, California",
+		"firstAppearance" : "Legends Europe #1",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Super Agent Combat Training", 
+			"rank": 9
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Vicki Savage is a weight lifter from Muscle Beach in Santa Monica, California. She was sometimes seen dating young starlets from Hollywood, which in turn landed her a role in a small film as a super agent who battled Hitler. The film role lead to her being chosen to be an actual super agent. She was sent to Camp X and received super agent training and was assigned to the European branch of the Legends."
+		],
+		"originPicThumb" : "http://i.imgur.com/I7AMUR0.jpg",
+		"originPic" : "http://i.imgur.com/I7AMUR0.jpg",
+		"originExtraPic" : "http://i.imgur.com/OQA3xlp.png",
+		"originExtraText" : "The modern version of Miss Muscles was also inspired by Colette Nelson and Marlene Dietrich."
+		},
+	"goldenAge" : {
+		"createdBy" : "Jerry Siegel and Bill Fraccio",
+		"firstGoldenAgeAppearance" : "Mr. Muscles #22",
+		"year" : "1956",
+		"thenAndNowPicThumb" : "http://i.imgur.com/gCnfrt0.png",
+		"thenAndNowPic" : "http://i.imgur.com/gCnfrt0.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "CampX",
+			"pic" : "https://i.imgur.com/Ofw9E8W.png",
+			"name" : "Camp X"
+		},
+		{
+			"bio" : "LegendsEurope",
+			"pic" : "https://i.imgur.com/TSV9ynR.png",
+			"name" : "The Legends Europe"
+		}
+		]
+}

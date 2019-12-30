@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stella Obscura Bio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="../css/USComics.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">s
+  	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/Parse/min.js"></script>
+	<script type="text/javascript" src="../js/ParseUser.js" ></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script></head>
+</head>
+
+<body onLoad="loadUser()">
+	<section id="content" data-role="page" class="bioPage">
+    <header>
+        <a href="../index.html" data-ajax="false"><img id="usComicsIcon" src="../images/U.S.Comics Icon 152x152.png" title="U.S. Comics"/></a>      
+    	<a href="BioIndex.html" data-ajax="false"><img id="biosUSComicsIcon" src="../images/icons/Bios.png" title="Biographies"/></a>      
+        <ul id="headerControl1">
+            <li class="menuItem"><a class="menuLink" id="userLogin" href="../customer/Login.html">Login</a></li>
+            <li class="menuItem"><a class="menuLink" id="userRegister" href="../customer/Register.html">Sign Up</a></li>
+        </ul>
+        <ul id="headerControl2">
+            <li class="menuItem"><a class="menuLink" id="userAccountName" href="../customer/Account.html">Account</a></li>
+            <li class="menuItem"><a class="menuLink" id="userLogout" href="../index.html" onclick="logOutUser()">Log Out</a></li>
+        </ul>
+    </header>
+    
+    <section class="bioImage">
+    	<img class="bioImage" src="http://i.imgur.com/Wif4OWk.png"/>
+    </section>
+    <div id="bioPersonalInfo" data-role="collapsible" data-collapsed="false" class="bioTitleBar">
+		<h3>Personal Info</h3>
+      	<div id="bioPersonalInfoContent" class="bioContent">
+        <table class="bioPersonalInfoTable">
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Real Name</td>
+            	<td class="bioPersonalInfoTableDataCell">Luana Jones</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Height</td>
+            	<td class="bioPersonalInfoTableDataCell">5'7"</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Weight</td>
+            	<td class="bioPersonalInfoTableDataCell">124 lbs.</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Eyes</td>
+            	<td class="bioPersonalInfoTableDataCell">Brown</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Hair</td>
+            	<td class="bioPersonalInfoTableDataCell">Black</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Citizenship</td>
+            	<td class="bioPersonalInfoTableDataCell">U.S.A.</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Place of Birth</td>
+            	<td class="bioPersonalInfoTableDataCell">Rio Rancho, New Mexico</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">First Appearance</td>
+            	<td class="bioPersonalInfoTableDataCell">Ye Olde Whisper Witch #3</td>
+            </tr>
+          <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Era</td>
+            	<td class="bioPersonalInfoTableDataCell">1800s</td>
+          </tr>
+        </table>
+        </div>
+    </div>
+    <div id="bioSkills" data-role="collapsible" class="bioTitleBar">
+		<h3>Skills</h3>
+      	<div id="bioSkillsContent" class="bioContent">
+            <ul class="graph">
+                <li class="power9">Summon Dark Bio-Matter: 9</li>
+            </ul>
+       	</div>
+    </div>
+    <div id="bioOrigin" data-role="collapsible" class="bioTitleBar">
+        <h3>Origin</h3>
+        <div id="bioOriginContent" class="bioContent">
+        <span class="originStoryText">Stella Obscura is an alternate universe's version of Luana Jones, the girlfriend of Captain Æther. In her universe Captain Æther was killed and she took a job in a saloon and called herself Stella Obscura.<br/><br/>
+
+Superbrain kidnapped and tortured Stella. Using his mental powers, he brought her under his control. His scientists then gave her the ability to generate and control Dark Bio-Mater, a substance that entangles its victims and drains their life force in a matter of minutes. Stella later broke free of Superbrain's mind control.<br/></span>
+        </div>
+    </div>
+    <div id="bioSeeAlso" data-role="collapsible" class="bioTitleBar">
+		<h3>See Also</h3>
+      	<div id="bioSeeAlsoContent" class="bioContent">
+            <div class="ui-grid-b">
+                <div class="ui-block-a"><a href="BioCaptainÆther.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbCaptainÆther.png" title="Captain Æther"><span class="bioTitle">Captain Æther</span></a></div>
+                <div class="ui-block-b"><a href="BioLuana.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbLuana.png" title="Luana Jones"><span class="bioTitle">Luana Jones</span></a></div>
+                <div class="ui-block-c"><a href="BioSuperbrain.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbSuperbrain.png" title="Superbrain"><span class="bioTitle">Superbrain</span></a></div>
+            </div>
+       	</div>
+    </div>
+ 
+    </section>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{
+"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/U7FgLFU.png"
+		],
+	"personalInfo" : {
+		"realName" : "Unknown",
+		"height" : "6'1\"",
+		"weight" : "243 lbs.",
+		"eyes" : "Brown",
+		"hair" : "Black",
+		"citizenship" : "The Beyond",
+		"placeOfBirth" : "The Beyond",
+		"firstAppearance" : "The Legends Europe #3",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Swordsmanship ", 
+			"rank": 9
+		},
+		{
+			"name": "Shield Defense", 
+			"rank": 9
+		},
+		{
+			"name": "Armor", 
+			"rank": 9
+		},
+		{
+			"name": "Beyond Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"The Black Knight is one of the Guardians Of The Beyond, creatures assigned to guard and protect entrances to the Beyond.",
+			"The Black Knight is outfitted in protective armor and skilled in the use of sword and shield. The Black Knight is immortal, like all creatures from the Beyond. If his body is severely damaged or destroyed, his spirit will return to the Beyond where the body can regenerate."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		},
+		{
+			"bio" : "GuardiansOfTheBeyond",
+			"pic" : "https://i.imgur.com/NYLQK7m.png",
+			"name" : "Guardians Of The Beyond"
+		}
+		]
+}

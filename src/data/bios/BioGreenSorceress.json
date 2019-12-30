@@ -1,0 +1,57 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/qT3wbBO.png"
+		],
+	"personalInfo" : {
+		"realName" : "Unknown",
+		"height" : "5'10\"",
+		"weight" : "124 lbs.",
+		"eyes" : "Green",
+		"hair" : "Blonde/Pink",
+		"citizenship" : "The Green Empire",
+		"placeOfBirth" : "Voltor City, The Green Empire",
+		"firstAppearance" : "Legends Europe #2",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Politics", 
+			"rank": 9
+		},
+		{
+			"name": "Seduction", 
+			"rank": 9
+		}
+		],
+	"origin" : {
+		"story" : [
+			"The Green Sorceress is ruler of the underground city of Voltor and the Green Empire. Her \"sorcery\" is a blend of advanced technology, political power, and personal charm. Her green skin indicates a race of human unknown to the world at large.",
+			"She sided with the Allies during the war, aiding the Legends Europe and acting as a double agent against the Nazis."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "Joe Simon",
+		"firstGoldenAgeAppearance" : "Blue Bolt Comics #1",
+		"year" : "1940",
+		"thenAndNowPicThumb" : "https://i.imgur.com/M8tmZEw.png",
+		"thenAndNowPic" : "https://i.imgur.com/M8tmZEw.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "CaptainBlitzkrieg",
+			"pic" : "https://i.imgur.com/of66WKm.png",
+			"name" : "Captain Blitzkrieg"
+		},
+		{
+			"bio" : "LegendsEurope",
+			"pic" : "https://i.imgur.com/TSV9ynR.png",
+			"name" : "The Legends Europe"
+		},
+		{
+			"bio" : "Voltor",
+			"pic" : "https://i.imgur.com/75Ws0pi.png",
+			"name" : "Voltor"
+		}
+		]
+}

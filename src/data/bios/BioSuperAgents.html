@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The Super Agents Bio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="../css/USComics.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">s
+    <script type="text/javascript" src="../js/Parse/min.js"></script>
+	<script type="text/javascript" src="../js/ParseUser.js" ></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script></head>
+</head>
+
+<body onLoad="loadUser()">
+	<section id="content" data-role="page" class="bioPage">
+    <header>
+        <a href="../index.html" data-ajax="false"><img id="usComicsIcon" src="../images/U.S.Comics Icon 152x152.png" title="U.S. Comics"/></a>      
+    	<a href="BioIndex.html" data-ajax="false"><img id="biosUSComicsIcon" src="../images/icons/Bios.png" title="Biographies"/></a>      
+        <ul id="headerControl1">
+            <li class="menuItem"><a class="menuLink" id="userLogin" href="../customer/Login.html">Login</a></li>
+            <li class="menuItem"><a class="menuLink" id="userRegister" href="../customer/Register.html">Sign Up</a></li>
+        </ul>
+        <ul id="headerControl2">
+            <li class="menuItem"><a class="menuLink" id="userAccountName" href="../customer/Account.html">Account</a></li>
+            <li class="menuItem"><a class="menuLink" id="userLogout" href="../index.html" onclick="logOutUser()">Log Out</a></li>
+        </ul>
+    </header>
+    
+    <section class="bioImage">
+    	<img class="bioImage" src="http://i.imgur.com/0bAuJfn.png"/>
+    </section>
+    <div id="bioOrigin" data-role="collapsible" data-collapsed="false" class="bioTitleBar">
+        <h3>Origin</h3>
+        <div id="bioOriginContent" class="bioContent">
+        <span class="originStoryText">The Super Agents are a team of special agents created by the order of President Kennedy in 1961. They were the last group of individuals trained at Camp X before it was closed.<br/><br/>
+
+The team members of the Super Agents are Atoman, Robot Girl, Strongman, and Undercover Girl. Atoman serves as the de facto leader of the group. Professor Supermind serves as the liaison between the group and an unknown government agency that provides missions.<br/></span>
+        </div>
+    </div>
+    <div id="bioSeeAlso" data-role="collapsible" class="bioTitleBar">
+		<h3>See Also</h3>
+      	<div id="bioSeeAlsoContent" class="bioContent">
+            <div class="ui-grid-b">
+                <div class="ui-block-a"><a href="BioAtoman.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbAtoman.png" title="Atoman"><span class="bioTitle">Atoman</span></a></div>
+                <div class="ui-block-b"><a href="BioCampX.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbCampX.png" title="Camp X"><span class="bioTitle">Camp X</span></a></div>
+                <div class="ui-block-c"><a href="BioProfessorSupermind.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbProfessorSupermind.png" title="Professor Supermind"><span class="bioTitle">Professor Supermind</span></a></div>
+                <div class="ui-block-a"><a href="BioRobotGirl.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbRobotGirl.png" title="Robot Girl"><span class="bioTitle">Robot Girl</span></a></div>
+                <div class="ui-block-b"><a href="BioStrongman.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbStrongman.png" title="Strongman"><span class="bioTitle">Strongman</span></a></div>
+                <div class="ui-block-c"><a href="BioUndercoverGirl.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbUndercoverGirl.png" title="Undercover Girl"><span class="bioTitle">Undercover Girl</span></a></div>
+            </div>
+       	</div>
+    </div>
+ 
+    </section>
+</body>
+</html>

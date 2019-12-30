@@ -1,0 +1,49 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/FRSiiB4.png"
+		],
+	"origin" : {
+		"story" : [
+			"Created by the order of Emperor Hirohito to counter the Allied Legends Pacific team, the Imperials are a group of powerful individuals from Japan and her allies.",
+            "The team members of the Imperials are Captain Nippon, Nagar, the Scarlet Serpent, Shinto Samurai, Agyo, Geisha, and the White Fox . Captain Nippon serves as the leader of the group."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Agyo",
+			"pic" : "https://i.imgur.com/hXyLEqK.png",
+			"name" : "Agyo"
+		},
+		{
+			"bio" : "CaptainNippon",
+			"pic" : "https://i.imgur.com/y5Y2vFQ.png",
+			"name" : "Captain Nippon"
+		},
+		{
+			"bio" : "Geisha",
+			"pic" : "https://i.imgur.com/cq8SyJ3.png",
+			"name" : "Geisha"
+		},
+		{
+			"bio" : "Nagar",
+			"pic" : "https://i.imgur.com/gyeIfcA.png",
+			"name" : "Nagar"
+		},
+		{
+			"bio" : "ScarletSerpent",
+			"pic" : "https://i.imgur.com/Kfgfrus.png",
+			"name" : "Scarlet Serpent"
+		},
+		{
+			"bio" : "ShintoSamurai",
+			"pic" : "https://i.imgur.com/KMXWT4z.png",
+			"name" : "Shinto Samurai"
+		},
+		{
+			"bio" : "WhiteFox",
+			"pic" : "https://i.imgur.com/QeLBtau.png",
+			"name" : "White Fox"
+		}
+		]
+}

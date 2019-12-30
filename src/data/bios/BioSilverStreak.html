@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The Silver Streak Bio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="../css/USComics.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">s
+    <script type="text/javascript" src="../js/Parse/min.js"></script>
+	<script type="text/javascript" src="../js/ParseUser.js" ></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script></head>
+</head>
+
+<body onLoad="loadUser()">
+	<section id="content" data-role="page" class="bioPage">
+    <header>
+        <a href="../index.html" data-ajax="false"><img id="usComicsIcon" src="../images/U.S.Comics Icon 152x152.png" title="U.S. Comics"/></a>      
+    	<a href="BioIndex.html" data-ajax="false"><img id="biosUSComicsIcon" src="../images/icons/Bios.png" title="Biographies"/></a>      
+        <ul id="headerControl1">
+            <li class="menuItem"><a class="menuLink" id="userLogin" href="../customer/Login.html">Login</a></li>
+            <li class="menuItem"><a class="menuLink" id="userRegister" href="../customer/Register.html">Sign Up</a></li>
+        </ul>
+        <ul id="headerControl2">
+            <li class="menuItem"><a class="menuLink" id="userAccountName" href="../customer/Account.html">Account</a></li>
+            <li class="menuItem"><a class="menuLink" id="userLogout" href="../index.html" onclick="logOutUser()">Log Out</a></li>
+        </ul>
+    </header>
+    
+    <section class="bioImage">
+    	<img class="bioImage" src="http://i.imgur.com/efKXdq0.png"/>
+    </section>
+    <div id="bioPersonalInfo" data-role="collapsible" data-collapsed="false" class="bioTitleBar">
+		<h3>Personal Info</h3>
+      	<div id="bioPersonalInfoContent" class="bioContent">
+        <table class="bioPersonalInfoTable">
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Real Name</td>
+            	<td class="bioPersonalInfoTableDataCell">Nate "Silver" Johnson</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Height</td>
+            	<td class="bioPersonalInfoTableDataCell">6'0"</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Weight</td>
+            	<td class="bioPersonalInfoTableDataCell">202 lbs.</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Eyes</td>
+            	<td class="bioPersonalInfoTableDataCell">Brown</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Hair</td>
+            	<td class="bioPersonalInfoTableDataCell">None</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Citizenship</td>
+            	<td class="bioPersonalInfoTableDataCell">U.S.A.</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Place of Birth</td>
+            	<td class="bioPersonalInfoTableDataCell">Oakville, Alabama</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">First Appearance</td>
+            	<td class="bioPersonalInfoTableDataCell">The Legends Europe #1</td>
+            </tr>
+          <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Era</td>
+            	<td class="bioPersonalInfoTableDataCell">World War II</td>
+          </tr>
+        </table>
+        </div>
+    </div>
+    <div id="bioSkills" data-role="collapsible" class="bioTitleBar">
+		<h3>Skills</h3>
+      	<div id="bioSkillsContent" class="bioContent">
+            <ul class="graph">
+                <li class="power9">Regeneration: 9</li>
+                <li class="power9">Super Agent Combat Training: 9</li>
+                <li class="power10">Super Speed: 10</li>
+            </ul>
+       	</div>
+    </div>
+    <div id="bioOrigin" data-role="collapsible" class="bioTitleBar">
+        <h3>Origin</h3>
+        <div id="bioOriginContent" class="bioContent">
+        <span class="originStoryText">Nate "Silver" Johnson was chosen as a volunteer in the U.S. Government's secret Æther experiments. By taping into the Æther, they believed a man would be able to move at the speed of light. The experiment was a success. Nate's body was merged with the foam of the Æther. Nate dubbed himself the Silver Streak and, after recieving Camp X training, joined the European branch of the Legends to fight Hitler.<br/></span>
+			<a href="#popupOrigin" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="http://i.imgur.com/Qdz9iuf.jpg" alt="Origin" title="Origin" style="width:30%"></a>
+			<div data-role="popup" id="popupOrigin" data-overlay-theme="b" data-theme="b" data-corners="false">
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="http://i.imgur.com/Qdz9iuf.jpg" style="max-height:512px;">
+			</div>
+            <br/><span class="compareThenAndNowLabel">Tap image to read origin story.</span>
+        </div>
+    </div>
+    <div id="bioGoldenAge" data-role="collapsible" class="bioTitleBar">
+        <h3>Golden Age</h3>
+        <div id="bioGoldenAgeContent" class="bioContent">
+            <table class="goldenAgeTable">
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Created By</td>
+            	<td class="bioPersonalInfoTableDataCell">Jack Binder</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">First Appearance</td>
+            	<td class="bioPersonalInfoTableDataCell">Silver Streak #3</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Year</td>
+            	<td class="bioPersonalInfoTableDataCell">1940</td>
+            </tr>
+            </table>
+            <img src="../images/icons/ThumbJessieOwens.png"/><br/>The modern version of the Silver Streak was also inspired by Jesse Owens.<br/>
+            <a href="#popupThenAndNow" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="http://i.imgur.com/0FqIaWY.png" alt="Then And Now" title="Then And Now" style="width:30%"></a>
+            <div data-role="popup" id="popupThenAndNow" data-overlay-theme="b" data-theme="b" data-corners="false">
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="http://i.imgur.com/0FqIaWY.png" style="max-height:512px;">
+            </div>
+            <br/><span class="compareThenAndNowLabel">Tap image to compare Golden Age and Modern versions.</span>
+        </div>
+    </div>
+    <div id="bioSeeAlso" data-role="collapsible" class="bioTitleBar">
+		<h3>See Also</h3>
+      	<div id="bioSeeAlsoContent" class="bioContent">
+            <div class="ui-grid-b">
+                <div class="ui-block-a"><a href="BioCampX.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbCampX.png" title="Camp X"><span class="bioTitle">Camp X</span></a></div>
+                <div class="ui-block-b"><a href="BioLegendsEurope.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbFlag.png" title="The Legends Europe"><span class="bioTitle">The Legends Europe</span></a></div>
+                <div class="ui-block-c"><a href="BioLuminiferousÆther.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbLuminiferousÆther.png" title="Luminiferous Æther"><span class="bioTitle">Luminiferous Æther</span></a></div>
+                <div class="ui-block-a"><a href="http://en.wikipedia.org/wiki/Jesse_Owens"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbWikipedia.png" title="Jesse Owens At Wikipedia"><span class="bioTitle">Jesse Owens At Wikipedia</span></a></div>
+                </tr>
+            </div>
+       	</div>
+    </div>
+ 
+    </section>
+</body>
+</html>

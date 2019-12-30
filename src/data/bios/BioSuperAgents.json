@@ -1,0 +1,44 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/0bAuJfn.png"
+		],
+	"origin" : {
+		"story" : [
+			"The Super Agents are a team of special agents created by the order of President Kennedy in 1961. They were the last group of individuals trained at Camp X before it was closed.",
+			"The team members of the Super Agents are Atoman, Robot Girl, Strongman, and Undercover Girl. Atoman serves as the de facto leader of the group. Professor Supermind serves as the liaison between the group and an unknown government agency that provides missions."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Atoman",
+			"pic" : "https://i.imgur.com/rxHlfb9.png",
+			"name" : "Atoman"
+		},
+		{
+			"bio" : "CampX",
+			"pic" : "https://i.imgur.com/Ofw9E8W.png",
+			"name" : "Camp X"
+		},
+		{
+			"bio" : "ProfessorSupermind",
+			"pic" : "https://i.imgur.com/kAaTXeV.png",
+			"name" : "Professor Supermind"
+		},
+		{
+			"bio" : "RobotGirl",
+			"pic" : "https://i.imgur.com/w86AbX3.png",
+			"name" : "Robot Girl"
+		},
+		{
+			"bio" : "Strongman",
+			"pic" : "https://i.imgur.com/LCI3GfK.png",
+			"name" : "Strongman"
+		},
+		{
+			"bio" : "UndercoverGirl",
+			"pic" : "https://i.imgur.com/iXr94yS.png",
+			"name" : "UndercoverGirl"
+		}
+		]
+}

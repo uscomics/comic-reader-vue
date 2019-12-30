@@ -3,6 +3,7 @@
     {
       "name": "Gold Venus",
       "image": "../statics/rive/gold-venus.png",
+      "icon": "../statics/rive/gold-venus-icon.png",
       "width": 683,
       "height": 910,
       "position": "cf",
@@ -21,6 +22,7 @@
     {
       "name": "Captain Æther",
       "image": "../statics/rive/captain-aether.png",
+      "icon": "../statics/rive/captain-aether-icon.png",
       "width": 683,
       "height": 910,
       "position": "lr",
@@ -39,6 +41,7 @@
     {
       "name": "Whisper Witch",
       "image": "../statics/rive/whisper-witch.png",
+      "icon": "../statics/rive/whisper-witch-icon.png",
       "width": 683,
       "height": 910,
       "position": "rr",

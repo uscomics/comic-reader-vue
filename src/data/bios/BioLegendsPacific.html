@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The Legends Pacific Bio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="../css/USComics.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">s
+    <script type="text/javascript" src="../js/Parse/min.js"></script>
+	<script type="text/javascript" src="../js/ParseUser.js" ></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script></head>
+</head>
+
+<body onLoad="loadUser()">
+	<section id="content" data-role="page" class="bioPage">
+    <header>
+        <a href="../index.html" data-ajax="false"><img id="usComicsIcon" src="../images/U.S.Comics Icon 152x152.png" title="U.S. Comics"/></a>      
+    	<a href="BioIndex.html" data-ajax="false"><img id="biosUSComicsIcon" src="../images/icons/Bios.png" title="Biographies"/></a>      
+        <ul id="headerControl1">
+            <li class="menuItem"><a class="menuLink" id="userLogin" href="../customer/Login.html">Login</a></li>
+            <li class="menuItem"><a class="menuLink" id="userRegister" href="../customer/Register.html">Sign Up</a></li>
+        </ul>
+        <ul id="headerControl2">
+            <li class="menuItem"><a class="menuLink" id="userAccountName" href="../customer/Account.html">Account</a></li>
+            <li class="menuItem"><a class="menuLink" id="userLogout" href="../index.html" onclick="logOutUser()">Log Out</a></li>
+        </ul>
+    </header>
+    
+    <section class="bioImage">
+    	<img class="bioImage" src="http://i.imgur.com/kZMDX0b.png"/>
+    	<img class="bioImage" src="http://i.imgur.com/rxBOZyc.png"/>
+    </section>
+    <div id="bioOrigin" data-role="collapsible" data-collapsed="false" class="bioTitleBar">
+        <h3>Origin</h3>
+        <div id="bioOriginContent" class="bioContent">
+        <span class="originStoryText">Created by the order of President Roosevelt, the Legends collects the world's best trained super agents together as a force to stop the Axis powers.<br/><br/>
+
+The Legends project is an expansion of the successful Gold Venus Project. It consisted of two branches, the Legends Pacific and the Legends Europe.<br/><br/>
+
+The team members of the Legends Pacific are Gold Venus, Trick Arrow, Man O' Metal, Dr. Frost, Dreamtime, the Shark, and Yin Yang. Gold Venus serves as the de facto leader of the group. Most of the group trained at Camp X.<br/></span>
+        </div>
+    </div>
+    <div id="bioSeeAlso" data-role="collapsible" class="bioTitleBar">
+		<h3>See Also</h3>
+      	<div id="bioSeeAlsoContent" class="bioContent">
+            <div class="ui-grid-b">
+                <div class="ui-block-a"><a href="BioCampX.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbCampX.png" title="Camp X"><span class="bioTitle">Camp X</span></a></div>
+                <div class="ui-block-b"><a href="BioDreamtime.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbDreamtime.png" title="Dreamtime"><span class="bioTitle">Dreamtime</span></a></div>
+                <div class="ui-block-c"><a href="BioDrFrost.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbDrFrost.png" title="Dr. Frost"><span class="bioTitle">Dr. Frost</span></a></div>
+                <div class="ui-block-a"><a href="BioGoldVenus.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbGoldVenus.png" title="TGold Venus"><span class="bioTitle">Gold Venus</span></a></div>
+                <div class="ui-block-b"><a href="BioManOMetal.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbManOMetal.png" title="Man O' Metal"><span class="bioTitle">Man O' Metal</span></a></div>
+                <div class="ui-block-c"><a href="BioShark.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbShark.png" title="The Shark"><span class="bioTitle">The Shark</span></a></div>
+                <div class="ui-block-a"><a href="BioTrickArrow.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbTrickArrow.png" title="Trick Arrow"><span class="bioTitle">Trick Arrow</span></a></div>
+                <div class="ui-block-b"><a href="BioYinYang.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbYinYang.png" title="Yin Yang"><span class="bioTitle">Yin Yang</span></a></div>
+            </div>
+       	</div>
+    </div>
+</body>
+</html>

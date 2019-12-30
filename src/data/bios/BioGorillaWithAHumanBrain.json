@@ -1,0 +1,52 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/jCcUAud.png"
+		],
+	"personalInfo" : {
+		"realName" : "Unknown",
+		"height" : "6'8\"",
+		"weight" : "637 lbs.",
+		"eyes" : "Black",
+		"hair" : "Brown",
+		"citizenship" : "Unknown",
+		"placeOfBirth" : "Unknown",
+		"firstAppearance" : "The Legends Europe #3",
+		"era" : "1960s"
+		},
+	"skills" : [
+		{
+			"name": "Super Strength", 
+			"rank": 3
+		}
+		],
+	"origin" : {
+		"story" : [
+			"The Gorilla With A Human Brain is a human being who was genetically altered by Dr. Creator. He was changed to have the body of a gorilla and the brain of a human. Gorilla With A Human Brain is a member of the Animals."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "Harry Graves",
+		"firstGoldenAgeAppearance" : "Blue Beetle #9",
+		"year" : "1941",
+		"thenAndNowPicThumb" : "https://i.imgur.com/Uq5XzLy.png",
+		"thenAndNowPic" : "https://i.imgur.com/Uq5XzLy.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Animals",
+			"pic" : "https://i.imgur.com/gRbHlkb.png",
+			"name" : "The Animals"
+		},
+		{
+			"bio" : "DrCreator",
+			"pic" : "https://i.imgur.com/1nESiZ0.png",
+			"name" : "Dr. Creator"
+		},
+		{
+			"bio" : "MonsterIsland",
+			"pic" : "https://i.imgur.com/B0wkuPm.png",
+			"name" : "Monster Island"
+		}
+		]
+}

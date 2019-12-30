@@ -1,0 +1,44 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/NlQTH0j.png"
+		],
+	"personalInfo" : {
+		"realName" : "Barry Dale",
+		"height" : "5'7\"",
+		"weight" : "115 lbs.",
+		"eyes" : "Black",
+		"hair" : "Black",
+		"citizenship" : "Beyond",
+		"placeOfBirth" : "Beyond",
+		"firstAppearance" : "Gold Venus #1",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Knife Fighting", 
+			"rank": 3
+		},
+		{
+			"name": "Beyond Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Lithuim is a murderous sociopath. She is creature from the Beyond and is fiercely loyal to her master, the Clown. Lithium is immortal, like all creatures from the Beyond. If her body is severely damaged or destroyed, her spirit will return to the Beyond where the body can regenerate."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		},
+		{
+			"bio" : "Clown",
+			"pic" : "https://i.imgur.com/llBwUQR.png",
+			"name" : "The Clown"
+		}
+		]
+}

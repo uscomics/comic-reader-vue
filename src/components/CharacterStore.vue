@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="character-info">
+    <div class="character-store">
       <div>
         <div class="character-name">{{getName()}}</div>
         <div class="row justify-center cover-gallery">
@@ -19,7 +19,7 @@ import Issue from '../data/issue'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
 export default {
-  name: 'CharacterInfo',
+  name: 'CharacterStore',
   props: {
     character: null
   },
@@ -50,7 +50,7 @@ export default {
 }
 </script>
 <style scoped>
-.character-info {
+.character-store {
   width: 99%;
   border: 1px solid #073d6d;
   background-color: #FFFFFF77;

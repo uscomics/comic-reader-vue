@@ -1,0 +1,53 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/eF3SbN0.png"
+		],
+	"personalInfo" : {
+		"realName" : "Wolfgang Schmidt",
+		"height" : "6'1\"",
+		"weight" : "243  lbs.",
+		"eyes" : "Blue",
+		"hair" : "Blonde",
+		"citizenship" : "Germany",
+		"placeOfBirth" : "Berlin, Germany",
+		"firstAppearance" : "The Legends Europe #2",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Tech Armor", 
+			"rank": 8
+		},
+		{
+			"name": "Flight ", 
+			"rank": 9
+		},
+		{
+			"name": "Super Speed", 
+			"rank": 9
+		},
+		{
+			"name": "Damage Resistance", 
+			"rank": 10
+		},
+		{
+			"name": "Super Strength", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Captain Blitzkrieg is a Dream Warrior, someone who was given his powers in a dream. In this dream Wolfgang Schmidt met with \"the embodiment of the Aryan race\" who explained that Schmidt had been called upon in his country's hour of need."
+		],
+		"originPicThumb" : "https://i.imgur.com/WTVVfY2.jpg",
+		"originPic" : "https://i.imgur.com/WTVVfY2.jpg"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "GreenSorceress",
+			"pic" : "https://i.imgur.com/2myI0mp.png",
+			"name" : "Green Sorceress"
+		}
+		]
+}

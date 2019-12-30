@@ -1,0 +1,60 @@
+{
+"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/YKWBPlL.png"
+		],
+	"personalInfo" : {
+		"realName" : "Unknown",
+		"height" : "5'11\"",
+		"weight" : "195 lbs.",
+		"eyes" : "Black",
+		"hair" : "Black",
+		"citizenship" : "Unknown",
+		"placeOfBirth" : "Unknown",
+		"firstAppearance" : "The Legends Europe #3",
+		"era" : "1960s"
+		},
+	"skills" : [
+		{
+			"name": "Super Strength", 
+			"rank": 3
+		},
+		{
+			"name": "Claw Attack", 
+			"rank": 9
+		},
+		{
+			"name": "Bite Attack", 
+			"rank": 9
+		}
+		],
+	"origin" : {
+		"story" : [
+			"The Black Rat is a human being who was genetically altered by Dr. Creator. He was changed so that his body is a blend of human and rat. Black Rat is a member of the Animals."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "Unknown",
+		"firstGoldenAgeAppearance" : "Bulletman #3",
+		"year" : "1942",
+		"thenAndNowPicThumb" : "https://i.imgur.com/Uq5XzLy.png",
+		"thenAndNowPic" : "https://i.imgur.com/Uq5XzLy.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Animals",
+			"pic" : "https://i.imgur.com/gRbHlkb.png",
+			"name" : "The Animals"
+		},
+		{
+			"bio" : "DrCreator",
+			"pic" : "https://i.imgur.com/1nESiZ0.png",
+			"name" : "Dr. Creator"
+		},
+		{
+			"bio" : "MonsterIsland",
+			"pic" : "https://i.imgur.com/B0wkuPm.png",
+			"name" : "Monster Island"
+		}
+		]
+}

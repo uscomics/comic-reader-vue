@@ -1,0 +1,69 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/lk4hccn.png"
+		],
+	"personalInfo" : {
+		"realName" : "The Morrigan, (Badb, Nemain, Macha)",
+		"height" : "5'11\" (Badb), 5'10\" (Nemain), 5'10\" (Macha)",
+		"weight" : "145 lbs (Badb), 142 lbs (Nemain), 143 lbs (Macha)",
+		"eyes" : "Black/Red",
+		"hair" : "Black (Badb), Blonde/Red (Nemain), Blonde (Macha)",
+		"citizenship" : "Beyond",
+		"placeOfBirth" : "Beyond",
+		"firstAppearance" : "Ye Old Whisper Witch #3",
+		"era" : "Renaissance, All"
+		},
+	"skills" : [
+		{
+			"name": "Damage Resistance (Badb, Nemain, Macha)", 
+			"rank": 7
+		},
+		{
+			"name": "Axe (Nemain)", 
+			"rank": 10
+		},
+		{
+			"name": "Bloodlust (Nemain)", 
+			"rank": 10
+		},
+		{
+			"name": "Hammer (Nemain)", 
+			"rank": 10
+		},
+		{
+			"name": "Shield Defense (Macha)", 
+			"rank": 10
+		},
+		{
+			"name": "Swordsmanship (Badb, Macha)", 
+			"rank": 10
+		},
+		{
+			"name": "Beyond Immortality (Badb, Nemain, Macha)", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"The Morrigan are a trio of warrior Goddesses from the Beyond, Badb, Nemain, and Macha. They have frequent battles with warriors from the Otherworld."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		},
+		{
+			"bio" : "Otherworld",
+			"pic" : "https://i.imgur.com/8oHPDt5.png",
+			"name" : "The Otherworld"
+		},
+		{
+			"bio" : "http://en.wikipedia.org/wiki/The_Morr%C3%ADgan",
+			"pic" : "https://i.imgur.com/0zF2LNd.png",
+			"name" : "The Morrigan At Wikipedia"
+		}
+		]
+}

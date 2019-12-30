@@ -1,0 +1,55 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/sCEytgz.png"
+		],
+	"origin" : {
+		"story" : [
+			"Created by the order of President Roosevelt, the Legends collects the world's best trained super agents together as a force to stop the Axis powers.",
+			"The Legends project is an expansion of the successful Gold Venus Project. It consisted of two branches, the Legends Pacific and the Legends Europe.",
+			"The team members of the Legends Europe are The Wraith, Silver Streak, The Heap, Whisper Witch, Miss Muscles, The Flag and Fireworks. The Flag serves as the de facto leader of the group. Most of the group trained at Camp X."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "CampX",
+			"pic" : "https://i.imgur.com/Ofw9E8W.png",
+			"name" : "Camp X"
+		},
+		{
+			"bio" : "Flag",
+			"pic" : "https://i.imgur.com/TSV9ynR.png",
+			"name" : "The Flag"
+		},
+		{
+			"bio" : "Fireworks",
+			"pic" : "https://i.imgur.com/FkYIj27.png",
+			"name" : "Fireworks"
+		},
+		{
+			"bio" : "Heap",
+			"pic" : "https://i.imgur.com/jrAp36h.png",
+			"name" : "Heap"
+		},
+		{
+			"bio" : "MissMuscles",
+			"pic" : "https://i.imgur.com/ib4lzqt.png",
+			"name" : "Miss Muscles"
+		},
+		{
+			"bio" : "SilverStreak",
+			"pic" : "https://i.imgur.com/zS1bMaF.png",
+			"name" : "Silver Streak"
+		},
+		{
+			"bio" : "WhisperWitch",
+			"pic" : "https://i.imgur.com/BiXRLrB.png",
+			"name" : "Whisper Witch"
+		},
+		{
+			"bio" : "Wraith",
+			"pic" : "https://i.imgur.com/eJdogQx.png",
+			"name" : "The Wraith"
+		}
+		]
+}

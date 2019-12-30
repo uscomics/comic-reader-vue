@@ -1,0 +1,58 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/O1vZbIV.png"
+		],
+	"personalInfo" : {
+		"realName" : "Starr Flagg",
+		"height" : "5'6\"",
+		"weight" : "134 lbs.",
+		"eyes" : "Blue",
+		"hair" : "Blonde",
+		"citizenship" : "U.S.A.",
+		"placeOfBirth" : "Arlington, Texas",
+		"firstAppearance" : "The Legends Europe #1",
+		"era" : "1960s"
+		},
+	"skills" : [
+		{
+			"name": "Super Agent Combat Training", 
+			"rank": 10
+		},
+		{
+			"name": "Gymnastics", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Starr Flagg was a 1960 Olympic Gymnast who was inspired by the stories of Gold Venus. Using government contacts she gained from the Olympics, she applied to and was accepted in the super agent program at Camp X as one of their final students. She was then made a member of the Super Agents."
+		],
+		"originPicThumb" : "https://i.imgur.com/fNHfOYC.jpg",
+		"originPic" : "https://i.imgur.com/fNHfOYC.jpg"
+		},
+	"goldenAge" : {
+		"createdBy" : "Ogden Whitney",
+		"firstGoldenAgeAppearance" : "Manhunt #1",
+		"year" : "1947",
+		"thenAndNowPicThumb" : "https://i.imgur.com/erB3yZN.png",
+		"thenAndNowPic" : "https://i.imgur.com/erB3yZN.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "CampX",
+			"pic" : "https://i.imgur.com/Ofw9E8W.png",
+			"name" : "Camp X"
+		},
+		{
+			"bio" : "GoldVenus",
+			"pic" : "https://i.imgur.com/CfgUJ7w.png",
+			"name" : "Gold Venus"
+		},
+		{
+			"bio" : "SuperAgents",
+			"pic" : "https://i.imgur.com/rxHlfb9.png",
+			"name" : "Super Agents"
+		}
+		]
+}

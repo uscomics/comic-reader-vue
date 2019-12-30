@@ -1,0 +1,106 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/wAEEJr2.png"
+		],
+	"personalInfo" : {
+		"realName" : "Scott White",
+		"height" : "6'0\"",
+		"weight" : "196 lbs.",
+		"eyes" : "Blue",
+		"hair" : "Blonde",
+		"citizenship" : "U.S.A.",
+		"placeOfBirth" : "Normal, Illinois",
+		"firstAppearance" : "The Legends Pacific #1",
+		"era" : "Prehistoric/Modern"
+		},
+	"skills" : [
+		{
+			"name": "Herbal Medicine", 
+			"rank": 5
+		},
+		{
+			"name": "Ape-Man Language", 
+			"rank": 6
+		},
+		{
+			"name": "Knife Combat", 
+			"rank": 7
+		},
+		{
+			"name": "Unarmed Combat", 
+			"rank": 8
+		},
+		{
+			"name": "Hunting", 
+			"rank": 8
+		},
+		{
+			"name": "Tracking", 
+			"rank": 9
+		},
+		{
+			"name": "Speak With Animals", 
+			"rank": 9
+		},
+		{
+			"name": "Command Dinosaurs", 
+			"rank": 9
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Scott White is an American teenager who, when he sleeps, enters a dream world known as Wild World. In Wild World dinosaurs, ape-men, and humans all co-exist side by side. Wild Boy is a Dream Warrior.",
+			"The natives of Wild World refer to Scott as Wild Boy. As Wild Boy, Scott is friends with many of the natives, dinosaurs and ape-men. He is also skilled at unarmed combat, combat with with primitive weapons such as knives and spears, hunting, tracking, and in herbal medicines. Wild Boy has a pet Quentzalcoatlus named Keeto. Keeto is large enough to carry Wild Boy on his back when he flys."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "Unknown",
+		"firstGoldenAgeAppearance" : "Wild Boy of the Congo #1",
+		"year" : "1954",
+		"thenAndNowPicThumb" : "https://i.imgur.com/AZIBsT1.png",
+		"thenAndNowPic" : "https://i.imgur.com/AZIBsT1.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Aarg",
+			"pic" : "https://i.imgur.com/CCS8svH.png",
+			"name" : "Aarg And The Ape-Men"
+		},
+		{
+			"bio" : "ChiefKambala",
+			"pic" : "https://i.imgur.com/Z0OAFOL.png",
+			"name" : "Chief Kambala"
+		},
+		{
+			"bio" : "Keeto",
+			"pic" : "https://i.imgur.com/ss48VUa.png",
+			"name" : "Keeto (Wild Boy)"
+		},
+		{
+			"bio" : "Lura",
+			"pic" : "https://i.imgur.com/xRsoEfK.png",
+			"name" : "Lura"
+		},
+		{
+			"bio" : "TigerQueen",
+			"pic" : "https://i.imgur.com/qSulPEX.png",
+			"name" : "Tiger Queen"
+		},
+		{
+			"bio" : "Timba",
+			"pic" : "https://i.imgur.com/54YTk4N.png",
+			"name" : "Timba"
+		},
+		{
+			"bio" : "WildWorld",
+			"pic" : "https://i.imgur.com/TDpgnmm.png",
+			"name" : "Wild World"
+		},
+		{
+			"bio" : "ZabbaTheWitchDoctor",
+			"pic" : "https://i.imgur.com/lyhcsam.png",
+			"name" : "Zabba The Witch Doctor"
+		}
+		]
+}

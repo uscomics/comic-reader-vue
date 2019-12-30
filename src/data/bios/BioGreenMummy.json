@@ -1,0 +1,66 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/8SGKXWp.png"
+		],
+	"personalInfo" : {
+		"realName" : "Charles Forbes",
+		"height" : "6'0\"",
+		"weight" : "175 lbs.",
+		"eyes" : "Green",
+		"hair" : "None",
+		"citizenship" : "U.S.A.",
+		"placeOfBirth" : "New York, New York",
+		"firstAppearance" : "Gold Venus #3",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Super Strength", 
+			"rank": 2
+		},
+		{
+			"name": "Damage Resistance", 
+			"rank": 5
+		},
+		{
+			"name": "Green Mummy Breath", 
+			"rank": 7
+		},
+		{
+			"name": "Fire Susceptibility", 
+			"rank": 9
+		},
+		{
+			"name": "Beyond Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Charles Forbes is a millionaire who paid what he believed was a Nazi doctor to make him immortal. The doctor was actually a Fleshless One in disguise and the procedure converted Forbes into a creature of the Beyond.",
+            "The Green Mummy is immortal, like all creatures from the Beyond. If his body is severely damaged or destroyed, his spirit will return to the Beyond where the body can regenerate."
+		],
+		"originPicThumb" : "https://i.imgur.com/Yoa5LNO.jpg",
+		"originPic" : "https://i.imgur.com/Yoa5LNO.jpg"
+		},
+	"goldenAge" : {
+		"createdBy" : "Jack Binder",
+		"firstGoldenAgeAppearance" : "Prize Comics #8 (vol 2)",
+		"year" : "1942",
+		"thenAndNowPicThumb" : "https://i.imgur.com/ysw63Ey.png",
+		"thenAndNowPic" : "https://i.imgur.com/ysw63Ey.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		},
+		{
+			"bio" : "FleshlessOnes",
+			"pic" : "https://i.imgur.com/XQpxngT.png",
+			"name" : "The Fleshless Ones"
+		}
+		]
+}

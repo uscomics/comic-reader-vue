@@ -1,0 +1,52 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/uWDLnYY.png"
+		],
+	"personalInfo" : {
+		"realName" : "Marbella",
+		"height" : "6'6\"",
+		"weight" : "262 lbs.",
+		"eyes" : "Black",
+		"hair" : "Black",
+		"citizenship" : "Beyond",
+		"placeOfBirth" : "Beyond",
+		"firstAppearance" : "Ye Olde Whisper Witch #3",
+		"era" : "Renaissance, World War II"
+		},
+	"skills" : [
+		{
+			"name": "Super Strength", 
+			"rank": 5
+		},
+		{
+			"name": "Climb Walls", 
+			"rank": 7
+		},
+		{
+			"name": "Super Reflexes", 
+			"rank": 8
+		},
+		{
+			"name": "Spideroid Silk", 
+			"rank": 10
+		},
+		{
+			"name": "Beyond Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Marbella commands the spideroids of the Beyond, creatures that posses four extra limbs similar to spider legs. Spideroids are extremely strong and quick. They can climb walls and capture foes in webs of silk stronger than steel.",
+            "Marbella is immortal, like all creatures from the Beyond. If her body is severely damaged or destroyed, her spirit will return to the Beyond where the body can regenerate."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		}
+		]
+}

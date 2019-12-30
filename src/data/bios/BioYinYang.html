@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Yin Yang Bio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="../css/USComics.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">s
+    <script type="text/javascript" src="../js/Parse/min.js"></script>
+	<script type="text/javascript" src="../js/ParseUser.js" ></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script></head>
+</head>
+
+<body onLoad="loadUser()">
+	<section id="content" data-role="page" class="bioPage">
+    <header>
+        <a href="../index.html" data-ajax="false"><img id="usComicsIcon" src="../images/U.S.Comics Icon 152x152.png" title="U.S. Comics"/></a>      
+    	<a href="BioIndex.html" data-ajax="false"><img id="biosUSComicsIcon" src="../images/icons/Bios.png" title="Biographies"/></a>      
+        <ul id="headerControl1">
+            <li class="menuItem"><a class="menuLink" id="userLogin" href="../customer/Login.html">Login</a></li>
+            <li class="menuItem"><a class="menuLink" id="userRegister" href="../customer/Register.html">Sign Up</a></li>
+        </ul>
+        <ul id="headerControl2">
+            <li class="menuItem"><a class="menuLink" id="userAccountName" href="../customer/Account.html">Account</a></li>
+            <li class="menuItem"><a class="menuLink" id="userLogout" href="../index.html" onclick="logOutUser()">Log Out</a></li>
+        </ul>
+    </header>
+    
+    <section class="bioImage">
+    	<img class="bioImage" src="http://i.imgur.com/Z9J71NI.png"/>
+    </section>
+    <div id="bioPersonalInfo" data-role="collapsible" data-collapsed="false" class="bioTitleBar">
+		<h3>Personal Info</h3>
+      	<div id="bioPersonalInfoContent" class="bioContent">
+        <table class="bioPersonalInfoTable">
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Real Name</td>
+            	<td class="bioPersonalInfoTableDataCell">Lin Lee</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Height</td>
+            	<td class="bioPersonalInfoTableDataCell">5'4"</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Weight</td>
+            	<td class="bioPersonalInfoTableDataCell">120 lbs.</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Eyes</td>
+            	<td class="bioPersonalInfoTableDataCell">Black</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Hair</td>
+            	<td class="bioPersonalInfoTableDataCell">Black</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Citizenship</td>
+            	<td class="bioPersonalInfoTableDataCell">China</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Place of Birth</td>
+            	<td class="bioPersonalInfoTableDataCell">Song Shan, Henan Province, China</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">First Appearance</td>
+            	<td class="bioPersonalInfoTableDataCell">The Legends Pacific #1</td>
+            </tr>
+          <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Era</td>
+            	<td class="bioPersonalInfoTableDataCell">World War II</td>
+          </tr>
+        </table>
+        </div>
+    </div>
+    <div id="bioSkills" data-role="collapsible" class="bioTitleBar">
+		<h3>Skills</h3>
+      	<div id="bioSkillsContent" class="bioContent">
+            <ul class="graph">
+                <li class="power10">Kung Fu: 10</li>
+                <li class="power7">Flight: 7 (Dreaming Dragon Form)</li>
+                <li class="power7">Fire Breath: 7 (Dreaming Dragon Form)</li>
+                <li class="power7">Damage Resistance: 7 (Dreaming Dragon Form)</li>
+                <li class="power10">Dreaming Immortality: 10 (Dreaming Dragon Form)</li>
+                <li class="power10">Dreaming Mind Control Immunity: 10 (Dreaming Dragon Form)</li>
+            </ul>
+       	</div>
+    </div>
+    <div id="bioOrigin" data-role="collapsible" class="bioTitleBar">
+        <h3>Origin</h3>
+        <div id="bioOriginContent" class="bioContent">
+        <span class="originStoryText">In 1927 a young baby girl was left at the Shaolin Monastery in Song Shan, China. The girl was taken in by the monks and given the name Lin Lee. Almost from birth, she was trained in the Chinese martial art of Kung Fu.<br/><br/>
+
+By 1941, China was at war both with itself and the Japanese. The Japanese had taken over China's Shaolin Monastery and the monks, along with Lin Lee, were living in exile from the monastery.<br/><br/>
+
+When, in 1942, President Roosevelt decided to expand the Gold Venus Project to the Legends Project, he sent China a request for a representative emblematic of the Chinese fighting spirit. This request was forwarded to the monks of the Shaolin Monastery. The monks considered fighting Mao's Communists even more important than fighting the Japanese. They therefore sent Lin Lee rather than one of their young men, whom were all considered more important to them. Only Lin's Master, Feng Chin, believed Lin contained the "power of the Dragon" within her and that monks were sending their greatest warrior to fight the Japanese.<br/><br/>
+<img src="../images/icons/ThumbYinYangDreamingForm.png"/><br/>During her first adventure with the Legends, Dreamtime summoned Lin's dreaming form, which was revealed to be a small white Oriental Dragon.<br/></span>
+			<a href="#popupOrigin" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="http://i.imgur.com/HgVu4fO.jpg" alt="Origin" title="Origin" style="width:30%"></a>
+			<div data-role="popup" id="popupOrigin" data-overlay-theme="b" data-theme="b" data-corners="false">
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="http://i.imgur.com/HgVu4fO.jpg" style="max-height:512px;">
+			</div>
+            <br/><span class="compareThenAndNowLabel">Tap image to read origin story.</span>
+        </div>
+    </div>
+    <div id="bioSeeAlso" data-role="collapsible" class="bioTitleBar">
+		<h3>See Also</h3>
+      	<div id="bioSeeAlsoContent" class="bioContent">
+            <div class="ui-grid-b">
+                <div class="ui-block-a"><a href="BioDreamtime.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbDreamtime.png" title="Dreamtime"><span class="bioTitle">Dreamtime</span></a></div>
+                <div class="ui-block-b"><a href="BioFengChin.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbFengChin.png" title="Feng Chin"><span class="bioTitle">Feng Chin</span></a></div>
+                <div class="ui-block-c"><a href="BioLegendsPacific.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbManOMetal.png" title="The Legends Pacific"><span class="bioTitle">The Legends Pacific</span></a></div>
+                <div class="ui-block-a"><a href="BioShaolinMonastery.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbShaolinMonastery.png" title="Shaolin Monastery"><span class="bioTitle">Shaolin Monastery</span></a></div>
+                <div class="ui-block-b"><a href="http://en.wikipedia.org/wiki/Shaolin_Monastery"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbWikipedia.png" title="The Shaolin Monastrey at Wikipedia"><span class="bioTitle">The Shaolin Monastrey at Wikipedia</span></a></div>
+            </div>
+       	</div>
+    </div>
+ 
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/kf2VbzN.png"
+		],
+	"personalInfo" : {
+		"realName" : "Agyo",
+		"height" : "6'6”",
+		"weight" : "320 lbs.",
+		"eyes" : "Gold",
+		"hair" : "None",
+		"citizenship" : "N/A",
+		"placeOfBirth" : "Unknown ",
+		"firstAppearance" : "The Legends Pacific #2",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Super Strength", 
+			"rank": 10
+		},
+		{
+			"name": "Damage Resistance ", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Agyo is one of the legendary guardians of the Buddha. At the request of the Goddess Inari he joined the Imperials during World War II. Agyo has super strength and high damage resistance."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Imperials",
+			"pic" : "https://i.imgur.com/y5Y2vFQ.png",
+			"name" : "The Imperials"
+		}
+		]
+}

@@ -1,0 +1,51 @@
+{
+"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/KD5a5HG.png"
+		],
+	"personalInfo" : {
+		"realName" : "Helena",
+		"height" : "5'9\"",
+		"weight" : "115 lbs.",
+		"eyes" : "Blue",
+		"hair" : "Blonde",
+		"citizenship" : "U.S.A.",
+		"placeOfBirth" : "Unknown",
+		"firstAppearance" : "Gold Venus #2",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Small Arms", 
+			"rank": 6
+		},
+		{
+			"name": "Motorcycle Driving", 
+			"rank": 8
+		}
+		],
+	"origin" : {
+		"story" : [
+			"The Black Phantom is the leader of a motorcycle gang that is believed to be funded by Nazi agents in order to stir up trouble in America. She and her gang engage mostly in thefts."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "Frank Bolle",
+		"firstGoldenAgeAppearance" : "Tim Holt Comics #25",
+		"year" : "1951",
+		"thenAndNowPicThumb" : "https://i.imgur.com/FNesOym.png",
+		"thenAndNowPic" : "https://i.imgur.com/FNesOym.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beast",
+			"pic" : "https://i.imgur.com/JmpqduZ.png",
+			"name" : "The Beast"
+		},
+		{
+			"bio" : "MotorcycleBlackPhantomGang",
+			"pic" : "https://i.imgur.com/Yo3hKvt.png",
+			"name" : "Motorcycle (Black Phantom Gang)"
+		}
+		]
+}

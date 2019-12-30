@@ -1,0 +1,109 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/3wq1MQI.png"
+		],
+	"personalInfo" : {
+		"realName" : "The Claw",
+		"height" : "6'1\"",
+		"weight" : "198 lbs.",
+		"eyes" : "Black and red",
+		"hair" : "Black",
+		"citizenship" : "The Beyond",
+		"placeOfBirth" : "The Beyond",
+		"firstAppearance" : "The Legands Pacific #1",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Energy Bolts", 
+			"rank": 10
+		},
+		{
+			"name": "Mind Control", 
+			"rank": 10
+		},
+		{
+			"name": "Super Growth", 
+			"rank": 10
+		},
+		{
+			"name": "Super Strength", 
+			"rank": 10
+		},
+		{
+			"name": "Beyond Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"The Claw is the powerful, despotic ruler of the island nation of Ricca.",
+			"He posses natural mind controlling abilities which he augments using giant crystals in his throne room and dream chambers below his castle. Additionally, The claw posses the power to grow to almost any imaginable size, is super strong, and can fire energy bolts from his hands. As ruler of Ricca, the Claw has access to a wide array of war machines, including Japanese Zero fighters , submarines , and powerful machines called \"Diggers\" which can tunnel through the earth.",
+			"The main island of Ricca is known as Claw Island. It inhabitants are mostly simple fishermen completely under the mental control of the Claw. He is also supplemented with support from the Japanese Empire in the form of trained guards and pilots.",
+			"He allies himself with the Japanese for the purposes of expanding his own empire with part of the Japanese conquests.",
+			"The Claw is immortal, like all creatures from the Beyond. If his body is severely damaged or destroyed, his spirit will return to the Beyond where the body can regenerate. During World War II the Soviets gained possession of the Claw's body after he was killed and used it to begin Project Pavlov and the Commissars."
+		],
+		"originPicThumb" : "https://i.imgur.com/wpxWOXG.jpg",
+		"originPic" : "https://i.imgur.com/wpxWOXG.jpg"
+		},
+	"goldenAge" : {
+		"createdBy" : "Jack Cole",
+		"firstGoldenAgeAppearance" : " Silver Streak Comics #1",
+		"year" : "1939",
+		"thenAndNowPicThumb" : "https://i.imgur.com/erB3yZN.png",
+		"thenAndNowPic" : "https://i.imgur.com/erB3yZN.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		},
+		{
+			"bio" : "Commissars",
+			"pic" : "https://i.imgur.com/tSzs09G.png",
+			"name" : "The Commissars"
+		},
+		{
+			"bio" : "DiggerFleetClaw",
+			"pic" : "https://i.imgur.com/5R81iin.png",
+			"name" : "Digger Fleet (The Claw)"
+		},
+		{
+			"bio" : "DreamChamberClaw",
+			"pic" : "https://i.imgur.com/rG5xsJk.png",
+			"name" : "Dream Chamber (The Claw)"
+		},
+		{
+			"bio" : "JapaneseAichiM6ASeiranFleetClaw",
+			"pic" : "https://i.imgur.com/U4837Kv.png",
+			"name" : "Japanese Aichi M6A Seiran Fleet (The Claw)"
+		},
+		{
+			"bio" : "JapaneseZeroFleetClaw",
+			"pic" : "https://i.imgur.com/TJ5JGtC.png",
+			"name" : "Japanese Zero Fleet (The Claw)"
+		},
+		{
+			"bio" : "MindControlCrystalsClaw",
+			"pic" : "https://i.imgur.com/0KhbtLJ.png",
+			"name" : "Mind Control Crystals (The Claw)"
+		},
+		{
+			"bio" : "ProjectPavlov",
+			"pic" : "https://i.imgur.com/TJ5JGtC.png",
+			"name" : "ProjectPavlov"
+		},
+		{
+			"bio" : "Ricca",
+			"pic" : "https://i.imgur.com/usCKRvH.png",
+			"name" : "Ricca"
+		},
+		{
+			"bio" : "SubmarineFleetClaw",
+			"pic" : "https://i.imgur.com/wghrXly.png",
+			"name" : "Submarine Fleet (The Claw)"
+		}
+		]
+}

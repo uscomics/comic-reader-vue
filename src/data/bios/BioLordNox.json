@@ -1,0 +1,63 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/uLoiBto.png"
+		],
+	"personalInfo" : {
+		"realName" : "Lord Dante Nox",
+		"height" : "6'11\"",
+		"weight" : "285 lbs.",
+		"eyes" : "Gold",
+		"hair" : "Bald",
+		"citizenship" : "England",
+		"placeOfBirth" : "Redruth, England",
+		"firstAppearance" : "Ye Olde Whisper Witch #1",
+		"era" : "Renaissance"
+		},
+	"skills" : [
+		{
+			"name": "Beyond Force Blast", 
+			"rank": 9
+		},
+		{
+			"name": "Beyond Force Shield", 
+			"rank": 9
+		},
+		{
+			"name": "Beyond Summoning", 
+			"rank": 9
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Lord Nox is a sorcerer who specializes in summoning and using dark energy from the Beyond. Also, Lord Nox assisted Isaac Newton in unlocking the power of the comet stone. Along with Dr. Eternity, he also transferred some of that power along with power from the Beyond to the Nox Eternity Crystals."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		},
+		{
+			"bio" : "CometStoneWhisperWitch",
+			"pic" : "https://i.imgur.com/C365asE.png",
+			"name" : "Comet Stone (Whisper Witch)"
+		},
+		{
+			"bio" : "DrEternity",
+			"pic" : "https://i.imgur.com/aVCkOxA.png",
+			"name" : "Dr. Eternity"
+		},
+		{
+			"bio" : "IsaacNewton",
+			"pic" : "https://i.imgur.com/dtPXBRg.png",
+			"name" : "Isaac Newton"
+		},
+		{
+			"bio" : "NoxEternityCrystals",
+			"pic" : "https://i.imgur.com/tYMaArn.png",
+			"name" : "Nox Eternity Crystals"
+		}
+		]
+}

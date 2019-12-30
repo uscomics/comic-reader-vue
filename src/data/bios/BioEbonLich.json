@@ -1,0 +1,50 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/dhSwJU7.png"
+		],
+	"personalInfo" : {
+		"realName" : "Unknown",
+		"height" : "6'4\"",
+		"weight" : "140 lbs.",
+		"eyes" : "Fire",
+		"hair" : "None",
+		"citizenship" : "Beyond",
+		"placeOfBirth" : "Beyond",
+		"firstAppearance" : "The Legends Europe #3",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Staff Combat", 
+			"rank": 9
+		},
+		{
+			"name": "Beyond Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"The Ebon Lich is one of the Guardians Of The Beyond, creatures assigned to guard and protect entrances to the Beyond.",
+            "The Ebon Lich can manipulate time, speeding it up, reversing it, stopping it, or traveling through it. These abilities come from the Time Staff he posessess. The Ebon Lich is immortal, like all creatures from the Beyond. If his body is severely damaged or destroyed, his spirit will return to the Beyond where the body can regenerate."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		},
+		{
+			"bio" : "GuardiansOfTheBeyond",
+			"pic" : "https://i.imgur.com/NYLQK7m.png",
+			"name" : "The Guardians Of The Beyond"
+		},
+		{
+			"bio" : "TimeStaffEbonLich",
+			"pic" : "https://i.imgur.com/aPZnTnO.png",
+			"name" : "Time Staff (Ebon Lich)"
+		}
+		]
+}

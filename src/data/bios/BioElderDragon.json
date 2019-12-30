@@ -1,0 +1,76 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/cBI4wuF.png"
+		],
+	"personalInfo" : {
+		"realName" : "Unknown",
+		"height" : "24'0\"",
+		"weight" : "1360 lbs.",
+		"eyes" : "Black",
+		"hair" : "None",
+		"citizenship" : "Beyond",
+		"placeOfBirth" : "Beyond",
+		"firstAppearance" : "The Legends Europe #3",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Super Strength", 
+			"rank": 4
+		},
+		{
+			"name": "Damage Resistance", 
+			"rank": 6
+		},
+		{
+			"name": "Flight", 
+			"rank": 7
+		},
+		{
+			"name": "Claw Attack", 
+			"rank": 9
+		},
+		{
+			"name": "Fire Breath", 
+			"rank": 9
+		},
+		{
+			"name": "Fire Resistance", 
+			"rank": 9
+		},
+		{
+			"name": "Tail Attack", 
+			"rank": 9
+		},
+		{
+			"name": "Beyond Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"The Elder Dragon is one of the Guardians Of The Beyond, creatures assigned to guard and protect entrances to the Beyond.",
+            "The Elder Dragon is super strong, resistance to damage including be nearly invulnerable to fire, can fly, breath fire, and attack with his claws and tail. The Elder Dragon is immortal, like all creatures from the Beyond. If his body is severely damaged or destroyed, his spirit will return to the Beyond where the body can regenerate."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "Unknown",
+		"firstGoldenAgeAppearance" : "This Magazine is Haunted #12",
+		"year" : "1953",
+		"thenAndNowPicThumb" : "https://i.imgur.com/H6TMdKV.png",
+		"thenAndNowPic" : "https://i.imgur.com/H6TMdKV.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		},
+		{
+			"bio" : "GuardiansOfTheBeyond",
+			"pic" : "https://i.imgur.com/NYLQK7m.png",
+			"name" : "The Guardians Of The Beyond"
+		}
+		]
+}

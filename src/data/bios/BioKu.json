@@ -1,0 +1,43 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/v9oOLI3.png"
+		],
+	"personalInfo" : {
+		"realName" : "Ka",
+		"height" : "6'6\"",
+		"weight" : "N/A",
+		"eyes" : "None",
+		"hair" : "None",
+		"citizenship" : "N/A",
+		"placeOfBirth" : "Mount Kasa, Japan",
+		"firstAppearance" : "The Legends Pacific #3",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Void Control", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Ku is an elemental golem created and controlled by Godai No Renkinjutsushi. Together with other similarly created golems, they form the Godai.",
+            "Ku is the Japanese word for void, and Ku controls the void completely."
+		],
+		"originPicThumb" : "https://i.imgur.com/k5RCu5G.jpg",
+		"originPic" : "https://i.imgur.com/k5RCu5G.jpg"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Godai",
+			"pic" : "https://i.imgur.com/m611PrS.png",
+			"name" : "Godai"
+		},
+		{
+			"bio" : "GodaiNoRenkinjutsushi",
+			"pic" : "https://i.imgur.com/m611PrS.png",
+			"name" : "Godai No Renkinjutsushi"
+		}
+		]
+}

@@ -1,0 +1,33 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/v815XiW.png"
+		],
+	"origin" : {
+		"story" : [
+			"The IllumiNaughty are a group of young women who specialize in destabilizing governments for their own profit. The team members are Brown Sugar, Lady Jane, Rainbow, and Ruby Tuesday."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "BrownSugar",
+			"pic" : "https://i.imgur.com/43i7X38.png",
+			"name" : "Brown Sugar"
+		},
+		{
+			"bio" : "LadyJane",
+			"pic" : "https://i.imgur.com/9jk7BN3.png",
+			"name" : "Lady Jane"
+		},
+		{
+			"bio" : "Rainbow",
+			"pic" : "https://i.imgur.com/Wx0YzmU.png",
+			"name" : "Rainbow"
+		},
+		{
+			"bio" : "RubyTuesday",
+			"pic" : "https://i.imgur.com/F1LSdxT.png",
+			"name" : "Ruby Tuesday"
+		}
+		]
+}

@@ -1,0 +1,64 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/nULHF8W.png"
+		],
+	"personalInfo" : {
+		"realName" : "Unknown",
+		"height" : "5'10\"",
+		"weight" : "165 lbs.",
+		"eyes" : "Black",
+		"hair" : "None",
+		"citizenship" : "Japan",
+		"placeOfBirth" : "Mount Kasa, Japan",
+		"firstAppearance" : "The Legends Pacific #3",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Command Elemental Golem", 
+			"rank": 9
+		},
+		{
+			"name": "Summon Elemental Golem", 
+			"rank": 9
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Godai No Renkinjutsushi is a Japanese Alchemist with power control over the Japnesee elements: Fire, Air, Earth, Water, and Void. He is capable of summoning and controlling golems of each of these elements. He uses his power both to aid Japan and for his own benefit."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Chi",
+			"pic" : "https://i.imgur.com/x6dRzMy.png",
+			"name" : "Chi"
+		},
+		{
+			"bio" : "Fu",
+			"pic" : "https://i.imgur.com/fv8n19J.png",
+			"name" : "Fu"
+		},
+		{
+			"bio" : "Godai",
+			"pic" : "https://i.imgur.com/m611PrS.png",
+			"name" : "Godai"
+		},
+		{
+			"bio" : "Ka",
+			"pic" : "https://i.imgur.com/I29PENh.png",
+			"name" : "Ka"
+		},
+		{
+			"bio" : "Ku",
+			"pic" : "https://i.imgur.com/w0clyVP.png",
+			"name" : "Ku"
+		},
+		{
+			"bio" : "Sui",
+			"pic" : "https://i.imgur.com/EElnaRL.png",
+			"name" : "Sui"
+		}
+		]
+}

@@ -1,0 +1,49 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/NdqRGfn.png"
+		],
+	"personalInfo" : {
+		"realName" : "Clarence Jackson",
+		"height" : "6'0\"",
+		"weight" : "243 lbs.",
+		"eyes" : "Brown",
+		"hair" : "Black",
+		"citizenship" : "U.S.A.",
+		"placeOfBirth" : "Arlington, Virgina",
+		"firstAppearance" : "Ye Olde Whisper Witch #3",
+		"era" : "1800s"
+		},
+	"skills" : [
+		{
+			"name": "Horseback Riding", 
+			"rank": 4
+		},
+		{
+			"name": "Pistols", 
+			"rank": 4
+		},
+		{
+			"name": "Super Strength (Steam Powered Arm Only)", 
+			"rank": 5
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Clarence Jackson was a slave picking cotton on a Virginia plantation during the U.S. Civil War. After the war General Sherman gave every freeman 40 acres of land and a mule. Clarence worked his land and saved money. Soon he had a few horses and a young wife, but the KKK burned his farm to the ground, killing his wife and causing him to lose an arm when he tried to save her.",
+			"His life and body in ruins, he took what he had left and headed out west. An outlaw attempted to rob him, but Captain Æther intervened. Seeing that Clarence was a good man, Captain Æther built him a new steam powered arm and asked for his help fighting Superbrain."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "CaptainÆther",
+			"pic" : "https://i.imgur.com/WtuQkSt.png",
+			"name" : "Captain Æther"
+		},
+		{
+			"bio" : "Superbrain",
+			"pic" : "https://i.imgur.com/SMVRKro.png",
+			"name" : "Superbrain"
+		}
+		]
+}

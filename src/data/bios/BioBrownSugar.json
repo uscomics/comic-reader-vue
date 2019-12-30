@@ -1,0 +1,35 @@
+{
+"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/uBL7ePN.png"
+		],
+	"personalInfo" : {
+		"realName" : "Unknown",
+		"height" : "5'7\"",
+		"weight" : "125 lbs.",
+		"eyes" : "Black",
+		"hair" : "Black",
+		"citizenship" : "U.S.A. (Assumed)",
+		"placeOfBirth" : "Unknown",
+		"firstAppearance" : "The Legends Europe #2",
+		"era" : "1960s"
+		},
+	"skills" : [
+		{
+			"name": "Small Arms", 
+			"rank": 9
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Brown Sugar is a small arms dealer and member of the IllumiNaughty."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "IllumiNaughty",
+			"pic" : "https://i.imgur.com/9jk7BN3.png",
+			"name" : "The IllumiNaughty"
+		}
+		]
+}

@@ -1,0 +1,88 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/7TdMp45.png"
+		],
+	"personalInfo" : {
+		"realName" : "Gordon Dane",
+		"height" : "6'0\"",
+		"weight" : "212 lbs.",
+		"eyes" : "Brown",
+		"hair" : "Brown",
+		"citizenship" : "U.S.A.",
+		"placeOfBirth" : "Roswell, New Mexico",
+		"firstAppearance" : "Ye Olde Whisper Witch #1",
+		"era" : "1800s"
+		},
+	"skills" : [
+		{
+			"name": "Astronomy", 
+			"rank": 9
+		},
+		{
+			"name": "Engineering", 
+			"rank": 10
+		},
+		{
+			"name": "Luminiferous Æther Manipulation", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Scientist Gordon Dane was out riding with his female companion Luana when they witnessed a spaceship crash to Earth. Rushing to investigate, Gordon discovered a dying alien named Knur. Knur warned Gordon of an immenent attack upon Earth by a being known as Superbrain.",
+			"Knur informed Gordon that he had travelled to Earth specifically to meet him and to enable him to become a champion capable of defending the planet. To assist him in this, Knur provided Gordon with a Holo Essence Projector of himself that could guide him after he died, an Æther Spaceship equipped with two Æther Drives, and access to the Luminiferous Æther Chamber which granted Gordon the ability to manipulate the Luminiferous Æther."
+		],
+		"originPicThumb" : "https://i.imgur.com/pD8s6Fl.jpg",
+		"originPic" : "https://i.imgur.com/pD8s6Fl.jpg"
+		},
+	"goldenAge" : {
+		"createdBy" : "Wally Wood, Gustav Schrotter, and Walter Johnson (Captain Science)",
+		"firstGoldenAgeAppearance" : "Captain Science #1",
+		"year" : "1950",
+		"thenAndNowPicThumb" : "https://i.imgur.com/Z0U57Ax.png",
+		"thenAndNowPic" : "https://i.imgur.com/Z0U57Ax.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "ÆtherSpaceship",
+			"pic" : "https://i.imgur.com/phJgCwa.png",
+			"name" : "Æther Spaceship (Captain Æther)"
+		},
+		{
+			"bio" : "HoloProjector",
+			"pic" : "https://i.imgur.com/XXGBF9i.png",
+			"name" : "Holo Essence Projector"
+		},
+		{
+			"bio" : "Knur",
+			"pic" : "https://i.imgur.com/my75KPp.png",
+			"name" : "Knur"
+		},
+		{
+			"bio" : "Luana",
+			"pic" : "https://i.imgur.com/xW0JuP2.png",
+			"name" : "Luana Jones"
+		},
+		{
+			"bio" : "LuminiferousÆther",
+			"pic" : "https://i.imgur.com/L1BQwqZ.png",
+			"name" : "Luminiferous Æther"
+		},
+		{
+			"bio" : "LuminiferousÆtherChamber",
+			"pic" : "https://i.imgur.com/1xnvkkX.png",
+			"name" : "Luminiferous Æther Chamber"
+		},
+		{
+			"bio" : "RoswellCrashSite",
+			"pic" : "https://i.imgur.com/sXjCgas.png",
+			"name" : "Roswell Crash Site"
+		},
+		{
+			"bio" : "Superbrain",
+			"pic" : "https://i.imgur.com/SMVRKro.png",
+			"name" : "Superbrain"
+		}
+		]
+}

@@ -1,0 +1,62 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/JcTVacZ.png"
+		],
+	"personalInfo" : {
+		"realName" : "Hassan",
+		"height" : "6'0\"",
+		"weight" : "235 lbs.",
+		"eyes" : "Brown",
+		"hair" : "Black",
+		"citizenship" : "Egypt",
+		"placeOfBirth" : "Giza, Egypt",
+		"firstAppearance" : "The Legends Europe #1",
+		"era" : "Egyptian New Dynasty, World War II"
+		},
+	"skills" : [
+		{
+			"name": "Super Strength", 
+			"rank": 6
+		},
+		{
+			"name": "Damage Resistance", 
+			"rank": 10
+		},
+		{
+			"name": "Super Speed", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Nagana, High Priestess of Isis during the end of the New Dynasty, learned the True Name of Isis. This knowledge gave her total power over Isis, which Nagana used to steal Isis's power for herself. She imparted some of this power to her minion Hassan.",
+            "Kalkor, the High Priest of Isis, arrived too late to prevent this but he used his abilities to imprison Nagana and Hassan in a block of solid time. Kalkor dubbed Nagana The Queen of Evil so that no one would be foolish enough to free her.",
+            "Centuries later Countess Siroon freed Nagana and convinced her to aid Hitler in his war efforts."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "Louis Cazeneuve",
+		"firstGoldenAgeAppearance" : "Fantastic Comics #23",
+		"year" : "1941",
+		"thenAndNowPicThumb" : "https://i.imgur.com/oFxcXKW.png",
+		"thenAndNowPic" : "https://i.imgur.com/oFxcXKW.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "IsisGoddess",
+			"pic" : "https://i.imgur.com/mwPCXC1.png",
+			"name" : "Isis (Goddess)"
+		},
+		{
+			"bio" : "Kalkor",
+			"pic" : "https://i.imgur.com/pEMywDM.png",
+			"name" : "Kalkor"
+		},
+		{
+			"bio" : "QueenOfEvil",
+			"pic" : "https://i.imgur.com/0JPtvnf.png",
+			"name" : "Queen Of Evil"
+		}
+		]
+}

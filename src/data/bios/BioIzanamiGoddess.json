@@ -1,0 +1,56 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/X0RfhDQ.png"
+		],
+	"personalInfo" : {
+		"realName" : "Izanami",
+		"height" : "5'7\"",
+		"weight" : "115 lbs.",
+		"eyes" : "Black/Red",
+		"hair" : "None",
+		"citizenship" : "N/A",
+		"placeOfBirth" : "Heaven",
+		"firstAppearance" : "The Legends Pacific #3",
+		"era" : "World War II, All"
+		},
+	"skills" : [
+		{
+			"name": "Flight", 
+			"rank": 3
+		},
+		{
+			"name": "Drain Life Force", 
+			"rank": 10
+		},
+		{
+			"name": "Invoke Beyond Portal", 
+			"rank": 10
+		},
+		{
+			"name": "Beyond Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"The first gods Kunitokotachi and Amenominakanushi summoned two divine beings into existence, the male Izanagi and the female Izanami, and charged them with creating the first land. To help them do this, Izanagi and Izanami were given a spear decorated with jewels, named Ame-no-nuboko (heavenly spear). The two deities then went to the bridge between heaven and earth, Ame-no-ukihashi ('floating bridge of heaven'), and churned the sea below with the spear. When drops of salty water fell from the spear, Onogoroshima ('self-forming island') was created. They descended from the bridge of heaven and made their home on the island.",
+            "Izanagi and the Izanami were wed and Izanami bore many children. Izanami died giving birth to the child Kagu-Tsuchi.",
+            "Izanagi lamented the death of Izanami and undertook a journey to Yomi (a.k.a. The Beyond). He searched for Izanami and found her. At first, Izanagi could not see her for the shadows hid her appearance. He asked her to return with him. Izanami spat out at him, informing Izanagi that he was too late. She had already eaten the food of the underworld and was now one with the land of the dead. She could no longer return to the living."
+		],
+		"originPicThumb" : "https://i.imgur.com/ElIdr2w.jpg",
+		"originPic" : "https://i.imgur.com/ElIdr2w.jpg"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		},
+		{
+			"bio" : "http://en.wikipedia.org/wiki/Izanami-no-Mikoto",
+			"pic" : "https://i.imgur.com/0zF2LNd.png",
+			"name" : "Izanami at Wikipedia"
+		}
+		]
+}

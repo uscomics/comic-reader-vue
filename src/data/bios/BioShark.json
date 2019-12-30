@@ -1,0 +1,85 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/HDJ9lrf.png"
+		],
+	"personalInfo" : {
+		"realName" : "Triton",
+		"height" : "6'0\"",
+		"weight" : "240 lbs.",
+		"eyes" : "Brown",
+		"hair" : "None",
+		"citizenship" : "Pacifica",
+		"placeOfBirth" : "Poseidonia, Pacifica",
+		"firstAppearance" : "The Legends Pacific #1",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Super Swimming", 
+			"rank": 8
+		},
+		{
+			"name": "Destory Beyond Portal (As of The Legends Pacific #3)", 
+			"rank": 8
+		},
+		{
+			"name": "Command Water", 
+			"rank": 9
+		},
+		{
+			"name": "Water Powered Super Strength", 
+			"rank": 10
+		},
+		{
+			"name": "Water Powered Damage Resistance", 
+			"rank": 10
+		},
+		{
+			"name": "Summon Sea Animals", 
+			"rank": 10
+		},
+		{
+			"name": "Command Sea Animals", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"The son of Poseidon, the Shark is called such because he is often seen in the company of large, man-eating sharks. His true name is Triton.",
+			"His powers include superhuman strength (\"strength of 10 whales\"), the ability to live underwater, and fast swimming (thanks to webbed hands and feet), and the ability to create illusions out of water (usually used to make doubles of himself), and is invulnerable while in water. However, he possesses normal human strength out the water unless he is carrying a magical trident given to him by his father. The trident also gives him the ability to teleport through water.",
+			"The Shark is a member of the Legends Pacific."
+		],
+		"originPicThumb" : "https://i.imgur.com/2P3mBbC.jpg",
+		"originPic" : "https://i.imgur.com/2P3mBbC.jpg"
+		},
+	"goldenAge" : {
+		"createdBy" : "Lew Glanzman",
+		"firstGoldenAgeAppearance" : "Amazing Man Comics #6",
+		"year" : "1939",
+		"thenAndNowPicThumb" : "https://i.imgur.com/6780jKQ.png",
+		"thenAndNowPic" : "https://i.imgur.com/6780jKQ.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "LegendsPacific",
+			"pic" : "https://i.imgur.com/KxDASPU.png",
+			"name" : "The Legends Pacific"
+		},
+		{
+			"bio" : "Pacifica",
+			"pic" : "https://i.imgur.com/KnbAPYh.png",
+			"name" : "Pacifica"
+		},
+		{
+			"bio" : "Poseidonia",
+			"pic" : "https://i.imgur.com/KnbAPYh.png",
+			"name" : "Poseidonia"
+		},
+		{
+			"bio" : "TridentShark",
+			"pic" : "https://i.imgur.com/7OnaFC2.png",
+			"name" : "Trident (The Shark)"
+		}
+		]
+}

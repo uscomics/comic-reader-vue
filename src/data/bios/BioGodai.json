@@ -1,0 +1,43 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/vBbp0xB.png"
+		],
+	"origin" : {
+		"story" : [
+			"The Godai are a team created and lead by the Japanese Alchemist Godai No Renkinjutsushi. The team consists of himself and five elemental golems that follow his every command: Chi, Fu, Ka, Ku, and Sui."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Chi",
+			"pic" : "https://i.imgur.com/x6dRzMy.png",
+			"name" : "Chi"
+		},
+		{
+			"bio" : "Fu",
+			"pic" : "https://i.imgur.com/fv8n19J.png",
+			"name" : "Fu"
+		},
+		{
+			"bio" : "GodaiNoRenkinjutsushi",
+			"pic" : "https://i.imgur.com/m611PrS.png",
+			"name" : "Godai No Renkinjutsushi"
+		},
+		{
+			"bio" : "Ka",
+			"pic" : "https://i.imgur.com/I29PENh.png",
+			"name" : "Ka"
+		},
+		{
+			"bio" : "Ku",
+			"pic" : "https://i.imgur.com/w0clyVP.png",
+			"name" : "Ku"
+		},
+		{
+			"bio" : "Sui",
+			"pic" : "https://i.imgur.com/EElnaRL.png",
+			"name" : "Sui"
+		}
+		]
+}

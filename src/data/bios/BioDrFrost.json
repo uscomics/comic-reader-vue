@@ -1,0 +1,101 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/CPCrWEE.png"
+		],
+	"personalInfo" : {
+		"realName" : "Davis Cote",
+		"height" : "6'0\"",
+		"weight" : "185 lbs.",
+		"eyes" : "Blue",
+		"hair" : "Blonde",
+		"citizenship" : "Canada",
+		"placeOfBirth" : "Ottawa, Ontario, Canada",
+		"firstAppearance" : "The Legends Pacific #1",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Super Agent Combat Training", 
+			"rank": 8
+		},
+		{
+			"name": "Ice Armor", 
+			"rank": 10
+		},
+		{
+			"name": "Ice Fists", 
+			"rank": 10
+		},
+		{
+			"name": "Ice Patch", 
+			"rank": 10
+		},
+		{
+			"name": "Freeze Water", 
+			"rank": 10
+		},
+		{
+			"name": "Summon Snow Storm", 
+			"rank": 10
+		},
+		{
+			"name": "Summon Hail", 
+			"rank": 10
+		},
+		{
+			"name": "Bite (Dreaming Wolf Form)", 
+			"rank": 7
+		},
+		{
+			"name": "Pounce (Dreaming Wolf Form)", 
+			"rank": 7
+		},
+		{
+			"name": "Damage Resistance (Dreaming Wolf Form)", 
+			"rank": 7
+		},
+		{
+			"name": "Dreaming Immortality (Dreaming Wolf Form)", 
+			"rank": 10
+		},
+		{
+			"name": "Dreaming Mind Control Immunity (Dreaming Wolf Form)", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Dr. Frost is a Dream Warrior, someone who was given his powers in a dream. With the outbreak of World War Two, Davis Cote was visited by two \"Spirits of Canada\" in his dreams, an Inuit Indian spirit and a Norseman spirit, telling Davis that he was needed to serve his country.",
+			"The spirits granted him the \"power of the frozen north\", which is the ability to generate, shape, and control ice and snow. Shortly after gaining these abilities, Davis approached the Canadian government, asking to serve in any way possible. He was enlisted in the Camp X super agent program and joined the Pacific arm of the Legends."
+		],
+		"originExtraPic" : "../images/icons/ThumbDrFrostDreamingForm.png",
+		"originExtraText" : "During the his first adventure with the Legends, Dreamtime summoned Davis's dreaming form, which was revealed to be a large wolf.",
+		"originPicThumb" : "https://i.imgur.com/LrIHyQg.jpg",
+		"originPic" : "https://i.imgur.com/LrIHyQg.jpg"
+		},
+	"goldenAge" : {
+		"createdBy" : "Unknown",
+		"firstGoldenAgeAppearance" : "Prize #7",
+		"year" : "1940",
+		"thenAndNowPicThumb" : "https://i.imgur.com/UympnFb.png",
+		"thenAndNowPic" : "https://i.imgur.com/UympnFb.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "CampX",
+			"pic" : "https://i.imgur.com/Ofw9E8W.png",
+			"name" : "Camp X"
+		},
+		{
+			"bio" : "Dreamtime",
+			"pic" : "https://i.imgur.com/O95F5z9.png",
+			"name" : "Dreamtime"
+		},
+		{
+			"bio" : "LegendsPacific",
+			"pic" : "https://i.imgur.com/KxDASPU.png",
+			"name" : "The Legends Pacific"
+		}
+		]
+}

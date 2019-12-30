@@ -1,0 +1,64 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/5nOOOUD.png"
+		],
+	"personalInfo" : {
+		"realName" : "General Tadao Sato",
+		"height" : "5'9\"",
+		"weight" : "137 lbs.",
+		"eyes" : "Black",
+		"hair" : "White (later bald)",
+		"citizenship" : "Empire of Japan",
+		"placeOfBirth" : "Hasami, Nagasaki",
+		"firstAppearance" : "Gold Venus #1",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Small Arms", 
+			"rank": 5
+		},
+		{
+			"name": "Army Tactics", 
+			"rank": 9
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Tadao Sato came from a military family and served as a General in the army of the Japanese Empire during World War Two. His responsibilities included producing advanced weaponry for Japan and running covert teams across the Pacific to attack and gather intelligence from Allied forces.",
+            "His advanced weaponry teams produced launchers capable of firing Japanese Zeros straight into the air, providing rapid deployment and the element of surprise. They also produced the world's first factory capable of building robots. These robots were meant to be used to fight allied ground forces.",
+            "Both the plane launchers and robot factories were discovered and destroyed by the Gold Venus . General Sato himself was caught in the explosion that destroyed them. He survived, but was severely burned and injured. As a result, he must now wear a robotic exoskeleton to walk. The exoskeleton is also tough enough to deflect bullets and comes equipped with a powerful gun on the left arm.",
+            "The intelligence arm of General Sato's activities is made up of the Blood Dragons , a covert team of operatives and spies, several of whom have special abilities. The Blood Dragons have bases throughout the pacific."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "Unknown",
+		"firstGoldenAgeAppearance" : "General Sato is based on the 'base commander' character appearing in issue #1 of Contact Comics",
+		"year" : "1944",
+		"thenAndNowPicThumb" : "https://i.imgur.com/yi4dLnR.png",
+		"thenAndNowPic" : "https://i.imgur.com/yi4dLnR.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "BloodDragons",
+			"pic" : "https://i.imgur.com/Nx8xz7y.png",
+			"name" : "Blood Dragons"
+		},
+		{
+			"bio" : "CatapultDromeGeneralSato",
+			"pic" : "https://i.imgur.com/8o0u5s8.png",
+			"name" : "Catapult Drome (General Sato)"
+		},
+		{
+			"bio" : "RoboticArmorGeneralSato",
+			"pic" : "https://i.imgur.com/7mJhzDt.png",
+			"name" : "Robotic Armor (General Sato)"
+		},
+		{
+			"bio" : "RobotsGeneralSato",
+			"pic" : "https://i.imgur.com/WdyGA22.png",
+			"name" : "Robots (General Sato)"
+		}
+		]
+}

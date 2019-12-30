@@ -1,0 +1,63 @@
+{
+"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/KD5a5HG.png"
+		],
+	"personalInfo" : {
+		"realName" : "Unknown ",
+		"height" : "6'0\"",
+		"weight" : "270 lbs.",
+		"eyes" : "Brown",
+		"hair" : "Bald",
+		"citizenship" : "U.S.A.",
+		"placeOfBirth" : "Unknown",
+		"firstAppearance" : "Gold Venus #2",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Small Arms", 
+			"rank": 3
+		},
+		{
+			"name": "Motorcycle Driving", 
+			"rank": 5
+		},
+		{
+			"name": "Whip", 
+			"rank": 5
+		},
+		{
+			"name": "Lock Picking", 
+			"rank": 9
+		},
+		{
+			"name": "Safe Cracking", 
+			"rank": 9
+		}
+		],
+	"origin" : {
+		"story" : [
+			"The Beast is a member of a motorcycle gang lead by a woman calling herself the Black Phantom. He is skilled with a whip and at picking locks and safes."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "Frank Bolle",
+		"firstGoldenAgeAppearance" : "Tim Holt Comics #25",
+		"year" : "1951",
+		"thenAndNowPicThumb" : "https://i.imgur.com/FNesOym.png",
+		"thenAndNowPic" : "https://i.imgur.com/FNesOym.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "BlackPhantom",
+			"pic" : "https://i.imgur.com/GSpr3Qz.png",
+			"name" : "Black Phantom"
+		},
+		{
+			"bio" : "MotorcycleBlackPhantomGang",
+			"pic" : "https://i.imgur.com/Yo3hKvt.png",
+			"name" : "Motorcycle (Black Phantom Gang)"
+		}
+		]
+}

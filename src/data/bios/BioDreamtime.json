@@ -1,0 +1,105 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/HXySSbr.png",
+		"https://i.imgur.com/3PTOBwb.png"
+		],
+	"personalInfo" : {
+		"realName" : "Wogal",
+		"height" : "5'10\"",
+		"weight" : "280 lbs.",
+		"eyes" : "Black and red",
+		"hair" : "None",
+		"citizenship" : "Australia",
+		"placeOfBirth" : "The Dreamtime",
+		"firstAppearance" : "The Legends Pacific #1",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Super Strength", 
+			"rank": 6
+		},
+		{
+			"name": "Cause Sickness", 
+			"rank": 8
+		},
+		{
+			"name": "Poison Claws", 
+			"rank": 8
+		},
+		{
+			"name": "Poison Claws", 
+			"rank": 8
+		},
+		{
+			"name": "Flight", 
+			"rank": 9
+		},
+		{
+			"name": "Damage Resistance", 
+			"rank": 9
+		},
+		{
+			"name": "Heal Person", 
+			"rank": 9
+		},
+		{
+			"name": "Summon Lightning", 
+			"rank": 10
+		},
+		{
+			"name": "Summon Thunderstorm", 
+			"rank": 10
+		},
+		{
+			"name": "Summon Monsoon", 
+			"rank": 10
+		},
+		{
+			"name": "Summon Winds", 
+			"rank": 10
+		},
+		{
+			"name": "Summon Rains", 
+			"rank": 10
+		},
+		{
+			"name": "Poison Bite", 
+			"rank": 10
+		},
+		{
+			"name": "Dreamtime Immortality", 
+			"rank": 10
+		},
+		{
+			"name": "Dreamtime Transference", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Wogal, the child of the Australian rainbow serpent, can fly, is super strong, can control the Australian dreamtime, weather, healing and sickness. She can summon an individual's Dreaming avatar from the Dreaming and send the individual's mortal body to the Dreaming.",
+			"Dreamtime is a member of the Legends Pacific."
+		],
+		"originPicThumb" : "https://i.imgur.com/Mru4qON.jpg",
+		"originPic" : "https://i.imgur.com/Mru4qON.jpg"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Dreaming",
+			"pic" : "https://i.imgur.com/oDE4e4R.jpg",
+			"name" : "The Dreaming"
+		},
+		{
+			"bio" : "LegendsPacific",
+			"pic" : "https://i.imgur.com/KxDASPU.png",
+			"name" : "The Legends Pacific"
+		},
+		{
+			"bio" : "http://en.wikipedia.org/wiki/Australian_Aboriginal_mythology",
+			"pic" : "https://i.imgur.com/0zF2LNd.png",
+			"name" : "Australian Aboriginal Mythology at Wikipedia"
+		}
+		]
+}

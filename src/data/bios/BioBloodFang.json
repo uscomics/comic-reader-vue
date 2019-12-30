@@ -1,0 +1,47 @@
+{
+"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/orvmXnn.png"
+		],
+	"personalInfo" : {
+		"realName" : "Blood Fang",
+		"height" : "6'9\"",
+		"weight" : "223 lbs.",
+		"eyes" : "Black",
+		"hair" : "Grey",
+		"citizenship" : "The Beyond",
+		"placeOfBirth" : "The Beyond",
+		"firstAppearance" : "Ye Olde Whisper Witch #3",
+		"era" : "Renaissance, World War II"
+		},
+	"skills" : [
+		{
+			"name": "Super Strength", 
+			"rank": 4
+		},
+		{
+			"name": "Claws ", 
+			"rank": 9
+		},
+		{
+			"name": "Bite", 
+			"rank": 9
+		},
+		{
+			"name": "Beyond Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Blood Fang is the alpha werewolf of the Beyond, all other werewolves follow his lead. He is known to be particularly bloodthirsty and ruthless."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		}
+		]
+}

@@ -1,0 +1,81 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/Z9J71NI.png"
+		],
+	"personalInfo" : {
+		"realName" : "Lin Lee",
+		"height" : "5'4\"",
+		"weight" : "120 lbs.",
+		"eyes" : "Black",
+		"hair" : "Black",
+		"citizenship" : "China",
+		"placeOfBirth" : "Song Shan, Henan Province, China",
+		"firstAppearance" : "The Legends Pacific #1",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Kung Fu", 
+			"rank": 10
+		},
+		{
+			"name": "Flight (Dreaming Dragon Form)", 
+			"rank": 7
+		},
+		{
+			"name": "Fire Breath (Dreaming Dragon Form)", 
+			"rank": 7
+		},
+		{
+			"name": "Damage Resistance (Dreaming Dragon Form)", 
+			"rank": 7
+		},
+		{
+			"name": "Dreaming Immortality (Dreaming Dragon Form)", 
+			"rank": 10
+		},
+		{
+			"name": "Dreaming Mind Control Immunity (Dreaming Dragon Form)", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"In 1927 a young baby girl was left at the Shaolin Monastery in Song Shan, China. The girl was taken in by the monks and given the name Lin Lee. Almost from birth, she was trained in the Chinese martial art of Kung Fu.",
+			"By 1941, China was at war both with itself and the Japanese. The Japanese had taken over China's Shaolin Monastery and the monks, along with Lin Lee, were living in exile from the monastery.",
+			"When, in 1942, President Roosevelt decided to expand the Gold Venus Project to the Legends Project, he sent China a request for a representative emblematic of the Chinese fighting spirit. This request was forwarded to the monks of the Shaolin Monastery. The monks considered fighting Mao's Communists even more important than fighting the Japanese. They therefore sent Lin Lee rather than one of their young men, whom were all considered more important to them. Only Lin's Master, Feng Chin, believed Lin contained the \"power of the Dragon\" within her and that monks were sending their greatest warrior to fight the Japanese."
+		],
+		"originExtraPic" : "../images/icons/ThumbYinYangDreamingForm.png",
+		"originExtraText" : "During her first adventure with the Legends, Dreamtime summoned Lin's dreaming form, which was revealed to be a small white Oriental Dragon.",
+		"originPicThumb" : "https://i.imgur.com/HgVu4fO.jpg",
+		"originPic" : "https://i.imgur.com/HgVu4fO.jpg"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Dreamtime",
+			"pic" : "https://i.imgur.com/O95F5z9.png",
+			"name" : "Dreamtime"
+		},
+		{
+			"bio" : "FengChin",
+			"pic" : "https://i.imgur.com/CauPbtG.png",
+			"name" : "Feng Chin"
+		},
+		{
+			"bio" : "LegendsPacific",
+			"pic" : "https://i.imgur.com/KxDASPU.png",
+			"name" : "The Legends Pacific"
+		},
+		{
+			"bio" : "ShaolinMonastery",
+			"pic" : "https://i.imgur.com/YJ8QjpQ.png",
+			"name" : "Shaolin Monastery"
+		},
+		{
+			"bio" : "http://en.wikipedia.org/wiki/Shaolin_Monastery",
+			"pic" : "https://i.imgur.com/0zF2LNd.png",
+			"name" : "The Shaolin Monastrey at Wikipedia"
+		}
+		]
+}

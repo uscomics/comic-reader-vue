@@ -1,0 +1,58 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/4JDAzKc.png"
+		],
+	"personalInfo" : {
+		"realName" : "Unknown ",
+		"height" : "5'9”",
+		"weight" : "125 lbs.",
+		"eyes" : "Black",
+		"hair" : "Black",
+		"citizenship" : "Empire of Japan",
+		"placeOfBirth" : "Unknown ",
+		"firstAppearance" : "Gold Venus #2",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Judo", 
+			"rank": 9
+		},
+		{
+			"name": "Karate ", 
+			"rank": 9
+		},
+		{
+			"name": "Kenjustu and Battojutsu (Japanese Swordsmanship)", 
+			"rank": 9
+		},
+		{
+			"name": "Seduction ", 
+			"rank": 9
+		},
+		{
+			"name": "Espionage ", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Agent X is a member of the Japanese World War II group known as the Blood Dragons . She is highly skilled in hand-to-hand combat and a variety of classic hand-held weapons. Agent X also serves as a spy for the Japanese Empire, using her beauty to seduce enemy soldiers and learn their secrets."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "Unknown",
+		"firstGoldenAgeAppearance" : "Contact Comics #2",
+		"year" : "1944",
+		"thenAndNowPicThumb" : "https://i.imgur.com/7gsPzfH.png",
+		"thenAndNowPic" : "https://i.imgur.com/7gsPzfH.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "BloodDragons",
+			"pic" : "https://i.imgur.com/Nx8xz7y.png",
+			"name" : "Blood Dragons"
+		}
+		]
+}

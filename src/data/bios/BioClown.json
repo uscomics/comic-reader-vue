@@ -1,0 +1,60 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/NlQTH0j.png"
+		],
+	"personalInfo" : {
+		"realName" : "The Clown",
+		"height" : "5'11\"",
+		"weight" : "185 lbs.",
+		"eyes" : "Black",
+		"hair" : "Black",
+		"citizenship" : "The Beyond",
+		"placeOfBirth" : "The Beyond",
+		"firstAppearance" : "Gold Venus #1",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Knife Fighting", 
+			"rank": 7
+		},
+		{
+			"name": "Chemistry", 
+			"rank": 8
+		},
+		{
+			"name": "Explosives", 
+			"rank": 8
+		},
+		{
+			"name": "Beyond Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"A creature from the Beyond, the Clown crosses over to the mortal plane to inflict pain, fear, and death. He is aided by his personal slave, Lithium, who is also from the Beyond. The Clown is skilled at chemistry and explosives and often carries sleeping gas canisters and bombs. He owns a large and impressive collection of knives.",
+			"The Clown is immortal, like all creatures from the Beyond. If his body is severely damaged or destroyed, his spirit will return to the Beyond where the body can regenerate."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "Paul Chadwick",
+		"firstGoldenAgeAppearance" : "Super Mystery Comics #5",
+		"year" : "1940",
+		"thenAndNowPicThumb" : "https://i.imgur.com/psvgXBd.png",
+		"thenAndNowPic" : "https://i.imgur.com/psvgXBd.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		},
+		{
+			"bio" : "Lithium",
+			"pic" : "https://i.imgur.com/DFbS5KF.png",
+			"name" : "Lithium"
+		}
+		]
+}

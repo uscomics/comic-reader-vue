@@ -1,0 +1,56 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"http://i.imgur.com/kZMDX0b.png",
+    	"http://i.imgur.com/rxBOZyc.png"
+		],
+	"origin" : {
+		"story" : [
+			"Created by the order of President Roosevelt, the Legends collects the world's best trained super agents together as a force to stop the Axis powers.",
+			"The Legends project is an expansion of the successful Gold Venus Project. It consisted of two branches, the Legends Pacific and the Legends Europe.",
+			"The team members of the Legends Pacific are Gold Venus, Trick Arrow, Man O' Metal, Dr. Frost, Dreamtime, the Shark, and Yin Yang. Gold Venus serves as the de facto leader of the group. Most of the group trained at Camp X."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "CampX",
+			"pic" : "https://i.imgur.com/Ofw9E8W.png",
+			"name" : "Camp X"
+		},
+		{
+			"bio" : "Dreamtime",
+			"pic" : "https://i.imgur.com/O95F5z9.png",
+			"name" : "Dreamtime"
+		},
+		{
+			"bio" : "DrFrost",
+			"pic" : "https://i.imgur.com/jGmBcYg.png",
+			"name" : "Dr. Frost"
+		},
+		{
+			"bio" : "GoldVenus",
+			"pic" : "https://i.imgur.com/CfgUJ7w.png",
+			"name" : "Gold Venus"
+		},
+		{
+			"bio" : "ManOMetal",
+			"pic" : "https://i.imgur.com/KxDASPU.png",
+			"name" : "Man O' Metal"
+		},
+		{
+			"bio" : "Shark",
+			"pic" : "https://i.imgur.com/wXZYR5Z.png",
+			"name" : "The Shark"
+		},
+		{
+			"bio" : "TrickArrow",
+			"pic" : "https://i.imgur.com/AVkE0fF.png",
+			"name" : "Trick Arrow"
+		},
+		{
+			"bio" : "YinYang",
+			"pic" : "https://i.imgur.com/FNA26bk.png",
+			"name" : "Yin Yang"
+		}
+		]
+}

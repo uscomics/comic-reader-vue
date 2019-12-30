@@ -1,0 +1,59 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/gW3ADoS.png"
+		],
+	"personalInfo" : {
+		"realName" : "Steve Adams",
+		"height" : "6'0\"",
+		"weight" : "217 lbs.",
+		"eyes" : "Brown",
+		"hair" : "Black",
+		"citizenship" : "U.S.A.",
+		"placeOfBirth" : "Carrizozo, New Mexico",
+		"firstAppearance" : "Ye Olde Whisper Witch #2",
+		"era" : "1800s"
+		},
+	"skills" : [
+		{
+			"name": "Archery", 
+			"rank": 9
+		},
+		{
+			"name": "Hunting", 
+			"rank": 9
+		},
+		{
+			"name": "Tracking", 
+			"rank": 9
+		},
+		{
+			"name": "Horseback Riding", 
+			"rank": 9
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Steve Adams was a native American orphan raised by whites after his parents were killed by outlaws. He became a respected warrior and a tireless protector of his people. Although he inherited his adopted parents ranch, he spent much time on the nearby reservation."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "Unknown",
+		"firstGoldenAgeAppearance" : "Straight Arrow #1",
+		"year" : "1950",
+		"thenAndNowPicThumb" : "https://i.imgur.com/c75PgSd.png",
+		"thenAndNowPic" : "https://i.imgur.com/c75PgSd.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "CaptainÆther",
+			"pic" : "https://i.imgur.com/WtuQkSt.png",
+			"name" : "Captain Æther"
+		},
+		{
+			"bio" : "ChiefSkullface",
+			"pic" : "https://i.imgur.com/63RNt39.png",
+			"name" : "Chief Skullface"
+		}
+		]
+}

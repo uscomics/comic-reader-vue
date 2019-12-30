@@ -1,0 +1,43 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/p7LyJuS.png"
+		],
+	"personalInfo" : {
+		"realName" : "Yori Ito",
+		"height" : " 5'4\"",
+		"weight" : "100 lbs.",
+		"eyes" : "Black",
+		"hair" : "Black",
+		"citizenship" : "Japan",
+		"placeOfBirth" : "Anjō, Japan",
+		"firstAppearance" : "The Legends Pacific #2",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Espionage", 
+			"rank": 9
+		},
+		{
+			"name": "Poisons", 
+			"rank": 9
+		},
+		{
+			"name": "Razor Fans", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Geisha is a trained assassin and spy who is a member of both the Blood Dragons and The Imperials. She is a master of unconventional weapons such as her razor sharp, bullet-proof fans and poison-dipped hair pins."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Imperials",
+			"pic" : "https://i.imgur.com/y5Y2vFQ.png",
+			"name" : "The Imperials"
+		}
+		]
+}

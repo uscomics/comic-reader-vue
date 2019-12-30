@@ -1,0 +1,76 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/jjU4d5p.png"
+		],
+	"personalInfo" : {
+		"realName" : "Richard Mord",
+		"height" : "5'11\"",
+		"weight" : "126 lbs.",
+		"eyes" : "Black",
+		"hair" : "White",
+		"citizenship" : "The Beyond",
+		"placeOfBirth" : "The Beyond",
+		"firstAppearance" : "Ye Olde Whisper Witch #3",
+		"era" : "Renaissance, World War II"
+		},
+	"skills" : [
+		{
+			"name": "Flight", 
+			"rank": 3
+		},
+		{
+			"name": "Teleport", 
+			"rank": 6
+		},
+		{
+			"name": "Time Travel", 
+			"rank": 6
+		},
+		{
+			"name": "Create Magic Talsmans", 
+			"rank": 7
+		},
+		{
+			"name": "Assume Human Form", 
+			"rank": 8
+		},
+		{
+			"name": "Invisibility", 
+			"rank": 8
+		},
+		{
+			"name": "Command Beyond Creatures", 
+			"rank": 10
+		},
+		{
+			"name": "Summon Beyond Creatures", 
+			"rank": 10
+		},
+		{
+			"name": "Beyond Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"As the literal personification of death, Doctor Death acts as a psychopomp, collecting human souls and transporting them to The Beyond. In this capacity, he has sovereign power over witches, vampires and various other supernatural beings, which are charged to do his bidding. Assuming the role of Grim Reaper, he can travel at will between the Earth and The Beyond, evidently having the ability to transcend both space and time itself.",
+            "In addition, he is capable of moving unseen through the Living Realm, subliminally influencing the fates of his intended victims. When direct intervention is required he can either reveal himself as the Specter of Death (medieval grim reaper) or assume human form to interact with those around him. While human, he appears to retain some degree of his supernatural powers, being capable of flying and subduing demonic creatures.",
+            "Dr. Death is immortal, like all creatures from the Beyond. If his body is severely damaged or destroyed, his spirit will return to the Beyond where the body can regenerate."
+		]
+        },
+	"goldenAge" : {
+		"createdBy" : "Sheldon Moldoff",
+		"firstGoldenAgeAppearance" : "This Magazine is Haunted #1",
+		"year" : "1951",
+		"thenAndNowPicThumb" : "https://i.imgur.com/NUPfBbJ.png",
+		"thenAndNowPic" : "https://i.imgur.com/NUPfBbJ.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		}
+		]
+}

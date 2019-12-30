@@ -7,19 +7,19 @@
       <img v-if="characters[2]" class="animation-character" v-bind:style="{ height: getHeight(2), 'z-index': getZ(2), 'left': getLeft(2), 'opacity': getOpacity(2)}" v-bind:src="characters[2].image">
     </div>
     <q-chat-message class="animation-quote" v-bind:style="{ 'opacity': getQuoteOpacity()}" :text="[getQuote()]" sent/>
-    <CharacterInfo v-bind:character="frontCharacter" class="row justify-center animation-character-panel"/>
+    <CharacterStore v-bind:character="frontCharacter" class="row justify-center animation-character-panel"/>
   </div>
 </template>
 
 <script>
 const animation = require('../data/animation.json')
-import CharacterInfo from './CharacterInfo'
+import CharacterStore from './CharacterStore'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
 export default {
   name: 'Animation',
   components: {
-    CharacterInfo
+    CharacterStore
   },
   data: function() {
     return {

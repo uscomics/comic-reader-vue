@@ -1,0 +1,46 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/h6dEZfE.png"
+		],
+	"personalInfo" : {
+		"realName" : "Unknown",
+		"height" : "5'8\"",
+		"weight" : "134 lbs.",
+		"eyes" : "Hazel",
+		"hair" : "Black",
+		"citizenship" : "U.S.S.R.",
+		"placeOfBirth" : "Leningrad, U.S.S.R.",
+		"firstAppearance" : "The Legands Europe #4",
+		"era" : "1960s"
+		},
+	"skills" : [
+		{
+			"name": "Mind Control", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Collective is a member of the Commissars, a group of Communists who were the first, and last, test subjects of Project Pavlov. Project Pavlov was a Soviet plan to use the captured body of the deceased Claw to give mental control powers to ordinary humans.",
+            "The project was a success even beyond this goal, which each of the four test subjects gaining a different power from the Claw: mind control, super strength, energy blasts, and growth. Collective gained the mind control abilities of the Claw."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Claw",
+			"pic" : "https://i.imgur.com/6MDPQZU.png",
+			"name" : "The Claw"
+		},
+		{
+			"bio" : "Commissars",
+			"pic" : "https://i.imgur.com/tSzs09G.png",
+			"name" : "The Commissars"
+		},
+		{
+			"bio" : "ProjectPavlov",
+			"pic" : "http://i.imgur.com/6Vnqbbo.png",
+			"name" : "Project Pavlov"
+		}
+		]
+}

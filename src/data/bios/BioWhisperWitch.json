@@ -1,0 +1,141 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/2KQ83lC.png",
+    	"https://i.imgur.com/vnBWylb.png"
+		],
+	"personalInfo" : {
+		"realName" : "Erin O'Hara",
+		"height" : "5'6\"",
+		"weight" : "120 lbs.",
+		"eyes" : "Green",
+		"hair" : "Red",
+		"citizenship" : "Ireland",
+		"placeOfBirth" : "Balgriffin, Ireland",
+		"firstAppearance" : "Ye Olde Whisper Witch #1",
+		"era" : "Renaissance, World War II, Modern"
+		},
+	"skills" : [
+		{
+			"name": "Mathematics", 
+			"rank": 6
+		},
+		{
+			"name": "Eastern Esoteric Knowledge", 
+			"rank": 6
+		},
+		{
+			"name": "Reality Manipulation", 
+			"rank": 9
+		},
+		{
+			"name": "Western Esoteric Knowledge", 
+			"rank": 10
+		},
+		{
+			"name": "Dream Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"On August 14, 1682 in Ireland Erin O'Hara, a young Herbalist, sees a comet fall from the sky. A small piece separates from the main body of the comet and lands near her. Determined to unlock the mysteries of the comet stone, Erin is eventually sent to Isaac Newton. Newton determines the stone possesses occult powers and gathers the greatest occult minds of the age to study the stone: Robert Boyle, Dr. Eternity, and Lord Nox. Newton devises a ritual to unlock the power of the stone and transfer it to Erin.",
+			"The next day, Erin is visited by the Sorceress of Zoom. The sorceress insists Erin become her apprentice, saying her new powers are too dangerous to use otherwise. The Sorceress tells Erin that reality is like a dream that she can now control. She also tells Erin she is now Immortal.",
+			"The Sorceress introduces Erin to various Cosmic Beings, including Fate. Fate tells Erin she now plays a role in the course of fate. Erin is also introduced to the Weaver, who creates Dream Worlds, Dream Warriors, and the Dream mortals call Reality. It is this Reality Dream that Erin can now control.",
+			"World War II Era",
+			"During World war II Whisper Witch was sent to Camp X as part of the team known as the Legends Europe. The team was responsible for battling the Axis in Europe and Africa.",
+			"Modern Era",
+			"In 2010, Erin O'Hara published Preternatural Forces In The 21st Century. The book contained a new system of mathematics as well as several new esoteric systems. It was intended that the book would provide a modern look at traditional esoteric schools of thought."
+		],
+		"storyHeaders" : [false, false, false, true, false, true, false],
+		"originPicThumb" : "https://i.imgur.com/IYk6JRX.jpg",
+		"originPic" : "https://i.imgur.com/IYk6JRX.jpg"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "CampX",
+			"pic" : "https://i.imgur.com/Ofw9E8W.png",
+			"name" : "Camp X"
+		},
+		{
+			"bio" : "CometStone",
+			"pic" : "https://i.imgur.com/C365asE.png",
+			"name" : "Comet Stone (Whisper Witch)"
+		},
+		{
+			"bio" : "DiamondsOfDaath",
+			"pic" : "https://i.imgur.com/nLtFsEP.png",
+			"name" : "Diamonds Of Daath (Esoteric System)"
+		},
+		{
+			"bio" : "DrEternity",
+			"pic" : "https://i.imgur.com/aVCkOxA.png",
+			"name" : "Dr. Eternity"
+		},
+		{
+			"bio" : "EnergiesAndEnvironments",
+			"pic" : "https://i.imgur.com/Lf2qLS1.png",
+			"name" : "Energies And Environments (Esoteric System)"
+		},
+		{
+			"bio" : "Fate",
+			"pic" : "https://i.imgur.com/fREcrQ2.png",
+			"name" : "Fate"
+		},
+		{
+			"bio" : "TreeOfLife",
+			"pic" : "https://i.imgur.com/0uK5m79.png",
+			"name" : "Hermetic Tree Of Life (Esoteric System)"
+		},
+		{
+			"bio" : "IsaacNewton",
+			"pic" : "https://i.imgur.com/dtPXBRg.png",
+			"name" : "Isaac Newton"
+		},
+		{
+			"bio" : "LegendsEurope",
+			"pic" : "https://i.imgur.com/TSV9ynR.png",
+			"name" : "The Legends Europe"
+		},
+		{
+			"bio" : "LordNox",
+			"pic" : "https://i.imgur.com/JSesZWe.png",
+			"name" : "Lord Nox"
+		},
+		{
+			"bio" : "Love",
+			"pic" : "https://i.imgur.com/XlE7rrY.png",
+			"name" : "Love (Mathematics)"
+		},
+		{
+			"bio" : "NewTarot",
+			"pic" : "https://i.imgur.com/RmBcxKX.png",
+			"name" : "New Tarot (Esoteric System)"
+		},
+		{
+			"bio" : "NewIChing",
+			"pic" : "https://i.imgur.com/Cu6yZKl.png",
+			"name" : "New I Ching (Esoteric System)"
+		},
+		{
+			"bio" : "Preternatural",
+			"pic" : "https://i.imgur.com/0uK5m79.png",
+			"name" : "Preternatural Forces In The 21st Century (Book)"
+		},
+		{
+			"bio" : "RobertBoyle",
+			"pic" : "https://i.imgur.com/2MAlGv7.png",
+			"name" : "Robert Boyle"
+		},
+		{
+			"bio" : "SorceressOfZoom",
+			"pic" : "https://i.imgur.com/xOUlrNR.png",
+			"name" : "Sorceress Of Zoom"
+		},
+		{
+			"bio" : "Weaver",
+			"pic" : "https://i.imgur.com/DhAdZPu.png",
+			"name" : "Weaver"
+		}
+		]
+}

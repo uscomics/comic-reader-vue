@@ -1,0 +1,56 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/gsXfRjN.png"
+		],
+	"personalInfo" : {
+		"realName" : "Baron Eric von Emmelman",
+		"height" : "7'10\"",
+		"weight" : "465 lbs.",
+		"eyes" : "Green",
+		"hair" : "None",
+		"citizenship" : "Germany",
+		"placeOfBirth" : "Munich, Bavaria",
+		"firstAppearance" : "Legends Europe #1",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Super Strength", 
+			"rank": 7
+		},
+		{
+			"name": "Manipulate Life Force", 
+			"rank": 9
+		},
+		{
+			"name": "Earth Control", 
+			"rank": 10
+		},
+		{
+			"name": "Plant Control", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Baron Eric von Emmelman was a World War One German flying ace under the command of the Red Baron. Near the end of the war he was shot down, his plane landing in a swamp. By all rights, Von Emmelman should have died that day... But through shear force of will he clung to life.. his body slowly merging with the swamp. Decades later he arose... half man, half plant! He is now determined to free his country from Nazi rule."
+		],
+		"originPicThumb" : "https://i.imgur.com/OBZ7STn.jpg",
+		"originPic" : "https://i.imgur.com/OBZ7STn.jpg"
+		},
+	"goldenAge" : {
+		"createdBy" : "Bill Woolfolk And Carmine Infantino",
+		"firstGoldenAgeAppearance" : "Air Fighters #3",
+		"year" : "1942",
+		"thenAndNowPicThumb" : "https://i.imgur.com/vZOVaJM.png",
+		"thenAndNowPic" : "https://i.imgur.com/vZOVaJM.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "LegendsEurope",
+			"pic" : "https://i.imgur.com/TSV9ynR.png",
+			"name" : "The Legends Europe"
+		}
+		]
+}

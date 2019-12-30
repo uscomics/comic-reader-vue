@@ -1,0 +1,57 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/u2TIsDK.png"
+		],
+	"personalInfo" : {
+		"realName" : "Unknown",
+		"height" : "6'0\"",
+		"weight" : "193 lbs.",
+		"eyes" : "Brown",
+		"hair" : "None",
+		"citizenship" : "U.S.A.",
+		"placeOfBirth" : "Unnkown",
+		"firstAppearance" : "Ye Olde Whisper Witch #2",
+		"era" : "1800s"
+		},
+	"skills" : [
+		{
+			"name": "Blunt Damage Resistance", 
+			"rank": 8
+		},
+		{
+			"name": "Piercing Damage Resistance", 
+			"rank": 8
+		},
+		{
+			"name": "Beyond Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Chief Skullface is an unknown native American who agreed to let Dr. Death change his body into a monstrous, but powerful form. The process warped his mind, turning him into a murderous creature of evil.",
+			"Chief Skullface is immune to most blunt and piercing damage, such as fists, bullets, knives, and arrows.",
+			"Chief Skullface is immortal, like all creatures from the Beyond. If his body is severely damaged or destroyed, his spirit will return to the Beyond where the body can regenerate."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "Jack Binder",
+		"firstGoldenAgeAppearance" : "Prize Comics vol. 2 #9",
+		"year" : "1942",
+		"thenAndNowPicThumb" : "https://i.imgur.com/QGjZRs5.png",
+		"thenAndNowPic" : "https://i.imgur.com/QGjZRs5.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		},
+		{
+			"bio" : "DrDeath",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "Dr. Death"
+		}
+		]
+}

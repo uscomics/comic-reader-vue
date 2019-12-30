@@ -1,0 +1,123 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/6L6BF5w.png",
+    	"https://i.imgur.com/Q9qwEvn.png"
+		],
+	"personalInfo" : {
+		"realName" : "Mary Roche",
+		"height" : "5'10\"",
+		"weight" : "130 lbs.",
+		"eyes" : "Blue",
+		"hair" : "Blonde",
+		"citizenship" : "U.S.A.",
+		"placeOfBirth" : "Post Falls, Idaho",
+		"firstAppearance" : "Gold Venus #1",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Small Air Craft Pilot", 
+			"rank": 9
+		},
+		{
+			"name": "P38 Lightning Pilot", 
+			"rank": 10
+		},
+		{
+			"name": "Super Agent Combat Training", 
+			"rank": 10
+		},
+		{
+			"name": "Flight (Dreaming Eagle Form)", 
+			"rank": 7
+		},
+		{
+			"name": "Claws (Dreaming Eagle Form)", 
+			"rank": 7
+		},
+		{
+			"name": "Damage Resistance (Dreaming Eagle Form)", 
+			"rank": 7
+		},
+		{
+			"name": "Dreaming Immortality (Dreaming Eagle Form)", 
+			"rank": 10
+		},
+		{
+			"name": "Dreaming Mind Control Immunity (Dreaming Eagle Form)", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Pre-War",
+			"Raised on a farm in Idaho, Mary LeRoche was taught how to fly a plane by her Father when she was only nine years old. After graduating from High School, Mary longed to see the world and enrolled in college in Paris, France prior to World War Two. There she met and fell in love with Jean Cartier, a Parisian lawyer.",
+			"Unfortunately, Mary also caught the eye Colonel Yamato, an attache to the Japanese embassy in Paris. Colonel Yamato threatened to kill Jean Cartier if Mary did not leave him. Fearing for her life and the life of her lover, Mary learned how to use a gun. However, Colonel Yamato managed to follow through on his threat and killed Jean Cartier.",
+			"Project Gold Venus And Camp X Training",
+			"Mary was devastated at the loss and didn’t know what to do about it. However, her skills as a pilot, her training with a gun, and her desire for revenge against the Japanese led an American agent to recommend her as a candidate for Project Gold Venus. Project Gold Venus was a plan originated by President Roosevelt to develop a special agent that could be used both as a combatant and to boost American moral in case America entered the war.",
+			"As part of Project Gold Venus, Mary was sent to Camp X and taught hand-to-hand combat and her skills with weapons were improved. She was taught how to fly war planes. Almost immediately after the Japanese bombed Pearl Harbor, Mary was assigned to a station in Burma. Her main job was to prevent the Japanese from linking up with the Nazis and she was also assigned responsibility of all the Pacific.",
+			"Wartime Action And The Legends Project",
+			"Her exploits against the Japanese were retold in American newspapers, making her a hero at home and directly leading to the creation of two war-time super groups: Legends Pacific and Legends Europe. She served as the de facto leader of the Legends Pacific."
+		],
+		"storyHeaders" : [true, false, false, true, false, false, true, false],
+		"originExtraPic" : "../images/icons/ThumbGoldVenusDreamingForm.png",
+		"originExtraText" : "During an early adventure with the Legends, Dreamtime summoned Mary's dreaming form, which was revealed to be a large bald eagle.",
+		"originPicThumb" : "https://i.imgur.com/OeBWoJm.jpg",
+		"originPic" : "https://i.imgur.com/OeBWoJm.jpg"
+		},
+	"goldenAge" : {
+		"createdBy" : "Unknown",
+		"firstGoldenAgeAppearance" : "Contact Comics #1 (Black Venus)",
+		"year" : "1944",
+		"thenAndNowPicThumb" : "https://i.imgur.com/8cXPORt.png",
+		"thenAndNowPic" : "https://i.imgur.com/8cXPORt.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "CampX",
+			"pic" : "https://i.imgur.com/Ofw9E8W.png",
+			"name" : "Camp X"
+		},
+		{
+			"bio" : "ColonelJameson",
+			"pic" : "https://i.imgur.com/8NZPE80.png",
+			"name" : "Colonel Jameson"
+		},
+		{
+			"bio" : "ColonelYamato",
+			"pic" : "https://i.imgur.com/lqENtSd.png",
+			"name" : "Colonel Yamato"
+		},
+		{
+			"bio" : "Dreamtime",
+			"pic" : "https://i.imgur.com/O95F5z9.png",
+			"name" : "Dreamtime"
+		},
+		{
+			"bio" : "JeanCartier",
+			"pic" : "https://i.imgur.com/9l2b6Ek.png",
+			"name" : "Jean Cartier"
+		},
+		{
+			"bio" : "LegendsPacific",
+			"pic" : "https://i.imgur.com/KxDASPU.png",
+			"name" : "The Legends Pacific"
+		},
+		{
+			"bio" : "BillEvans",
+			"pic" : "https://i.imgur.com/T0zUORf.png",
+			"name" : "Lieutenant Bill Evans"
+		},
+		{
+			"bio" : "P38Lightning",
+			"pic" : "https://i.imgur.com/ks2gvM9.png",
+			"name" : "P38 Lightning (Gold Venus)"
+		},
+		{
+			"bio" : "MikeOMalley",
+			"pic" : "https://i.imgur.com/Gn6FuX1.png",
+			"name" : "Sergeant Mike OMalley"
+		}
+		]
+}

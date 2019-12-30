@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The Legends Europe Bio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="../css/USComics.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">s
+    <script type="text/javascript" src="../js/Parse/min.js"></script>
+	<script type="text/javascript" src="../js/ParseUser.js" ></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script></head>
+</head>
+
+<body onLoad="loadUser()">
+	<section id="content" data-role="page" class="bioPage">
+    <header>
+        <a href="../index.html" data-ajax="false"><img id="usComicsIcon" src="../images/U.S.Comics Icon 152x152.png" title="U.S. Comics"/></a>      
+    	<a href="BioIndex.html" data-ajax="false"><img id="biosUSComicsIcon" src="../images/icons/Bios.png" title="Biographies"/></a>      
+        <ul id="headerControl1">
+            <li class="menuItem"><a class="menuLink" id="userLogin" href="../customer/Login.html">Login</a></li>
+            <li class="menuItem"><a class="menuLink" id="userRegister" href="../customer/Register.html">Sign Up</a></li>
+        </ul>
+        <ul id="headerControl2">
+            <li class="menuItem"><a class="menuLink" id="userAccountName" href="../customer/Account.html">Account</a></li>
+            <li class="menuItem"><a class="menuLink" id="userLogout" href="../index.html" onclick="logOutUser()">Log Out</a></li>
+        </ul>
+    </header>
+    
+    <section class="bioImage">
+    	<img class="bioImage" src="http://i.imgur.com/sCEytgz.png"/>
+    </section>
+    <div id="bioOrigin" data-role="collapsible" data-collapsed="false" class="bioTitleBar">
+        <h3>Origin</h3>
+        <div id="bioOriginContent" class="bioContent">
+        <span class="originStoryText">Created by the order of President Roosevelt, the Legends collects the world's best trained super agents together as a force to stop the Axis powers.<br/><br/>
+
+The Legends project is an expansion of the successful Gold Venus Project. It consisted of two branches, the Legends Pacific and the Legends Europe.<br/><br/>
+
+The team members of the Legends Europe are The Wraith, Silver Streak, The Heap, Whisper Witch, Miss Muscles, The Flag and Fireworks. The Flag serves as the de facto leader of the group. Most of the group trained at Camp X.<br/></span>
+        </div>
+    </div>
+    <div id="bioSeeAlso" data-role="collapsible" class="bioTitleBar">
+		<h3>See Also</h3>
+      	<div id="bioSeeAlsoContent" class="bioContent">
+            <div class="ui-grid-b">
+                <div class="ui-block-a"><a href="BioCampX.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbCampX.png" title="Camp X"><span class="bioTitle">Camp X</span></a></div>
+                <div class="ui-block-b"><a href="BioFlag.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbFlag.png" title="The Flag"><span class="bioTitle">The Flag</span></a></div>
+                <div class="ui-block-c"><a href="BioFireworks.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbFireworks.png" title="Fireworks"><span class="bioTitle">Fireworks</span></a></div>
+                <div class="ui-block-a"><a href="BioHeap.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbHeap.png" title="The Heap"><span class="bioTitle">The Heap</span></a></div>
+                <div class="ui-block-b"><a href="BioMissMuscles.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbMissMuscles.png" title="Miss Muscles"><span class="bioTitle">Miss Muscles</span></a></div>
+                <div class="ui-block-c"><a href="BioSilverStreak.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbSilverStreak.png" title="Silver Streak"><span class="bioTitle">Silver Streak</span></a></div>
+                <div class="ui-block-a"><a href="BioWhisperWitch.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbWhisperWitch.png" title="Whisper Witch"><span class="bioTitle">Whisper Witch</span></a></div>
+                <div class="ui-block-b"><a href="BioWraith.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbWraith.png" title="The Wraith"><span class="bioTitle">The Wraith</span></a></div>
+            </div>
+       	</div>
+    </div>
+</body>
+</html>

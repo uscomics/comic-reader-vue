@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Steamtrain Bio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="../css/USComics.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">s
+    <script type="text/javascript" src="../js/Parse/min.js"></script>
+	<script type="text/javascript" src="../js/ParseUser.js" ></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script></head>
+</head>
+
+<body onLoad="loadUser()">
+	<section id="content" data-role="page" class="bioPage">
+    <header>
+        <a href="../index.html" data-ajax="false"><img id="usComicsIcon" src="../images/U.S.Comics Icon 152x152.png" title="U.S. Comics"/></a>      
+    	<a href="BioIndex.html" data-ajax="false"><img id="biosUSComicsIcon" src="../images/icons/Bios.png" title="Biographies"/></a>      
+        <ul id="headerControl1">
+            <li class="menuItem"><a class="menuLink" id="userLogin" href="../customer/Login.html">Login</a></li>
+            <li class="menuItem"><a class="menuLink" id="userRegister" href="../customer/Register.html">Sign Up</a></li>
+        </ul>
+        <ul id="headerControl2">
+            <li class="menuItem"><a class="menuLink" id="userAccountName" href="../customer/Account.html">Account</a></li>
+            <li class="menuItem"><a class="menuLink" id="userLogout" href="../index.html" onclick="logOutUser()">Log Out</a></li>
+        </ul>
+    </header>
+    
+    <section class="bioImage">
+    	<img class="bioImage" src="http://i.imgur.com/NdqRGfn.png"/>
+    </section>
+    <div id="bioPersonalInfo" data-role="collapsible" data-collapsed="false" class="bioTitleBar">
+		<h3>Personal Info</h3>
+      	<div id="bioPersonalInfoContent" class="bioContent">
+        <table class="bioPersonalInfoTable">
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Real Name</td>
+            	<td class="bioPersonalInfoTableDataCell">Clarence Jackson</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Height</td>
+            	<td class="bioPersonalInfoTableDataCell">6'0"</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Weight</td>
+            	<td class="bioPersonalInfoTableDataCell">243 lbs.</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Eyes</td>
+            	<td class="bioPersonalInfoTableDataCell">Brown</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Hair</td>
+            	<td class="bioPersonalInfoTableDataCell">Black</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Citizenship</td>
+            	<td class="bioPersonalInfoTableDataCell">U.S.A.</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Place of Birth</td>
+            	<td class="bioPersonalInfoTableDataCell">Arlington, Virgina</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">First Appearance</td>
+            	<td class="bioPersonalInfoTableDataCell">Ye Olde Whisper Witch #3</td>
+            </tr>
+          <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Era</td>
+            	<td class="bioPersonalInfoTableDataCell">1800s</td>
+          </tr>
+        </table>
+        </div>
+    </div>
+    <div id="bioSkills" data-role="collapsible" class="bioTitleBar">
+		<h3>Skills</h3>
+      	<div id="bioSkillsContent" class="bioContent">
+            <ul class="graph">
+                <li class="power5">Super Strength: 5 (Steam Powered Arm Only)</li>
+                <li class="power4">Pistols: 4</li>
+                <li class="power4">Horseback Riding: 4</li>
+            </ul>
+       	</div>
+    </div>
+    <div id="bioOrigin" data-role="collapsible" class="bioTitleBar">
+        <h3>Origin</h3>
+        <div id="bioOriginContent" class="bioContent">
+        <span class="originStoryText">Clarence Jackson was a slave picking cotton on a Virginia plantation during the U.S. Civil War. After the war General Sherman gave every freeman 40 acres of land and a mule. Clarence worked his land and saved money. Soon he had a few horses and a young wife, but the KKK burned his farm to the ground, killing his wife and causing him to lose an arm when he tried to save her.<br/><br/>
+
+His life and body in ruins, he took what he had left and headed out west. An outlaw attempted to rob him, but Captain Æther intervened. Seeing that Clarence was a good man, Captain Æther built him a new steam powered arm and asked for his help fighting Superbrain.<br/></span>
+        </div>
+    </div>
+    <div id="bioSeeAlso" data-role="collapsible" class="bioTitleBar">
+		<h3>See Also</h3>
+      	<div id="bioSeeAlsoContent" class="bioContent">
+            <div class="ui-grid-b">
+                <div class="ui-block-a"><a href="BioCaptainÆther.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbCaptainÆther.png" title="Captain Æther"><span class="bioTitle">Captain Æther</span></a></div>
+                <div class="ui-block-b"><a href="BioSuperbrain.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbSuperbrain.png" title="Superbrain"><span class="bioTitle">Superbrain</span></a></div>
+            </div>
+       	</div>
+    </div>
+ 
+    </section>
+</body>
+</html>

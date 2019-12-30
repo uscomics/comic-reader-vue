@@ -1,0 +1,42 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/hy62By1.png"
+		],
+	"personalInfo" : {
+		"realName" : "Unknown",
+		"height" : "6'1\"",
+		"weight" : "220 lbs.",
+		"eyes" : "Unknown",
+		"hair" : "Black",
+		"citizenship" : "Unknown",
+		"placeOfBirth" : "Unknown",
+		"firstAppearance" : "Legends Europe #3",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Unknown", 
+			"rank": 0
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Mr. Nobody is a man of mystery who has a knack for showing up when needed and knowing secrets. He has knowledge of secret identities, the plots of creatures in other dimensions, and so on."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "C. Harrington La Ray and John Giunta",
+		"firstGoldenAgeAppearance" : "Terrific Comics #1",
+		"year" : "1944",
+		"thenAndNowPicThumb" : "http://i.imgur.com/fl3Fvb1.png",
+		"thenAndNowPic" : "http://i.imgur.com/fl3Fvb1.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "LegendsEurope",
+			"pic" : "https://i.imgur.com/TSV9ynR.png",
+			"name" : "The Legends Europe"
+		}
+		]
+}

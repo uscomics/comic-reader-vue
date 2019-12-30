@@ -1,0 +1,57 @@
+{
+"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/432PGZq.png"
+		],
+	"personalInfo" : {
+		"realName" : "Blood Dragon",
+		"height" : "15'6\"",
+		"weight" : "Approximately 70 tons.",
+		"eyes" : "Black and Red",
+		"hair" : "Black and Red",
+		"citizenship" : "Burma",
+		"placeOfBirth" : "The Beyond",
+		"firstAppearance" : "Gold Venus #4",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Damage Resistance", 
+			"rank": 9
+		},
+		{
+			"name": "Super Strength", 
+			"rank": 10
+		},
+		{
+			"name": "Fire Breath", 
+			"rank": 10
+		},
+		{
+			"name": "Immunity To Fire", 
+			"rank": 10
+		},
+		{
+			"name": "Beyond Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"The Blood Dragon is an Exile from the Beyond , i.e. a creature born in the Beyond who now lives permanently on Earth. As such the Blood Dragon is immortal, like all creatures from the Beyond. If his body is severely damaged or destroyed, his spirit will return to the Beyond where the body can regenerate.",
+			"The Blood Dragon has taken up a leadership role in the governance of Burma. It appears that all major decisions must gain his approval, regardless of the structure and wishes of the human leadership."
+		]
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		},
+		{
+			"bio" : "BloodDragons",
+			"pic" : "https://i.imgur.com/Nx8xz7y.png",
+			"name" : "The Blood Dragons"
+		}
+		]
+}

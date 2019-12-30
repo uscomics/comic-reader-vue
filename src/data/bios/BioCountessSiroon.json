@@ -1,0 +1,63 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/u4jZX1T.png"
+		],
+	"personalInfo" : {
+		"realName" : "Countess Siroon",
+		"height" : "5'10\"",
+		"weight" : "125 lbs.",
+		"eyes" : "Black and Red",
+		"hair" : "Black",
+		"citizenship" : "The Beyond",
+		"placeOfBirth" : "The Beyond",
+		"firstAppearance" : "Gold Venus #3",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Command Beyond Creatures", 
+			"rank": 9
+		},
+		{
+			"name": "Seduction ", 
+			"rank": 9
+		},
+		{
+			"name": "Summon Beyond Portal", 
+			"rank": 10
+		},
+		{
+			"name": "Vampiric Blood Drain", 
+			"rank": 10
+		},
+		{
+			"name": "Summon Beyond Creatures", 
+			"rank": 10
+		},
+		{
+			"name": "Beyond Immortality", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Countess Siroon is a high ranking leader in the Beyond . She is able to command the creatures of the Beyond, rejuvenate her strength by sucking the blood of mortals with her fangs, and is one of the few people able to summon a portal that allows travel between Earth and the Beyond.",
+            "Countess Siroon is immortal, like all creatures from the Beyond. If her body is severely damaged or destroyed, her spirit will return to the Beyond where the body can regenerate."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "Unknown",
+		"firstGoldenAgeAppearance" : "This Magazine is Haunted #12",
+		"year" : "1953",
+		"thenAndNowPicThumb" : "https://i.imgur.com/coUpAKp.png",
+		"thenAndNowPic" : "https://i.imgur.com/coUpAKp.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Beyond",
+			"pic" : "https://i.imgur.com/6xmAHDo.png",
+			"name" : "The Beyond"
+		}
+		]
+}

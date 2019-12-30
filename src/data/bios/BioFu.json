@@ -1,0 +1,51 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/NfyFVqH.png"
+		],
+	"personalInfo" : {
+		"realName" : "Fu",
+		"height" : "5'11\"",
+		"weight" : "40 lbs.",
+		"eyes" : "Silver",
+		"hair" : "None",
+		"citizenship" : "N/A",
+		"placeOfBirth" : "Mount Kasa, Japan",
+		"firstAppearance" : "The Legends Pacific #3",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Air Blast", 
+			"rank": 10
+		},
+		{
+			"name": "Animate Air", 
+			"rank": 10
+		},
+		{
+			"name": "Summon Twister", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Fu is an elemental golem created and controlled by Godai No Renkinjutsushi. Together with other similarly created golems, they form the Godai.",
+            "Fu is the Japanese word for air, and Fu controls air completely."
+		],
+        "originPicThumb" : "https://i.imgur.com/k5RCu5G.jpg",
+		"originPic" : "https://i.imgur.com/k5RCu5G.jpg"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "Godai",
+			"pic" : "https://i.imgur.com/m611PrS.png",
+			"name" : "Godai"
+		},
+		{
+			"bio" : "GodaiNoRenkinjutsushi",
+			"pic" : "https://i.imgur.com/m611PrS.png",
+			"name" : "Godai No Renkinjutsushi"
+		}
+		]
+}

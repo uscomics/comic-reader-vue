@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Whisper Witch Bio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="../css/USComics.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">s
+    <script type="text/javascript" src="../js/Parse/min.js"></script>
+	<script type="text/javascript" src="../js/ParseUser.js" ></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script></head>
+</head>
+
+<body onLoad="loadUser()">
+	<section id="content" data-role="page" class="bioPage">
+    <header>
+        <a href="../index.html" data-ajax="false"><img id="usComicsIcon" src="../images/U.S.Comics Icon 152x152.png" title="U.S. Comics"/></a>      
+    	<a href="BioIndex.html" data-ajax="false"><img id="biosUSComicsIcon" src="../images/icons/Bios.png" title="Biographies"/></a>      
+        <ul id="headerControl1">
+            <li class="menuItem"><a class="menuLink" id="userLogin" href="../customer/Login.html">Login</a></li>
+            <li class="menuItem"><a class="menuLink" id="userRegister" href="../customer/Register.html">Sign Up</a></li>
+        </ul>
+        <ul id="headerControl2">
+            <li class="menuItem"><a class="menuLink" id="userAccountName" href="../customer/Account.html">Account</a></li>
+            <li class="menuItem"><a class="menuLink" id="userLogout" href="../index.html" onclick="logOutUser()">Log Out</a></li>
+        </ul>
+    </header>
+    
+    <section class="bioImage">
+    	<img class="bioImage" src="http://i.imgur.com/2KQ83lC.png"/>
+    	<img class="bioImage" src="http://i.imgur.com/vnBWylb.png"/>
+    </section>
+    <div id="bioPersonalInfo" data-role="collapsible" data-collapsed="false" class="bioTitleBar">
+		<h3>Personal Info</h3>
+      	<div id="bioPersonalInfoContent" class="bioContent">
+        <table class="bioPersonalInfoTable">
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Real Name</td>
+            	<td class="bioPersonalInfoTableDataCell">Erin O'Hara</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Height</td>
+            	<td class="bioPersonalInfoTableDataCell">5'6"</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Weight</td>
+            	<td class="bioPersonalInfoTableDataCell">120 lbs.</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Eyes</td>
+            	<td class="bioPersonalInfoTableDataCell">Green</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Hair</td>
+            	<td class="bioPersonalInfoTableDataCell">Red</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Citizenship</td>
+            	<td class="bioPersonalInfoTableDataCell">Ireland</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Place of Birth</td>
+            	<td class="bioPersonalInfoTableDataCell">Balgriffin, Ireland</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">First Appearance</td>
+            	<td class="bioPersonalInfoTableDataCell">Ye Olde Whisper Witch #1</td>
+            </tr>
+          <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Era</td>
+            	<td class="bioPersonalInfoTableDataCell">Renaissance, World War II, Modern</td>
+          </tr>
+        </table>
+        </div>
+    </div>
+    <div id="bioSkills" data-role="collapsible" class="bioTitleBar">
+		<h3>Skills</h3>
+      	<div id="bioSkillsContent" class="bioContent">
+            <ul class="graph">
+                <li class="power6">Mathematics: 6</li>
+                <li class="power6">Eastern Esoteric Knowledge: 6</li>
+                <li class="power9">Reality Manipulation: 9</li>
+                <li class="power10">Western Esoteric Knowledge: 10</li>
+                <li class="power10">Dream Immortality: 10</li>
+            </ul>
+       	</div>
+    </div>
+    <div id="bioOrigin" data-role="collapsible" class="bioTitleBar">
+        <h3>Origin</h3>
+        <div id="bioOriginContent" class="bioContent">
+        <span class="originStoryText">On August 14, 1682 in Ireland Erin O'Hara, a young Herbalist, sees a comet fall from the sky. A small piece separates from the main body of the comet and lands near her. Determined to unlock the mysteries of the comet stone, Erin is eventually sent to Isaac Newton. Newton determines the stone possesses occult powers and gathers the greatest occult minds of the age to study the stone: Robert Boyle, Dr. Eternity, and Lord Nox. Newton devises a ritual to unlock the power of the stone and transfer it to Erin.<br/><br/>
+
+The next day, Erin is visited by the Sorceress of Zoom. The sorceress insists Erin become her apprentice, saying her new powers are too dangerous to use otherwise. The Sorceress tells Erin that reality is like a dream that she can now control. She also tells Erin she is now Immortal.<br/><br/>
+
+The Sorceress introduces Erin to various Cosmic Beings, including Fate. Fate tells Erin she now plays a role in the course of fate. Erin is also introduced to the Weaver, who creates Dream Worlds, Dream Warriors, and the Dream mortals call Reality. It is this Reality Dream that Erin can now control.<br/><br/>
+
+<span class="originTextSubHeader">World War II Era</span><br/>
+During World war II Whisper Witch was sent to Camp X as part of the team known as the Legends Europe. The team was responsible for battling the Axis in Europe and Africa.<br/><br/>
+
+<span class="originTextSubHeader">Modern Era</span><br/>
+In 2010, Erin O'Hara published Preternatural Forces In The 21st Century. The book contained a new system of mathematics as well as several new esoteric systems. It was intended that the book would provide a modern look at traditional esoteric schools of thought.
+<br/></span>
+			<a href="#popupOrigin" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="http://i.imgur.com/IYk6JRX.jpg" alt="Origin" title="Origin" style="width:30%"></a>
+			<div data-role="popup" id="popupOrigin" data-overlay-theme="b" data-theme="b" data-corners="false">
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="http://i.imgur.com/IYk6JRX.jpg" style="max-height:512px;">
+			</div>
+            <br/><span class="compareThenAndNowLabel">Tap image to read origin story.</span>
+        </div>
+    </div>
+    <div id="bioSeeAlso" data-role="collapsible" class="bioTitleBar">
+		<h3>See Also</h3>
+      	<div id="bioSeeAlsoContent" class="bioContent">
+            <div class="ui-grid-b">
+                <div class="ui-block-a"><a href="BioCampX.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbCampX.png" title="Camp X"><span class="bioTitle">Camp X</span></a></div>
+                <div class="ui-block-b"><a href="BioCometStone.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbCometStone.png" title="Comet Stone (Whisper Witch)"><span class="bioTitle">Comet Stone (Whisper Witch)</span></a></div>
+                <div class="ui-block-c"><a href="BioDiamondsOfDaath.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbDiamondsOfDaath.png" title="Diamonds Of Daath (Esoteric System)"><span class="bioTitle">Diamonds Of Daath (Esoteric System)</span></a></div>
+                <div class="ui-block-a"><a href="BioDrEternity.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbDrEternity.png" title="Dr. Eternity"><span class="bioTitle">Dr. Eternity</span></a></div>
+                <div class="ui-block-b"><a href="BioEnergiesAndEnvironments.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbEnergiesAndEnvironments.png" title="Energies And Environments (Esoteric System)"><span class="bioTitle">Energies And Environments (Esoteric System)</span></a></div>
+                <div class="ui-block-c"><a href="BioFate.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbFate.png" title="Fate"><span class="bioTitle">Fate</span></a></div>
+                <div class="ui-block-a"><a href="BioTreeOfLife.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbTreeOfLife.png" title="Hermetic Tree Of Life (Esoteric System)"><span class="bioTitle">Hermetic Tree Of Life (Esoteric System)</span></a></div>
+                <div class="ui-block-b"><a href="BioIsaacNewton.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbIsaacNewton.png" title="Isaac Newton"><span class="bioTitle">Isaac Newton</span></a></div>
+                <div class="ui-block-c"><a href="BioLegendsEurope.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbFlag.png" title="The Legends Europe"><span class="bioTitle">The Legends Europe</span></div></td>
+                <div class="ui-block-a"><a href="BioLordNox.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbLordNox.png" title="Lord Nox"><span class="bioTitle">Lord Nox</span></a></div>
+                <div class="ui-block-b"><a href="BioLove.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbLove.png" title="Love (Mathematics)"><span class="bioTitle">Love (Mathematics)</span></a></div>
+                <div class="ui-block-c"><a href="BioNewTarot.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbNewTarot.png" title="New Tarot (Esoteric System)"><span class="bioTitle">New Tarot (Esoteric System)</span></a></div>
+                <div class="ui-block-a"><a href="BioNewIChing.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbNewIChing.png" title="New I Ching (Esoteric System)"><span class="bioTitle">New I Ching (Esoteric System)</span></a></div>
+                <div class="ui-block-b"><a href="BioPreternatural.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbPreternatural.png" title="Preternatural Forces In The 21st Century (Book)"><span class="bioTitle">Preternatural Forces In The 21st Century (Book)</span></a></div>
+                <div class="ui-block-c"><a href="BioRobertBoyle.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbRobertBoyle.png" title="Robert Boyle"><span class="bioTitle">Robert Boyle</span></a></div>
+                <div class="ui-block-a"><a href="BioSorceressOfZoom.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbSorceressOfZoom.png" title="Sorceress of Zoom"><span class="bioTitle">Sorceress of Zoom</span></a></div>
+                <div class="ui-block-b"><a href="BioWeaver.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbWeaver.png" title="Weaver"><span class="bioTitle">Weaver</span></a></div>
+            </div>
+       	</div>
+    </div>
+ 
+    </section>
+
+</body>
+</html>

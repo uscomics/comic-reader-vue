@@ -1,0 +1,52 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/wdoE1YY.png"
+		],
+	"personalInfo" : {
+		"realName" : "Tabitha Marley",
+		"height" : "5'7\"",
+		"weight" : "110 lbs.",
+		"eyes" : "Brown",
+		"hair" : "Brown",
+		"citizenship" : "U.S.A.",
+		"placeOfBirth" : "Old Brookville, New York",
+		"firstAppearance" : "Gold Venus #1",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Super Agent Combat Training", 
+			"rank": 9
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Tabitha Marley's mother died of cancer when she was 6 years old. Her father, Police Detective Paul Marley, was killed by a bomber who called himself the Clown. As his dying request, her asked his partner, Detective John Perry, to look after his daughter.",
+			"Frustrated at the lack of progress tracking down the bomber and inspired by the success of Gold Venus fighting the Japanese in Asia, John Perry decided to don a heroic costume and take up the name Black Fury to instill fear into the hearts of the local underworld. This, he hoped, would generate a lead on the identity of the bomber.",
+			"Shortly after taking up the Black Fury persona John tracks down the Clown, and defeats him with the help of Tabitha.",
+			"John continued to fight crime in his Black Fury persona, with Tabitha insisting she help him. Their activities gain the notice of the U.S. government, who recruit the pair for training at a special facility known as Camp X. They received standard Camp X training and gadgets as well as a mansion headquarters and a specially equipped Auburn Speedster car."
+		],
+		"originPicThumb" : "https://i.imgur.com/o15dteJ.jpg",
+		"originPic" : "https://i.imgur.com/o15dteJ.jpg"
+		},
+	"goldenAge" : {
+		"createdBy" : "Dennis Neville",
+		"firstGoldenAgeAppearance" : "Fantastic Comics #17",
+		"year" : "1940",
+		"thenAndNowPicThumb" : "https://i.imgur.com/Zq8eAfj.png",
+		"thenAndNowPic" : "https://i.imgur.com/Zq8eAfj.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "BlackFury",
+			"pic" : "https://i.imgur.com/rb4rb7c.png",
+			"name" : "Black Fury"
+		},
+		{
+			"bio" : "CampX",
+			"pic" : "https://i.imgur.com/Ofw9E8W.png",
+			"name" : "Camp X"
+		}
+		]
+}

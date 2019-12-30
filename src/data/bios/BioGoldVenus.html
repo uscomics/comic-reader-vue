@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gold Venus Bio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="stylesheet" href="../css/USComics.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">s
+    <script type="text/javascript" src="../js/Parse/min.js"></script>
+	<script type="text/javascript" src="../js/ParseUser.js" ></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script></head>
+</head>
+
+<body onLoad="loadUser()">
+	<section id="content" data-role="page" class="bioPage">
+    <header>
+        <a href="../index.html" data-ajax="false"><img id="usComicsIcon" src="../images/U.S.Comics Icon 152x152.png" title="U.S. Comics"/></a>      
+    	<a href="BioIndex.html" data-ajax="false"><img id="biosUSComicsIcon" src="../images/icons/Bios.png" title="Biographies"/></a>      
+        <ul id="headerControl1">
+            <li class="menuItem"><a class="menuLink" id="userLogin" href="../customer/Login.html">Login</a></li>
+            <li class="menuItem"><a class="menuLink" id="userRegister" href="../customer/Register.html">Sign Up</a></li>
+        </ul>
+        <ul id="headerControl2">
+            <li class="menuItem"><a class="menuLink" id="userAccountName" href="../customer/Account.html">Account</a></li>
+            <li class="menuItem"><a class="menuLink" id="userLogout" href="../index.html" onclick="logOutUser()">Log Out</a></li>
+        </ul>
+    </header>
+    
+    <section class="bioImage">
+    	<img class="bioImage" src="http://i.imgur.com/6L6BF5w.png"/>
+    	<img class="bioImage" src="http://i.imgur.com/Q9qwEvn.png"/>
+    </section>
+    <div id="bioPersonalInfo" data-role="collapsible" data-collapsed="false" class="bioTitleBar">
+		<h3>Personal Info</h3>
+      	<div id="bioPersonalInfoContent" class="bioContent">
+        <table class="bioPersonalInfoTable">
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Real Name</td>
+            	<td class="bioPersonalInfoTableDataCell">Mary LeRoche</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Height</td>
+            	<td class="bioPersonalInfoTableDataCell">5'10"</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Weight</td>
+            	<td class="bioPersonalInfoTableDataCell">130 lbs.</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Eyes</td>
+            	<td class="bioPersonalInfoTableDataCell">Blue</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Hair</td>
+            	<td class="bioPersonalInfoTableDataCell">Blonde</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Citizenship</td>
+            	<td class="bioPersonalInfoTableDataCell">U.S.A.</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Place of Birth</td>
+            	<td class="bioPersonalInfoTableDataCell">Post Falls, Idaho</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">First Appearance</td>
+            	<td class="bioPersonalInfoTableDataCell">Gold Venus #1</td>
+            </tr>
+          <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Era</td>
+            	<td class="bioPersonalInfoTableDataCell">World War II</td>
+          </tr>
+        </table>
+        </div>
+    </div>
+    <div id="bioSkills" data-role="collapsible" class="bioTitleBar">
+		<h3>Skills</h3>
+      	<div id="bioSkillsContent" class="bioContent">
+            <ul class="graph">
+                <li class="power9">Small Air Craft Pilot: 9</li>
+                <li class="power10">P38 Lightning Pilot: 10</li>
+                <li class="power10">Super Agent Combat Training: 10</li>
+                <li class="power7">Flight: 7 (Dreaming Eagle Form)</li>
+                <li class="power7">Claws: 7 (Dreaming Eagle Form)</li>
+                <li class="power7">Damage Resistance: 7 (Dreaming Eagle Form)</li>
+                <li class="power10">Dreaming Immortality: 10 (Dreaming Eagle Form)</li>
+                <li class="power10">Dreaming Mind Control Immunity: 10 (Dreaming Eagle Form)</li>
+            </ul>
+       	</div>
+    </div>
+    <div id="bioOrigin" data-role="collapsible" class="bioTitleBar">
+        <h3>Origin</h3>
+        <div id="bioOriginContent" class="bioContent">
+        <span class="originStoryText"><span class="originTextSubHeader">Pre-War</span><br/>
+Raised on a farm in Idaho, Mary LeRoche was taught how to fly a plane by her Father when she was only nine years old. After graduating from High School, Mary longed to see the world and enrolled in college in Paris, France prior to World War Two. There she met and fell in love with Jean Cartier, a Parisian lawyer.<br/><br/>
+
+Unfortunately, Mary also caught the eye Colonel Yamato, an attache to the Japanese embassy in Paris. Colonel Yamato threatened to kill Jean Cartier if Mary did not leave him. Fearing for her life and the life of her lover, Mary learned how to use a gun. However, Colonel Yamato managed to follow through on his threat and killed Jean Cartier.<br/><br/>
+
+<span class="originTextSubHeader">Project Gold Venus And Camp X Training</span><br/>
+Mary was devastated at the loss and didn’t know what to do about it. However, her skills as a pilot, her training with a gun, and her desire for revenge against the Japanese led an American agent to recommend her as a candidate for Project Gold Venus. Project Gold Venus was a plan originated by President Roosevelt to develop a special agent that could be used both as a combatant and to boost American moral in case America entered the war.<br/><br/>
+
+As part of Project Gold Venus, Mary was sent to Camp X and taught hand-to-hand combat and her skills with weapons were improved. She was taught how to fly war planes. Almost immediately after the Japanese bombed Pearl Harbor, Mary was assigned to a station in Burma. Her main job was to prevent the Japanese from linking up with the Nazis and she was also assigned responsibility of all the Pacific.<br/><br/>
+
+<span class="originTextSubHeader">Wartime Action And The Legends Project</span><br/>
+Her exploits against the Japanese were retold in American newspapers, making her a hero at home and directly leading to the creation of two war-time super groups: Legends Pacific and Legends Europe. She served as the de facto leader of the Legends Pacific.<br/><br/>
+
+<img src="../images/icons/ThumbGoldVenusDreamingForm.png" />During an early adventure with the Legends, Dreamtime summoned Mary's dreaming form, which was revealed to be a large bald eagle.</span><br/>
+			<a href="#popupOrigin" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="http://i.imgur.com/OeBWoJm.jpg" alt="Origin" title="Origin" style="width:30%"></a>
+			<div data-role="popup" id="popupOrigin" data-overlay-theme="b" data-theme="b" data-corners="false">
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="http://i.imgur.com/OeBWoJm.jpg" style="max-height:512px;">
+			</div>
+            <br/><span class="compareThenAndNowLabel">Tap image to read origin story.</span>
+        </div>
+    </div>
+    <div id="bioGoldenAge" data-role="collapsible" class="bioTitleBar">
+        <h3>Golden Age</h3>
+        <div id="bioGoldenAgeContent" class="bioContent">
+            <table class="goldenAgeTable">
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Created By</td>
+            	<td class="bioPersonalInfoTableDataCell">Unknown</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">First Appearance</td>
+            	<td class="bioPersonalInfoTableDataCell">Contact Comics #1 (Black Venus)</td>
+            </tr>
+            <tr class="bioPersonalInfoTableRow">
+            	<td class="bioPersonalInfoTableTitleCell">Year</td>
+            	<td class="bioPersonalInfoTableDataCell">1944</td>
+            </tr>
+            </table>
+            <section class="compareThenAndNow">
+                <a href="#popupThenAndNow" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="http://i.imgur.com/8cXPORt.png" alt="Then And Now" title="Then And Now" style="width:30%"></a>
+                <div data-role="popup" id="popupThenAndNow" data-overlay-theme="b" data-theme="b" data-corners="false">
+                    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="http://i.imgur.com/8cXPORt.png" style="max-height:512px;">
+                </div>
+                <br/><span class="compareThenAndNowLabel">Tap image to compare Golden Age and Modern versions.</span>
+            </section>
+        </div>
+    </div>
+    <div id="bioSeeAlso" data-role="collapsible" class="bioTitleBar">
+		<h3>See Also</h3>
+      	<div id="bioSeeAlsoContent" class="bioContent">
+            <div class="ui-grid-b">
+                <div class="ui-block-a"><a href="BioCampX.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbCampX.png" title="Camp X"><span class="bioTitle">Camp X</span></a></div>
+                <div class="ui-block-b"><a href="BioColonelJameson.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbColonelJameson.png" title="Colonel Charles Jameson"><span class="bioTitle">Colonel Charles Jameson</span></a></div>
+                <div class="ui-block-c"><a href="BioColonelYamato.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbColonelYamato.png" title="Colonel Yamato"><span class="bioTitle">Colonel Yamato</span></a></div>
+                <div class="ui-block-a"><a href="BioDreamtime.html"><img class="bioThumb" id="heroThumb2" src="../images/icons/ThumbDreamtime.png" title="Dreamtime"><span class="bioTitle">Dreamtime</span></a></div>
+                <div class="ui-block-b"><a href="BioJeanCartier.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbJeanCartier.png" title="Jean Cartier"><span class="bioTitle">Jean Cartier</span></a></div>
+                <div class="ui-block-c"><a href="BioLegendsPacific.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbManOMetal.png" title="The Legends Pacific"><span class="bioTitle">The Legends Pacific</span></a></div>
+                <div class="ui-block-a"><a href="BioBillEvans.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbBillEvans.png" title="Lieutenant Bill Evans"><span class="bioTitle">Lieutenant Bill Evans</span></a></div>
+                <div class="ui-block-b"><a href="BioP38Lightning.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbP38Lightning.png" title="P38 Lightning (Gold Venus)"><span class="bioTitle">P38 Lightning (Gold Venus)</span></a></div>
+                <div class="ui-block-c"><a href="BioMikeOMalley.html"><img class="bioThumb" id="heroThumb1" src="../images/icons/ThumbMikeOMalley.png" title="Sergeant Mike O'Malley"><span class="bioTitle">Sergeant Mike O'Malley</span></a></div>
+            </div>
+       	</div>
+    </div>
+ 
+    </section>
+</body>
+</html>

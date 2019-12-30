@@ -1,0 +1,86 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/SLlbqxk.png"
+		],
+	"personalInfo" : {
+		"realName" : "Ralph Payne",
+		"height" : "6'0\"",
+		"weight" : "185 lbs.",
+		"eyes" : "Blue",
+		"hair" : "Brown",
+		"citizenship" : "U.S.A.",
+		"placeOfBirth" : "Frederick, MD",
+		"firstAppearance" : "Gold Venus #3",
+		"era" : "World War II"
+		},
+	"skills" : [
+		{
+			"name": "Explosives", 
+			"rank": 8
+		},
+		{
+			"name": "Chemistry", 
+			"rank": 8
+		},
+		{
+			"name": "Super Agent Combat Training", 
+			"rank": 9
+		},
+		{
+			"name": "Archery", 
+			"rank": 10
+		},
+		{
+			"name": "Poison Bite (Dreaming Snake Form)", 
+			"rank": 7
+		},
+		{
+			"name": "Dreaming Immortality (Dreaming Snake Form)", 
+			"rank": 10
+		},
+		{
+			"name": "Dreaming Mind Control Immunity (Dreaming Snake Form)", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Ralph Payne was a member of the U.S. Office Of Strategic Services (OSS), a U.S. intelligence agency. Feeling that he could not effectively fight crime in his civilian guise, he turns to costumed crime fighting, becoming Trick Arrow. His primary weapon is his skill with bow and arrow, though he is good at fighting even without his weapons. In addition to standard arrows, he caries several types of trick arrows. These include arrows that explode, release sleeping gas, cable arrows, and so on.",
+			"After the initial success of Project Gold Venus, the Trick Arrow became the first additional member of the Legends, which expanded Project Gold Venus to create two super groups to fight the Axis. The Trick Arrow is a member of the Pacific arm of the Legends. He has received training from Camp X."
+		],
+		"originExtraPic" : "../images/icons/ThumbTrickArrowDreamingForm.png",
+		"originExtraText" : "During an early adventure with the Legends, Dreamtime summoned Ralph's dreaming form, which was revealed to be a large rattle snake.",
+		"originPicThumb" : "https://i.imgur.com/grBJbaP.jpg",
+		"originPic" : "https://i.imgur.com/grBJbaP.jpg"
+		},
+	"goldenAge" : {
+		"createdBy" : "Unknown",
+		"firstGoldenAgeAppearance" : "Funny Pages #10, vol 2 (Arrow, the 3rd super hero ever created.)",
+		"year" : "1938",
+		"thenAndNowPicThumb" : "https://i.imgur.com/faZV7I4.png",
+		"thenAndNowPic" : "https://i.imgur.com/faZV7I4.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "CampX",
+			"pic" : "https://i.imgur.com/Ofw9E8W.png",
+			"name" : "Camp X"
+		},
+		{
+			"bio" : "Dreamtime",
+			"pic" : "https://i.imgur.com/O95F5z9.png",
+			"name" : "Dreamtime"
+		},
+		{
+			"bio" : "LegendsPacific",
+			"pic" : "https://i.imgur.com/KxDASPU.png",
+			"name" : "The Legends Pacific"
+		},
+		{
+			"bio" : "TrickArrowsTrickArrows",
+			"pic" : "https://i.imgur.com/Arlydlt.png",
+			"name" : "Trick Arrows (Trick Arrow)"
+		}
+		]
+}

@@ -1,0 +1,73 @@
+{
+	"title" : "U.S. Comics",
+	"wallpapers" : [
+    	"https://i.imgur.com/x1arXDl.png"
+		],
+	"personalInfo" : {
+		"realName" : "Knur",
+		"height" : "3'2\"",
+		"weight" : "74 lbs.",
+		"eyes" : "Black",
+		"hair" : "None",
+		"citizenship" : "Unknown",
+		"placeOfBirth" : "Unknown",
+		"firstAppearance" : "Ye Olde Whisper Witch #1",
+		"era" : "1800s"
+		},
+	"skills" : [
+		{
+			"name": "Science", 
+			"rank": 10
+		}
+		],
+	"origin" : {
+		"story" : [
+			"Knur is an alien who crash landed on Earth attempting to warn the planet of the coming Superbrain invasion. As his dying act he selected Gordon Dane, aka Captain Æther, to be the Earth's champion against the attack.",
+			"Knur supplied Dane with a Holo Essence Projector of himself that can be called up at any time for assistance. He also bequeathed his Æther powered spaceship to Dane, as well as giving him access to an Luminiferous Æther Chamber which gave Dane the power to control the Luminiferous Æther."
+		]
+		},
+	"goldenAge" : {
+		"createdBy" : "Wally Wood, Gustav Schrotter, and Walter Johnson",
+		"firstGoldenAgeAppearance" : "Captain Science #1",
+		"year" : "1950",
+		"thenAndNowPicThumb" : "https://i.imgur.com/Z0U57Ax.png",
+		"thenAndNowPic" : "https://i.imgur.com/Z0U57Ax.png"
+		},
+	"seeAlso" : [
+		{
+			"bio" : "ÆtherSpaceship",
+			"pic" : "https://i.imgur.com/phJgCwa.png",
+			"name" : "Æther Spaceship (Captain Æther)"
+		},
+		{
+			"bio" : "CaptainÆther",
+			"pic" : "https://i.imgur.com/WtuQkSt.png",
+			"name" : "Captain Æther"
+		},
+		{
+			"bio" : "HoloProjector",
+			"pic" : "https://i.imgur.com/XXGBF9i.png",
+			"name" : "Holo Essence Projector"
+		},
+		{
+			"bio" : "LuminiferousÆther",
+			"pic" : "https://i.imgur.com/L1BQwqZ.png",
+			"name" : "Luminiferous Æther"
+		},
+		{
+			"bio" : "LuminiferousÆtherChamber",
+			"pic" : "https://i.imgur.com/1xnvkkX.png",
+			"name" : "Luminiferous Æther Chamber"
+		},
+		{
+			"bio" : "RoswellCrashSite",
+			"pic" : "https://i.imgur.com/sXjCgas.png",
+			"name" : "Roswell Crash Site"
+		},
+		{
+			"bio" : "Superbrain",
+			"pic" : "https://i.imgur.com/SMVRKro.png",
+			"name" : "Superbrain"
+		}
+		]
+}

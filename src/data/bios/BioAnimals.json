@@ -1,0 +1,44 @@
+{
+"title" : "U.S. Comics",
+	"wallpapers" : [
+  		"https://i.imgur.com/Y4thNuw.png"
+		],
+	"origin" : {
+		"story" : [
+			"The Animals are a group of genetically altered humans who are under the control of Dr. Creator. He uses them as slaves to carry out his evil plans.",
+			"The team members of the Animals are Ant Queen, Black Rat, Gorilla With A Human Brain, and the Toad."
+		]
+        },
+	"seeAlso" : [
+		{
+			"bio" : "AntQueen",
+			"pic" : "https://i.imgur.com/gRbHlkb.png",
+			"name" : "Ant Queen"
+		},
+		{
+			"bio" : "BlackRat",
+			"pic" : "https://i.imgur.com/abBbjYQ.png",
+			"name" : "Black Rat"
+		},
+		{
+			"bio" : "DrCreator",
+			"pic" : "https://i.imgur.com/1nESiZ0.png",
+			"name" : "Dr. Creator"
+		},
+		{
+			"bio" : "GorillaWithAHumanBrain",
+			"pic" : "https://i.imgur.com/qfqTPgI.png",
+			"name" : "Gorilla With A Human Brain"
+		},
+		{
+			"bio" : "MonsterIsland",
+			"pic" : "https://i.imgur.com/B0wkuPm.png",
+			"name" : "Monster Island"
+		},
+		{
+			"bio" : "Toad",
+			"pic" : "https://i.imgur.com/YXIoH3n.png",
+			"name" : "The Toad"
+		}
+		]
+}
