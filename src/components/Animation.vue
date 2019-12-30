@@ -6,7 +6,8 @@
       <img v-if="characters[1]" class="animation-character" v-bind:style="{ height: getHeight(1), 'z-index': getZ(1), 'left': getLeft(1), 'opacity': getOpacity(1)}" v-bind:src="characters[1].image">
       <img v-if="characters[2]" class="animation-character" v-bind:style="{ height: getHeight(2), 'z-index': getZ(2), 'left': getLeft(2), 'opacity': getOpacity(2)}" v-bind:src="characters[2].image">
     </div>
-    <CharacterInfo v-bind:character="frontCharacter" class="row justify-center animation-character-panel" v-bind:style="{'opacity': infoOpacity}"/>
+    <q-chat-message class="animation-quote" v-bind:style="{ 'opacity': getQuoteOpacity()}" :text="[getQuote()]" sent/>
+    <CharacterInfo v-bind:character="frontCharacter" class="row justify-center animation-character-panel"/>
   </div>
 </template>
 
@@ -24,8 +25,8 @@ export default {
     return {
       characters: [],
       characterName: '',
-      infoOpacity: 1.0,
-      intervalId: 0
+      intervalId: 0,
+      quoteOpacity: 0.0
     }
   },
   created () {
@@ -33,6 +34,8 @@ export default {
     this.setName()
     Queue.register(this, Messages.STORE_BOOK_SELECTED, this.doStoreBookSelected)
     this.intervalId = setInterval(() => { this.animate() }, 5000)
+    setTimeout(() => { this.quoteOpacity = 1.0 }, 1000)
+    setTimeout(() => { this.quoteOpacity = 0.0 }, 4000)
   },
   computed: {
     frontCharacter () {
@@ -45,14 +48,13 @@ export default {
   },
   methods: {
     animate () {
-      this.infoOpacity = 0.0
-      setTimeout(() => { this.infoOpacity = 1.0 }, 1000)
       for (let i = 0; i < this.characters.length; i++) {
         if ('cf' === this.characters[i].position) this.characters[i].position = 'lr'
         else if ('lr' === this.characters[i].position) this.characters[i].position = 'rr'
         else if ('rr' === this.characters[i].position) this.characters[i].position = 'cf'
       }
-      this.setInfo()
+      setTimeout(() => { this.quoteOpacity = 1.0 }, 2300)
+      setTimeout(() => { this.quoteOpacity = 0.0 }, 4800)
     },
     // mobile, tablet, laptop, and desktop defined in router/index.js
     getHeight (index) {
@@ -87,6 +89,12 @@ export default {
       if ('lr' === position || 'rr' === position) return 0.5
       return 0 // should never happen
     },
+    getQuote (index) {
+      return this.frontCharacter.quote
+    },
+    getQuoteOpacity (index) {
+      return this.quoteOpacity
+    },
     getZ (index) {
       let position = this.characters[index].position
       if ('cf' === position) return 10
@@ -101,9 +109,6 @@ export default {
       this.$store.commit('main/SET_CURRENT_BOOK', preview)
       if (this.$route.path !== '/reader') this.$router.push({ path: '/reader' }).catch(() => {})
     },
-    setInfo() {
-      this.infoOpacity = 1.0
-    },
     setName () {
       this.characterName = this.frontCharacter.name
     }
@@ -116,6 +121,13 @@ export default {
   top: 0%;
   width: auto;
   transition: z-index 2s linear, left 2s linear, height 2s linear, opacity 2s linear;
+}
+.animation-quote {
+  position: absolute;
+  top: 7%;
+  left: 35%;
+  width: 150px;
+  z-index: 20;
 }
 .animation-character-panel {
   position: absolute;
