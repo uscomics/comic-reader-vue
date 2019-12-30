@@ -25,7 +25,7 @@
 
         <q-tab-panel name="you">
           <div class="row justify-center">
-            <q-btn color="white" text-color="black" class="q-mb-lg" label="Sign Out" v-on:click="signOut"/>
+            <label class="sign-out-link q-mb-lg" v-on:click="signOut">Sign Out</label>
           </div>
           <q-separator style="height: 5px;"/>
           <UpdateAccount/>
@@ -187,5 +187,9 @@ export default {
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
+}
+.sign-out-link {
+  text-decoration: underline;
+  cursor: pointer;
 }
 </style>

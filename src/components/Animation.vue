@@ -124,4 +124,14 @@ export default {
   z-index: 15;
   margin: 1%;
 }
+@media only screen and (max-width: 450px) {
+.animation-character-panel {
+  position: absolute;
+  bottom: 5px;
+  left: 1px;
+  width: 98%;
+  z-index: 15;
+  margin: 1%;
+}
+}
 </style>

@@ -7,7 +7,7 @@
       <q-toolbar>
         <q-toolbar-title>
           <q-avatar >
-            <img src='../assets/USComicsLogo.png'>
+            <img src='../assets/USComicsLogo.png' v-on:click="showAbout">
           </q-avatar>
         </q-toolbar-title>
 
@@ -34,11 +34,13 @@ import HTTP from '../util/http'
 import Issue from '../data/issue'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
+import QueuedUserMessage from '../util/queued-user-message'
 import ResetPassword from '../components/ResetPassword'
 import SignIn from '../components/SignIn'
 import SignUp from '../components/SignUp'
 import UserPanel from '../components/UserPanel'
 import UserState from '../util/user-state'
+import UserMessages from '../util/user-messages'
 export default {
   components: {
     ResetPassword,
@@ -95,6 +97,11 @@ export default {
     },
     hideDrawer () {
       this.$refs.rightDrawer.hide()
+    },
+    showAbout () {
+      let msg = UserMessages.getMessage(UserMessages.LANGUAGE.en_US, UserMessages.TOOLS)
+      let successMsg = new QueuedUserMessage(msg, UserMessages.SOUND_SUCCESS, 0, false)
+      this.showMessage(successMsg)
     },
     showMessage (msg) {
       this.$q.notify({

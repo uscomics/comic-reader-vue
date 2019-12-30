@@ -16,20 +16,20 @@
       <!-- Remember Me -->
       <div class="sign-in-row-2">
         <q-checkbox id="rememberMe" v-model="rememberMe" />
-        <label class="text-body1" for="rememberMe">Remember Me</label>
+        <label for="rememberMe">Remember Me</label>
       </div>
-      <q-btn color="white" text-color="black" class="q-mt-md" label="Sign In" v-on:click="signIn"/>
+      <q-btn type="submit" color="white" text-color="black" class="q-mt-md" label="Sign In" v-on:click="signIn"/>
     </form>
     <!-- Don't Have An Account? -->
     <br/>
-    <label class="text-body1">Don't Have An Account?</label>
+    <label>Don't Have An Account?</label>
     <!-- Sign Up -->
-    <label class="text-body1 sign-in-link" v-on:click="signUp">Sign Up</label>
+    <label class="sign-in-link" v-on:click="signUp">Sign Up</label>
     <!-- Forgot Your Password? -->
     <br/>
-    <label class="text-body1">Forgot Your Password?</label>
+    <label>Forgot Your Password?</label>
     <!-- Reset Password -->
-    <label class="text-body1 sign-in-link" v-on:click="resetPassword">Reset Password</label>
+    <label class="sign-in-link" v-on:click="resetPassword">Reset Password</label>
   </div>
 </div>
 </template>

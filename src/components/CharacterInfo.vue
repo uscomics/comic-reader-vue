@@ -3,14 +3,10 @@
     <div class="character-info">
       <div>
         <div class="character-name">{{getName()}}</div>
-        <div class="row cover-gallery">
-          <div class="row appearances justify-center" clickable v-ripple v-on:click="clicked(item)" v-for="(item, index) in character.appearances" v-bind:key="index">
-            <div class="column justify-center">
-              <img class="thumbnail-image self-center" v-bind:src="getURL(item)" />
-              <div class="thumbnail-item-description">
-                <div>{{getTitle(item)}} #{{item.issue}}</div>
-              </div>
-            </div>
+        <div class="row justify-center cover-gallery">
+          <div class="appearances row" clickable v-ripple v-on:click="clicked(item)" v-for="(item, index) in character.appearances" v-bind:key="index">
+            <img class="thumbnail-image" v-bind:src="getURL(item)" />
+            <div class="thumbnail-item-description">{{getTitle(item)}} #{{item.issue}}</div>
           </div>
         </div>
       </div>
@@ -68,10 +64,11 @@ export default {
 }
 .cover-gallery {
   width: 100%;
+  margin: 2px;
 }
 .thumbnail-item-description {
-  font-size: medium;
-  width: 66%;
+  font-size: small;
+  width: 60%;
   text-align: center;
 }
 .thumbnail-image {
@@ -83,7 +80,8 @@ export default {
   border-style: solid;
 }
 .appearances {
-  width: 25%;
+  width: 24%;
+  margin: 2px;
 }
 @media only screen and (max-width: 450px) {
 .character-info {
@@ -112,11 +110,6 @@ export default {
   background-color: #073d6d;
   border-color: #073d6d;
   border-style: solid;
-}
-.cover-gallery {
-  width: 100%;
-  height: 50%;
-  overflow: auto;
 }
 }
 </style>

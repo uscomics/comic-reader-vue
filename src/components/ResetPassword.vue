@@ -8,7 +8,7 @@
       <!-- Email -->
       <q-input id="email" v-model="email" label="Email" />
       <br/>
-      <q-btn color="white" text-color="black" class="q-mt-md" label="Reset Password" v-on:click="resetPassword"/>
+      <q-btn type="submit" color="white" text-color="black" class="q-mt-md" label="Reset Password" v-on:click="resetPassword"/>
     </form>
     <br/>
     <div class="text-body1">

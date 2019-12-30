@@ -21,7 +21,7 @@
       {{helpText}}
       <br/>
       <br/>
-      <q-btn color="white" text-color="black" class="q-mt-sm" label="Update Account" v-on:click="updateAccount"/>
+      <q-btn type="submit" color="white" text-color="black" class="q-mt-sm" label="Update Account" v-on:click="updateAccount"/>
     </form>
   </div>
 </div>

@@ -28,6 +28,7 @@ export default class UserMessages {
   static NO_FAVORITES = 21
   static NO_PURCHASES = 22
   static SIGN_IN_TO_ADD_TO_FAVORITES_OR_CART = 23
+  static TOOLS = 24
 
   // eslint-disable-next-line camelcase
   static messages_en_US = [
@@ -53,7 +54,8 @@ export default class UserMessages {
     'There\'s nothing in our cart. Get shopping!',
     'You don\'t have any favorites. Yet.',
     'It doesn\'t look like you\'ve bought anything yet. Cheapskate.',
-    'Sign in to add this book to your favoites or cart.'
+    'Sign in to add this book to your favoites or cart.',
+    'Author: David Leeper (davidkleeper@gmail.com) Tools: Vue, Vue Router, Vuex, VueMQ, Node JS, MongoDB.'
   ]
 
   static getMessage (inLanguage, inMessageId) {

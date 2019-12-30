@@ -27,7 +27,7 @@
         <q-checkbox id="rememberMe" v-model="rememberMe" />
         <label class="text-body1" for="rememberMe">Remember Me</label>
       </div>
-    <q-btn color="white" text-color="black" class="q-mt-md" label="Sign Up" v-on:click="signUp"/>
+      <q-btn type="submit" color="white" text-color="black" class="q-mt-md" label="Sign Up" v-on:click="signUp"/>
     </form>
     <!-- Already Have An Account? -->
     <br/>
