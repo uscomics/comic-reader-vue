@@ -1,27 +1,59 @@
 // https://css-tricks.com/animate-to-an-inline-style/
-// https://stackoverflow.com/questions/50585880/how-to-play-multiple-animations-back-to-back-in-css
 <template>
   <div>
-    <img v-if="characters[0]" class="character" v-bind:style="{ height: getHeight(0), 'z-index': getZ(0), 'left': getLeft(0), 'opacity': getOpacity(0)}" v-bind:src="characters[0].image">
-    <img v-if="characters[1]" class="character" v-bind:style="{ height: getHeight(1), 'z-index': getZ(1), 'left': getLeft(1), 'opacity': getOpacity(1)}" v-bind:src="characters[1].image">
-    <img v-if="characters[2]" class="character" v-bind:style="{ height: getHeight(2), 'z-index': getZ(2), 'left': getLeft(2), 'opacity': getOpacity(2)}" v-bind:src="characters[2].image">
+    <div>
+      <img v-if="characters[0]" class="animation-character" v-bind:style="{ height: getHeight(0), 'z-index': getZ(0), 'left': getLeft(0), 'opacity': getOpacity(0)}" v-bind:src="characters[0].image">
+      <img v-if="characters[1]" class="animation-character" v-bind:style="{ height: getHeight(1), 'z-index': getZ(1), 'left': getLeft(1), 'opacity': getOpacity(1)}" v-bind:src="characters[1].image">
+      <img v-if="characters[2]" class="animation-character" v-bind:style="{ height: getHeight(2), 'z-index': getZ(2), 'left': getLeft(2), 'opacity': getOpacity(2)}" v-bind:src="characters[2].image">
+    </div>
+    <CharacterInfo v-bind:character="frontCharacter" class="row justify-center animation-character-panel" v-bind:style="{'opacity': infoOpacity}"/>
   </div>
 </template>
 
 <script>
 const animation = require('../data/animation.json')
+import CharacterInfo from './CharacterInfo'
+import Messages from '../util/messages'
+import Queue from '../util/queue'
 export default {
   name: 'Animation',
+  components: {
+    CharacterInfo
+  },
   data: function() {
     return {
-      characters: []
+      characters: [],
+      characterName: '',
+      infoOpacity: 1.0,
+      intervalId: 0
     }
   },
   created () {
     this.characters = animation.characters
-    setInterval(() => { this.animate() }, 5000)
+    this.setName()
+    Queue.register(this, Messages.STORE_BOOK_SELECTED, this.doStoreBookSelected)
+    this.intervalId = setInterval(() => { this.animate() }, 5000)
+  },
+  computed: {
+    frontCharacter () {
+      for (let i = 0; i < this.characters.length; i++) {
+        if ('cf' !== this.characters[i].position) continue
+        return this.characters[i]
+      }
+      return null
+    }
   },
   methods: {
+    animate () {
+      this.infoOpacity = 0.0
+      setTimeout(() => { this.infoOpacity = 1.0 }, 1000)
+      for (let i = 0; i < this.characters.length; i++) {
+        if ('cf' === this.characters[i].position) this.characters[i].position = 'lr'
+        else if ('lr' === this.characters[i].position) this.characters[i].position = 'rr'
+        else if ('rr' === this.characters[i].position) this.characters[i].position = 'cf'
+      }
+      this.setInfo()
+    },
     // mobile, tablet, laptop, and desktop defined in router/index.js
     getHeight (index) {
       let position = this.characters[index].position
@@ -31,13 +63,7 @@ export default {
         if (this.$mq === 'laptop') return '573px'
         if (this.$mq === 'desktop') return '819px'
       }
-      if ('lf' === position || 'rf' === position) {
-        if (this.$mq === 'mobile') return '152px'
-        if (this.$mq === 'tablet') return '305px'
-        if (this.$mq === 'laptop') return '423px'
-        if (this.$mq === 'desktop') return '637px'
-      }
-      if ('cr' === position || 'lr' === position || 'rr' === position) {
+      if ('lr' === position || 'rr' === position) {
         if (this.$mq === 'mobile') return '98px'
         if (this.$mq === 'tablet') return '197px'
         if (this.$mq === 'laptop') return '273px'
@@ -45,41 +71,57 @@ export default {
       }
       return 0 // Should never happen
     },
-    getZ (index) {
-      let position = this.characters[index].position
-      if ('cf' === position || 'lf' === position || 'rf' === position) return 10
-      return 5
-    },
     getLeft (index) {
       let position = this.characters[index].position
-      if ('cf' === position || 'cr' === position) return '40%'
-      if ('lf' === position) return '-40%'
-      if ('rf' === position) return '95%'
-      if ('rr' === position) return '75%'
+      if ('cf' === position) return '30%'
+      if ('rr' === position) return '80%'
       if ('lr' === position) return '10px'
       return 0 // should never happen
     },
+    getName() {
+      return this.characterName
+    },
     getOpacity (index) {
       let position = this.characters[index].position
-      if ('cf' === position || 'lf' === position || 'rf' === position) return 1.0
-      if ('cr' === position || 'lr' === position || 'rr' === position) return 0.5
+      if ('cf' === position) return 1.0
+      if ('lr' === position || 'rr' === position) return 0.5
       return 0 // should never happen
     },
-    animate () {
-      for (let i = 0; i < this.characters.length; i++) {
-        if ('cf' === this.characters[i].position) this.characters[i].position = 'lr'
-        else if ('lr' === this.characters[i].position) this.characters[i].position = 'rr'
-        else if ('rr' === this.characters[i].position) this.characters[i].position = 'cf'
-      }
+    getZ (index) {
+      let position = this.characters[index].position
+      if ('cf' === position) return 10
+      return 5
+    },
+    doStoreBookSelected(book) {
+      let pages = [ book.cover ]
+      pages = pages.concat(book.preview)
+      pages = pages.concat('EndofPreview.jpg')
+      let preview = { id: book.id, issue: book.issue, pages: pages }
+      clearInterval(this.intervalId)
+      this.$store.commit('main/SET_CURRENT_BOOK', preview)
+      if (this.$route.path !== '/reader') this.$router.push({ path: '/reader' }).catch(() => {})
+    },
+    setInfo() {
+      this.infoOpacity = 1.0
+    },
+    setName () {
+      this.characterName = this.frontCharacter.name
     }
   }
 }
 </script>
-<style>
-.character {
+<style scoped>
+.animation-character {
   position: absolute;
   top: 0%;
   width: auto;
   transition: z-index 2s linear, left 2s linear, height 2s linear, opacity 2s linear;
+}
+.animation-character-panel {
+  position: absolute;
+  left: 1px;
+  width: 98%;
+  z-index: 15;
+  margin: 1%;
 }
 </style>

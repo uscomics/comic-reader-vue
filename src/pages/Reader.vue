@@ -4,7 +4,7 @@
 // https://dev.to/samolabams/understanding-vuejs-lifecycle-hooks-5ejk
 <template>
   <q-page class="flex flex-center">
-    <canvas id="page-canvas" class="page" width="1275" height="1650"/>
+    <canvas id="page-canvas" class="reader-page" width="1275" height="1650"/>
     <ReaderNavBar v-if="navBarVisible" class="reader-nav-bar"/>
   </q-page>
 </template>
@@ -167,7 +167,7 @@ export default {
   align-items: center;
   justify-content: center;
 }
-.page {
+.reader-page {
   height: 98%;
   width: 77vh;
   margin: 1%;
@@ -180,8 +180,8 @@ export default {
   background-color: #073D6D;
   opacity: 0.9;
 }
-@media only screen and (max-width: 420px) {
-  .page {
+@media only screen and (max-width: 450px) {
+  .reader-page {
   height: 120vw;
   width: 98%;
   margin: 1%;

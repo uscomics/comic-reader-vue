@@ -91,7 +91,7 @@ export default {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-direction: column;
+  flex-direction: row;
   font-weight: bold;
   width: 120px;
 }
