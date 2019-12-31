@@ -55,7 +55,7 @@ export default class UserMessages {
     'You don\'t have any favorites. Yet.',
     'It doesn\'t look like you\'ve bought anything yet. Cheapskate.',
     'Sign in to add this book to your favoites or cart.',
-    'Author: David Leeper (davidkleeper@gmail.com) Tools: Vue, Vue Router, Vuex, VueMQ, Node JS, MongoDB.'
+    'Author: David Leeper (davidkleeper@gmail.com) Tools: Vue, Vue Router, Vuex, VueMQ, Quasar, NodeJS, MongoDB.'
   ]
 
   static getMessage (inLanguage, inMessageId) {
