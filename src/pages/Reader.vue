@@ -46,10 +46,10 @@ export default {
     Queue.register(this, Messages.READER_NAV_BAR_HOME, this.home)
     Queue.register(this, Messages.READER_NAV_BAR_NEXT_PAGE, this.nextPage)
     Queue.register(this, Messages.READER_NAV_BAR_LAST_PAGE, this.lastPage)
-    Queue.register(this, Messages.READER_NAV_BAR_REMOVE_FROM_CART, this.addToCart)
-    Queue.register(this, Messages.READER_NAV_BAR_ADD_TO_CART, this.removeFromCart)
-    Queue.register(this, Messages.READER_NAV_BAR_REMOVE_FROM_FAVORITES, this.addToFavorites)
-    Queue.register(this, Messages.READER_NAV_BAR_ADD_TO_FAVORITES, this.removeFromFavorites)
+    Queue.register(this, Messages.READER_NAV_BAR_REMOVE_FROM_CART, this.removeFromCart)
+    Queue.register(this, Messages.READER_NAV_BAR_ADD_TO_CART, this.addToCart)
+    Queue.register(this, Messages.READER_NAV_BAR_REMOVE_FROM_FAVORITES, this.removeFromFavorites)
+    Queue.register(this, Messages.READER_NAV_BAR_ADD_TO_FAVORITES, this.addToFavorites)
     window.addEventListener('mousemove', this.updateNavBarTime)
     this.intervalId = setInterval(() => { this.updateNavBarVisible() }, 300)
     this.updateNavBarButtons()
@@ -82,28 +82,28 @@ export default {
     },
     async addToCart () {
       let url = this.$store.state.main.urlBase + 'user/cart/add/data'
-      let cart = new Cart(this.$store.state.main.username, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)
+      let cart = new Cart(this.$store.state.main.account.username, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)
       let cartResponse = await cart.postToServer(url)
       if (HTTP.hasErrors(cartResponse)) return
       this.$store.commit('main/ADD_CART', this.$store.state.main.currentBook)
     },
     async removeFromCart () {
       let url = this.$store.state.main.urlBase + 'user/cart/delete/data'
-      let cart = new Cart(this.$store.state.main.username, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)
+      let cart = new Cart(this.$store.state.main.account.username, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)
       let cartResponse = await cart.postToServer(url)
       if (HTTP.hasErrors(cartResponse)) return
       this.$store.commit('main/REMOVE_CART', this.$store.state.main.currentBook)
     },
     async addToFavorites () {
       let url = this.$store.state.main.urlBase + 'user/favorites/add/data'
-      let favorite = new Favorite(this.$store.state.main.username, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)
+      let favorite = new Favorite(this.$store.state.main.account.username, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)
       let favoriteResponse = await favorite.postToServer(url)
       if (HTTP.hasErrors(favoriteResponse)) return
       this.$store.commit('main/ADD_FAVORITE', this.$store.state.main.currentBook)
     },
     async removeFromFavorites () {
       let url = this.$store.state.main.urlBase + 'user/favorites/delete/data'
-      let favorite = new Favorite(this.$store.state.main.username, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)
+      let favorite = new Favorite(this.$store.state.main.account.username, this.$store.state.main.currentBook.id, this.$store.state.main.currentBook.issue)
       let favoriteResponse = await favorite.postToServer(url)
       if (HTTP.hasErrors(favoriteResponse)) return
       this.$store.commit('main/REMOVE_FAVORITE', this.$store.state.main.currentBook)

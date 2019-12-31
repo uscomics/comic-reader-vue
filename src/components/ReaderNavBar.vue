@@ -10,8 +10,8 @@
       <div>
         <div class="row">
           <q-btn class="nav-button" rounded color="white" text-color="black" icon="arrow_upward" v-on:click="home"/>
-          <q-btn v-if="2==$store.state.main.readerState" class="nav-button" rounded color="white" v-bind:text-color="favoritesColor" icon="favorite" :disable=!favoritesDisabled v-on:click="toggleFavorite"/>
-          <q-btn v-if="2==$store.state.main.readerState" class="nav-button" rounded color="white" v-bind:text-color="cartColor" icon="shopping_cart" :disable=!cartDisabled v-on:click="toggleCart"/>
+          <q-btn v-if="2==$store.state.main.readerState" class="nav-button" rounded color="white" v-bind:text-color="favoritesColor" icon="favorite" :disable=favoritesDisabled v-on:click="toggleFavorite"/>
+          <q-btn v-if="2==$store.state.main.readerState" class="nav-button" rounded color="white" v-bind:text-color="cartColor" icon="shopping_cart" :disable=cartDisabled v-on:click="toggleCart"/>
         </div>
       </div>
       <div>
@@ -51,14 +51,16 @@ export default {
       return 'black'
     },
     cartDisabled() {
-      return !this.$store.state.main.username
+      if (!this.$store.state.main.account || !this.$store.state.main.account.username) return true
+      return false
     },
     favoritesColor() {
       if (this.isFavorite) return 'red'
       return 'black'
     },
     favoritesDisabled() {
-      return !this.$store.state.main.username
+      if (!this.$store.state.main.account || !this.$store.state.main.account.username) return true
+      return false
     },
     inCart () {
       let currentBook = this.$store.state.main.currentBook

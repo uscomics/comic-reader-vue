@@ -15,6 +15,7 @@
       An email will be sent to you. It will contain a link which can be used to reset your password. This link will expire after 1 hour.
     </div>
     <br/>
+    <label class="text-body1 sign-up-link" v-on:click="signIn">Sign In</label>
   </div>
 </div>
 </template>
@@ -43,6 +44,9 @@ export default {
       let successMsg = new QueuedUserMessage(msg, UserMessages.SOUND_SUCCESS, 0, false)
       this.$store.commit('main/SET_USER_PANEL_STATE', UserState.SIGN_IN)
       Queue.broadcast(Messages.USER_MESSAGE, successMsg)
+    },
+    signIn () {
+      this.$store.commit('main/SET_USER_PANEL_STATE', UserState.SIGN_IN)
     }
   }
 }
@@ -64,5 +68,9 @@ export default {
   top: -3px;
   width: 50px;
   height: 50px;
+}
+.sign-up-link {
+  text-decoration: underline;
+  cursor: pointer;
 }
 </style>

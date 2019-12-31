@@ -24,12 +24,12 @@
     <br/>
     <label>Don't Have An Account?</label>
     <!-- Sign Up -->
-    <label class="sign-in-link" v-on:click="signUp">Sign Up</label>
+    <label class="stext-body1 ign-in-link" v-on:click="signUp">Sign Up</label>
     <!-- Forgot Your Password? -->
     <br/>
     <label>Forgot Your Password?</label>
     <!-- Reset Password -->
-    <label class="sign-in-link" v-on:click="resetPassword">Reset Password</label>
+    <label class="text-body1 sign-in-link" v-on:click="resetPassword">Reset Password</label>
   </div>
 </div>
 </template>

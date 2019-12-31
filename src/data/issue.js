@@ -32,6 +32,7 @@ class Issue {
     })
   }
   static getBook (list, id, issue) {
+    if (!list) return null
     for (let i = 0; i < list.length; i++) {
       let book = list[i]
       if (book.id !== id || book.issue !== issue) continue
@@ -43,6 +44,7 @@ class Issue {
     return !!Issue.getBook(list, id, issue)
   }
   static sortBooks (list, sortBy) {
+    if (!list) return
     if (Issue.SORT_BY_DATE === sortBy) {
       // This is a stable sort.
       // http://www.csharp411.com/c-stable-sort/

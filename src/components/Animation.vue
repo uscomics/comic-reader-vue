@@ -34,7 +34,7 @@ export default {
     this.setName()
     Queue.register(this, Messages.STORE_BOOK_SELECTED, this.doStoreBookSelected)
     this.intervalId = setInterval(() => { this.animate() }, 5000)
-    setTimeout(() => { this.quoteOpacity = 1.0 }, 1000)
+    setTimeout(() => { this.quoteOpacity = 0.0 }, 1000) // <- change to 1.0 to make quote visible.
     setTimeout(() => { this.quoteOpacity = 0.0 }, 4000)
   },
   computed: {
@@ -53,7 +53,7 @@ export default {
         else if ('lr' === this.characters[i].position) this.characters[i].position = 'rr'
         else if ('rr' === this.characters[i].position) this.characters[i].position = 'cf'
       }
-      setTimeout(() => { this.quoteOpacity = 1.0 }, 2300)
+      setTimeout(() => { this.quoteOpacity = 0.0 }, 2300) // <- change to 1.0 to make quote visible.
       setTimeout(() => { this.quoteOpacity = 0.0 }, 4800)
     },
     // mobile, tablet, laptop, and desktop defined in router/index.js

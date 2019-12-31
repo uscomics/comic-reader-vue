@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import Image from '../data/image'
 import Issue from '../data/issue'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
@@ -26,7 +27,7 @@ export default {
   methods: {
     clicked (item) {
       let book = this.getBook(item)
-      this.$store.commit('main/SET_READER_STATE', this.readerState)
+      this.$store.commit('main/SET_READER_STATE', Image.PREVIEW)
       Queue.broadcast(Messages.STORE_BOOK_SELECTED, book)
     },
     getBook(item) {
