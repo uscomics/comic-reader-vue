@@ -25,7 +25,7 @@
 
         <q-tab-panel name="you">
           <div class="row justify-center">
-            <label class="sign-out-link q-mb-lg" v-on:click="signOut">Sign Out</label>
+            <label class="text-body1 sign-out-link q-mb-lg" v-on:click="signOut">Sign Out</label>
           </div>
           <q-separator style="height: 5px;"/>
           <UpdateAccount/>

@@ -1,8 +1,10 @@
 import UserState from '../../util/user-state'
 import Image from '../../data/image'
+
+// urlBase: 'https://us-comics.herokuapp.com/',
 export default function () {
   return {
-    urlBase: 'http://localhost:1337/',
+    urlBase: 'https://us-comics.herokuapp.com/',
     account: null,
     currentBook: null,
     purchased: null,
