@@ -101,7 +101,7 @@ export default {
       return 5
     },
     doStoreBookSelected(book) {
-      let pages = [ book.cover ]
+      let pages = [ book.pages[0] ]
       pages = pages.concat(book.preview)
       pages = pages.concat('EndofPreview.jpg')
       let preview = { id: book.id, issue: book.issue, pages: pages }

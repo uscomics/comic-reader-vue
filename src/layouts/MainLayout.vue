@@ -4,11 +4,9 @@
   <q-layout view="hHh lpR fFf">
 
     <q-header v-model="headerVisible" reveal elevated class="bg-primary text-white">
-      <q-toolbar>
+      <q-toolbar style="background-image: linear-gradient(270deg, #020024 0%, #090979 35%, #0099b8 100%);">
         <q-toolbar-title>
-          <q-avatar >
-            <img src='../assets/USComicsLogo.png' v-on:click="showAbout">
-          </q-avatar>
+            <img src='../assets/USComicsLogo.png'  class="header-logo" v-on:click="showAbout">
         </q-toolbar-title>
 
         <q-btn dense flat round icon="person" @click="right = !right" />
@@ -125,4 +123,8 @@ export default {
 }
 </script>
 <style>
-</style>
+.header-logo {
+  width: 50px;
+  height: 50px;
+  padding-top: 5px;
+}</style>
