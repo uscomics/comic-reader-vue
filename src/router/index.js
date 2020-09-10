@@ -10,7 +10,11 @@ Vue.use(VueMq, {
     mobile: 450,
     tablet: 900,
     laptop: 1250,
-    desktop: Infinity
+    desktop: Infinity,
+    max_power_entry_columns_1: 280,
+    max_power_entry_columns_2: 560,
+    max_power_entry_columns_3: 840,
+    max_power_entry_columns_4: 1120
   }
 })
 

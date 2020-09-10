@@ -2,7 +2,7 @@
 <div class="sign-up-column">
   <div class="sign-up-column sign-up-top">
     <!-- Image -->
-    <img class="sign-up-logo q-mb-md" src='../assets/USComicsLogo.png'/>
+    <!-- <img class="sign-up-logo q-mb-md" src='../assets/USComicsLogo.png'/> -->
     <!-- Form -->
     <form class="sign-up-column">
       <!--     UserName     Password -->

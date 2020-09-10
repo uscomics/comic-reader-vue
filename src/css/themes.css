@@ -1,0 +1,44 @@
+
+:root {
+    --theme_background_color                        : #EEEEEF;
+    --theme_background_color_menu_bar               : #EEEEEF;
+    --theme_background_image_menu_bar               : linear-gradient(270deg, #020024 0%, #090979 35%, #0099b8 100%);
+    --theme_background_color_status_bar             : #EEEEEF;
+    --theme_background_color_button_down            : #555555;
+    --theme_font_family                             : "Roboto", sans-serif;
+    --theme_font_size_small                         : small;
+    --theme_font_size_medium                        : medium;
+    --theme_font_size_large                         : large;
+    --theme_text_align_title                        : left;
+    --theme_text_align_image_button                 : center;
+    --theme_text_align_label                        : left;
+    --theme_text_align_field                        : left;
+    --theme_text_color_image_button                 : #0000FF;
+    --theme_text_color_label                        : #555555;
+    --theme_text_color_field                        : #555555;
+    --theme_text_color_button_down                  : #EEEEEF;
+    --theme_text_color_image_button_disabled        : #999999;
+    --theme_text_color_label_disabled               : #999999;
+    --theme_text_color_field_disabled               : #999999;
+    --theme_text_color_slots_remaining              : #999999;
+    --theme_border_radius_image_button_image        : 50%;
+    --theme_border_image_button_image               : 2px solid white;
+    --theme_buton_text_color                        : #555555;
+    --theme_buton_background_color                  : #EEEEEF;
+    --theme_buton_text_color_disabled               : #999999;
+    --theme_buton_background_color_disabled         : #EEEEEF;
+    --theme_box_shadow_menu_bar                     : none;
+    --theme_box_shadow_image_button                 : none;
+    --theme_box_shadow_image_button_active          : none;
+    --theme_box_shadow_small                        : none;
+    --theme_box_shadow_small_active                 : none;
+    --theme_background_image                        : none;
+    --theme_no_power_set                            : #999999;
+    --theme_primary_power_set                       : blue;
+    --theme_secondary_power_set                     : red;
+    --theme_pool_power_set                          : yellow;
+    --theme_epic_power_set                          : orange;
+    --theme_inherent_power_set                      : green;
+    --theme_power_set_background_color              : #DDDDDD;
+    --theme_power_set_text_color                    : #555555;
+}

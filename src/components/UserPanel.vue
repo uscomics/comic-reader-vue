@@ -5,10 +5,10 @@
         v-model="tab"
         class="text-teal"
       >
-        <q-tab class="tabs" name="stuff" icon="menu_book" label="Stuff" />
-        <q-tab class="tabs" name="you" icon="face" label="You" />
-        <q-tab class="tabs" name="favs" icon="favorite" label="Favs" />
-        <q-tab class="tabs" name="cart" icon="shopping_cart"  label="Cart" />
+        <q-tab class="Tabs" name="stuff" icon="menu_book" label="Stuff" />
+        <q-tab class="Tabs" name="you" icon="face" label="You" />
+        <q-tab class="Tabs" name="favs" icon="favorite" label="Favs" />
+        <q-tab class="Tabs" name="cart" icon="shopping_cart"  label="Cart" />
       </q-tabs>
       <q-tab-panels v-model="tab" animated>
         <q-tab-panel name="stuff">
@@ -25,7 +25,7 @@
 
         <q-tab-panel name="you">
           <div class="row justify-center">
-            <label class="text-body1 sign-out-link q-mb-lg" v-on:click="signOut">Sign Out</label>
+            <label class="TextBody1 SignOutLink q-mb-lg" v-on:click="signOut">Sign Out</label>
           </div>
           <q-separator style="height: 5px;"/>
           <UpdateAccount/>
@@ -53,22 +53,22 @@
             v-bind:showPrice="true"
             v-bind:listHeight="275"
             />
-          <div class="cart-price-panel q-mb-md">
-            <div class="cart-price-row">
+          <div class="CartPricePanel q-mb-md">
+            <div class="CartPriceRow">
               <div>Subtotal:</div>
               <div>${{getSubtotal()}}</div>
             </div>
-            <div class="cart-price-row">
+            <div class="CartPriceRow">
               <div>Discount:</div>
               <div>${{getSubtotal()}}</div>
             </div>
-            <div class="cart-price-row">
+            <div class="CartPriceRow">
               <div>Total:</div>
               <div>$0.00</div>
             </div>
           </div>
           <div class="row justify-center">
-            <q-btn color="white" text-color="black" label="Purchase" v-on:click="purchase"/>
+            <q-btn class="PurchaseSubmit" label="Purchase" v-on:click="purchase"/>
           </div>
         </q-tab-panel>
       </q-tab-panels>
@@ -170,25 +170,29 @@ export default {
 }
 </script>
 <style>
-.tabs {
+.Tabs {
   font-size: .7rem;
   padding: 4px;
 }
-.cart-price-panel {
+.CartPricePanel {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   margin-left: 5px;
 }
-.cart-price-row {
+.CartPriceRow {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
 }
-.sign-out-link {
+.PurchaseSubmit {
+  color: var(--theme_background_color) !important;
+  background-color: var(--theme_text_color_label) !important;
+}
+.SignOutLink {
   text-decoration: underline;
   cursor: pointer;
 }

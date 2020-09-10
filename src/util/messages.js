@@ -32,4 +32,5 @@ export default class Messages {
   static SHOW_DRAWER = 'SHOW_DRAWER'
   static USER_MESSAGE = 'USER_MESSAGE'
   static USER_ERROR = 'USER_ERROR'
+  static TOON_SAVE = 'TOON_SAVE'
 }

@@ -2,22 +2,18 @@
 // https://forum.quasar-framework.org/topic/3416/hide-header-from-script/4
 <template>
   <q-layout view="hHh lpR fFf">
-
     <q-header v-model="headerVisible" reveal elevated class="bg-primary text-white">
-      <q-toolbar style="background-image: linear-gradient(270deg, #020024 0%, #090979 35%, #0099b8 100%);">
-        <q-toolbar-title>
-            <img src='../assets/USComicsLogo.png'  class="header-logo" v-on:click="showAbout">
-        </q-toolbar-title>
-
-        <q-btn dense flat round icon="person" @click="right = !right" />
+      <q-toolbar class="Toolbar">
+        <div class="ToolbarTitle" @click="doHomeClicked">HERO/Web</div>
+        <div class="ButtonRow">
+          <q-btn :class="getHamburgerButtonClass" dense flat round icon="menu" @click="right = !right" />
+          <q-btn :class="getSaveButtonClass" class="MenuButton" dense flat round icon="save" @click="doSave" />
+        </div>
       </q-toolbar>
     </q-header>
 
     <q-drawer ref="rightDrawer" v-model="right" side="right" no-swipe-backdrop elevated>
-      <ResetPassword v-if="$store.state.main.userPanelState === stateResetPassword"/>
-      <SignIn v-else-if="$store.state.main.userPanelState === stateSignIn"/>
-      <SignUp v-else-if="$store.state.main.userPanelState === stateSignUp"/>
-      <UserPanel v-else-if="$store.state.main.userPanelState === stateUser"/>
+      <Drawer />
     </q-drawer>
 
     <q-page-container>
@@ -28,28 +24,21 @@
 </template>
 
 <script>
+import Drawer from '../components/Drawer'
 import HTTP from '../util/http'
 import Issue from '../data/issue'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
 import QueuedUserMessage from '../util/queued-user-message'
-import ResetPassword from '../components/ResetPassword'
-import SignIn from '../components/SignIn'
-import SignUp from '../components/SignUp'
-import UserPanel from '../components/UserPanel'
-import UserState from '../util/user-state'
+import { setThemeLight } from '../util/theme_utils'
 import UserMessages from '../util/user-messages'
 export default {
-  components: {
-    ResetPassword,
-    SignIn,
-    SignUp,
-    UserPanel
-  },
+  components: { Drawer },
   data () {
     return {
       right: false,
-      headerVisible: true
+      headerVisible: true,
+      showToonButtons: false
     }
   },
   created() {
@@ -58,9 +47,15 @@ export default {
     Queue.register(this, Messages.SHOW_DRAWER, this.showDrawer)
     Queue.register(this, Messages.HIDE_DRAWER, this.hideDrawer)
     Queue.register(this, Messages.USER_MESSAGE, this.showMessage)
-    Queue.register(this, Messages.USER_ERROR, this.showError)
+    Queue.register(this, Messages.USER_ERROR, this.showErrorMessage)
+  },
+  updated() {
+    this.showToonButtons = this.$router.currentRoute.path.startsWith('/Toon')
   },
   async mounted() {
+    this.monitorErrorMessages()
+    this.$store.dispatch('builder/loadDatabase')
+    setThemeLight()
     let url = this.$store.state.main.urlBase + 'comics'
     let storeBooks = await Issue.getFromServer(url)
     if (HTTP.hasErrors(storeBooks)) return
@@ -70,61 +65,145 @@ export default {
     this.showDrawer()
   },
   computed: {
-    stateResetPassword () {
-      return UserState.RESET_PASSWORD
+    getErrorMessage: function () {
+      if (this.getErrorMessageCount === 0) {
+        return ''
+      }
+      return this.$store.state.builder.errorMessages[0]
     },
-    stateSignIn () {
-      return UserState.SIGN_IN
+    getErrorMessageCount: function () {
+      return this.$store.state.builder.errorMessages.length
     },
-    stateSignUp () {
-      return UserState.SIGN_UP
+    getHamburgerButtonClass: function () {
+      if (this.right) {
+        return 'MenuButtonPressed'
+      }
+      return 'MenuButton'
     },
-    stateUser () {
-      return UserState.USER
+    getSaveButtonClass: function () {
+      if (this.showToonButtons) {
+        return ''
+      }
+      return 'Hidden'
     }
   },
   methods: {
-    showHeader () {
-      this.headerVisible = true
+    doHomeClicked () {
+      this.$router.push('/')
+    },
+    doSave () {
+      Queue.broadcast(Messages.TOON_SAVE)
+    },
+    hideDrawer () {
+      this.$refs.rightDrawer.hide()
     },
     hideHeader () {
       this.headerVisible = false
     },
-    showDrawer () {
-      this.$refs.rightDrawer.show()
-    },
-    hideDrawer () {
-      this.$refs.rightDrawer.hide()
+    monitorErrorMessages: function () {
+      const monitor = () => {
+        if (this.getErrorMessageCount === 0) {
+          return
+        }
+        this.showErrorMessage(this.$store.state.builder.errorMessages[0])
+        this.$store.commit('builder/removeOldestErrorMessage')
+      }
+      setInterval(monitor, 500)
     },
     showAbout () {
       let msg = UserMessages.getMessage(UserMessages.LANGUAGE.en_US, UserMessages.TOOLS)
       let successMsg = new QueuedUserMessage(msg, UserMessages.SOUND_SUCCESS, 0, false)
       this.showMessage(successMsg)
     },
+    showDrawer () {
+      this.$refs.rightDrawer.show()
+    },
+    showErrorMessage (errorMessage) {
+      if (!errorMessage) {
+        return
+      }
+      this.$q.notify({
+        type: 'negative',
+        message: errorMessage
+      })
+    },
+    showHeader () {
+      this.headerVisible = true
+    },
     showMessage (msg) {
+      alert('showMessage' + msg)
       this.$q.notify({
         message: msg.message,
         color: 'primary',
         multiLine: true,
-        avatar: this.$store.state.main.urlBase + 'logo',
-        position: 'top'
-      })
-    },
-    showError (msg) {
-      this.$q.notify({
-        message: msg.message,
-        color: 'red',
-        multiLine: true,
-        avatar: this.$store.state.main.urlBase + 'logo',
         position: 'top'
       })
     }
   }
 }
 </script>
-<style>
-.header-logo {
-  width: 50px;
-  height: 50px;
+
+<style scoped lang="scss">
+@import '../css/app.sass';
+
+.Hidden {
+  display: none;
+}
+
+.Toolbar {
+  @include row;
+  justify-content: space-between;
+  font-family: var(--theme_font_family) !important;
+  font-size: var(--theme_font_size_large) !important;
+  background-image: var(--theme_background_image_menu_bar);
+  box-shadow: var(--theme_box_shadow_small_active) !important;
+}
+
+.ToolbarTitle {
+  @include rise;
+  @include cursor-pointer;
+  width: 100px;
+  height: 35px;
   padding-top: 5px;
-}</style>
+}
+
+.ButtonRow {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  width: 80px;
+}
+
+.MenuButton {
+  @include cursor-default;
+  @include small-box;
+  @include rise;
+  @include cursor-pointer;
+  color: var(--theme_text_color_label) !important;
+  background-color: var(--theme_background_color) !important;
+  font-family: var(--theme_font_family) !important;
+  box-shadow: var(--theme_box_shadow_small) !important;
+  border-radius: var(--theme_border_radius_image_button_image) !important;
+  margin-right: 20px;
+  &:active {
+    box-shadow: var(--theme_box_shadow_small_active) !important;
+  }
+}
+
+.MenuButtonPressed {
+  @include cursor-default;
+  @include small-box;
+  @include rise;
+  @include cursor-pointer;
+  color: var(--theme_text_color_button_down) !important;
+  background-color: var(--theme_background_color_button_down) !important;
+  font-family: var(--theme_font_family) !important;
+  box-shadow: var(--theme_box_shadow_small_active) !important;
+  border-radius: var(--theme_border_radius_image_button_image) !important;
+  margin-right: 20px;
+  &:active {
+    box-shadow: var(--theme_box_shadow_small) !important;
+  }
+}
+
+</style>

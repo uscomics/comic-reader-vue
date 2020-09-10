@@ -99,9 +99,9 @@ module.exports = function (ctx) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: 'US Comics',
-        short_name: 'US Comics',
-        description: 'US Comics reader and store',
+        name: 'HERO/Web',
+        short_name: 'HERO/Web',
+        description: 'HERO/Web',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',

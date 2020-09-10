@@ -1,8 +1,8 @@
 {
   "name": "comic-reader-vue",
   "version": "0.0.1",
-  "description": "US Comics reader and store",
-  "productName": "US Comics",
+  "description": "HERO/Web",
+  "productName": "HERO/Web",
   "cordovaId": "io.uscomics.app",
   "capacitorId": "",
   "author": "dave-leeper <magicjtv@gmail.com>",
@@ -15,7 +15,9 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "file-dialog": "0.0.8",
     "quasar": "^1.0.0",
+    "vue-draggable-resizable": "^2.2.0",
     "vue-mq": "^1.0.1"
   },
   "devDependencies": {

@@ -14,10 +14,12 @@ Vue.use(Vuex)
  * with the Store instance.
  */
 import main from './main'
+import builder from './builder'
 export default function (/* { ssrContext } */) {
   const Store = new Vuex.Store({
     modules: {
-      main
+      main,
+      builder
     },
 
     // enable strict mode (adds overhead!)

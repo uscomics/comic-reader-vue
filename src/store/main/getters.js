@@ -1,76 +1,76 @@
-export let urlBase = state => {
+export const urlBase = state => {
   return state.urlBase
 }
-export let authorization = state => {
+export const authorization = state => {
   if (!state.account) return null
   return state.account.authorization
 }
-export let username = state => {
+export const username = state => {
   if (!state.account) return null
   return state.account.username
 }
-export let firstName = state => {
+export const firstName = state => {
   if (!state.account) return null
   return state.account.firstName
 }
-export let lastName = state => {
+export const lastName = state => {
   if (!state.account) return null
   return state.account.lastName
 }
-export let email = state => {
+export const email = state => {
   if (!state.account) return null
   return state.account.email
 }
-export let purchased = state => {
+export const purchased = state => {
   return state.purchased
 }
-export let purchasedCount = state => {
+export const purchasedCount = state => {
   if (!state.purchased) return 0
   return state.purchased.length
 }
-export let purchasedItem = (state) => (index) => {
+export const purchasedItem = (state) => (index) => {
   if (!state.purchased || state.purchased.length <= index || 0 > index) return null
   return state.purchased[index]
 }
-export let bookInfo = state => {
+export const bookInfo = state => {
   return state.bookInfo
 }
-export let bookInfoCount = state => {
+export const bookInfoCount = state => {
   if (!state.bookInfo) return 0
   return state.bookInfo.length
 }
-export let bookInfoiteItem = (state) => (index) => {
+export const bookInfoiteItem = (state) => (index) => {
   if (!state.bookInfo || state.bookInfo.length <= index || 0 > index) return null
   return state.bookInfo[index]
 }
-export let currentBook = state => {
+export const currentBook = state => {
   return state.currentBook
 }
-export let currentBookPages = state => {
+export const currentBookPages = state => {
   if (!state.currentBook) return []
   return state.currentBook.pages
 }
-export let currentBookPageCount = state => {
+export const currentBookPageCount = state => {
   if (!state.currentBook) return 0
   return state.currentBook.pages.length
 }
-export let currentBookId = state => {
+export const currentBookId = state => {
   if (!state.currentBook) return ''
   return state.currentBook.id
 }
-export let currentBookIssue = state => {
+export const currentBookIssue = state => {
   if (!state.currentBook) return 0
   return state.currentBook.issue
 }
-export let favoritesCount = state => {
+export const favoritesCount = state => {
   if (!state.favorites) return 0
   return state.favorites.length
 }
-export let favoriteItem = (state) => (index) => {
+export const favoriteItem = (state) => (index) => {
   if (!state.favorites || state.favorites.length <= index || 0 > index) return null
   return state.favorites[index]
 }
-export let hasFavorite = (state) => (favorite) => {
+export const hasFavorite = (state) => (favorite) => {
   if (!state.favorites) return false
   for (let i = state.favorites.length - 1; i >= 0; i--) {
     let fav = state.favorites[i]
@@ -79,19 +79,19 @@ export let hasFavorite = (state) => (favorite) => {
   }
   return false
 }
-export let cart = state => {
+export const cart = state => {
   if (!state.cart) return null
   return state.cart
 }
-export let cartCount = state => {
+export const cartCount = state => {
   if (!state.cart) return 0
   return state.cart.length
 }
-export let cartItem = (state) => (index) => {
+export const cartItem = (state) => (index) => {
   if (!state.cart || state.cart.length <= index || 0 > index) return null
   return state.cart[index]
 }
-export let hasCart = (state) => (cart) => {
+export const hasCart = (state) => (cart) => {
   if (!state.cart) return false
   for (let i = state.cart.length - 1; i >= 0; i--) {
     let car = state.cart[i]
@@ -100,6 +100,6 @@ export let hasCart = (state) => (cart) => {
   }
   return false
 }
-export let userPanelState = (state) => {
+export const userPanelState = (state) => {
   return state.userPanelState
 }

@@ -4,8 +4,10 @@ const routes = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') },
+      { path: '', component: () => import('pages/Builder.vue') },
       { path: 'index', component: () => import('pages/Index.vue') },
+      { path: 'Toon/:archetype_id/:build', component: () => import('pages/Toon.vue') },
+      { path: 'AT', component: () => import('pages/AT.vue') },
       { path: 'reader', component: () => import('pages/Reader.vue') }
     ]
   }

@@ -2,7 +2,7 @@
 <div class="reset-password-column">
   <div class="reset-password-column reset-password-top">
     <!-- Image -->
-    <img class="reset-password-logo q-mb-md" src='../assets/USComicsLogo.png'/>
+    <!-- <img class="reset-password-logo q-mb-md" src='../assets/USComicsLogo.png'/> -->
     <!-- Form -->
     <form class="reset-password-column">
       <!-- Email -->

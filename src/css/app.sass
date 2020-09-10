@@ -1,1 +1,52 @@
 // app global css in Sass form
+
+@mixin column
+    display: flex;
+    flex-direction: column;
+
+@mixin row
+    display: flex;
+    flex-direction: row;
+
+@mixin rise
+    transition: transform 0.5s;
+    &:hover
+        transform: translateY(-2px);
+
+@mixin cursor-pointer
+  &:hover
+    cursor:pointer !important
+
+@mixin cursor-default
+  &:hover
+    cursor:default !important
+
+@mixin cursor-move
+  &:hover
+    cursor:move !important
+
+@mixin center 
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+@mixin center-horiz
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+@mixin center-vert
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+@mixin small-box
+    width: 35px;
+    height: 35px;

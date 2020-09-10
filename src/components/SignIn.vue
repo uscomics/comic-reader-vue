@@ -1,35 +1,35 @@
 <template>
-<div class="sign-in-wrapper">
-  <div class="sign-in-column sign-in-top">
+<div class="SignInWrapper">
+  <div class="SignInColumn SignInTop">
     <!-- Image -->
-    <img class="sign-in-logo q-mb-md" src='../assets/USComicsLogo.png'/>
+    <!-- <img class="SignInLogo q-mb-md" src='../assets/USComicsLogo.png'/> -->
     <!-- Form -->
-    <form class="sign-in-column">
+    <form class="SignInColumn">
       <!-- UserName -->
       <!-- Password -->
-      <div class="sign-in-row">
-        <div class="sign-in-column">
-          <q-input id="username" v-model="username" label="User Name" />
-          <q-input id="password" v-model="password" type="password" label="Password" />
+      <div class="SignInRow">
+        <div class="SignInColumn">
+          <q-input class="SignInText" borderless dense hide-bottom-space bg-color="grey-3" id="username" v-model="username" label="User Name" />
+          <q-input class="SignInText" borderless dense hide-bottom-space bg-color="grey-3" id="password" v-model="password" type="password" label="Password" />
         </div>
       </div>
       <!-- Remember Me -->
-      <div class="sign-in-row-2">
-        <q-checkbox id="rememberMe" v-model="rememberMe" />
-        <label for="rememberMe">Remember Me</label>
+      <div class="SignInRememberMeRow">
+        <q-checkbox color="white-1" id="rememberMe" v-model="rememberMe" />
+        <label class="SignInRememberMe" for="rememberMe">Remember Me</label>
       </div>
-      <q-btn type="submit" color="white" text-color="black" class="q-mt-md" label="Sign In" v-on:click="signIn"/>
+      <q-btn type="submit" class="q-mt-md SignInSubmit" label="Sign In" v-on:click="signIn"/>
     </form>
     <!-- Don't Have An Account? -->
     <br/>
     <label>Don't Have An Account?</label>
     <!-- Sign Up -->
-    <label class="text-body1 sign-in-link" v-on:click="signUp">Sign Up</label>
+    <q-item tag="a" class="TextBody1 SignInLink" v-on:click="signUp">Sign Up</q-item>
     <!-- Forgot Your Password? -->
     <br/>
     <label>Forgot Your Password?</label>
     <!-- Reset Password -->
-    <label class="text-body1 sign-in-link" v-on:click="resetPassword">Reset Password</label>
+    <q-item tag="a" class="TextBody1 SignInLink" v-on:click="resetPassword">Reset Password</q-item>
   </div>
 </div>
 </template>
@@ -59,12 +59,14 @@ export default {
   },
   methods: {
     async remember () {
+      /*
       let url = this.$store.state.main.urlBase + 'remember/data'
       let response = await HTTP.postToServer(url, new FormData())
       if (200 === response.status) {
         this.username = JSON.parse(response.body).user
         this.rememberMe = true
       }
+      */
     },
     async signIn () {
       let url = this.$store.state.main.urlBase + 'user/authenticate'
@@ -114,54 +116,111 @@ export default {
   }
 }
 </script>
-<style scoped>
-.sign-in-wrapper {
-  display: flex;
-  flex-direction: column;
+<style scoped lang="scss">
+@import '../css/app.sass';
+
+.SignInWrapper {
+  @include column;
   justify-content: flex-center;
   align-items: center;
 }
-.sign-in-top {
+
+.SignInTop {
   position: absolute;
-  top: 60px;
-  width: 96%;
+  top: 50px;
+  bottom: 0px;
+  width: 100%;
+  color: var(--theme_text_color_label) !important;
+  background-color: var(--theme_background_color) !important;
 }
-.sign-in-column {
-  display: flex;
-  flex-direction: column;
+
+.SignInColumn {
+  @include column;
   justify-content: flex-center;
   align-items: center;
 }
-.sign-in-row {
-  display: flex;
-  flex-direction: row;
+
+.SignInRow {
+  @include row;
   justify-content: space-between;
   align-items: center;
   width:100%;
   min-width: 100%;
   max-width: 100%;
 }
-.sign-in-row-2 {
-  display: flex;
-  flex-direction: row;
+
+.SignInRow:before {
+  box-sizing: content-box;
+}
+
+.SignInRow:after {
+  box-sizing: content-box;
+}
+
+.SignInRememberMeRow {
+  @include rise;
+  @include row;
   justify-content: center;
   align-items: center;
   width:100%;
   min-width: 100%;
   max-width: 100%;
 }
-.sign-in-row:before {
-  box-sizing: content-box;
-}
-.sign-in-row:after {
-  box-sizing: content-box;
-}
-.sign-in-logo {
+
+.SignInLogo {
   width: 50px;
   height: 50px;
 }
-.sign-in-link {
-  text-decoration: underline;
-  cursor: pointer;
+
+.SignInRememberMe {
+  color: var(--theme_text_color_label) !important;
+  background-color: var(--theme_background_color) !important;
+}
+
+.SignInText {
+    @include rise;
+    @include row;
+    @include cursor-pointer;
+    width: 100%;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    justify-content: center;
+    overflow: hidden;
+    font-family: var(--theme_font_family) !important;
+    font-size: var(--theme_font_size_medium) !important;
+    color: var(--theme_text_color_image_button) !important;
+    background-color: var(--theme_background_color) !important;
+    box-shadow: var(--theme_box_shadow_small_active) !important;
+}
+
+.SignInSubmit {
+  @include rise;
+  color: var(--theme_background_color) !important;
+  background-color: var(--theme_text_color_label) !important;
+  box-shadow: var(--theme_box_shadow_small) !important;
+  &:active {
+    box-shadow: var(--theme_box_shadow_small_active) !important;
+  }
+}
+
+.SignInLink {
+    @include rise;
+    @include row;
+    @include cursor-pointer;
+    width: 75%;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    justify-content: center;
+    overflow: hidden;
+    font-family: var(--theme_font_family) !important;
+    font-size: var(--theme_font_size_medium) !important;
+    color: var(--theme_text_color_image_button) !important;
+    background-color: var(--theme_background_color) !important;
+    box-shadow: var(--theme_box_shadow_small) !important;
+    &:active {
+      border: 2px solid var(--theme_text_color_image_button) !important;
+    }
 }
 </style>
