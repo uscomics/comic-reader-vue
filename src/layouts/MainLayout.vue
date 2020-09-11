@@ -6,8 +6,8 @@
       <q-toolbar class="Toolbar">
         <div class="ToolbarTitle" @click="doHomeClicked">HERO/Web</div>
         <div class="ButtonRow">
-          <q-btn :class="getHamburgerButtonClass" dense flat round icon="menu" @click="right = !right" />
-          <q-btn :class="getSaveButtonClass" class="MenuButton" dense flat round icon="save" @click="doSave" />
+          <IconButton icon="menu" :pressed="right" @icon-button-event="right = !right" />
+          <IconButton v-if="showToonButtons" icon="save" :toggle="false" @icon-button-event="doSave" />
         </div>
       </q-toolbar>
     </q-header>
@@ -26,6 +26,7 @@
 <script>
 import Drawer from '../components/Drawer'
 import HTTP from '../util/http'
+import IconButton from '../components/IconButton'
 import Issue from '../data/issue'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
@@ -33,7 +34,7 @@ import QueuedUserMessage from '../util/queued-user-message'
 import { setThemeLight } from '../util/theme_utils'
 import UserMessages from '../util/user-messages'
 export default {
-  components: { Drawer },
+  components: { Drawer, IconButton },
   data () {
     return {
       right: false,
@@ -79,12 +80,6 @@ export default {
         return 'MenuButtonPressed'
       }
       return 'MenuButton'
-    },
-    getSaveButtonClass: function () {
-      if (this.showToonButtons) {
-        return ''
-      }
-      return 'Hidden'
     }
   },
   methods: {
@@ -172,38 +167,6 @@ export default {
   flex-direction: row-reverse;
   align-items: flex-end;
   width: 80px;
-}
-
-.MenuButton {
-  @include cursor-default;
-  @include small-box;
-  @include rise;
-  @include cursor-pointer;
-  color: var(--theme_text_color_label) !important;
-  background-color: var(--theme_background_color) !important;
-  font-family: var(--theme_font_family) !important;
-  box-shadow: var(--theme_box_shadow_small) !important;
-  border-radius: var(--theme_border_radius_image_button_image) !important;
-  margin-right: 20px;
-  &:active {
-    box-shadow: var(--theme_box_shadow_small_active) !important;
-  }
-}
-
-.MenuButtonPressed {
-  @include cursor-default;
-  @include small-box;
-  @include rise;
-  @include cursor-pointer;
-  color: var(--theme_text_color_button_down) !important;
-  background-color: var(--theme_background_color_button_down) !important;
-  font-family: var(--theme_font_family) !important;
-  box-shadow: var(--theme_box_shadow_small_active) !important;
-  border-radius: var(--theme_border_radius_image_button_image) !important;
-  margin-right: 20px;
-  &:active {
-    box-shadow: var(--theme_box_shadow_small) !important;
-  }
 }
 
 </style>

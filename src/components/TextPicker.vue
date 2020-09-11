@@ -49,7 +49,7 @@ export default {
 .TextPicker{
     @include column;
     width: 140px;
-    height: 150px;
+    height: 140px;
     border-width: 1px;
     border-color: var(--theme_power_set_text_color) !important;
 }
@@ -72,7 +72,7 @@ export default {
 .TextPickerList {
     @include column;
     width: 136px;
-    height: 125px;
+    height: 115px;
     overflow-y: scroll;
     margin-left: 2px;
 }

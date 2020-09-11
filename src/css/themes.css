@@ -1,5 +1,29 @@
 
 :root {
+    --theme_text_input_color                            : #555555;
+    --theme_text_input_background_color                 : #EEEEEF;
+    --theme_text_input_text_align                       : left;
+    --theme_text_input_overflow                         : hidden;
+    --theme_text_input_font-family                      : "Roboto", sans-serif;
+    --theme_text_input_font-size                        : medium
+    --theme_text_input_box_shadow                       : none;
+    --theme_text_input_box_shadow_active                : none;
+
+    --theme_button_color                                : #555555;
+    --theme_button_background_color                     : #EEEEEF;
+    --theme_button_box_shadow                           : none;
+    --theme_button_box_shadow_active                    : none;
+
+    --theme_icon_button_color                           : #555555;
+    --theme_icon_button_background_color                : #EEEEEF;
+    --theme_icon_button_margin                          : 3px;
+    --theme_icon_button_font_family                     : "Roboto", sans-serif;
+    --theme_icon_button_border_radius                   : 50%;
+    --theme_icon_button_box_shadow                      : none;
+    --theme_icon_button_color_down                      : #EEEEEF;
+    --theme_icon_button_background_color_down           : #555555;
+    --theme_icon_button_box_shadow_down                 : none;
+
     --theme_background_color                        : #EEEEEF;
     --theme_background_color_menu_bar               : #EEEEEF;
     --theme_background_image_menu_bar               : linear-gradient(270deg, #020024 0%, #090979 35%, #0099b8 100%);

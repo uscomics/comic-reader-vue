@@ -4,31 +4,35 @@
         dense
         flat
         round
-        icon="menu"
+        :icon="icon"
         @click="doClicked"
         />
 </template>
 
 <script>
 export default {
+  name: 'IconButton',
   props: {
-    pressed_initial: { type: Boolean },
-    event: { type: String, default: 'icon-button-event' }
-  },
-  data () {
-    return { pressed: false }
+    event: { type: String, default: 'icon-button-event' },
+    icon: { type: String, default: 'menu' },
+    pressed: { type: Boolean, default: false },
+    toggle: { type: Boolean, default: true }
   },
   computed: {
     getIconButtonClass: function () {
-      if (this.right) {
-        return 'MenuButtonPressed'
+      let style = 'IconButtonNoToggle'
+      if (this.toggle) {
+        if (this.pressed) {
+          style = 'IconButtonPressed'
+        } else {
+          style = 'IconButton'
+        }
       }
-      return 'MenuButton'
+      return style
     }
   },
   methods: {
     doClicked () {
-      this.pressed = !this.pressed
       this.$emit(this.event, this.pressed)
     }
   }
@@ -39,34 +43,41 @@ export default {
 @import '../css/app.sass';
 
 .IconButton {
-  @include cursor-default;
   @include small-box;
   @include rise;
   @include cursor-pointer;
-  color: var(--theme_text_color_label) !important;
-  background-color: var(--theme_background_color) !important;
-  font-family: var(--theme_font_family) !important;
-  box-shadow: var(--theme_box_shadow_small) !important;
-  border-radius: var(--theme_border_radius_image_button_image) !important;
-  margin-right: 20px;
-  &:active {
-    box-shadow: var(--theme_box_shadow_small_active) !important;
-  }
+  margin:           var(--theme_icon_button_margin) !important;
+  color:            var(--theme_icon_button_color) !important;
+  background-color: var(--theme_icon_button_background_color) !important;
+  font-family:      var(--theme_icon_button_font_family) !important;
+  border-radius:    var(--theme_icon_button_border_radius) !important;
+  box-shadow:       var(--theme_icon_button_box_shadow) !important;
 }
 
-.IconButtonButtonPressed {
-  @include cursor-default;
+.IconButtonPressed {
   @include small-box;
   @include rise;
   @include cursor-pointer;
-  color: var(--theme_text_color_button_down) !important;
-  background-color: var(--theme_background_color_button_down) !important;
-  font-family: var(--theme_font_family) !important;
-  box-shadow: var(--theme_box_shadow_small_active) !important;
-  border-radius: var(--theme_border_radius_image_button_image) !important;
-  margin-right: 20px;
+  margin:           var(--theme_icon_button_margin) !important;
+  color:            var(--theme_icon_button_color_down) !important;
+  background-color: var(--theme_icon_button_background_color_down) !important;
+  font-family:      var(--theme_icon_button_font_family) !important;
+  border-radius:    var(--theme_icon_button_border_radius) !important;
+  box-shadow:       var(--theme_icon_button_box_shadow_down) !important;
+}
+
+.IconButtonNoToggle {
+  @include small-box;
+  @include rise;
+  @include cursor-pointer;
+  margin:           var(--theme_icon_button_margin) !important;
+  color:            var(--theme_icon_button_color) !important;
+  background-color: var(--theme_icon_button_background_color) !important;
+  font-family:      var(--theme_icon_button_font_family) !important;
+  border-radius:    var(--theme_icon_button_border_radius) !important;
+  box-shadow:       var(--theme_icon_button_box_shadow) !important;
   &:active {
-    box-shadow: var(--theme_box_shadow_small) !important;
+    box-shadow:     var(--theme_icon_button_box_shadow_down) !important;
   }
 }
 

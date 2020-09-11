@@ -9,8 +9,23 @@
       <!-- Password -->
       <div class="SignInRow">
         <div class="SignInColumn">
-          <q-input class="SignInText" borderless dense hide-bottom-space bg-color="grey-3" id="username" v-model="username" label="User Name" />
-          <q-input class="SignInText" borderless dense hide-bottom-space bg-color="grey-3" id="password" v-model="password" type="password" label="Password" />
+          <TextInput
+            class="SignInText"
+            :dense="true"
+            :hidebottomspace="true"
+            id="username"
+            label="User Name"
+            v-model="username"
+          />
+          <TextInput
+            class="SignInText"
+            :dense="true"
+            :hidebottomspace="true"
+            id="password"
+            label="Password"
+            type="password"
+            v-model="password"
+          />
         </div>
       </div>
       <!-- Remember Me -->
@@ -18,7 +33,7 @@
         <q-checkbox color="white-1" id="rememberMe" v-model="rememberMe" />
         <label class="SignInRememberMe" for="rememberMe">Remember Me</label>
       </div>
-      <q-btn type="submit" class="q-mt-md SignInSubmit" label="Sign In" v-on:click="signIn"/>
+      <Button type="submit" class="q-mt-md" label="Sign In" @button-event="signIn"/>
     </form>
     <!-- Don't Have An Account? -->
     <br/>
@@ -35,14 +50,17 @@
 </template>
 <script>
 import Account from '../data/account'
+import Button from '../components/Button.vue'
 import HTTP from '../util/http'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
 import QueuedUserMessage from '../util/queued-user-message'
+import TextInput from '../components/TextInput.vue'
 import UserMessages from '../util/user-messages'
 import UserState from '../util/user-state'
 export default {
   name: 'SignIn',
+  components: { Button, TextInput },
   data: function() {
     return {
       username: '',
@@ -178,30 +196,10 @@ export default {
 }
 
 .SignInText {
-    @include rise;
-    @include row;
-    @include cursor-pointer;
     width: 100%;
-    height: 25px;
+    height: 40px;
     margin-top: 5px;
     margin-bottom: 3px;
-    justify-content: center;
-    overflow: hidden;
-    font-family: var(--theme_font_family) !important;
-    font-size: var(--theme_font_size_medium) !important;
-    color: var(--theme_text_color_image_button) !important;
-    background-color: var(--theme_background_color) !important;
-    box-shadow: var(--theme_box_shadow_small_active) !important;
-}
-
-.SignInSubmit {
-  @include rise;
-  color: var(--theme_background_color) !important;
-  background-color: var(--theme_text_color_label) !important;
-  box-shadow: var(--theme_box_shadow_small) !important;
-  &:active {
-    box-shadow: var(--theme_box_shadow_small_active) !important;
-  }
 }
 
 .SignInLink {

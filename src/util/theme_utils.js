@@ -1,8 +1,32 @@
 const setThemeLight = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_text_input_color', '#555555')
+  style.setProperty('--theme_text_input_background_color', '#EEEEEF')
+  style.setProperty('--theme_text_input_text_align', 'left')
+  style.setProperty('--theme_text_input_overflow', 'hidden')
+  style.setProperty('--theme_text_input_font-family', '"Roboto", sans-serif')
+  style.setProperty('--theme_text_input_font-size', 'medium')
+  style.setProperty('--theme_text_input_box_shadow', 'none')
+  style.setProperty('--theme_text_input_box_shadow_active', 'none')
+
+  style.setProperty('--theme_button_color', '#EEEEEF')
+  style.setProperty('--theme_button_background_color', '#555555')
+  style.setProperty('--theme_button_box_shadow', 'none')
+  style.setProperty('--theme_button_box_shadow_active', 'none')
+
+  style.setProperty('--theme_icon_button_color', '#555555')
+  style.setProperty('--theme_icon_button_background_color', '#EEEEEF')
+  style.setProperty('--theme_icon_button_margin', '3px')
+  style.setProperty('--theme_icon_button_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_icon_button_border_radius', '50%')
+  style.setProperty('--theme_icon_button_box_shadow', 'none')
+  style.setProperty('--theme_icon_button_color_down', '#EEEEEF')
+  style.setProperty('--theme_icon_button_background_color_down', '#555555')
+  style.setProperty('--theme_icon_button_box_shadow_down', 'none')
+
   style.setProperty('--theme_background_color', '#EEEEEF')
   style.setProperty('--theme_background_color_menu_bar', '#EEEEEF')
-  style.setProperty('--theme_background_image_menu_bar', 'linear-gradient(270deg, #333333 0%, #090979 35%, #0099b8 100%)')
+  style.setProperty('--theme_background_image_menu_bar', 'linear-gradient(270deg, #222222 0%, #090979 35%, #0099b8 100%)')
   style.setProperty('--theme_background_color_status_bar', '#EEEEEF')
   style.setProperty('--theme_background_color_button_down', '#EEEEEF')
   style.setProperty('--theme_font_family', '"Roboto", sans-serif')
@@ -44,6 +68,29 @@ const setThemeLight = () => {
 
 const setThemeDark = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_text_input_color', '#555555')
+  style.setProperty('--theme_text_input_background_color', '#EEEEEF')
+  style.setProperty('--theme_text_input_text_align', 'left')
+  style.setProperty('--theme_text_input_overflow', 'hidden')
+  style.setProperty('--theme_text_input_font-family', '"Roboto", sans-serif')
+  style.setProperty('--theme_text_input_font-size', 'medium')
+  style.setProperty('--theme_text_input_box_shadow', 'none')
+  style.setProperty('--theme_text_input_box_shadow_active', 'none')
+
+  style.setProperty('--theme_button_color', '#555555')
+  style.setProperty('--theme_button_background_color', '#EEEEEF')
+  style.setProperty('--theme_button_box_shadow', 'none')
+  style.setProperty('--theme_button_box_shadow_active', 'none')
+
+  style.setProperty('--theme_icon_button_color', '#EEEEEF')
+  style.setProperty('--theme_icon_button_background_color', '#555555')
+  style.setProperty('--theme_icon_button_margin', '3px')
+  style.setProperty('--theme_icon_button_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_icon_button_border_radius', '50%')
+  style.setProperty('--theme_icon_button_box_shadow', 'none')
+  style.setProperty('--theme_icon_button_color_down', '#555555')
+  style.setProperty('--theme_icon_button_background_color_down', '#EEEEEF')
+  style.setProperty('--theme_icon_button_box_shadow_down', 'none')
 
   style.setProperty('--theme_background_color', '#555555')
   style.setProperty('--theme_background_color_menu_bar', '#555555')
@@ -89,6 +136,29 @@ const setThemeDark = () => {
 
 const setThemeHero = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_text_input_color', '#003366')
+  style.setProperty('--theme_text_input_background_color', '#FFCC66')
+  style.setProperty('--theme_text_input_text_align', 'left')
+  style.setProperty('--theme_text_input_overflow', 'hidden')
+  style.setProperty('--theme_text_input_font-family', '"Roboto", sans-serif')
+  style.setProperty('--theme_text_input_font-size', 'medium')
+  style.setProperty('--theme_text_input_box_shadow', 'none')
+  style.setProperty('--theme_text_input_box_shadow_active', 'none')
+
+  style.setProperty('--theme_button_color', '#003366')
+  style.setProperty('--theme_button_background_color', '#FFCC66')
+  style.setProperty('--theme_button_box_shadow', 'none')
+  style.setProperty('--theme_button_box_shadow_active', 'none')
+
+  style.setProperty('--theme_icon_button_color', '#FFCC66')
+  style.setProperty('--theme_icon_button_background_color', '#003366')
+  style.setProperty('--theme_icon_button_margin', '3px')
+  style.setProperty('--theme_icon_button_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_icon_button_border_radius', '50%')
+  style.setProperty('--theme_icon_button_box_shadow', 'none')
+  style.setProperty('--theme_icon_button_color_down', '#003366')
+  style.setProperty('--theme_icon_button_background_color_down', '#FFCC66')
+  style.setProperty('--theme_icon_button_box_shadow_down', 'none')
 
   style.setProperty('--theme_background_color', '#003366')
   style.setProperty('--theme_background_color_menu_bar', '#003366')
@@ -134,6 +204,29 @@ const setThemeHero = () => {
 
 const setThemeVillian = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_text_input_color', '#810000')
+  style.setProperty('--theme_text_input_background_color', '#f5efef')
+  style.setProperty('--theme_text_input_text_align', 'left')
+  style.setProperty('--theme_text_input_overflow', 'hidden')
+  style.setProperty('--theme_text_input_font-family', '"Roboto", sans-serif')
+  style.setProperty('--theme_text_input_font-size', 'medium')
+  style.setProperty('--theme_text_input_box_shadow', 'none')
+  style.setProperty('--theme_text_input_box_shadow_active', 'none')
+
+  style.setProperty('--theme_button_color', '#810000')
+  style.setProperty('--theme_button_background_color', '#f5efef')
+  style.setProperty('--theme_button_box_shadow', 'none')
+  style.setProperty('--theme_button_box_shadow_active', 'none')
+
+  style.setProperty('--theme_icon_button_color', '#f5efef')
+  style.setProperty('--theme_icon_button_background_color', '#810000')
+  style.setProperty('--theme_icon_button_margin', '3px')
+  style.setProperty('--theme_icon_button_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_icon_button_border_radius', '50%')
+  style.setProperty('--theme_icon_button_box_shadow', 'none')
+  style.setProperty('--theme_icon_button_color_down', '#810000')
+  style.setProperty('--theme_icon_button_background_color_down', '#f5efef')
+  style.setProperty('--theme_icon_button_box_shadow_down', 'none')
 
   style.setProperty('--theme_background_color', '#810000')
   style.setProperty('--theme_background_color_menu_bar', '#810000')
@@ -179,6 +272,29 @@ const setThemeVillian = () => {
 
 const setThemeGamma = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_text_input_color', '#2C6700')
+  style.setProperty('--theme_text_input_background_color', '#FFCF79')
+  style.setProperty('--theme_text_input_text_align', 'left')
+  style.setProperty('--theme_text_input_overflow', 'hidden')
+  style.setProperty('--theme_text_input_font-family', '"Roboto", sans-serif')
+  style.setProperty('--theme_text_input_font-size', 'medium')
+  style.setProperty('--theme_text_input_box_shadow', 'none')
+  style.setProperty('--theme_text_input_box_shadow_active', 'none')
+
+  style.setProperty('--theme_button_color', '#2C6700')
+  style.setProperty('--theme_button_background_color', '#FFCF79')
+  style.setProperty('--theme_button_box_shadow', 'none')
+  style.setProperty('--theme_button_box_shadow_active', 'none')
+
+  style.setProperty('--theme_icon_button_color', '#FFCF79')
+  style.setProperty('--theme_icon_button_background_color', '#2C6700')
+  style.setProperty('--theme_icon_button_margin', '3px')
+  style.setProperty('--theme_icon_button_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_icon_button_border_radius', '50%')
+  style.setProperty('--theme_icon_button_box_shadow', 'none')
+  style.setProperty('--theme_icon_button_color_down', '#2C6700')
+  style.setProperty('--theme_icon_button_background_color_down', '#FFCF79')
+  style.setProperty('--theme_icon_button_box_shadow_down', 'none')
 
   style.setProperty('--theme_background_color', '#2C6700')
   style.setProperty('--theme_background_color_menu_bar', '#2C6700')
@@ -222,53 +338,31 @@ const setThemeGamma = () => {
   style.setProperty('--theme_power_set_text_color', '#555555')
 }
 
-const setTheme3D = () => {
-  const style = document.documentElement.style
-
-  style.setProperty('--theme_background_color', '#EEEEEF')
-  style.setProperty('--theme_background_color_menu_bar', '#EEEEEF')
-  style.setProperty('--theme_background_image_menu_bar', 'linear-gradient(270deg, #020024 0%, #090979 35%, #0099b8 100%)')
-  style.setProperty('--theme_background_color_status_bar', '#EEEEEF')
-  style.setProperty('--theme_background_color_button_down', '#555555')
-  style.setProperty('--theme_font_family', '"Roboto", sans-serif')
-  style.setProperty('--theme_font_size_small', 'small')
-  style.setProperty('--theme_font_size_medium', 'medium')
-  style.setProperty('--theme_font_size_large', 'large')
-  style.setProperty('--theme_text_align_title', 'left')
-  style.setProperty('--theme_text_align_image_button', 'center')
-  style.setProperty('--theme_text_align_label', 'left')
-  style.setProperty('--theme_text_align_field', 'left')
-  style.setProperty('--theme_text_color_image_button', '#0000FF')
-  style.setProperty('--theme_text_color_label', '#555555')
-  style.setProperty('--theme_text_color_field', '#555555')
-  style.setProperty('--theme_text_color_button_down', '#EEEEEF')
-  style.setProperty('--theme_text_color_image_button_disabled', '#999999')
-  style.setProperty('--theme_text_color_label_disabled', '#999999')
-  style.setProperty('--theme_text_color_field_disabled', '#999999')
-  style.setProperty('--theme_text_color_slots_remaining', '#999999')
-  style.setProperty('--theme_border_radius_image_button_image', '50%')
-  style.setProperty('--theme_border_image_button_image', '2px solid white')
-  style.setProperty('--theme_buton_text_color', '#EEEEEF')
-  style.setProperty('--theme_buton_background_color', '#555555')
-  style.setProperty('--theme_buton_text_color_disabled', '#999999')
-  style.setProperty('--theme_buton_background_color_disabled', '#EEEEEF')
-  style.setProperty('--theme_box_shadow_menu_bar', 'none')
-  style.setProperty('--theme_box_shadow_image_button', 'none')
-  style.setProperty('--theme_box_shadow_image_button_active', 'none')
-  style.setProperty('--theme_box_shadow_small', 'none')
-  style.setProperty('--theme_box_shadow_small_active', 'none')
-  style.setProperty('--theme_no_power_set', '#999999')
-  style.setProperty('--theme_primary_power_set', '#003399')
-  style.setProperty('--theme_secondary_power_set', '#990000')
-  style.setProperty('--theme_pool_power_set', '#FF9900')
-  style.setProperty('--theme_epic_power_set', '#FFFF66')
-  style.setProperty('--theme_inherent_power_set', '#336600  ')
-  style.setProperty('--theme_power_set_background_color', '#DDDDDD')
-  style.setProperty('--theme_power_set_text_color', '#555555')
-}
-
 const setThemeNeumorphic = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_text_input_color', '#3000FF')
+  style.setProperty('--theme_text_input_background_color', '#EEEEEF')
+  style.setProperty('--theme_text_input_text_align', 'left')
+  style.setProperty('--theme_text_input_overflow', 'hidden')
+  style.setProperty('--theme_text_input_font-family', '"Roboto", sans-serif')
+  style.setProperty('--theme_text_input_font-size', 'medium')
+  style.setProperty('--theme_text_input_box_shadow', '2px 2px 2px #bababa, -2px -2px 2px #ffffff')
+  style.setProperty('--theme_text_input_box_shadow_active', '2px 2px 2px #ffffff, -2px -2px 2px #bababa')
+
+  style.setProperty('--theme_button_color', '#EEEEEF')
+  style.setProperty('--theme_button_background_color', '#3000FF')
+  style.setProperty('--theme_button_box_shadow', '2px 2px 2px #bababa, -2px -2px 2px #ffffff')
+  style.setProperty('--theme_button_box_shadow_active', '2px 2px 2px #ffffff, -2px -2px 2px #bababa')
+
+  style.setProperty('--theme_icon_button_color', '#3000FF')
+  style.setProperty('--theme_icon_button_background_color', '#EEEEEF')
+  style.setProperty('--theme_icon_button_margin', '3px')
+  style.setProperty('--theme_icon_button_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_icon_button_border_radius', '50%')
+  style.setProperty('--theme_icon_button_box_shadow', '2px 2px 2px #bababa, -2px -2px 2px #ffffff')
+  style.setProperty('--theme_icon_button_color_down', '#3000FF')
+  style.setProperty('--theme_icon_button_background_color_down', '#EEEEEF')
+  style.setProperty('--theme_icon_button_box_shadow_down', '2px 2px 2px #ffffff, -2px -2px 2px #bababa')
 
   style.setProperty('--theme_background_color', '#EEEEEF')
   style.setProperty('--theme_background_color_menu_bar', '#EEEEEF')
@@ -314,6 +408,29 @@ const setThemeNeumorphic = () => {
 
 const setThemeNeumorphicDark = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_text_input_color', '#242424')
+  style.setProperty('--theme_text_input_background_color', '#7B68EE')
+  style.setProperty('--theme_text_input_text_align', 'left')
+  style.setProperty('--theme_text_input_overflow', 'hidden')
+  style.setProperty('--theme_text_input_font-family', '"Roboto", sans-serif')
+  style.setProperty('--theme_text_input_font-size', 'medium')
+  style.setProperty('--theme_text_input_box_shadow', '2px 2px 2px #000000, -2px -2px 2px #7B68EE')
+  style.setProperty('--theme_text_input_box_shadow_active', '2px 2px 2px #7B68EE, -2px -2px 2px #000000')
+
+  style.setProperty('--theme_button_color', '#242424')
+  style.setProperty('--theme_button_background_color', '#7B68EE')
+  style.setProperty('--theme_button_box_shadow', '2px 2px 2px #000000, -2px -2px 2px #7B68EE')
+  style.setProperty('--theme_button_box_shadow_active', '2px 2px 2px #7B68EE, -2px -2px 2px #000000')
+
+  style.setProperty('--theme_icon_button_color', '#7B68EE')
+  style.setProperty('--theme_icon_button_background_color', '#242424')
+  style.setProperty('--theme_icon_button_margin', '3px')
+  style.setProperty('--theme_icon_button_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_icon_button_border_radius', '50%')
+  style.setProperty('--theme_icon_button_box_shadow', '2px 2px 2px #000000, -2px -2px 2px #7B68EE')
+  style.setProperty('--theme_icon_button_color_down', '#7B68EE')
+  style.setProperty('--theme_icon_button_background_color_down', '#242424')
+  style.setProperty('--theme_icon_button_box_shadow_down', '2px 2px 2px #7B68EE, -2px -2px 2px #000000')
 
   style.setProperty('--theme_background_color', '#242424')
   style.setProperty('--theme_background_color_menu_bar', '#242424')
@@ -357,4 +474,4 @@ const setThemeNeumorphicDark = () => {
   style.setProperty('--theme_power_set_text_color', '#555555')
 }
 
-export { setThemeLight, setThemeDark, setThemeHero, setThemeVillian, setThemeGamma, setTheme3D, setThemeNeumorphic, setThemeNeumorphicDark }
+export { setThemeLight, setThemeDark, setThemeHero, setThemeVillian, setThemeGamma, setThemeNeumorphic, setThemeNeumorphicDark }

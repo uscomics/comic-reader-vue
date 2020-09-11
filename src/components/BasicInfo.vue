@@ -1,7 +1,14 @@
 <template>
     <div class="BasicInfo">
         <div >
-            <q-input borderless dense hide-bottom-space bg-color="grey-3" class="BasicInfoName" v-model="name" label="Name" />
+          <TextInput
+            class="BasicInfoName"
+            :dense="true"
+            :hidebottomspace="true"
+            id="toon_name"
+            label="Name"
+            v-model="name"
+          />
         </div>
         <div class="BasicInfoArchetypeAndLevel">
             <div class="BasicInfoArchetype">
@@ -18,8 +25,10 @@
 </template>
 
 <script>
+import TextInput from './TextInput.vue'
 export default {
   name: 'BasicInfo',
+  components: { TextInput },
   created: function() {
     this.getArchetypeName()
   },
@@ -72,16 +81,9 @@ export default {
 }
 
 .BasicInfoName {
-    @include rise;
-    height: 19px;
+    height: 40px;
     width: 175px;
-    text-align: left;
-    overflow: hidden;
     margin-bottom: 3px;
-    color: var(--theme_power_set_text_color);
-    border-bottom-width: 1px;
-    border-bottom-color: var(--theme_power_set_text_color);
-    box-shadow: var(--theme_box_shadow_small_active) !important;
 }
 
 .BasicInfoArchetypeAndLevel{

@@ -21,8 +21,23 @@
           />
       </div>
       <div class="PowerSetPickerButtons">
-        <div class="PowerSetPickerButton " @click="onCancelClicked">Cancel</div>
-        <div :class="getSelectButtonClass" @click="onSelectClicked">Select</div>
+        <Button
+          class="PowerSetPickerButton"
+          :dense="true"
+          label="Cancel"
+          :stretch="true"
+          type="button"
+          @button-event="onCancelClicked"
+        />
+        <Button
+          class="PowerSetPickerButton"
+          :dense="true"
+          :disabled="getSelectDisabled"
+          label="Select"
+          :stretch="true"
+          type="button"
+          @button-event="onSelectClicked"
+        />
       </div>
     </div>
     </div>
@@ -30,12 +45,13 @@
 </template>
 
 <script>
+import Button from '../components/Button'
 import SVGCircleButton from 'components/SVG/SVGCircleButton.vue'
 import TextPicker from './TextPicker'
 import VueDraggableResizable from 'vue-draggable-resizable'
 
 export default {
-  components: { SVGCircleButton, TextPicker, VueDraggableResizable },
+  components: { Button, SVGCircleButton, TextPicker, VueDraggableResizable },
   name: 'PowerSetPicker',
   created: function () {
     this.fetchPrimaryPowerSets()
@@ -53,8 +69,8 @@ export default {
     }
   },
   computed: {
-    getSelectButtonClass: function() {
-      if (-1 === this.selectedPrimaryPowerSetIndex || -1 === this.selectedSecondaryPowerSetIndex) { return 'PowerSetPickerButtonDisabled' } else { return 'PowerSetPickerButton' }
+    getSelectDisabled: function() {
+      return (-1 === this.selectedPrimaryPowerSetIndex || -1 === this.selectedSecondaryPowerSetIndex)
     }
   },
   methods: {
@@ -73,6 +89,8 @@ export default {
       this.selectedSecondaryPowerSetIndex = index
     },
     onCancelClicked: function () {
+      this.selectedPrimaryPowerSetIndex = -1
+      this.selectedSecondaryPowerSetIndex = -1
       this.$emit('power-set-picker-cancel', '')
     },
     onSelectClicked: function (index) {
@@ -84,6 +102,8 @@ export default {
         secondary_power_set_index: this.selectedSecondaryPowerSetIndex,
         secondary_power_set: this.secondaryPowerSets[this.selectedSecondaryPowerSetIndex]
       }
+      this.selectedPrimaryPowerSetIndex = -1
+      this.selectedSecondaryPowerSetIndex = -1
       this.$emit('power-set-picker-select', event)
     }
   }
@@ -159,7 +179,7 @@ export default {
     @include row;
     @include cursor-default;
     width: 280px;
-    height: 150px;
+    height: 140px;
     background-color: var(--theme_power_set_background_color);
     border-left: 1px solid var(--theme_text_color_label);
     border-right: 1px solid var(--theme_text_color_label);
@@ -168,27 +188,17 @@ export default {
 .PowerSetPickerButtons{
     @include row;
     width: 280px;
-    height: 25px;
+    height: 35px;
 }
 
 .PowerSetPickerButton{
     @include rise;
     @include cursor-pointer;
     width: 140px;
-    height: 25px;
+    height: 35px;
     color: var(--theme_buton_text_color);
     background-color: var(--theme_buton_background_color);
     border: 1px solid var(--theme_power_set_background_color);
-    text-align: center;
-}
-
-.PowerSetPickerButtonDisabled{
-    @include cursor-default;
-    width: 140px;
-    height: 25px;
-    background-color: var(--theme_buton_background_color_disabled);
-    color: var(--theme_buton_text_color_disabled);
-    border: 1px solid var(--theme_background_color_button_down);
     text-align: center;
 }
 

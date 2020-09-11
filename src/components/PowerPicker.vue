@@ -21,8 +21,23 @@
           />
       </div>
       <div class="PowerPickerButtons">
-        <div class="PowerPickerButton " @click="onCancelClicked">Cancel</div>
-        <div :class="getSelectButtonClass" @click="onSelectClicked">Select</div>
+        <Button
+          class="PowerPickerButton"
+          :dense="true"
+          label="Cancel"
+          :stretch="true"
+          type="button"
+          @button-event="onCancelClicked"
+        />
+        <Button
+          class="PowerPickerButton"
+          :dense="true"
+          :disabled="getSelectDisabled"
+          label="Select"
+          :stretch="true"
+          type="button"
+          @button-event="onSelectClicked"
+        />
       </div>
     </div>
     </div>
@@ -30,12 +45,13 @@
 </template>
 
 <script>
+import Button from '../components/Button'
 import SVGCircleButton from 'components/SVG/SVGCircleButton.vue'
 import TextPicker from './TextPicker'
 import VueDraggableResizable from 'vue-draggable-resizable'
 
 export default {
-  components: { SVGCircleButton, TextPicker, VueDraggableResizable },
+  components: { Button, SVGCircleButton, TextPicker, VueDraggableResizable },
   name: 'PowerPicker',
   created: function () {
   },
@@ -53,8 +69,8 @@ export default {
     }
   },
   computed: {
-    getSelectButtonClass: function() {
-      if (-1 === this.selectedPrimaryPowerSetIndex || -1 === this.selectedSecondaryPowerSetIndex) { return 'PowerPickerButtonDisabled' } else { return 'PowerPickerButton' }
+    getSelectDisabled: function() {
+      return (-1 === this.selectedPowerSetIndex || -1 === this.selectedPowerIndex)
     }
   },
   methods: {
@@ -68,6 +84,8 @@ export default {
     },
     onCancelClicked: function () {
       this.availablePowers = []
+      this.selectedPowerSetIndex = -1
+      this.selectedPowerIndex = -1
       this.$emit('power-picker-cancel', '')
     },
     onSelectClicked: function () {
@@ -80,6 +98,8 @@ export default {
         power: this.availablePowers[this.selectedPowerIndex]
       }
       this.availablePowers = []
+      this.selectedPowerSetIndex = -1
+      this.selectedPowerIndex = -1
       this.$emit('power-picker-select', event)
     }
   }
@@ -155,7 +175,7 @@ export default {
     @include row;
     @include cursor-default;
     width: 280px;
-    height: 150px;
+    height: 140px;
     background-color: var(--theme_power_set_background_color);
     border-left: 1px solid var(--theme_text_color_label);
     border-right: 1px solid var(--theme_text_color_label);
@@ -171,20 +191,10 @@ export default {
     @include rise;
     @include cursor-pointer;
     width: 140px;
-    height: 25px;
+    height: 35px;
     color: var(--theme_text_color_label);
     background-color: var(--theme_background_color);
     border: 1px solid var(--theme_power_set_background_color);
-    text-align: center;
-}
-
-.PowerPickerButtonDisabled{
-    @include cursor-default;
-    width: 140px;
-    height: 25px;
-    background-color: var(--theme_text_color_image_button_disabled);
-    color: var(--theme_background_color_button_down);
-    border: 1px solid var(--theme_background_color_button_down);
     text-align: center;
 }
 
