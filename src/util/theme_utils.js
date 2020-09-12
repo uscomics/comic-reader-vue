@@ -1,11 +1,27 @@
 const setThemeLight = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_notes_color', '#555555')
+  style.setProperty('--theme_notes_background_color', '#EEEEEF')
+  style.setProperty('--theme_notes_editor_color', '#555555')
+  style.setProperty('--theme_notes_box_shadow', 'none')
+
+  style.setProperty('--theme_link_color', '#555555')
+  style.setProperty('--theme_link_background_color', '#EEEEEF')
+  style.setProperty('--theme_link_text_align', 'center')
+  style.setProperty('--theme_link_text_decoration', 'underline')
+  style.setProperty('--theme_link_overflow', 'hidden')
+  style.setProperty('--theme_link_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_link_font_size', 'medium')
+  style.setProperty('--theme_link_box_shadow', 'none')
+  style.setProperty('--theme_link_box_shadow_active', 'none')
+  style.setProperty('--theme_link_filter', 'brightness(95%)')
+
   style.setProperty('--theme_text_input_color', '#555555')
   style.setProperty('--theme_text_input_background_color', '#EEEEEF')
   style.setProperty('--theme_text_input_text_align', 'left')
   style.setProperty('--theme_text_input_overflow', 'hidden')
-  style.setProperty('--theme_text_input_font-family', '"Roboto", sans-serif')
-  style.setProperty('--theme_text_input_font-size', 'medium')
+  style.setProperty('--theme_text_input_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_text_input_font_size', 'medium')
   style.setProperty('--theme_text_input_box_shadow', 'none')
   style.setProperty('--theme_text_input_box_shadow_active', 'none')
 
@@ -57,23 +73,39 @@ const setThemeLight = () => {
   style.setProperty('--theme_box_shadow_small', 'none')
   style.setProperty('--theme_box_shadow_small_active', 'none')
   style.setProperty('--theme_no_power_set', '#999999')
-  style.setProperty('--theme_primary_power_set', '#003399')
-  style.setProperty('--theme_secondary_power_set', '#990000')
-  style.setProperty('--theme_pool_power_set', '#FF9900')
-  style.setProperty('--theme_epic_power_set', '#FFFF66')
-  style.setProperty('--theme_inherent_power_set', '#336600  ')
+  style.setProperty('--theme_primary_power_set', 'rgba(0,51,153,0.3)')
+  style.setProperty('--theme_secondary_power_set', 'rgba(153,0,0,0.3)')
+  style.setProperty('--theme_pool_power_set', 'rgba(255,153,0,0.3)')
+  style.setProperty('--theme_epic_power_set', 'rgba(153,0,0,0.3)')
+  style.setProperty('--theme_inherent_power_set', 'rgba(51,102,0,0.3)')
   style.setProperty('--theme_power_set_background_color', '#DDDDDD')
   style.setProperty('--theme_power_set_text_color', '#555555')
 }
 
 const setThemeDark = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_notes_color', '#EEEEEF')
+  style.setProperty('--theme_notes_background_color', '#555555')
+  style.setProperty('--theme_notes_editor_color', '#555555')
+  style.setProperty('--theme_notes_box_shadow', 'none')
+
+  style.setProperty('--theme_link_color', '#EEEEEF')
+  style.setProperty('--theme_link_background_color', '555555#')
+  style.setProperty('--theme_link_text_align', 'center')
+  style.setProperty('--theme_link_text_decoration', 'underline')
+  style.setProperty('--theme_link_overflow', 'hidden')
+  style.setProperty('--theme_link_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_link_font_size', 'medium')
+  style.setProperty('--theme_link_box_shadow', 'none')
+  style.setProperty('--theme_link_box_shadow_active', 'none')
+  style.setProperty('--theme_link_filter', 'brightness(150%)')
+
   style.setProperty('--theme_text_input_color', '#555555')
   style.setProperty('--theme_text_input_background_color', '#EEEEEF')
   style.setProperty('--theme_text_input_text_align', 'left')
   style.setProperty('--theme_text_input_overflow', 'hidden')
-  style.setProperty('--theme_text_input_font-family', '"Roboto", sans-serif')
-  style.setProperty('--theme_text_input_font-size', 'medium')
+  style.setProperty('--theme_text_input_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_text_input_font_size', 'medium')
   style.setProperty('--theme_text_input_box_shadow', 'none')
   style.setProperty('--theme_text_input_box_shadow_active', 'none')
 
@@ -136,12 +168,28 @@ const setThemeDark = () => {
 
 const setThemeHero = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_notes_color', '#FFCC66')
+  style.setProperty('--theme_notes_background_color', '#003366')
+  style.setProperty('--theme_notes_editor_color', '#555555')
+  style.setProperty('--theme_notes_box_shadow', 'none')
+
+  style.setProperty('--theme_link_color', '#FFCC66')
+  style.setProperty('--theme_link_background_color', '#003366')
+  style.setProperty('--theme_link_text_align', 'center')
+  style.setProperty('--theme_link_text_decoration', 'underline')
+  style.setProperty('--theme_link_overflow', 'hidden')
+  style.setProperty('--theme_link_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_link_font_size', 'medium')
+  style.setProperty('--theme_link_box_shadow', 'none')
+  style.setProperty('--theme_link_box_shadow_active', 'none')
+  style.setProperty('--theme_link_filter', 'brightness(150%)')
+
   style.setProperty('--theme_text_input_color', '#003366')
   style.setProperty('--theme_text_input_background_color', '#FFCC66')
   style.setProperty('--theme_text_input_text_align', 'left')
   style.setProperty('--theme_text_input_overflow', 'hidden')
-  style.setProperty('--theme_text_input_font-family', '"Roboto", sans-serif')
-  style.setProperty('--theme_text_input_font-size', 'medium')
+  style.setProperty('--theme_text_input_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_text_input_font_size', 'medium')
   style.setProperty('--theme_text_input_box_shadow', 'none')
   style.setProperty('--theme_text_input_box_shadow_active', 'none')
 
@@ -204,12 +252,28 @@ const setThemeHero = () => {
 
 const setThemeVillian = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_notes_color', '#f5efef')
+  style.setProperty('--theme_notes_background_color', '#810000')
+  style.setProperty('--theme_notes_editor_color', '#555555')
+  style.setProperty('--theme_notes_box_shadow', 'none')
+
+  style.setProperty('--theme_link_color', '#f5efef')
+  style.setProperty('--theme_link_background_color', '#810000')
+  style.setProperty('--theme_link_text_align', 'center')
+  style.setProperty('--theme_link_text_decoration', 'underline')
+  style.setProperty('--theme_link_overflow', 'hidden')
+  style.setProperty('--theme_link_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_link_font_size', 'medium')
+  style.setProperty('--theme_link_box_shadow', 'none')
+  style.setProperty('--theme_link_box_shadow_active', 'none')
+  style.setProperty('--theme_link_filter', 'brightness(150%)')
+
   style.setProperty('--theme_text_input_color', '#810000')
   style.setProperty('--theme_text_input_background_color', '#f5efef')
   style.setProperty('--theme_text_input_text_align', 'left')
   style.setProperty('--theme_text_input_overflow', 'hidden')
-  style.setProperty('--theme_text_input_font-family', '"Roboto", sans-serif')
-  style.setProperty('--theme_text_input_font-size', 'medium')
+  style.setProperty('--theme_text_input_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_text_input_font_size', 'medium')
   style.setProperty('--theme_text_input_box_shadow', 'none')
   style.setProperty('--theme_text_input_box_shadow_active', 'none')
 
@@ -272,12 +336,28 @@ const setThemeVillian = () => {
 
 const setThemeGamma = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_notes_color', '#FFCF79')
+  style.setProperty('--theme_notes_background_color', '#2C6700')
+  style.setProperty('--theme_notes_editor_color', '#555555')
+  style.setProperty('--theme_notes_box_shadow', 'none')
+
+  style.setProperty('--theme_link_color', '#FFCF79')
+  style.setProperty('--theme_link_background_color', '#2C6700')
+  style.setProperty('--theme_link_text_align', 'center')
+  style.setProperty('--theme_link_text_decoration', 'underline')
+  style.setProperty('--theme_link_overflow', 'hidden')
+  style.setProperty('--theme_link_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_link_font_size', 'medium')
+  style.setProperty('--theme_link_box_shadow', 'none')
+  style.setProperty('--theme_link_box_shadow_active', 'none')
+  style.setProperty('--theme_link_filter', 'brightness(150%)')
+
   style.setProperty('--theme_text_input_color', '#2C6700')
   style.setProperty('--theme_text_input_background_color', '#FFCF79')
   style.setProperty('--theme_text_input_text_align', 'left')
   style.setProperty('--theme_text_input_overflow', 'hidden')
-  style.setProperty('--theme_text_input_font-family', '"Roboto", sans-serif')
-  style.setProperty('--theme_text_input_font-size', 'medium')
+  style.setProperty('--theme_text_input_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_text_input_font_size', 'medium')
   style.setProperty('--theme_text_input_box_shadow', 'none')
   style.setProperty('--theme_text_input_box_shadow_active', 'none')
 
@@ -340,12 +420,28 @@ const setThemeGamma = () => {
 
 const setThemeNeumorphic = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_notes_color', '#3000FF')
+  style.setProperty('--theme_notes_background_color', '#EEEEEF')
+  style.setProperty('--theme_notes_editor_color', '#555555')
+  style.setProperty('--theme_notes_box_shadow', '2px 2px 2px #bababa, -2px -2px 2px #ffffff')
+
+  style.setProperty('--theme_link_color', '#3000FF')
+  style.setProperty('--theme_link_background_color', '#EEEEEF')
+  style.setProperty('--theme_link_text_align', 'center')
+  style.setProperty('--theme_link_text_decoration', 'none')
+  style.setProperty('--theme_link_overflow', 'hidden')
+  style.setProperty('--theme_link_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_link_font_size', 'medium')
+  style.setProperty('--theme_link_box_shadow', '2px 2px 2px #bababa, -2px -2px 2px #ffffff')
+  style.setProperty('--theme_link_box_shadow_active', '2px 2px 2px #ffffff, -2px -2px 2px #bababa')
+  style.setProperty('--theme_link_filter', 'none')
+
   style.setProperty('--theme_text_input_color', '#3000FF')
   style.setProperty('--theme_text_input_background_color', '#EEEEEF')
   style.setProperty('--theme_text_input_text_align', 'left')
   style.setProperty('--theme_text_input_overflow', 'hidden')
-  style.setProperty('--theme_text_input_font-family', '"Roboto", sans-serif')
-  style.setProperty('--theme_text_input_font-size', 'medium')
+  style.setProperty('--theme_text_input_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_text_input_font_size', 'medium')
   style.setProperty('--theme_text_input_box_shadow', '2px 2px 2px #bababa, -2px -2px 2px #ffffff')
   style.setProperty('--theme_text_input_box_shadow_active', '2px 2px 2px #ffffff, -2px -2px 2px #bababa')
 
@@ -397,23 +493,39 @@ const setThemeNeumorphic = () => {
   style.setProperty('--theme_box_shadow_small', '3px 3px 3px #bababa, -3px -3px 3px #ffffff')
   style.setProperty('--theme_box_shadow_small_active', '2px 2px 2px #ffffff, -3px -3px 3px #bababa')
   style.setProperty('--theme_no_power_set', '#999999')
-  style.setProperty('--theme_primary_power_set', '#6495ED')
-  style.setProperty('--theme_secondary_power_set', '#FF4500')
-  style.setProperty('--theme_pool_power_set', '#FFA500')
-  style.setProperty('--theme_epic_power_set', '#FFFFBF')
-  style.setProperty('--theme_inherent_power_set', '#3CB371')
+  style.setProperty('--theme_primary_power_set', 'rgba(0,51,153,0.3)')
+  style.setProperty('--theme_secondary_power_set', 'rgba(153,0,0,0.3)')
+  style.setProperty('--theme_pool_power_set', 'rgba(255,153,0,0.3)')
+  style.setProperty('--theme_epic_power_set', 'rgba(153,0,0,0.3)')
+  style.setProperty('--theme_inherent_power_set', 'rgba(51,102,0,0.3)')
   style.setProperty('--theme_power_set_background_color', '#DDDDDD')
   style.setProperty('--theme_power_set_text_color', '#555555')
 }
 
 const setThemeNeumorphicDark = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_notes_color', '#7B68EE')
+  style.setProperty('--theme_notes_background_color', '#242424')
+  style.setProperty('--theme_notes_editor_color', '#555555')
+  style.setProperty('--theme_notes_box_shadow', '2px 2px 2px #000000, -2px -2px 2px #7B68EE')
+
+  style.setProperty('--theme_link_color', '#7B68EE')
+  style.setProperty('--theme_link_background_color', '#242424')
+  style.setProperty('--theme_link_text_align', 'center')
+  style.setProperty('--theme_link_text_decoration', 'none')
+  style.setProperty('--theme_link_overflow', 'hidden')
+  style.setProperty('--theme_link_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_link_font_size', 'medium')
+  style.setProperty('--theme_link_box_shadow', '2px 2px 2px #000000, -2px -2px 2px #7B68EE')
+  style.setProperty('--theme_link_box_shadow_active', '2px 2px 2px #7B68EE, -2px -2px 2px #000000')
+  style.setProperty('--theme_link_filter', 'none')
+
   style.setProperty('--theme_text_input_color', '#242424')
   style.setProperty('--theme_text_input_background_color', '#7B68EE')
   style.setProperty('--theme_text_input_text_align', 'left')
   style.setProperty('--theme_text_input_overflow', 'hidden')
-  style.setProperty('--theme_text_input_font-family', '"Roboto", sans-serif')
-  style.setProperty('--theme_text_input_font-size', 'medium')
+  style.setProperty('--theme_text_input_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_text_input_font_size', 'medium')
   style.setProperty('--theme_text_input_box_shadow', '2px 2px 2px #000000, -2px -2px 2px #7B68EE')
   style.setProperty('--theme_text_input_box_shadow_active', '2px 2px 2px #7B68EE, -2px -2px 2px #000000')
 

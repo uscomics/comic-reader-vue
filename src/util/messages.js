@@ -33,4 +33,5 @@ export default class Messages {
   static USER_MESSAGE = 'USER_MESSAGE'
   static USER_ERROR = 'USER_ERROR'
   static TOON_SAVE = 'TOON_SAVE'
+  static TOON_NOTES = 'TOON_NOTES'
 }

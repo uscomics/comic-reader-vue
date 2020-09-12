@@ -6,8 +6,18 @@
       <q-toolbar class="Toolbar">
         <div class="ToolbarTitle" @click="doHomeClicked">HERO/Web</div>
         <div class="ButtonRow">
-          <IconButton icon="menu" :pressed="right" @icon-button-event="right = !right" />
-          <IconButton v-if="showToonButtons" icon="save" :toggle="false" @icon-button-event="doSave" />
+          <div>
+            <IconButton icon="menu" :pressed="right" @icon-button-event="right = !right" />
+            <q-tooltip>Control Panel</q-tooltip>
+          </div>
+          <div>
+            <IconButton v-if="showToonButtons" icon="save" :toggle="false" @icon-button-event="doSave" />
+            <q-tooltip>Save</q-tooltip>
+          </div>
+          <div>
+            <IconButton v-if="showToonButtons" icon="create" :toggle="false" @icon-button-event="doNotes" />
+            <q-tooltip>Notes</q-tooltip>
+          </div>
         </div>
       </q-toolbar>
     </q-header>
@@ -85,6 +95,9 @@ export default {
   methods: {
     doHomeClicked () {
       this.$router.push('/')
+    },
+    doNotes () {
+      Queue.broadcast(Messages.TOON_NOTES)
     },
     doSave () {
       Queue.broadcast(Messages.TOON_SAVE)

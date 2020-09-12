@@ -32,16 +32,17 @@
             <ImageButton id="Class_Warshade" source="Warshade.png" label="Warshade" @image-button-event="doClick"/>
         </div>
         <div class="Spacer"> </div>
-        <q-item class="Link" tag="a" @click="doTellMeClick">Tell Me About the Archetypes</q-item>
+        <Link class="ATLink" text="Tell Me About the Archetypes" @link-event="doTellMeClick" />
     </div>
 </template>
 
 <script>
-import ImageButton from 'components/ImageButton.vue'
+import ImageButton from './ImageButton.vue'
+import Link from './Link.vue'
 
 export default {
-  components: { ImageButton },
   name: 'ArchetypeGrid',
+  components: { ImageButton, Link },
   methods: {
     doClick: function (message) {
       if (message === 'Open_Mids') {
@@ -123,23 +124,9 @@ export default {
     height: 20px;
 }
 
-.Link {
-  @include cursor-pointer;
-  @include rise;
-  @include row;
-  justify-content: center;
-  width: 100%;
+.ATLink {
+  width: 100% !important;
   height: 20px !important;
-  max-height: 20px !important;
-  font-family: var(--theme_font_family) !important;
-  font-size: var(--theme_font_size_medium) !important;
-  color: var(--theme_text_color_image_button) !important;
-  background-color: var(--theme_background_color) !important;
-  box-shadow: var(--theme_box_shadow_small) !important;
-  &:active {
-    box-shadow: var(--theme_box_shadow_small_active) !important;
-    border: 2px solid var(--theme_text_color_image_button) !important;
-  }
 }
 
 </style>

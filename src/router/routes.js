@@ -8,6 +8,7 @@ const routes = [
       { path: 'index', component: () => import('pages/Index.vue') },
       { path: 'Toon/:archetype_id/:build', component: () => import('pages/Toon.vue') },
       { path: 'AT', component: () => import('pages/AT.vue') },
+      { path: 'Notes', component: () => import('pages/Notes.vue') },
       { path: 'reader', component: () => import('pages/Reader.vue') }
     ]
   }

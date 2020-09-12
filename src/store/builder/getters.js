@@ -234,9 +234,6 @@ export const getToonAllowedPowerSets = (state, getters) => (power_level_enum) =>
 
   let power_sets_meet_requirements = []
   power_sets.forEach((power_set) => {
-    let powers = getters.getPowersFromPowerSet(power_set.id)
-    let powers_meet_requirements = []
-
     if (power_level_enum === PowerLevel.level_1_primary &&
         power_set.set_type !== PowerSetType.PRIMARY) {
       return
@@ -246,6 +243,8 @@ export const getToonAllowedPowerSets = (state, getters) => (power_level_enum) =>
       return
     }
 
+    let powers = getters.getPowersFromPowerSet(power_set.id)
+    let powers_meet_requirements = []
     powers.forEach((power) => {
       if (power.level > power_level) {
         return
@@ -258,7 +257,6 @@ export const getToonAllowedPowerSets = (state, getters) => (power_level_enum) =>
     if (0 === powers_meet_requirements.length) {
       return
     }
-
     power_sets_meet_requirements.push(power_set)
   })
   return power_sets_meet_requirements

@@ -1,24 +1,33 @@
 <template>
   <div>
       <q-toolbar class="TabBar">
-        <IconButton
-          icon="person"
-          :pressed="userTab"
-          @icon-button-event="userTab = true; linksTab = false; settingsTab=false"
-          aria-label="User"
-        />
-        <IconButton
-          icon="link"
-          :pressed="linksTab"
-          @icon-button-event="userTab = false; linksTab = true; settingsTab=false"
-          aria-label="Essential Links"
-        />
-        <IconButton
-          icon="settings"
-          :pressed="settingsTab"
-          @icon-button-event="userTab = false; linksTab = false; settingsTab=true"
-          aria-label="Settings"
-        />
+        <div>
+          <IconButton
+            icon="person"
+            :pressed="userTab"
+            @icon-button-event="userTab = true; linksTab = false; settingsTab=false"
+            aria-label="User"
+          />
+          <q-tooltip>Account</q-tooltip>
+        </div>
+        <div>
+          <IconButton
+            icon="link"
+            :pressed="linksTab"
+            @icon-button-event="userTab = false; linksTab = true; settingsTab=false"
+            aria-label="Essential Links"
+          />
+          <q-tooltip>Links</q-tooltip>
+        </div>
+        <div>
+          <IconButton
+            icon="settings"
+            :pressed="settingsTab"
+            @icon-button-event="userTab = false; linksTab = false; settingsTab=true"
+            aria-label="Settings"
+          />
+          <q-tooltip>Settings</q-tooltip>
+        </div>
       </q-toolbar>
       <div v-if="userTab">
         <ResetPassword v-if="$store.state.main.userPanelState === stateResetPassword"/>

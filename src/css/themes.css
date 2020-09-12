@@ -1,11 +1,27 @@
 
 :root {
+    --theme_notes_color                                 : #555555;
+    --theme_notes_background_color                      : #EEEEEF;
+    --theme_notes_editor_color                          : #555555;
+    --theme_notes_box_shadow                            : none;
+
+    --theme_link_color                                  : #555555;
+    --theme_link_background_color                       : #EEEEEF;
+    --theme_link_text_align                             : left;
+    --theme_link_text_decoration                        : underline;
+    --theme_link_overflow                               : hidden;
+    --theme_link_font_family                            : "Roboto", sans-serif;
+    --theme_link_font_size                              : medium;
+    --theme_link_box_shadow                             : none;
+    --theme_link_box_shadow_active                      : none;
+    --theme_link_filter                                 : none;
+
     --theme_text_input_color                            : #555555;
     --theme_text_input_background_color                 : #EEEEEF;
     --theme_text_input_text_align                       : left;
     --theme_text_input_overflow                         : hidden;
-    --theme_text_input_font-family                      : "Roboto", sans-serif;
-    --theme_text_input_font-size                        : medium
+    --theme_text_input_font_family                      : "Roboto", sans-serif;
+    --theme_text_input_font_size                        : medium;
     --theme_text_input_box_shadow                       : none;
     --theme_text_input_box_shadow_active                : none;
 

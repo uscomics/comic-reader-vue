@@ -18,7 +18,7 @@
         :name="name ? name : ''"
         :outlined="outlined"
         :pattern="pattern ? pattern : ''"
-        :placeholder="placeholder ? placeholder : ''"
+        :placeholder="placeholder"
         :prefix="prefix ? prefix : ''"
         :readonly="readonly"
         :required="required"
@@ -26,11 +26,10 @@
         :rounded="rounded"
         :shadow-text="shadowtext ? shadowtext : ''"
         :square="square"
-        :standout="standout ? standout : ''"
         :suffix="suffix ? suffix : ''"
         :type="type"
         :unmasked-value="unmaskedvalue"
-        :value="value"
+        v-model="text"
     />
 </template>
 <script>
@@ -42,12 +41,14 @@ export default {
     clearable: { type: Boolean, default: false },
     dense: { type: Boolean, default: false },
     disabled: { type: Boolean, default: false },
+    event: { type: String, default: 'text-input-changed-event' },
     filled: { type: Boolean, default: false },
     fillmask: { type: String, default: '' },
     form: { type: String, default: '' }, // form name
     hidebottomspace: { type: Boolean, default: false },
     hidehint: { type: Boolean, default: true },
     hint: { type: String, default: '' },
+    initial_value: { type: String, default: '' },
     label: { type: String, default: '' },
     mask: { type: String, default: '' },
     minlength: { type: Number, default: 0 },
@@ -63,14 +64,18 @@ export default {
     shadowtext: { type: String, default: '' },
     size: { type: Number, default: 0 },
     square: { type: Boolean, default: false },
-    standout: { type: String, default: '' },
     suffix: { type: String, default: '' },
     type: { type: String, default: 'text' }, // email, hidden, number, password, range, search, tel, text, url
     unmaskedvalue: { type: Boolean, default: false }
   },
   data: function() {
     return {
-      value: ''
+      text: this.initial_value
+    }
+  },
+  watch: {
+    'text': function(val, preVal) {
+      this.$emit(this.event, val)
     }
   }
 }
@@ -84,8 +89,8 @@ export default {
     background-color:   var(--theme_text_input_background_color) !important;
     text-align:         var(--theme_text_input_text_align) !important;
     overflow:           var(--theme_text_input_overflow) !important;
-    font-family:        var(--theme_text_input_font-family) !important;
-    font-size:          var(--theme_text_input_font) !important;
+    font-family:        var(--theme_text_input_font_family) !important;
+    font-size:          var(--theme_text_input_font_size) !important;
     box-shadow:         var(--theme_text_input_box_shadow_active) !important;
 }
 </style>

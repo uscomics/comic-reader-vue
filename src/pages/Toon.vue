@@ -38,14 +38,22 @@ export default {
   components: { BasicInfo, Build, PowerEntryGrid, PowerPicker, PowerSetPicker },
   name: 'PageToon',
   beforeCreate: function() {
-    if (null == this.$store.getters['builder/getToon']) {
+    let toon = this.$store.getters['builder/getToon']
+    if (null === toon) {
       window.location.assign('/')
     }
-    Queue.register(this, Messages.TOON_SAVE, () => { this.doSave() })
+    while (Queue.isRegistered('PageToon', Messages.TOON_SAVE)) {
+      Queue.unregister('PageToon', Messages.TOON_SAVE)
+    }
+    Queue.register('PageToon', Messages.TOON_SAVE, () => { this.doSave() })
+    while (Queue.isRegistered('PageToon', Messages.TOON_NOTES)) {
+      Queue.unregister('PageToon', Messages.TOON_NOTES)
+    }
+    Queue.register('PageToon', Messages.TOON_NOTES, () => { this.doNotes() })
   },
   data () {
     return {
-      powerSetPickerVisible: true,
+      powerSetPickerVisible: false,
       powerPickerVisible: false,
       primary_power_set_display_name: '',
       secondary_power_set_display_name: '',
@@ -78,12 +86,28 @@ export default {
     },
     getPrimaryPowerSetName: function () {
       if ('' === this.primary_power_set_display_name) {
+        let toon = this.$store.getters['builder/getToon']
+        if (toon) {
+          let build = toon.builds[toon.current_build]
+          if (build.power_sets.primary && build.power_sets.secondary) {
+            let primary = this.$store.getters['builder/getPowerSet'](build.power_sets.primary)
+            return primary.display_name
+          }
+        }
         return 'Tap to set Primary'
       }
       return this.primary_power_set_display_name
     },
     getSecondaryPowerSetName: function () {
       if ('' === this.secondary_power_set_display_name) {
+        let toon = this.$store.getters['builder/getToon']
+        if (toon) {
+          let build = toon.builds[toon.current_build]
+          if (build.power_sets.primary && build.power_sets.secondary) {
+            let secondary = this.$store.getters['builder/getPowerSet'](build.power_sets.secondary)
+            return secondary.display_name
+          }
+        }
         return 'Secondary'
       }
       return this.secondary_power_set_display_name
@@ -107,6 +131,9 @@ export default {
     },
     doClick: function(event) {
       alert(JSON.stringify(event))
+    },
+    doNotes: function() {
+      this.$router.push('/Notes')
     },
     doPowerClicked: function (powerEntry) {
       this.powerLevel = this.getPowerLevel(powerEntry)
@@ -176,7 +203,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <style scoped lang="scss">

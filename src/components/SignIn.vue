@@ -39,12 +39,12 @@
     <br/>
     <label>Don't Have An Account?</label>
     <!-- Sign Up -->
-    <q-item tag="a" class="TextBody1 SignInLink" v-on:click="signUp">Sign Up</q-item>
+    <Link class="SignInLink" text="Sign Up" @link-event="signUp" />
     <!-- Forgot Your Password? -->
     <br/>
     <label>Forgot Your Password?</label>
     <!-- Reset Password -->
-    <q-item tag="a" class="TextBody1 SignInLink" v-on:click="resetPassword">Reset Password</q-item>
+    <Link class="SignInLink" text="Reset Password" @link-event="resetPassword" />
   </div>
 </div>
 </template>
@@ -52,6 +52,7 @@
 import Account from '../data/account'
 import Button from '../components/Button.vue'
 import HTTP from '../util/http'
+import Link from '../components/Link.vue'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
 import QueuedUserMessage from '../util/queued-user-message'
@@ -60,7 +61,7 @@ import UserMessages from '../util/user-messages'
 import UserState from '../util/user-state'
 export default {
   name: 'SignIn',
-  components: { Button, TextInput },
+  components: { Button, Link, TextInput },
   data: function() {
     return {
       username: '',
@@ -203,22 +204,9 @@ export default {
 }
 
 .SignInLink {
-    @include rise;
-    @include row;
-    @include cursor-pointer;
     width: 75%;
     height: 25px;
     margin-top: 5px;
     margin-bottom: 3px;
-    justify-content: center;
-    overflow: hidden;
-    font-family: var(--theme_font_family) !important;
-    font-size: var(--theme_font_size_medium) !important;
-    color: var(--theme_text_color_image_button) !important;
-    background-color: var(--theme_background_color) !important;
-    box-shadow: var(--theme_box_shadow_small) !important;
-    &:active {
-      border: 2px solid var(--theme_text_color_image_button) !important;
-    }
 }
 </style>

@@ -13,15 +13,17 @@
         <div class="Info">
             <div class="Title">{{ title }}</div>
             <div>{{ description }}</div>
-            <div class="Button" @click="buildArchetype(archetype_id)" >Build {{article}} {{ title }}</div>
+            <Link class="Button" :text="getText" @link-event="buildArchetype(archetype_id)" />
         </div>
     </div>
 </template>
 
 <script>
 
+import Link from './Link.vue'
 export default {
   name: 'ArchetypeInfo',
+  components: { Link },
   props: {
     archetype_id: { type: String, default: '' },
     avatar: { type: String, default: '' },
@@ -34,6 +36,9 @@ export default {
   computed: {
     getInfoCardClass: function () {
       return (this.$mq === 'max_power_entry_columns_1' || this.$mq === 'max_power_entry_columns_2') ? 'InfoCardColumn' : 'InfoCardRow'
+    },
+    getText: function () {
+      return 'Build ' + this.article + ' ' + this.title
     }
   },
   methods: {
@@ -120,19 +125,7 @@ export default {
 }
 
 .Button {
-    @include cursor-pointer;
-    @include rise;
-    color: var(--theme_text_color_image_button) !important;
-    background: var(--theme_background_color) !important;
-    font-family: var(--theme_font_family) !important;
-    font-size: var(--theme_font_size_large) !important;
     margin-top: 50px;
-    text-align: center;
-    box-shadow: var(--theme_box_shadow_small) !important;
-    &:active {
-        box-shadow: var(--theme_box_shadow_small_active) !important;
-        border: 2px solid var(--theme_text_color_image_button) !important;
-    }
 }
 
 </style>

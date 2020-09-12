@@ -6,8 +6,9 @@
             :dense="true"
             :hidebottomspace="true"
             id="toon_name"
+            :initial_value="starting_name"
             label="Name"
-            v-model="name"
+            @text-input-changed-event="doNameChanged"
           />
         </div>
         <div class="BasicInfoArchetypeAndLevel">
@@ -54,17 +55,15 @@ export default {
     }
   },
   methods: {
+    doNameChanged: function (newName) {
+      this.$store.commit('builder/toonSetName', newName)
+    },
     doPowerSetClicked: function () {
       this.$emit('power-set-clicked', '')
     },
     getArchetypeName: function () {
       let archtype = this.$store.getters['builder/getArchetype'](this.archetype_id)
       this.archetype_name = archtype.display_name
-    }
-  },
-  watch: {
-    'name': function(val, preVal) {
-      this.$store.commit('builder/changedName', val)
     }
   }
 }
@@ -81,7 +80,7 @@ export default {
 }
 
 .BasicInfoName {
-    height: 40px;
+    height: 30px;
     width: 175px;
     margin-bottom: 3px;
 }
