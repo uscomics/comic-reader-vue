@@ -31,18 +31,18 @@
       <!-- Remember Me -->
       <div class="SignInRememberMeRow">
         <q-checkbox color="white-1" id="rememberMe" v-model="rememberMe" />
-        <label class="SignInRememberMe" for="rememberMe">Remember Me</label>
+        <Label for="rememberMe" text="Remember Me" size="medium" color="default" />
       </div>
       <Button type="submit" class="q-mt-md" label="Sign In" @button-event="signIn"/>
     </form>
     <!-- Don't Have An Account? -->
     <br/>
-    <label>Don't Have An Account?</label>
+    <Label text="Don't Have An Account?" size="medium" color="default" />
     <!-- Sign Up -->
     <Link class="SignInLink" text="Sign Up" @link-event="signUp" />
     <!-- Forgot Your Password? -->
     <br/>
-    <label>Forgot Your Password?</label>
+    <Label text="Forgot Your Password?" size="medium" color="default" />
     <!-- Reset Password -->
     <Link class="SignInLink" text="Reset Password" @link-event="resetPassword" />
   </div>
@@ -52,16 +52,17 @@
 import Account from '../data/account'
 import Button from '../components/Button.vue'
 import HTTP from '../util/http'
+import Label from '../components/Label.vue'
 import Link from '../components/Link.vue'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
-import QueuedUserMessage from '../util/queued-user-message'
+// import QueuedUserMessage from '../util/queued-user-message'
 import TextInput from '../components/TextInput.vue'
-import UserMessages from '../util/user-messages'
+// import UserMessages from '../util/user-messages'
 import UserState from '../util/user-state'
 export default {
   name: 'SignIn',
-  components: { Button, Link, TextInput },
+  components: { Button, Label, Link, TextInput },
   data: function() {
     return {
       username: '',
@@ -88,6 +89,7 @@ export default {
       */
     },
     async signIn () {
+      /*
       let url = this.$store.state.main.urlBase + 'user/authenticate'
       let account = new Account(this.username, this.password, null, null, null, this.rememberMe, null)
       let result = await account.signInToServer(url)
@@ -101,6 +103,7 @@ export default {
       Queue.broadcast(Messages.USER_MESSAGE, successMsg)
       Queue.broadcast(Messages.USER_SIGNED_IN, { username: this.username })
       this.$store.commit('main/SET_USER_PANEL_STATE', UserState.USER)
+      */
     },
     signUp () {
       this.$store.commit('main/SET_USER_PANEL_STATE', UserState.SIGN_UP)
@@ -109,16 +112,20 @@ export default {
       this.$store.commit('main/SET_USER_PANEL_STATE', UserState.RESET_PASSWORD)
     },
     async getUserInfo (user) {
+      /*
       let url = this.$store.state.main.urlBase + 'user/' + this.username + '/info'
       let result = await Account.getUserInfoFromServer(url)
       if (HTTP.hasErrors(result)) return
       this.$store.commit('main/SET_ACCOUNT', JSON.parse(result.body))
+      */
     },
     async getUserCart (user) {
+      /*
       let url = this.$store.state.main.urlBase + 'cart/' + this.username
       let result = await Account.getUserCartFromServer(url)
       if (HTTP.hasErrors(result)) return
       this.$store.commit('main/SET_CART', JSON.parse(result.body))
+      */
     },
     async getUserFavorites (user) {
       let url = this.$store.state.main.urlBase + 'favorites/' + this.username
@@ -127,10 +134,12 @@ export default {
       this.$store.commit('main/SET_FAVORITES', JSON.parse(result.body))
     },
     async getUserPurchases (user) {
+      /*
       let url = this.$store.state.main.urlBase + 'comics/' + this.username
       let result = await Account.getUserPurchasesFromServer(url)
       if (HTTP.hasErrors(result)) return
       this.$store.commit('main/SET_PURCHASED', JSON.parse(result.body))
+      */
     }
   }
 }
@@ -189,11 +198,6 @@ export default {
 .SignInLogo {
   width: 50px;
   height: 50px;
-}
-
-.SignInRememberMe {
-  color: var(--theme_text_color_label) !important;
-  background-color: var(--theme_background_color) !important;
 }
 
 .SignInText {

@@ -1,20 +1,27 @@
 <template>
     <div class="PowerText" @click="doClick">
-        <div class="PowerTextName" :class="getPowerTextClass">{{power_name}}</div>
-        <div class="PowerTextLevel" :class="getPowerTextClass">Level {{power_level}}</div>
+        <Label class="PowerTextName" :text="power_name" size="small" color="default" :disabled="getDisabled" />
+        <Label class="PowerTextLevel" :text="power_level" size="small" color="default" :disabled="getDisabled" />
     </div>
 </template>
 
 <script>
+import Label from './Label.vue'
 import { PowerSetType } from '../enums/PowerSetType'
 export default {
   name: 'PowerText',
+  components: { Label },
   props: {
     power_name: { type: String, default: '' },
     power_level: { type: String, default: '0' },
     power_set_type: { type: String, default: PowerSetType.NO_POWER }
   },
   computed: {
+    getDisabled: function () {
+      let powerSetType = this.power_set_type
+      if (this.power_set) powerSetType = this.power_set.group_name
+      return (powerSetType === PowerSetType.NO_POWER)
+    },
     getPowerTextClass: function () {
       let classes = ''
       let powerSetType = this.power_set_type
@@ -55,21 +62,18 @@ export default {
 }
 
 .PowerTextName{
-    font-size: 13px;
     width: 195px;
     height: 19px;
-    text-align: left;
-    overflow: hidden;
     &:hover{
         cursor:pointer
     }
 }
 
 .PowerTextLevel{
-    @include cursor-pointer;
-    font-size: 11px;
     width: 45px;
     height: 16px;
+    text-align: right !important;
+    padding-right: 3px;
 }
 
 .PowerTextNoPower {

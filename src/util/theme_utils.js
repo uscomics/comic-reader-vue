@@ -1,5 +1,16 @@
 const setThemeLight = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_lable_color', '#555555')
+  style.setProperty('--theme_lable_alt_color', '#000099')
+  style.setProperty('--theme_lable_disabled_color', '#999999')
+  style.setProperty('--theme_lable_background_color', 'transparent')
+  style.setProperty('--theme_lable_text_align', 'left')
+  style.setProperty('--theme_lable_overflow ', 'hidden')
+  style.setProperty('--theme_lable_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_lable_small_font_size', 'small')
+  style.setProperty('--theme_lable_medium_font_size', 'medium')
+  style.setProperty('--theme_lable_large_font_size', 'large')
+
   style.setProperty('--theme_notes_color', '#555555')
   style.setProperty('--theme_notes_background_color', '#EEEEEF')
   style.setProperty('--theme_notes_editor_color', '#555555')
@@ -84,6 +95,17 @@ const setThemeLight = () => {
 
 const setThemeDark = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_lable_color', '#EEEEEF')
+  style.setProperty('--theme_lable_alt_color', '#FFCF79')
+  style.setProperty('--theme_lable_disabled_color', '#999999')
+  style.setProperty('--theme_lable_background_color', 'transparent')
+  style.setProperty('--theme_lable_text_align', 'left')
+  style.setProperty('--theme_lable_overflow ', 'hidden')
+  style.setProperty('--theme_lable_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_lable_small_font_size', 'small')
+  style.setProperty('--theme_lable_medium_font_size', 'medium')
+  style.setProperty('--theme_lable_large_font_size', 'large')
+
   style.setProperty('--theme_notes_color', '#EEEEEF')
   style.setProperty('--theme_notes_background_color', '#555555')
   style.setProperty('--theme_notes_editor_color', '#555555')
@@ -168,6 +190,17 @@ const setThemeDark = () => {
 
 const setThemeHero = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_lable_color', '#555555')
+  style.setProperty('--theme_lable_alt_color', '#FFCC66')
+  style.setProperty('--theme_lable_disabled_color', '#999999')
+  style.setProperty('--theme_lable_background_color', 'transparent')
+  style.setProperty('--theme_lable_text_align', 'left')
+  style.setProperty('--theme_lable_overflow ', 'hidden')
+  style.setProperty('--theme_lable_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_lable_small_font_size', 'small')
+  style.setProperty('--theme_lable_medium_font_size', 'medium')
+  style.setProperty('--theme_lable_large_font_size', 'large')
+
   style.setProperty('--theme_notes_color', '#FFCC66')
   style.setProperty('--theme_notes_background_color', '#003366')
   style.setProperty('--theme_notes_editor_color', '#555555')
@@ -252,6 +285,17 @@ const setThemeHero = () => {
 
 const setThemeVillian = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_lable_color', '#555555')
+  style.setProperty('--theme_lable_alt_color', '#f5efef')
+  style.setProperty('--theme_lable_disabled_color', '#999999')
+  style.setProperty('--theme_lable_background_color', 'transparent')
+  style.setProperty('--theme_lable_text_align', 'left')
+  style.setProperty('--theme_lable_overflow ', 'hidden')
+  style.setProperty('--theme_lable_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_lable_small_font_size', 'small')
+  style.setProperty('--theme_lable_medium_font_size', 'medium')
+  style.setProperty('--theme_lable_large_font_size', 'large')
+
   style.setProperty('--theme_notes_color', '#f5efef')
   style.setProperty('--theme_notes_background_color', '#810000')
   style.setProperty('--theme_notes_editor_color', '#555555')
@@ -336,6 +380,17 @@ const setThemeVillian = () => {
 
 const setThemeGamma = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_lable_color', '#555555')
+  style.setProperty('--theme_lable_alt_color', '#FFCF79')
+  style.setProperty('--theme_lable_disabled_color', '#999999')
+  style.setProperty('--theme_lable_background_color', 'transparent')
+  style.setProperty('--theme_lable_text_align', 'left')
+  style.setProperty('--theme_lable_overflow ', 'hidden')
+  style.setProperty('--theme_lable_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_lable_small_font_size', 'small')
+  style.setProperty('--theme_lable_medium_font_size', 'medium')
+  style.setProperty('--theme_lable_large_font_size', 'large')
+
   style.setProperty('--theme_notes_color', '#FFCF79')
   style.setProperty('--theme_notes_background_color', '#2C6700')
   style.setProperty('--theme_notes_editor_color', '#555555')
@@ -420,6 +475,17 @@ const setThemeGamma = () => {
 
 const setThemeNeumorphic = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_lable_color', '#555555')
+  style.setProperty('--theme_lable_alt_color', '#3000FF')
+  style.setProperty('--theme_lable_disabled_color', '#999999')
+  style.setProperty('--theme_lable_background_color', 'transparent')
+  style.setProperty('--theme_lable_text_align', 'left')
+  style.setProperty('--theme_lable_overflow ', 'hidden')
+  style.setProperty('--theme_lable_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_lable_small_font_size', 'small')
+  style.setProperty('--theme_lable_medium_font_size', 'medium')
+  style.setProperty('--theme_lable_large_font_size', 'large')
+
   style.setProperty('--theme_notes_color', '#3000FF')
   style.setProperty('--theme_notes_background_color', '#EEEEEF')
   style.setProperty('--theme_notes_editor_color', '#555555')
@@ -504,6 +570,17 @@ const setThemeNeumorphic = () => {
 
 const setThemeNeumorphicDark = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_lable_color', '#555555')
+  style.setProperty('--theme_lable_alt_color', '#7B68EE')
+  style.setProperty('--theme_lable_disabled_color', '#999999')
+  style.setProperty('--theme_lable_background_color', 'transparent')
+  style.setProperty('--theme_lable_text_align', 'left')
+  style.setProperty('--theme_lable_overflow ', 'hidden')
+  style.setProperty('--theme_lable_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_lable_small_font_size', 'small')
+  style.setProperty('--theme_lable_medium_font_size', 'medium')
+  style.setProperty('--theme_lable_large_font_size', 'large')
+
   style.setProperty('--theme_notes_color', '#7B68EE')
   style.setProperty('--theme_notes_background_color', '#242424')
   style.setProperty('--theme_notes_editor_color', '#555555')

@@ -35,9 +35,9 @@
 
 <script>
 import Drawer from '../components/Drawer'
-import HTTP from '../util/http'
+// import HTTP from '../util/http'
 import IconButton from '../components/IconButton'
-import Issue from '../data/issue'
+// import Issue from '../data/issue'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
 import QueuedUserMessage from '../util/queued-user-message'
@@ -67,12 +67,14 @@ export default {
     this.monitorErrorMessages()
     this.$store.dispatch('builder/loadDatabase')
     setThemeLight()
+    /*
     let url = this.$store.state.main.urlBase + 'comics'
     let storeBooks = await Issue.getFromServer(url)
     if (HTTP.hasErrors(storeBooks)) return
     let bookInfo = await Issue.getBooksFromServer(this.$store.state.main.urlBase + 'comics/', JSON.parse(storeBooks.body))
     Issue.sortBooks(bookInfo, Issue.SORT_BY_NAME)
     this.$store.commit('main/SET_BOOK_INFO', bookInfo)
+    */
     this.showDrawer()
   },
   computed: {

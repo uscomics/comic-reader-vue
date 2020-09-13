@@ -12,24 +12,19 @@
           />
         </div>
         <div class="BasicInfoArchetypeAndLevel">
-            <div class="BasicInfoArchetype">
-                {{archetype_name}}
-            </div>
-            <div class="BasicInfoLevel">
-                Level {{getLevel}}
-            </div>
+            <Label class="BasicInfoArchetype" :text="archetype_name" size="small" color="alt" />
+            <Label class="BasicInfoLevel" :text="getLevel" size="small" color="alt" />
         </div>
-        <div class="BasicInfoPrimaryAndSecondaryPowerSets" @click="doPowerSetClicked">
-            {{getPowerSetNames}}
-        </div>
+        <Label class="BasicInfoPrimaryAndSecondaryPowerSets" :text="getPowerSetNames" size="small" color="alt" @click="doPowerSetClicked"/>
     </div>
 </template>
 
 <script>
+import Label from './Label.vue'
 import TextInput from './TextInput.vue'
 export default {
   name: 'BasicInfo',
-  components: { TextInput },
+  components: { Label, TextInput },
   created: function() {
     this.getArchetypeName()
   },
@@ -51,7 +46,7 @@ export default {
       return this.primary_name + '/' + this.secondary_name
     },
     getLevel: function () {
-      return this.$store.getters['builder/getToon'].level
+      return this.$store.getters['builder/getToon'].level.toString()
     }
   },
   methods: {
@@ -91,30 +86,18 @@ export default {
 }
 
 .BasicInfoArchetype{
-    @include cursor-default;
-    font-size: 11px;
     height: 16px;
     width: 100px;
-    text-align: left;
-    overflow: hidden;
   }
 
 .BasicInfoLevel{
-    @include cursor-default;
-    font-size: 11px;
     height: 16px;
     width: 85px;
-    text-align: right;
-    overflow: hidden;
+    text-align: right !important;
 }
 
 .BasicInfoPrimaryAndSecondaryPowerSets{
-    @include rise;
-    @include cursor-pointer;
-    font-size: 11px;
     height: 16px;
     width: 215px;
-    text-align: left;
-    overflow: hidden;
 }
 </style>

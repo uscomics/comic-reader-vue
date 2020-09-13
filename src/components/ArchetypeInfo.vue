@@ -3,7 +3,7 @@
         <div class="ImageBox">
             <img :src="resolve_img_url(avatar)" alt="">
             <div class="Extras">
-                <div class="ExtrasTitle"> {{ title }}</div>
+                <Label class="ExtrasLabel" :text="title" size="large" color="alt" />
                 <img class="Chart" :src="resolve_img_url(chart)" alt="">
             </div>
             <div class="IconBox">
@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="Info">
-            <div class="Title">{{ title }}</div>
+            <Label :text="title" size="large" color="alt" />
             <div>{{ description }}</div>
             <Link class="Button" :text="getText" @link-event="buildArchetype(archetype_id)" />
         </div>
@@ -20,10 +20,11 @@
 
 <script>
 
+import Label from './Label.vue'
 import Link from './Link.vue'
 export default {
   name: 'ArchetypeInfo',
-  components: { Link },
+  components: { Label, Link },
   props: {
     archetype_id: { type: String, default: '' },
     avatar: { type: String, default: '' },
@@ -80,11 +81,8 @@ export default {
     box-shadow: var(--theme_box_shadow_small_active) !important;
 }
 
-.ExtrasTitle {
-    color: var(--theme_text_color_label) !important;
-    background: var(--theme_background_color) !important;
-    font-family: var(--theme_font_family) !important;
-    font-size: var(--theme_font_size_large) !important;
+.ExtrasLabel {
+    padding-left: 5px;
 }
 
 .Chart {
@@ -115,13 +113,6 @@ export default {
     font-family: var(--theme_font_family) !important;
     font-size: var(--theme_font_size_small) !important;
     margin: 30px;
-}
-
-.Title {
-    color: var(--theme_text_color_label) !important;
-    background: var(--theme_background_color) !important;
-    font-family: var(--theme_font_family) !important;
-    font-size: var(--theme_font_size_large) !important;
 }
 
 .Button {

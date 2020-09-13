@@ -6,14 +6,15 @@
             <SVGCircleButton :class="getBuild2Class" @click.native="onBuild2Clicked" text="2" text_x="8"></SVGCircleButton>
             <SVGCircleButton :class="getBuild3Class" @click.native="onBuild3Clicked" text="3" text_x="8"></SVGCircleButton>
         </div>
-        <div class="BuildText">Build</div>
+        <Label class="BuildText" text="Build" size="small" color="alt"/>
     </div>
 </template>
 
 <script>
+import Label from './Label.vue'
 import SVGCircleButton from 'components/SVG/SVGCircleButton.vue'
 export default {
-  components: { SVGCircleButton },
+  components: { Label, SVGCircleButton },
   name: 'Build',
   computed: {
     getBuild1Class: function () {
@@ -106,11 +107,8 @@ export default {
 }
 
 .BuildText {
-    font-size: 11px;
     width: 100px;
     height: 16px;
-    text-align: center;
-    color: var(--theme_text_color_label);
-    background-color: var(--theme_background_color);
+    text-align: center !important;
 }
 </style>

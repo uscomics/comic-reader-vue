@@ -8,13 +8,6 @@ export default {
     event: { type: String, default: 'link-event' },
     text: { type: String, default: 'Link Text' }
   },
-  data: function() {
-    return {
-      username: '',
-      password: '',
-      rememberMe: false
-    }
-  },
   methods: {
     doClicked () {
       this.$emit(this.event)
