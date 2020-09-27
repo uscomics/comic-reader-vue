@@ -125,7 +125,6 @@ export default {
   },
   methods: {
     getHelpText () {
-      console.log('this.helpText: ' + this.helpText)
       return this.helpText
     },
     setHelpText (text) {
@@ -178,15 +177,13 @@ export default {
 }
 
 .SignUpColumn {
-  display: flex;
-  flex-direction: column;
+  @include column;
   justify-content: flex-center;
   align-items: center;
 }
 
 .SignUpRow {
-  display: flex;
-  flex-direction: row;
+  @include row;
   justify-content: space-between;
   align-items: center;
   width:100%;
@@ -195,8 +192,7 @@ export default {
 }
 
 .SignUpRow-2 {
-  display: flex;
-  flex-direction: row;
+  @include row;
   justify-content: center;
   align-items: center;
   width:100%;

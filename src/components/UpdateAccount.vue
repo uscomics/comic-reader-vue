@@ -1,40 +1,99 @@
 <template>
-<div class="update-account-column">
-  <div class="update-account-column update-account-top">
+<div class="UpdateAccountColumn">
+  <div class="UpdateAccountColumn update-account-top">
     <!-- Form -->
-    <form class="update-account-column">
+    <form class="UpdateAccountColumn">
       <!--     UserName     Password -->
       <!--     First Name   Reenter Password -->
       <!--     Last Name    Email -->
-      <div class="update-account-row">
-        <div class="update-account-column update-account-half-width">
-          <q-input id="username" v-on:focus="setHelpText('Minimum 5 characters. Letter, number, dash, or underscore.')" v-model="username" label="User Name" />
-          <q-input id="firstName" v-on:focus="setHelpText('Optional.')" v-model="firstName" label="First Name" />
-          <q-input id="lastName" v-on:focus="setHelpText('Optional.')" v-model="lastName" label="Last Name" />
+      <div class="UpdateAccountRow">
+        <div class="UpdateAccountColumn UpdateAccountHalfWidth">
+          <TextInput
+            class="SignUpText"
+            :dense="true"
+            :hidebottomspace="true"
+            id="username"
+            label="User Name"
+            type="text"
+            v-model="username"
+            @text-input-focus-event="setHelpText('Minimum 5 characters. Letter, number, dash, or underscore.')"
+          />
+          <TextInput
+            class="SignUpText"
+            :dense="true"
+            :hidebottomspace="true"
+            id="firstName"
+            label="First Name"
+            type="text"
+            v-model="firstName"
+            @text-input-focus-event="setHelpText('Optional.')"
+          />
+          <TextInput
+            class="SignUpText"
+            :dense="true"
+            :hidebottomspace="true"
+            id="lastName"
+            label="Last Name"
+            type="text"
+            v-model="lastName"
+            @text-input-focus-event="setHelpText('Optional.')"
+          />
         </div>
-        <div class="update-account-column update-account-half-width">
-          <q-input id="password" v-on:focus="setHelpText('Minimum 5 characters.')" v-model="password" type="password" label="Password" />
-          <q-input id="reenterPassword" v-on:focus="setHelpText('Minimum 5 characters.')" v-model="reenterPassword" type="password" label="Renter Password" />
-          <q-input id="email" v-on:focus="setHelpText('Used for password reset.')" v-on:blur="setHelpText('')" v-model="email" label="Email" />
+        <div class="UpdateAccountColumn UpdateAccountHalfWidth">
+          <TextInput
+            class="SignUpText"
+            :dense="true"
+            :hidebottomspace="true"
+            id="password"
+            label="Password"
+            type="password"
+            v-model="password"
+            @text-input-focus-event="setHelpText('Minimum 5 characters.')"
+          />
+          <TextInput
+            class="SignUpText"
+            :dense="true"
+            :hidebottomspace="true"
+            id="reenterPassword"
+            label="Renter Password"
+            type="password"
+            v-model="reenterPassword"
+            @text-input-focus-event="setHelpText('Minimum 5 characters.')"
+          />
+          <TextInput
+            class="SignUpText"
+            :dense="true"
+            :hidebottomspace="true"
+            id="email"
+            label="Email"
+            type="text"
+            v-model="reenterPassword"
+            @text-input-focus-event="setHelpText('Used for password reset.')"
+          />
         </div>
       </div>
-      {{helpText}}
+      <Label :text="getHelpText()" size="small" color="default" />
       <br/>
       <br/>
-      <q-btn type="submit" color="white" text-color="black" class="q-mt-sm" label="Update Account" v-on:click="updateAccount"/>
+      <Button type="submit" class="q-mt-md" label="Update Account" @button-event="updateAccount"/>
     </form>
   </div>
 </div>
 </template>
 <script>
 import Account from '../data/account'
+import Button from '../components/Button.vue'
 import HTTP from '../util/http'
+import Label from '../components/Label.vue'
+import Link from '../components/Link.vue'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
 import QueuedUserMessage from '../util/queued-user-message'
+import TextInput from '../components/TextInput.vue'
 import UserMessages from '../util/user-messages'
 export default {
   name: 'UpdateAccount',
+  components: { Button, Label, Link, TextInput },
   data: function() {
     return {
       username: this.$store.state.main.account.username,
@@ -47,6 +106,9 @@ export default {
     }
   },
   methods: {
+    getHelpText () {
+      return this.helpText
+    },
     setHelpText (text) {
       this.helpText = text
     },
@@ -78,26 +140,22 @@ export default {
   }
 }
 </script>
-<style scoped>
-.update-account-top {
-  width: 96%;
-}
-.update-account-column {
-  display: flex;
-  flex-direction: column;
+<style scoped lang="scss">
+@import '../css/app.sass';
+.UpdateAccountColumn {
+  @include column;
   justify-content: flex-center;
   align-items: center;
 }
-.update-account-row {
-  display: flex;
-  flex-direction: row;
+.UpdateAccountRow {
+  @include row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   min-width: 100%;
   max-width: 100%;
 }
-.update-account-half-width {
+.UpdateAccountHalfWidth {
   width: 48%;
 }
 
