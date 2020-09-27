@@ -56,9 +56,9 @@ import Label from '../components/Label.vue'
 import Link from '../components/Link.vue'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
-// import QueuedUserMessage from '../util/queued-user-message'
+import QueuedUserMessage from '../util/queued-user-message'
 import TextInput from '../components/TextInput.vue'
-// import UserMessages from '../util/user-messages'
+import UserMessages from '../util/user-messages'
 import UserState from '../util/user-state'
 export default {
   name: 'SignIn',
@@ -79,17 +79,15 @@ export default {
   },
   methods: {
     async remember () {
-      /*
       let url = this.$store.state.main.urlBase + 'remember/data'
       let response = await HTTP.postToServer(url, new FormData())
+      console.log('response: ' + JSON.stringify(response))
       if (200 === response.status) {
         this.username = JSON.parse(response.body).user
         this.rememberMe = true
       }
-      */
     },
     async signIn () {
-      /*
       let url = this.$store.state.main.urlBase + 'user/authenticate'
       let account = new Account(this.username, this.password, null, null, null, this.rememberMe, null)
       let result = await account.signInToServer(url)
@@ -103,7 +101,6 @@ export default {
       Queue.broadcast(Messages.USER_MESSAGE, successMsg)
       Queue.broadcast(Messages.USER_SIGNED_IN, { username: this.username })
       this.$store.commit('main/SET_USER_PANEL_STATE', UserState.USER)
-      */
     },
     signUp () {
       this.$store.commit('main/SET_USER_PANEL_STATE', UserState.SIGN_UP)
@@ -112,20 +109,16 @@ export default {
       this.$store.commit('main/SET_USER_PANEL_STATE', UserState.RESET_PASSWORD)
     },
     async getUserInfo (user) {
-      /*
       let url = this.$store.state.main.urlBase + 'user/' + this.username + '/info'
       let result = await Account.getUserInfoFromServer(url)
       if (HTTP.hasErrors(result)) return
       this.$store.commit('main/SET_ACCOUNT', JSON.parse(result.body))
-      */
     },
     async getUserCart (user) {
-      /*
       let url = this.$store.state.main.urlBase + 'cart/' + this.username
       let result = await Account.getUserCartFromServer(url)
       if (HTTP.hasErrors(result)) return
       this.$store.commit('main/SET_CART', JSON.parse(result.body))
-      */
     },
     async getUserFavorites (user) {
       let url = this.$store.state.main.urlBase + 'favorites/' + this.username
@@ -134,12 +127,10 @@ export default {
       this.$store.commit('main/SET_FAVORITES', JSON.parse(result.body))
     },
     async getUserPurchases (user) {
-      /*
       let url = this.$store.state.main.urlBase + 'comics/' + this.username
       let result = await Account.getUserPurchasesFromServer(url)
       if (HTTP.hasErrors(result)) return
       this.$store.commit('main/SET_PURCHASED', JSON.parse(result.body))
-      */
     }
   }
 }

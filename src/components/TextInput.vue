@@ -30,6 +30,8 @@
         :type="type"
         :unmasked-value="unmaskedvalue"
         v-model="text"
+        v-on:blur="doBlur"
+        v-on:focus="doFocus"
     />
 </template>
 <script>
@@ -71,6 +73,14 @@ export default {
   data: function() {
     return {
       text: this.initial_value
+    }
+  },
+  methods: {
+    doBlur () {
+      this.$emit('text-input-blur-event')
+    },
+    doFocus () {
+      this.$emit('text-input-focus-event')
     }
   },
   watch: {

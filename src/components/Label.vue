@@ -38,7 +38,6 @@ export default {
           labelClass = 'LabelLargeAlt'
         }
       }
-      console.log('this.disabled: ' + this.disabled + ', labelClass: ' + labelClass)
       return labelClass
     }
   }
@@ -49,55 +48,55 @@ export default {
 
 .Label {
     @include cursor-default;
-    background-color:   var(--theme_lable_background_color) !important;
-    text-align:         var(--theme_lable_text_align) !important;
-    overflow:           var(--theme_lable_overflow) !important;
-    font-family:        var(--theme_lable_font_family) !important;
+    background-color:   var(--theme_label_background_color) !important;
+    text-align:         var(--theme_label_text_align) !important;
+    overflow:           var(--theme_label_overflow) !important;
+    font-family:        var(--theme_label_font_family) !important;
 }
 
 .LabelSmallDefault {
-    color:              var(--theme_lable_color) !important;
-    font-size:          var(--theme_lable_small_font_size) !important;
+    color:              var(--theme_label_color) !important;
+    font-size:          var(--theme_label_small_font_size) !important;
 }
 
 .LabelMediumDefault {
-    color:              var(--theme_lable_color) !important;
-    font-size:          var(--theme_lable_medium_font_size) !important;
+    color:              var(--theme_label_color) !important;
+    font-size:          var(--theme_label_medium_font_size) !important;
 }
 
 .LabelLargeDefault {
-    color:              var(--theme_lable_color) !important;
-    font-size:          var(--theme_lable_large_font_size) !important;
+    color:              var(--theme_label_color) !important;
+    font-size:          var(--theme_label_large_font_size) !important;
 }
 
 .LabelSmallAlt {
-    color:              var(--theme_lable_alt_color) !important;
-    font-size:          var(--theme_lable_small_font_size) !important;
+    color:              var(--theme_label_alt_color) !important;
+    font-size:          var(--theme_label_small_font_size) !important;
 }
 
 .LabelMediumAlt {
-    color:              var(--theme_lable_alt_color) !important;
-    font-size:          var(--theme_lable_medium_font_size) !important;
+    color:              var(--theme_label_alt_color) !important;
+    font-size:          var(--theme_label_medium_font_size) !important;
 }
 
 .LabelLargeAlt {
-    color:              var(--theme_lable_alt_color) !important;
-    font-size:          var(--theme_lable_large_font_size) !important;
+    color:              var(--theme_label_alt_color) !important;
+    font-size:          var(--theme_label_large_font_size) !important;
 }
 
 .LabelSmallDisabled {
-    color:              var(--theme_lable_disabled_color) !important;
-    font-size:          var(--theme_lable_small_font_size) !important;
+    color:              var(--theme_label_disabled_color) !important;
+    font-size:          var(--theme_label_small_font_size) !important;
 }
 
 .LabelMediumDisabled {
-    color:              var(--theme_lable_disabled_color) !important;
-    font-size:          var(--theme_lable_medium_font_size) !important;
+    color:              var(--theme_label_disabled_color) !important;
+    font-size:          var(--theme_label_medium_font_size) !important;
 }
 
 .LabelLargeDisabled {
-    color:              var(--theme_lable_disabled_color) !important;
-    font-size:          var(--theme_lable_large_font_size) !important;
+    color:              var(--theme_label_disabled_color) !important;
+    font-size:          var(--theme_label_large_font_size) !important;
 }
 
 </style>

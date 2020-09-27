@@ -4,7 +4,7 @@ import Image from '../../data/image'
 // urlBase: 'https://us-comics.herokuapp.com/',
 export default function () {
   return {
-    urlBase: 'https://us-comics.herokuapp.com/',
+    urlBase: 'http://localhost:3000/',
     account: null,
     currentBook: null,
     purchased: null,

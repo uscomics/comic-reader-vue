@@ -1,57 +1,116 @@
 <template>
-<div class="sign-up-column">
-  <div class="sign-up-column sign-up-top">
+<div class="SignUpColumn">
+  <div class="SignUpColumn SignUpTop">
     <!-- Image -->
     <!-- <img class="sign-up-logo q-mb-md" src='../assets/USComicsLogo.png'/> -->
     <!-- Form -->
-    <form class="sign-up-column">
+    <form class="SignUpColumn">
       <!--     UserName     Password -->
       <!--     First Name   Reenter Password -->
       <!--     Last Name    Email -->
-      <div class="sign-up-row">
-        <div class="sign-up-column sign-up-half-width">
-          <q-input id="username" v-on:focus="setHelpText('Minimum 5 characters. Letter, number, dash, or underscore.')" v-model="username" label="User Name" />
-          <q-input id="firstName" v-on:focus="setHelpText('Optional.')" v-model="firstName" label="First Name" />
-          <q-input id="lastName" v-on:focus="setHelpText('Optional.')" v-model="lastName" label="Last Name" />
+      <div class="SignUpRow">
+        <div class="SignUpColumn SignUpHalfWidth">
+          <TextInput
+            class="SignUpText"
+            :dense="true"
+            :hidebottomspace="true"
+            id="username"
+            label="User Name"
+            type="text"
+            v-model="username"
+            @text-input-focus-event="setHelpText('Minimum 5 characters. Letter, number, dash, or underscore.')"
+          />
+          <TextInput
+            class="SignUpText"
+            :dense="true"
+            :hidebottomspace="true"
+            id="firstName"
+            label="First Name"
+            type="text"
+            v-model="firstName"
+            @text-input-focus-event="setHelpText('Optional.')"
+          />
+          <TextInput
+            class="SignUpText"
+            :dense="true"
+            :hidebottomspace="true"
+            id="lastName"
+            label="Last Name"
+            type="text"
+            v-model="lastName"
+            @text-input-focus-event="setHelpText('Optional.')"
+          />
         </div>
-        <div class="sign-up-column sign-up-half-width">
-          <q-input id="password" v-on:focus="setHelpText('Minimum 5 characters.')" v-model="password" type="password" label="Password" />
-          <q-input id="reenterPassword" v-on:focus="setHelpText('Minimum 5 characters.')" v-model="reenterPassword" type="password" label="Renter Password" />
-          <q-input id="email" v-on:focus="setHelpText('Used for password reset.')" v-on:blur="setHelpText('')" v-model="email" label="Email" />
+        <div class="SignUpColumn SignUpHalfWidth">
+          <TextInput
+            class="SignUpText"
+            :dense="true"
+            :hidebottomspace="true"
+            id="password"
+            label="Password"
+            type="password"
+            v-model="password"
+            @text-input-focus-event="setHelpText('Minimum 5 characters.')"
+          />
+          <TextInput
+            class="SignUpText"
+            :dense="true"
+            :hidebottomspace="true"
+            id="reenterPassword"
+            label="Renter Password"
+            type="password"
+            v-model="reenterPassword"
+            @text-input-focus-event="setHelpText('Minimum 5 characters.')"
+          />
+          <TextInput
+            class="SignUpText"
+            :dense="true"
+            :hidebottomspace="true"
+            id="email"
+            label="Email"
+            type="text"
+            v-model="reenterPassword"
+            @text-input-focus-event="setHelpText('Used for password reset.')"
+          />
         </div>
       </div>
-      {{helpText}}
+      <Label :text="getHelpText()" size="small" color="default" />
       <br/>
       <!-- Remember Me -->
-      <div class="sign-up-row-2">
-        <q-checkbox id="rememberMe" v-model="rememberMe" />
-        <label class="text-body1" for="rememberMe">Remember Me</label>
+       <div class="SignUpRememberMeRow">
+        <q-checkbox color="white-1" id="rememberMe" v-model="rememberMe" />
+        <Label for="rememberMe" text="Remember Me" size="medium" color="default" />
       </div>
-      <q-btn type="submit" color="white" text-color="black" class="q-mt-md" label="Sign Up" v-on:click="signUp"/>
+     <Button type="submit" class="q-mt-md" label="Sign Up" @button-event="signUp"/>
     </form>
     <!-- Already Have An Account? -->
     <br/>
-    <label class="text-body1">Already Have An Account?</label>
+    <Label text="Already Have An Account?" size="medium" color="default" />
     <!-- Sign In -->
-    <label class="text-body1 sign-up-link" v-on:click="signIn">Sign In</label>
+    <Link class="SignUpLink" text="Sign In" @link-event="signIn" />
     <!-- Forgot Your Password? -->
     <br/>
-    <label class="text-body1">Forgot Your Password?</label>
+    <Label text="Forgot Your Password?" size="medium" color="default" />
     <!-- Reset Password -->
-    <label class="text-body1 sign-up-link" v-on:click="resetPassword">Reset Password</label>
+    <Link class="SignUpLink" text="Reset Password" @link-event="resetPassword" />
   </div>
 </div>
 </template>
 <script>
 import Account from '../data/account'
+import Button from '../components/Button.vue'
 import HTTP from '../util/http'
+import Label from '../components/Label.vue'
+import Link from '../components/Link.vue'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
 import QueuedUserMessage from '../util/queued-user-message'
+import TextInput from '../components/TextInput.vue'
 import UserMessages from '../util/user-messages'
 import UserState from '../util/user-state'
 export default {
   name: 'SignUp',
+  components: { Button, Label, Link, TextInput },
   data: function() {
     return {
       username: '',
@@ -65,6 +124,10 @@ export default {
     }
   },
   methods: {
+    getHelpText () {
+      console.log('this.helpText: ' + this.helpText)
+      return this.helpText
+    },
     setHelpText (text) {
       this.helpText = text
     },
@@ -103,19 +166,25 @@ export default {
   }
 }
 </script>
-<style scoped>
-.sign-up-top {
+<style scoped lang="scss">
+@import '../css/app.sass';
+.SignUpTop {
   position: absolute;
-  top: 60px;
-  width: 96%;
+  top: 50px;
+  bottom: 0px;
+  width: 100%;
+  color: var(--theme_text_color_label) !important;
+  background-color: var(--theme_background_color) !important;
 }
-.sign-up-column {
+
+.SignUpColumn {
   display: flex;
   flex-direction: column;
   justify-content: flex-center;
   align-items: center;
 }
-.sign-up-row {
+
+.SignUpRow {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -124,7 +193,8 @@ export default {
   min-width: 100%;
   max-width: 100%;
 }
-.sign-up-row-2 {
+
+.SignUpRow-2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -133,23 +203,50 @@ export default {
   min-width: 100%;
   max-width: 100%;
 }
-.sign-up-row:before {
+
+.SignUpRow:before {
   box-sizing: content-box;
 }
-.sign-up-row:after {
+
+.SignUpRow:after {
   box-sizing: content-box;
 }
-.sign-up-half-width {
+
+.SignUpHalfWidth {
   width: 48%;
 }
+
 .sign-up-logo {
   position: relative;
   top: -3px;
   width: 50px;
   height: 50px;
 }
-.sign-up-link {
-  text-decoration: underline;
-  cursor: pointer;
+
+.SignUpRememberMeRow {
+  @include rise;
+  @include row;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  min-width: 100%;
+  max-width: 100%;
 }
+
+.SignUpText {
+    text-decoration: underline;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.SignUpLink {
+    width: 75%;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
 </style>
