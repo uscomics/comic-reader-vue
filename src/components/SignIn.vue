@@ -83,6 +83,31 @@ export default {
     Queue.register('SignIn', Messages.USER_SIGNED_IN, this.getUserPurchases)
   },
   methods: {
+    async getUserCart (message) {
+      let url = this.$store.state.main.urlBase + 'cart/' + message.username
+      let result = await Account.getUserCartFromServer(url)
+      if (HTTP.hasErrors(result)) return
+      this.$store.commit('main/SET_CART', JSON.parse(result.body))
+    },
+    async getUserFavorites (message) {
+      let url = this.$store.state.main.urlBase + 'favorites/' + message.username
+      let result = await Account.getUserFavoritesFromServer(url)
+      if (HTTP.hasErrors(result)) return
+      this.$store.commit('main/SET_FAVORITES', JSON.parse(result.body))
+    },
+    async getUserInfo (username) {
+      let url = this.$store.state.main.urlBase + 'user/' + username + '/info'
+      let result = await Account.getUserInfoFromServer(url)
+      if (HTTP.hasErrors(result)) return
+      console.log(JSON.stringify(result.body))
+      this.$store.commit('main/SET_ACCOUNT', JSON.parse(result.body))
+    },
+    async getUserPurchases (message) {
+      let url = this.$store.state.main.urlBase + 'comics/' + message.username
+      let result = await Account.getUserPurchasesFromServer(url)
+      if (HTTP.hasErrors(result)) return
+      this.$store.commit('main/SET_PURCHASED', JSON.parse(result.body))
+    },
     async remember () {
       let url = this.$store.state.main.urlBase + 'remember/data'
       let response = await HTTP.postToServer(url, new FormData())
@@ -118,30 +143,6 @@ export default {
     },
     resetPassword () {
       this.$store.commit('main/SET_USER_PANEL_STATE', UserState.RESET_PASSWORD)
-    },
-    async getUserInfo (username) {
-      let url = this.$store.state.main.urlBase + 'user/' + username + '/info'
-      let result = await Account.getUserInfoFromServer(url)
-      if (HTTP.hasErrors(result)) return
-      this.$store.commit('main/SET_ACCOUNT', JSON.parse(result.body))
-    },
-    async getUserCart (message) {
-      let url = this.$store.state.main.urlBase + 'cart/' + message.username
-      let result = await Account.getUserCartFromServer(url)
-      if (HTTP.hasErrors(result)) return
-      this.$store.commit('main/SET_CART', JSON.parse(result.body))
-    },
-    async getUserFavorites (message) {
-      let url = this.$store.state.main.urlBase + 'favorites/' + message.username
-      let result = await Account.getUserFavoritesFromServer(url)
-      if (HTTP.hasErrors(result)) return
-      this.$store.commit('main/SET_FAVORITES', JSON.parse(result.body))
-    },
-    async getUserPurchases (message) {
-      let url = this.$store.state.main.urlBase + 'comics/' + message.username
-      let result = await Account.getUserPurchasesFromServer(url)
-      if (HTTP.hasErrors(result)) return
-      this.$store.commit('main/SET_PURCHASED', JSON.parse(result.body))
     }
   }
 }

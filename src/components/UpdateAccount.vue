@@ -22,7 +22,8 @@
             id="firstName"
             label="First Name"
             type="text"
-            v-model="firstName"
+            :initial_value="firstName"
+            :text="firstName"
             @text-input-changed-event="setFirstName"
             @text-input-focus-event="setHelpText('Optional.')"
           />
@@ -33,7 +34,8 @@
             id="lastName"
             label="Last Name"
             type="text"
-            v-model="lastName"
+            :initial_value="lastName"
+            :text="lastName"
             @text-input-changed-event="setLastName"
             @text-input-focus-event="setHelpText('Optional.')"
           />
@@ -46,7 +48,6 @@
             id="password"
             label="Password"
             type="password"
-            v-model="password"
             @text-input-changed-event="setPassword"
             @text-input-focus-event="setHelpText('Minimum 5 characters.')"
           />
@@ -57,7 +58,6 @@
             id="reenterPassword"
             label="Renter Password"
             type="password"
-            v-model="reenterPassword"
             @text-input-changed-event="setReenterPassword"
             @text-input-focus-event="setHelpText('Minimum 5 characters.')"
           />
@@ -68,7 +68,8 @@
             id="email"
             label="Email"
             type="text"
-            v-model="reenterPassword"
+            :initial_value="email"
+            :text="email"
             @text-input-changed-event="setEmail"
             @text-input-focus-event="setHelpText('Used for password reset.')"
           />
@@ -95,6 +96,10 @@ import UserMessages from '../util/user-messages'
 export default {
   name: 'UpdateAccount',
   components: { Button, Label, TextInput },
+  created () {
+    Queue.unregister('UpdateAccount', Messages.USER_SIGNED_IN)
+    Queue.register('UpdateAccount', Messages.USER_SIGNED_IN, this.refreshUser)
+  },
   data: function() {
     return {
       username: this.$store.state.main.account.username,
@@ -109,6 +114,15 @@ export default {
   methods: {
     getHelpText () {
       return this.helpText
+    },
+    refreshUser () {
+      alert(this.$store.state.main.account.firstName)
+      this.username = this.$store.getters['main/firstName']
+      this.firstName = this.$store.state.main.account.firstName
+      this.lastName = this.$store.state.main.account.lastName
+      this.password = ''
+      this.reenterPassword = ''
+      this.email = this.$store.state.main.account.email
     },
     setEmail (text) {
       this.email = text
