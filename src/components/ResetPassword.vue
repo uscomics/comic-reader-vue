@@ -1,34 +1,52 @@
 <template>
-<div class="reset-password-column">
-  <div class="reset-password-column reset-password-top">
+<div class="ResetPasswordColumn">
+  <div class="ResetPasswordColumn ResetPasswordTop">
     <!-- Image -->
     <!-- <img class="reset-password-logo q-mb-md" src='../assets/USComicsLogo.png'/> -->
     <!-- Form -->
-    <form class="reset-password-column">
+    <form class="ResetPasswordColumn">
       <!-- Email -->
-      <q-input id="email" v-model="email" label="Email" />
+      <TextInput
+        class="ResetPasswordText"
+        :dense="true"
+        :hidebottomspace="true"
+        id="email"
+        label="Email"
+        type="text"
+        v-model="email"
+        @text-input-changed-event="setEmail"
+        @text-input-focus-event="setHelpText('Used for password reset.')"
+      />
       <br/>
-      <q-btn type="submit" color="white" text-color="black" class="q-mt-md" label="Reset Password" v-on:click="resetPassword"/>
+     <Button type="submit" class="q-mt-md" label="Reset Password" @button-event="resetPassword"/>
     </form>
     <br/>
-    <div class="text-body1">
-      An email will be sent to you. It will contain a link which can be used to reset your password. This link will expire after 1 hour.
-    </div>
+    <Label
+      class="Info"
+      text="An email will be sent to you. It will contain a link which can be used to reset your password. This link will expire after 1 hour."
+      size="small"
+      color="default"
+    />
     <br/>
-    <label class="text-body1 sign-up-link" v-on:click="signIn">Sign In</label>
+    <Link class="ResetPasswordLink" text="Sign In" @link-event="signIn" />
   </div>
 </div>
 </template>
 <script>
 import Account from '../data/account'
+import Button from '../components/Button.vue'
 import HTTP from '../util/http'
+import Label from '../components/Label.vue'
+import Link from '../components/Link.vue'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
 import QueuedUserMessage from '../util/queued-user-message'
+import TextInput from '../components/TextInput.vue'
 import UserMessages from '../util/user-messages'
 import UserState from '../util/user-state'
 export default {
   name: 'ResetPassword',
+  components: { Button, Label, Link, TextInput },
   data: function() {
     return {
       email: ''
@@ -45,6 +63,9 @@ export default {
       this.$store.commit('main/SET_USER_PANEL_STATE', UserState.SIGN_IN)
       Queue.broadcast(Messages.USER_MESSAGE, successMsg)
     },
+    setEmail (text) {
+      this.email = text
+    },
     signIn () {
       this.$store.commit('main/SET_USER_PANEL_STATE', UserState.SIGN_IN)
     }
@@ -52,25 +73,45 @@ export default {
 }
 </script>
 <style scoped>
-.reset-password-top {
+.ResetPasswordTop {
   position: absolute;
-  top: 60px;
-  width: 96%;
+  top: 50px;
+  bottom: 0px;
+  color: var(--theme_text_color_label) !important;
+  background-color: var(--theme_background_color) !important;
 }
-.reset-password-column {
+
+.ResetPasswordColumn {
   display: flex;
   flex-direction: column;
   justify-content: flex-center;
   align-items: center;
 }
+
 .reset-password-logo {
   position: relative;
   top: -3px;
   width: 50px;
   height: 50px;
 }
-.sign-up-link {
-  text-decoration: underline;
-  cursor: pointer;
+
+.ResetPasswordText {
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.ResetPasswordLink {
+    text-decoration: underline;
+    width: 75%;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.Info{
+  margin: 5px;
 }
 </style>

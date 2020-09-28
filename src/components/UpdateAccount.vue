@@ -8,66 +8,68 @@
       <!--     Last Name    Email -->
       <div class="UpdateAccountRow">
         <div class="UpdateAccountColumn UpdateAccountHalfWidth">
-          <TextInput
-            class="SignUpText"
-            :dense="true"
-            :hidebottomspace="true"
+          <Label
+            class="UpdateAccountText Username"
             id="username"
-            label="User Name"
-            type="text"
-            v-model="username"
-            @text-input-focus-event="setHelpText('Minimum 5 characters. Letter, number, dash, or underscore.')"
+            :text="username"
+            size="medium"
+            color="default"
           />
           <TextInput
-            class="SignUpText"
+            class="UpdateAccountText"
             :dense="true"
             :hidebottomspace="true"
             id="firstName"
             label="First Name"
             type="text"
             v-model="firstName"
+            @text-input-changed-event="setFirstName"
             @text-input-focus-event="setHelpText('Optional.')"
           />
           <TextInput
-            class="SignUpText"
+            class="UpdateAccountText"
             :dense="true"
             :hidebottomspace="true"
             id="lastName"
             label="Last Name"
             type="text"
             v-model="lastName"
+            @text-input-changed-event="setLastName"
             @text-input-focus-event="setHelpText('Optional.')"
           />
         </div>
         <div class="UpdateAccountColumn UpdateAccountHalfWidth">
           <TextInput
-            class="SignUpText"
+            class="UpdateAccountText"
             :dense="true"
             :hidebottomspace="true"
             id="password"
             label="Password"
             type="password"
             v-model="password"
+            @text-input-changed-event="setPassword"
             @text-input-focus-event="setHelpText('Minimum 5 characters.')"
           />
           <TextInput
-            class="SignUpText"
+            class="UpdateAccountText"
             :dense="true"
             :hidebottomspace="true"
             id="reenterPassword"
             label="Renter Password"
             type="password"
             v-model="reenterPassword"
+            @text-input-changed-event="setReenterPassword"
             @text-input-focus-event="setHelpText('Minimum 5 characters.')"
           />
           <TextInput
-            class="SignUpText"
+            class="UpdateAccountText"
             :dense="true"
             :hidebottomspace="true"
             id="email"
             label="Email"
             type="text"
             v-model="reenterPassword"
+            @text-input-changed-event="setEmail"
             @text-input-focus-event="setHelpText('Used for password reset.')"
           />
         </div>
@@ -85,7 +87,6 @@ import Account from '../data/account'
 import Button from '../components/Button.vue'
 import HTTP from '../util/http'
 import Label from '../components/Label.vue'
-import Link from '../components/Link.vue'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
 import QueuedUserMessage from '../util/queued-user-message'
@@ -93,7 +94,7 @@ import TextInput from '../components/TextInput.vue'
 import UserMessages from '../util/user-messages'
 export default {
   name: 'UpdateAccount',
-  components: { Button, Label, Link, TextInput },
+  components: { Button, Label, TextInput },
   data: function() {
     return {
       username: this.$store.state.main.account.username,
@@ -109,8 +110,23 @@ export default {
     getHelpText () {
       return this.helpText
     },
+    setEmail (text) {
+      this.email = text
+    },
+    setFirstName (text) {
+      this.firstName = text
+    },
     setHelpText (text) {
       this.helpText = text
+    },
+    setLastName (text) {
+      this.lastName = text
+    },
+    setPassword (text) {
+      this.password = text
+    },
+    setReenterPassword (text) {
+      this.reenterPassword = text
     },
     async updateAccount () {
       let err = this.validate()
@@ -147,6 +163,7 @@ export default {
   justify-content: flex-center;
   align-items: center;
 }
+
 .UpdateAccountRow {
   @include row;
   justify-content: space-between;
@@ -155,8 +172,29 @@ export default {
   min-width: 100%;
   max-width: 100%;
 }
+
 .UpdateAccountHalfWidth {
   width: 48%;
+}
+
+.Username {
+    height: 43px !important;
+}
+
+.UpdateAccountText {
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.UpdateAccountLink {
+    text-decoration: underline;
+    width: 75%;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 3px;
 }
 
 </style>

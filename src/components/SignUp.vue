@@ -18,6 +18,7 @@
             label="User Name"
             type="text"
             v-model="username"
+            @text-input-changed-event="setUsername"
             @text-input-focus-event="setHelpText('Minimum 5 characters. Letter, number, dash, or underscore.')"
           />
           <TextInput
@@ -28,6 +29,7 @@
             label="First Name"
             type="text"
             v-model="firstName"
+            @text-input-changed-event="setFirstName"
             @text-input-focus-event="setHelpText('Optional.')"
           />
           <TextInput
@@ -38,6 +40,7 @@
             label="Last Name"
             type="text"
             v-model="lastName"
+            @text-input-changed-event="setLastName"
             @text-input-focus-event="setHelpText('Optional.')"
           />
         </div>
@@ -50,6 +53,7 @@
             label="Password"
             type="password"
             v-model="password"
+            @text-input-changed-event="setPassword"
             @text-input-focus-event="setHelpText('Minimum 5 characters.')"
           />
           <TextInput
@@ -60,6 +64,7 @@
             label="Renter Password"
             type="password"
             v-model="reenterPassword"
+            @text-input-changed-event="setReenterPassword"
             @text-input-focus-event="setHelpText('Minimum 5 characters.')"
           />
           <TextInput
@@ -69,7 +74,8 @@
             id="email"
             label="Email"
             type="text"
-            v-model="reenterPassword"
+            v-model="email"
+            @text-input-changed-event="setEmail"
             @text-input-focus-event="setHelpText('Used for password reset.')"
           />
         </div>
@@ -127,8 +133,26 @@ export default {
     getHelpText () {
       return this.helpText
     },
+    setEmail (text) {
+      this.email = text
+    },
+    setFirstName (text) {
+      this.firstName = text
+    },
     setHelpText (text) {
       this.helpText = text
+    },
+    setLastName (text) {
+      this.lastName = text
+    },
+    setPassword (text) {
+      this.password = text
+    },
+    setReenterPassword (text) {
+      this.reenterPassword = text
+    },
+    setUsername (text) {
+      this.username = text
     },
     async signUp () {
       let err = this.validate()
@@ -159,7 +183,9 @@ export default {
       let account = new Account(this.username, this.password, this.email)
       let err = account.validate()
       if (err) return err
-      if (this.password !== this.reenterPassword) return UserMessages.ERROR_PASSWORDS_DO_NOT_MATCH
+      if (this.password !== this.reenterPassword) {
+        return UserMessages.ERROR_PASSWORDS_DO_NOT_MATCH
+      }
       return 0
     }
   }
@@ -230,7 +256,6 @@ export default {
 }
 
 .SignUpText {
-    text-decoration: underline;
     cursor: pointer;
     width: 100%;
     height: 40px;
@@ -239,6 +264,7 @@ export default {
 }
 
 .SignUpLink {
+    text-decoration: underline;
     width: 75%;
     height: 25px;
     margin-top: 5px;

@@ -79,6 +79,9 @@ export default {
     doBlur () {
       this.$emit('text-input-blur-event')
     },
+    doChange (event) {
+      this.$emit('text-input-change-event')
+    },
     doFocus () {
       this.$emit('text-input-focus-event')
     }

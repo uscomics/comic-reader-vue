@@ -1,17 +1,17 @@
 <template>
-  <div class="q-pa-md">
+  <div class="q-pa-md UserPanel">
     <div class="q-gutter-y-md" style="max-width: 600px">
       <q-tabs
         v-model="tab"
         class="text-teal"
       >
-        <q-tab class="Tabs" name="stuff" icon="menu_book" label="Stuff" />
+        <q-tab v-if="showFullPanel" class="Tabs" name="stuff" icon="menu_book" label="Stuff" />
         <q-tab class="Tabs" name="you" icon="face" label="You" />
         <q-tab class="Tabs" name="favs" icon="favorite" label="Favs" />
-        <q-tab class="Tabs" name="cart" icon="shopping_cart"  label="Cart" />
+        <q-tab v-if="showFullPanel" class="Tabs" name="cart" icon="shopping_cart" label="Cart" />
       </q-tabs>
       <q-tab-panels v-model="tab" animated>
-        <q-tab-panel name="stuff">
+        <q-tab-panel v-if="showFullPanel" name="stuff">
           <ItemList
             style="height:100%;"
             v-bind:bookList="$store.state.main.purchased"
@@ -43,7 +43,7 @@
            />
         </q-tab-panel>
 
-        <q-tab-panel name="cart">
+        <q-tab-panel v-if="showFullPanel" name="cart">
           <ItemList
             style="height:100%;"
             v-bind:bookList="$store.state.main.cart"
@@ -91,9 +91,12 @@ export default {
     ItemList,
     UpdateAccount
   },
+  props: {
+    showFullPanel: { type: Boolean, default: true }
+  },
   data () {
     return {
-      tab: 'stuff',
+      tab: this.showFullPanel ? 'stuff' : 'you',
       subtotal: 0
     }
   },
@@ -170,6 +173,10 @@ export default {
 }
 </script>
 <style>
+.UserPanel {
+  position: absolute;
+  top: 50px;
+}
 .Tabs {
   font-size: .7rem;
   padding: 4px;

@@ -33,7 +33,7 @@
         <ResetPassword v-if="$store.state.main.userPanelState === stateResetPassword"/>
         <SignIn v-else-if="$store.state.main.userPanelState === stateSignIn"/>
         <SignUp v-else-if="$store.state.main.userPanelState === stateSignUp"/>
-        <UserPanel v-else-if="$store.state.main.userPanelState === stateUser"/>
+        <UserPanel v-else-if="$store.state.main.userPanelState === stateUser" :showFullPanel="false"/>
       </div>
       <div v-if="settingsTab" class="DrawerContent ThemeWrapper">
         <q-select class="ThemeSelect"

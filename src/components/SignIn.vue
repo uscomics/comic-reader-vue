@@ -15,6 +15,7 @@
             :hidebottomspace="true"
             id="username"
             label="User Name"
+            @text-input-changed-event="setUsername"
             v-model="username"
           />
           <TextInput
@@ -24,6 +25,7 @@
             id="password"
             label="Password"
             type="password"
+            @text-input-changed-event="setPassword"
             v-model="password"
           />
         </div>
@@ -72,20 +74,28 @@ export default {
   },
   created () {
     this.remember()
-    Queue.register(this, Messages.USER_SIGNED_IN, this.getUserInfo)
-    Queue.register(this, Messages.USER_SIGNED_IN, this.getUserCart)
-    Queue.register(this, Messages.USER_SIGNED_IN, this.getUserFavorites)
-    Queue.register(this, Messages.USER_SIGNED_IN, this.getUserPurchases)
+    Queue.unregister('SignIn', Messages.USER_SIGNED_IN)
+    Queue.unregister('SignIn', Messages.USER_SIGNED_IN)
+    Queue.unregister('SignIn', Messages.USER_SIGNED_IN)
+    Queue.unregister('SignIn', Messages.USER_SIGNED_IN)
+    Queue.register('SignIn', Messages.USER_SIGNED_IN, this.getUserCart)
+    Queue.register('SignIn', Messages.USER_SIGNED_IN, this.getUserFavorites)
+    Queue.register('SignIn', Messages.USER_SIGNED_IN, this.getUserPurchases)
   },
   methods: {
     async remember () {
       let url = this.$store.state.main.urlBase + 'remember/data'
       let response = await HTTP.postToServer(url, new FormData())
-      console.log('response: ' + JSON.stringify(response))
       if (200 === response.status) {
         this.username = JSON.parse(response.body).user
         this.rememberMe = true
       }
+    },
+    setPassword (text) {
+      this.password = text
+    },
+    setUsername (text) {
+      this.username = text
     },
     async signIn () {
       let url = this.$store.state.main.urlBase + 'user/authenticate'
@@ -96,6 +106,7 @@ export default {
         this.$store.commit('main/SET_USER_PANEL_STATE', UserState.SIGN_IN)
         return
       }
+      await this.getUserInfo(this.username)
       let msg = UserMessages.getMessage(UserMessages.LANGUAGE.en_US, UserMessages.SUCCESS_SIGN_IN)
       let successMsg = new QueuedUserMessage(msg, UserMessages.SOUND_SUCCESS, 0, false)
       Queue.broadcast(Messages.USER_MESSAGE, successMsg)
@@ -108,26 +119,26 @@ export default {
     resetPassword () {
       this.$store.commit('main/SET_USER_PANEL_STATE', UserState.RESET_PASSWORD)
     },
-    async getUserInfo (user) {
-      let url = this.$store.state.main.urlBase + 'user/' + this.username + '/info'
+    async getUserInfo (username) {
+      let url = this.$store.state.main.urlBase + 'user/' + username + '/info'
       let result = await Account.getUserInfoFromServer(url)
       if (HTTP.hasErrors(result)) return
       this.$store.commit('main/SET_ACCOUNT', JSON.parse(result.body))
     },
-    async getUserCart (user) {
-      let url = this.$store.state.main.urlBase + 'cart/' + this.username
+    async getUserCart (message) {
+      let url = this.$store.state.main.urlBase + 'cart/' + message.username
       let result = await Account.getUserCartFromServer(url)
       if (HTTP.hasErrors(result)) return
       this.$store.commit('main/SET_CART', JSON.parse(result.body))
     },
-    async getUserFavorites (user) {
-      let url = this.$store.state.main.urlBase + 'favorites/' + this.username
+    async getUserFavorites (message) {
+      let url = this.$store.state.main.urlBase + 'favorites/' + message.username
       let result = await Account.getUserFavoritesFromServer(url)
       if (HTTP.hasErrors(result)) return
       this.$store.commit('main/SET_FAVORITES', JSON.parse(result.body))
     },
-    async getUserPurchases (user) {
-      let url = this.$store.state.main.urlBase + 'comics/' + this.username
+    async getUserPurchases (message) {
+      let url = this.$store.state.main.urlBase + 'comics/' + message.username
       let result = await Account.getUserPurchasesFromServer(url)
       if (HTTP.hasErrors(result)) return
       this.$store.commit('main/SET_PURCHASED', JSON.parse(result.body))

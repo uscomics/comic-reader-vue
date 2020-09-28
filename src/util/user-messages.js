@@ -40,7 +40,7 @@ export default class UserMessages {
     'Passwords do not match.',
     'Email required.',
     'Invalid email.',
-    'Account created successfully. Welcome to U.S. Comics.',
+    'Account created successfully. Welcome to HERO/Web.',
     'Account updated successfully.',
     'Login successful.',
     'A network error occured.',

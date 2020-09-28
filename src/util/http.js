@@ -31,13 +31,11 @@ class HTTP {
     } else if (500 !== result.status) {
       let errorMsg = new QueuedUserMessage(result.body, UserMessages.SOUND_ERROR, 0, false)
       Queue.broadcast(Messages.USER_ERROR, errorMsg)
-      console.log(result.body)
       return true
     } else {
       let msg = UserMessages.getMessage(UserMessages.LANGUAGE.en_US, UserMessages.ERROR_NETWORK)
       let errorMsg = new QueuedUserMessage(msg, UserMessages.SOUND_ERROR, 0, false)
       Queue.broadcast(Messages.USER_ERROR, errorMsg)
-      console.log(msg)
       return true
     }
   }

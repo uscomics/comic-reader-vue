@@ -53,12 +53,18 @@ export default {
     }
   },
   created() {
-    Queue.register(this, Messages.SHOW_HEADER, this.showHeader)
-    Queue.register(this, Messages.HIDE_HEADER, this.hideHeader)
-    Queue.register(this, Messages.SHOW_DRAWER, this.showDrawer)
-    Queue.register(this, Messages.HIDE_DRAWER, this.hideDrawer)
-    Queue.register(this, Messages.USER_MESSAGE, this.showMessage)
-    Queue.register(this, Messages.USER_ERROR, this.showErrorMessage)
+    Queue.unregister('MainLayout', Messages.SHOW_HEADER)
+    Queue.unregister('MainLayout', Messages.HIDE_HEADER)
+    Queue.unregister('MainLayout', Messages.SHOW_DRAWER)
+    Queue.unregister('MainLayout', Messages.HIDE_DRAWER)
+    Queue.unregister('MainLayout', Messages.USER_MESSAGE)
+    Queue.unregister('MainLayout', Messages.USER_ERROR)
+    Queue.register('MainLayout', Messages.SHOW_HEADER, this.showHeader)
+    Queue.register('MainLayout', Messages.HIDE_HEADER, this.hideHeader)
+    Queue.register('MainLayout', Messages.SHOW_DRAWER, this.showDrawer)
+    Queue.register('MainLayout', Messages.HIDE_DRAWER, this.hideDrawer)
+    Queue.register('MainLayout', Messages.USER_MESSAGE, this.showMessage)
+    Queue.register('MainLayout', Messages.USER_ERROR, this.showErrorMessage)
   },
   updated() {
     this.showToonButtons = this.$router.currentRoute.path.startsWith('/Toon')
@@ -132,16 +138,22 @@ export default {
       if (!errorMessage) {
         return
       }
-      this.$q.notify({
-        type: 'negative',
-        message: errorMessage
-      })
+      if (errorMessage.message) {
+        this.$q.notify({
+          type: 'negative',
+          message: errorMessage.message
+        })
+      } else {
+        this.$q.notify({
+          type: 'negative',
+          message: errorMessage
+        })
+      }
     },
     showHeader () {
       this.headerVisible = true
     },
     showMessage (msg) {
-      alert('showMessage' + msg)
       this.$q.notify({
         message: msg.message,
         color: 'primary',
