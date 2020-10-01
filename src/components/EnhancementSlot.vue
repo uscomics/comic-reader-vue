@@ -9,7 +9,7 @@
             :cx=20
             :cy=20
             :r=19
-            :text="slotsRemaining"
+            :text="getSlotsRemaining"
             text_x="12"
             text_y="24"
         />
@@ -30,10 +30,21 @@ export default {
     enhancement_level: { type: Number, default: 0 },
     power_set_type: { type: String, default: PowerSetType.NO_POWER },
     slot_state: { type: String, default: SlotState.NO_POWER },
-    slots_remaining: { type: Number, default: 0 },
     show_slots_remaining: { type: Boolean, default: true }
   },
   computed: {
+    getEnhancemenBadgeClass: function () {
+      if (this.enhancement_level === 0) {
+        return 'Hidden'
+      }
+      return 'SlotEnhancementBadge'
+    },
+    getLevelBadgeClass: function () {
+      if (this.slot_level === 0) {
+        return 'Hidden'
+      }
+      return 'SlotLevelBadge'
+    },
     getSlotClass: function () {
       let classes = ''
       if (this.power_set_type === PowerSetType.NO_POWER || this.slot_state === SlotState.NO_POWER) {
@@ -53,23 +64,17 @@ export default {
       }
       return classes
     },
-    getLevelBadgeClass: function () {
-      if (this.slot_level === 0) {
-        return 'Hidden'
+    getSlotsRemaining: function () {
+      if (this.power_set_type === PowerSetType.NO_POWER || this.slot_state === SlotState.NO_POWER) {
+        return ' '
+      } else if (this.slot_state === SlotState.UNSLOTTED) {
+        let toon = this.$store.getters['builder/getToon']
+        let slotsRemaining = toon.getExtraSlotsRemaining()
+        console.log(`Slots remaining: ${slotsRemaining}`)
+        return slotsRemaining.toString()
+      } else {
+        return ' '
       }
-      return 'SlotLevelBadge'
-    },
-    getEnhancemenBadgeClass: function () {
-      if (this.enhancement_level === 0) {
-        return 'Hidden'
-      }
-      return 'SlotEnhancementBadge'
-    },
-    slotsRemaining: function () {
-      if (this.slots_remaining === 0 || !this.show_slots_remaining || this.power_set_type !== PowerSetType.NO_POWER) {
-        return ''
-      }
-      return this.slots_remaining
     }
   }
 }

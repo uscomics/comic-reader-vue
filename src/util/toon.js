@@ -20,4 +20,15 @@ export default class Toon {
     toon.builds.push(build)
     return toon
   }
+
+  getExtraSlotsRemaining() {
+    const build = this.builds[this.current_build]
+    if (!build) {
+      return 0
+    }
+    const level = (this.level === 49) ? 50 : this.level
+    const slotsForLevel = Build.getExtraSlotCountForLevel(level)
+    const slotsUsed = build.getExtraSlotCount()
+    return slotsForLevel - slotsUsed
+  }
 }

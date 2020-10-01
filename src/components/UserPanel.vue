@@ -3,14 +3,14 @@
     <div class="q-gutter-y-md" style="max-width: 600px">
       <q-tabs
         v-model="tab"
-        class="text-teal"
+        class=""
       >
         <q-tab v-if="showFullPanel" class="Tabs" name="stuff" icon="menu_book" label="Stuff" />
         <q-tab class="Tabs" name="you" icon="face" label="You" />
         <q-tab class="Tabs" name="favs" icon="favorite" label="Favs" />
         <q-tab v-if="showFullPanel" class="Tabs" name="cart" icon="shopping_cart" label="Cart" />
       </q-tabs>
-      <q-tab-panels v-model="tab" animated>
+      <q-tab-panels class="Theme" v-model="tab" animated>
         <q-tab-panel v-if="showFullPanel" name="stuff">
           <ItemList
             style="height:100%;"
@@ -173,13 +173,22 @@ export default {
 }
 </script>
 <style>
+.Theme {
+  color: var(--theme_text_color_label) !important;
+  background-color: var(--theme_background_color) !important;
+}
 .UserPanel {
   position: absolute;
   top: 50px;
+  bottom: 0px;
+  color: var(--theme_text_color_label) !important;
+  background-color: var(--theme_background_color) !important;
 }
 .Tabs {
   font-size: .7rem;
   padding: 4px;
+  color: var(--theme_text_color_label) !important;
+  background-color: var(--theme_background_color) !important;
 }
 .CartPricePanel {
   display: flex;

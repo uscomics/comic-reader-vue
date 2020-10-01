@@ -1,6 +1,6 @@
 <template>
 <div class="UpdateAccountColumn">
-  <div class="UpdateAccountColumn update-account-top">
+  <div class="UpdateAccountColumn">
     <!-- Form -->
     <form class="UpdateAccountColumn">
       <!--     UserName     Password -->
@@ -116,13 +116,12 @@ export default {
       return this.helpText
     },
     refreshUser () {
-      alert(this.$store.state.main.account.firstName)
-      this.username = this.$store.getters['main/firstName']
-      this.firstName = this.$store.state.main.account.firstName
-      this.lastName = this.$store.state.main.account.lastName
+      this.username = this.$store.getters['main/username']
+      this.firstName = this.$store.getters['main/firstName']
+      this.lastName = this.$store.getters['main/lastName']
       this.password = ''
       this.reenterPassword = ''
-      this.email = this.$store.state.main.account.email
+      this.email = this.$store.getters['main/email']
     },
     setEmail (text) {
       this.email = text
@@ -176,6 +175,8 @@ export default {
   @include column;
   justify-content: flex-center;
   align-items: center;
+  color: var(--theme_text_color_label) !important;
+  background-color: var(--theme_background_color) !important;
 }
 
 .UpdateAccountRow {
@@ -185,6 +186,8 @@ export default {
   width: 100%;
   min-width: 100%;
   max-width: 100%;
+  color: var(--theme_text_color_label) !important;
+  background-color: var(--theme_background_color) !important;
 }
 
 .UpdateAccountHalfWidth {

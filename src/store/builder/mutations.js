@@ -72,14 +72,14 @@ export function toonSelectBuild (state, buildNumber) {
         newBuild.power_sets[BuildPowerSets.secondary] = build.power_sets[BuildPowerSets.secondary]
 
         if (2 < toon.level) {
-        Build.add_level_2_powers(newBuild)
+        Build.addLevel2Powers(newBuild)
         }  
         toon.builds.push(newBuild)
     }
     toon.current_build = buildNumber
     build = toon.builds[toon.current_build]
     if (2 < toon.level) {
-        Build.add_level_2_powers(build)
+        Build.addLevel2Powers(build)
     }  
 }
 
@@ -116,7 +116,7 @@ export function toonSetPowerEntry (state, payload) {
         toon.level = payload.powerEntry.level
 
     if (2 < toon.level) {
-        Build.add_level_2_powers(build)
+        Build.addLevel2Powers(build)
     }
 
     let power = state.dbPowersData[payload.powerEntry.power_id]

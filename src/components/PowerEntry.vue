@@ -90,9 +90,6 @@ export default {
     },
     isNoPower: function () {
       return this.getPowerSetType === PowerSetType.NO_POWER
-    },
-    slotsRemaining: function () {
-      return 62
     }
   },
   methods: {

@@ -4,6 +4,94 @@ import PowerEntry from './power_entry.js'
 import { PowerLevel } from '../enums/PowerLevel.js'
 
 export default class Build {
+  static fromArchetype(archetype) {
+    let build = new Build()
+    if (archetype === 'Class_Peacebringer') {
+      let level_1_kheldian = new PowerEntry()
+      level_1_kheldian.level = 1
+      level_1_kheldian.power_id = 'Inherent.Inherent.Energy_Flight'
+      level_1_kheldian.addEmptySlot()
+      this.power_entries[PowerLevel.level_1_kheldian] = level_1_kheldian
+    } else if (archetype === 'Class_Warshade') {
+      let level_1_kheldian = new PowerEntry()
+      level_1_kheldian.level = 1
+      level_1_kheldian.power_id = 'Inherent.Inherent.Shadow_Step'
+      level_1_kheldian.addEmptySlot()
+      this.power_entries[PowerLevel.level_1_kheldian] = level_1_kheldian
+    }
+    return build
+  }
+
+  static addLevel2Powers(build) {
+    let power_entries = build.power_entries
+    if (!power_entries.sprint || 0 === power_entries.sprint.level) {
+      let sprint = new PowerEntry()
+      sprint.level = 2
+      sprint.power_id = 'Inherent.Inherent.Sprint'
+      sprint.addEmptySlot()
+      power_entries.sprint = sprint
+    }
+    if (!power_entries.hurdle || 0 === power_entries.hurdle.level) {
+      let hurdle = new PowerEntry()
+      hurdle.level = 2
+      hurdle.power_id = 'Inherent.Fitness.Hurdle'
+      hurdle.addEmptySlot()
+      power_entries.hurdle = hurdle
+    }
+    if (!power_entries.swift || 0 === power_entries.swift.level) {
+      let swift = new PowerEntry()
+      swift.level = 2
+      swift.power_id = 'Inherent.Fitness.Swift'
+      swift.addEmptySlot()
+      power_entries.swift = swift
+    }
+  }
+
+  static EXTRA_SLOTS = [
+    { level: 3, slots: 2 },
+    { level: 5, slots: 2 },
+    { level: 7, slots: 2 },
+    { level: 9, slots: 2 },
+    { level: 11, slots: 2 },
+    { level: 13, slots: 2 },
+    { level: 15, slots: 2 },
+    { level: 17, slots: 2 },
+    { level: 19, slots: 2 },
+    { level: 21, slots: 2 },
+    { level: 23, slots: 2 },
+    { level: 25, slots: 2 },
+    { level: 27, slots: 2 },
+    { level: 29, slots: 2 },
+    { level: 31, slots: 3 },
+    { level: 33, slots: 3 },
+    { level: 34, slots: 3 },
+    { level: 36, slots: 3 },
+    { level: 37, slots: 3 },
+    { level: 39, slots: 3 },
+    { level: 40, slots: 3 },
+    { level: 42, slots: 3 },
+    { level: 43, slots: 3 },
+    { level: 45, slots: 3 },
+    { level: 46, slots: 3 },
+    { level: 48, slots: 3 },
+    { level: 50, slots: 3 }
+  ]
+
+  static getExtraSlotCountForLevel(level) {
+    let extraSlotCount = 0
+    if (3 > level) {
+      return extraSlotCount
+    }
+    for (let slotIndex = 0; slotIndex < Build.EXTRA_SLOTS.length; slotIndex++) {
+      let slotInfo = Build.EXTRA_SLOTS[slotIndex]
+      if (slotInfo.level > level) {
+        return extraSlotCount
+      }
+      extraSlotCount += slotInfo.slots
+    }
+    return extraSlotCount
+  }
+
   constructor() {
     this.power_sets = {}
     this.power_entries = {}
@@ -60,46 +148,14 @@ export default class Build {
     this.power_entries[PowerLevel.level_49] = new PowerEntry()
   }
 
-  static fromArchetype(archetype) {
-    let build = new Build()
-    if (archetype === 'Class_Peacebringer') {
-      let level_1_kheldian = new PowerEntry()
-      level_1_kheldian.level = 1
-      level_1_kheldian.power_id = 'Inherent.Inherent.Energy_Flight'
-      level_1_kheldian.addEmptySlot()
-      this.power_entries[PowerLevel.level_1_kheldian] = level_1_kheldian
-    } else if (archetype === 'Class_Warshade') {
-      let level_1_kheldian = new PowerEntry()
-      level_1_kheldian.level = 1
-      level_1_kheldian.power_id = 'Inherent.Inherent.Shadow_Step'
-      level_1_kheldian.addEmptySlot()
-      this.power_entries[PowerLevel.level_1_kheldian] = level_1_kheldian
+  getExtraSlotCount() {
+    let extraSlotCount = 0
+    let powerEntries = Object.keys(this.power_entries)
+    for (let powerEntryIndex = 0; powerEntryIndex < powerEntries.length; powerEntryIndex++) {
+      const powerEntryName = powerEntries[powerEntryIndex]
+      const powerEntry = this.power_entries[powerEntryName]
+      extraSlotCount = Math.max(0, powerEntry.slots.length - 1)
     }
-    return build
-  }
-
-  static add_level_2_powers(build) {
-    let power_entries = build.power_entries
-    if (!power_entries.sprint || 0 === power_entries.sprint.level) {
-      let sprint = new PowerEntry()
-      sprint.level = 2
-      sprint.power_id = 'Inherent.Inherent.Sprint'
-      sprint.addEmptySlot()
-      power_entries.sprint = sprint
-    }
-    if (!power_entries.hurdle || 0 === power_entries.hurdle.level) {
-      let hurdle = new PowerEntry()
-      hurdle.level = 2
-      hurdle.power_id = 'Inherent.Fitness.Hurdle'
-      hurdle.addEmptySlot()
-      power_entries.hurdle = hurdle
-    }
-    if (!power_entries.swift || 0 === power_entries.swift.level) {
-      let swift = new PowerEntry()
-      swift.level = 2
-      swift.power_id = 'Inherent.Fitness.Swift'
-      swift.addEmptySlot()
-      power_entries.swift = swift
-    }
+    return extraSlotCount
   }
 }
