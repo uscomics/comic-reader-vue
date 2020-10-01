@@ -8,6 +8,7 @@
         />
         <SVGCircleButton :class="getPowerBarInfoButtonClass"></SVGCircleButton>
     </div>
+    <q-tooltip v-if="getPowerShortDescription !== ''">{{getPowerShortDescription}}</q-tooltip>
     <EnhancementSlotRow class="PowerEntrySlotRow" :power_set_type="getPowerSetType"></EnhancementSlotRow>
   </div>
 </template>
@@ -65,6 +66,13 @@ export default {
         classes = 'PowerBarInfoButton'
       }
       return classes
+    },
+    getPowerShortDescription: function () {
+      const power = this.getPower
+      if (!power) {
+        return ''
+      }
+      return power.description_short
     },
     getPowerLevel: function () {
       if (!this.power_entry || !this.power_entry.level) { return '0' }

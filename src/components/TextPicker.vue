@@ -4,14 +4,16 @@
           <div class="TextPickerPowerSetTitle">{{title}}</div>
         </div>
         <div class="TextPickerList">
-            <div
-                v-for="(item, index) in list"
-                :class="getItemClass(index)"
-                @click="doClick(index)"
-                :key="getKey(index)">
-                {{item}}
+            <div v-for="(item, index) in list" :key="getKey(index)">
+              <div
+                  :class="getItemClass(index)"
+                  @click="doClick(index)"
+              >
+                  {{item}}
+              </div>
+              <q-tooltip v-if="getHoverText(index) !== ''">{{getHoverText(index)}}</q-tooltip>
             </div>
-        </div>
+       </div>
     </div>
 </template>
 
@@ -21,16 +23,25 @@ export default {
   props: {
     title: { type: String, default: 'Title' },
     click_event: { type: String, default: 'selected-item' },
-    list: { type: Array, default: function () { return ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8'] } }
+    list: { type: Array, default: function () { return ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8'] } },
+    hoverList: { type: Array, default: function () { return ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8'] } },
+    initialSelection: { type: Number, default: -1 }
   },
   data () {
     return {
-      currentSelection: -1
+      currentSelection: this.initialSelection
     }
   },
   methods: {
+    getHoverText: function(index) {
+      return this.hoverList[index]
+    },
     getItemClass: function(index) {
-      if (index === this.currentSelection) { return 'TextPickerListItemSelected' } else { return 'TextPickerListItem' }
+      if (index === this.currentSelection) {
+        return 'TextPickerListItemSelected'
+      } else {
+        return 'TextPickerListItem'
+      }
     },
     getKey: function(index) {
       return this.click_event + index

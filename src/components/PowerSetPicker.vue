@@ -9,12 +9,14 @@
       <div class="PowerSetPickerBody">
           <TextPicker
             :list="primaryPowerSets.map(x => x.display_name)"
+            :hoverList="primaryPowerSets.map(x => x.description)"
             @selected-primary="doPrimaryClicked"
             click_event='selected-primary'
             title="Primary"
           />
           <TextPicker
             :list="secondaryPowerSets.map(x => x.display_name)"
+            :hoverList="secondaryPowerSets.map(x => x.description)"
             @selected-secondary="doSecondaryClicked"
             click_event='selected-secondary'
             title="Secondary"

@@ -9,15 +9,19 @@
       <div class="PowerPickerBody">
           <TextPicker
             :list="availablePowerSets.map(x => x.display_name)"
+            :hoverList="availablePowerSets.map(x => x.description)"
             @selected-power-set="doPowerSetClicked"
             click_event='selected-power-set'
             title="Power Sets"
+            :initialSelection="-1"
           />
           <TextPicker
             :list="availablePowers.map(x => x.display_name)"
+            :hoverList="availablePowers.map(x => x.description_short)"
             @selected-power="doPowerClicked"
             click_event='selected-power'
             title="Powers"
+            :initialSelection="-1"
           />
       </div>
       <div class="PowerPickerButtons">
