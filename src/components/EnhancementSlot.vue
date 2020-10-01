@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="SlotBadgeColumn">
-        <div :class="getLevelBadgeClass">{{slot_level}}</div>
+        <div class="Pill" :class="getLevelBadgeClass">{{slot_level}}</div>
         <SVGCircleButton class="Slot"
             :class="getSlotClass"
             :width=40
@@ -13,7 +13,7 @@
             text_x="12"
             text_y="24"
         />
-        <div :class="getEnhancemenBadgeClass">{{enhancement_level}}</div>
+        <div class="PillAlt" :class="getEnhancemenBadgeClass">{{enhancement_level}}</div>
     </div>
   </div>
 </template>
@@ -70,7 +70,6 @@ export default {
       } else if (this.slot_state === SlotState.UNSLOTTED) {
         let toon = this.$store.getters['builder/getToon']
         let slotsRemaining = toon.getExtraSlotsRemaining()
-        console.log(`Slots remaining: ${slotsRemaining}`)
         return slotsRemaining.toString()
       } else {
         return ' '
@@ -218,8 +217,7 @@ export default {
   @include cursor-default;
     position: absolute;
     width: 20px;
-    top: 35px;
-    left: 22px;
+    top: 32px;
     color: white;
     background-color: #6495ED;
     border-radius: 4px;
@@ -231,11 +229,34 @@ export default {
   @include cursor-default;
     position: absolute;
     width: 20px;
-    top: 35px;
+    top: 32px;
+    left: 22px;
     color: white;
     background-color: #FF4500;
     border-radius: 4px;
     text-align: center;
     z-index: 1;
+}
+
+.Pill {
+  color: var(--theme_pill_color) !important;
+  background-color: var(--theme_pill_background_color) !important;
+  text-align: var(--theme_pill_text_align) !important;
+  overflow: var(--theme_pill_overflow) !important;
+  font-family: var(--theme_pill_font_family) !important;
+  font-size: var(--theme_pill_font_size) !important;
+  width: 15px;
+  height: 15px;
+}
+
+.PillAlt {
+  color: var(--theme_pill_color) !important;
+  background-color: var(--theme_pill_alt_background_color) !important;
+  text-align: var(--theme_pill_text_align) !important;
+  overflow: var(--theme_pill_overflow) !important;
+  font-family: var(--theme_pill_font_family) !important;
+  font-size: var(--theme_pill_font_size) !important;
+  width: 15px;
+  height: 15px;
 }
 </style>

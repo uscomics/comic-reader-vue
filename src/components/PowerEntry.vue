@@ -9,7 +9,16 @@
         <SVGCircleButton :class="getPowerBarInfoButtonClass"></SVGCircleButton>
     </div>
     <q-tooltip v-if="getPowerShortDescription !== ''">{{getPowerShortDescription}}</q-tooltip>
-    <EnhancementSlotRow class="PowerEntrySlotRow" :power_set_type="getPowerSetType"></EnhancementSlotRow>
+    <EnhancementSlotRow
+      class="PowerEntrySlotRow"
+      :power_set_type="getPowerSetType"
+      :slot1_slot_level="getSlot1Level"
+      :slot2_slot_level="getSlot2Level"
+      :slot3_slot_level="getSlot3Level"
+      :slot4_slot_level="getSlot4Level"
+      :slot5_slot_level="getSlot5Level"
+      :slot6_slot_level="getSlot6Level"
+    ></EnhancementSlotRow>
   </div>
 </template>
 
@@ -96,6 +105,24 @@ export default {
       if (!powerSet) { return PowerSetType.NO_POWER }
       return powerSet.set_type
     },
+    getSlot1Level: function () {
+      return this.getSlotLevel(0)
+    },
+    getSlot2Level: function () {
+      return this.getSlotLevel(1)
+    },
+    getSlot3Level: function () {
+      return this.getSlotLevel(2)
+    },
+    getSlot4Level: function () {
+      return this.getSlotLevel(3)
+    },
+    getSlot5Level: function () {
+      return this.getSlotLevel(4)
+    },
+    getSlot6Level: function () {
+      return this.getSlotLevel(5)
+    },
     isNoPower: function () {
       return this.getPowerSetType === PowerSetType.NO_POWER
     }
@@ -105,6 +132,12 @@ export default {
       let powerSetType = this.getPowerSetType
       if (powerSetType === PowerSetType.INHERENT) { return }
       this.$emit('power-clicked', this.power_entry)
+    },
+    getSlotLevel: function (index) {
+      if (!this.power_entry || !this.power_entry.power_entry || !this.power_entry.power_entry.slots || this.power_entry.power_entry.slots.length <= index) {
+        return 0
+      }
+      return this.power_entry.power_entry.slots[index].level
     }
   },
   watch: {
@@ -125,7 +158,7 @@ export default {
 .PowerEntry {
   @include column;
   width: 280px;
-  height: 85px;
+  height: 78px;
 }
 
 .PowerBar {

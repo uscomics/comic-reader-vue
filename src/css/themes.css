@@ -1,9 +1,17 @@
 
 :root {
+    --theme_pill_color                                  :white;
+    --theme_pill_background_color                       :#6495ED;
+    --theme_pill_alt_background_color                   :#FF4500;
+    --theme_pill_text_align                             : center;
+    --theme_pill_overflow                               : hidden;
+    --theme_pill_font_family                            : "Roboto", sans-serif;
+    --theme_pill_font_size                              : x-small;
+
     --theme_label_color                                 : #555555;
     --theme_label_alt_color                             : #000099;
     --theme_label_disabled_color                        : ##999999;
-    --theme_label_background_color                      :transparent;
+    --theme_label_background_color                      : transparent;
     --theme_label_text_align                            : left;
     --theme_label_overflow                              : hidden;
     --theme_label_font_family                           : "Roboto", sans-serif;

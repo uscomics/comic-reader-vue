@@ -11,9 +11,10 @@ export default class PowerEntry {
     this.sub_powers = []
   }
 
-  addEmptySlot() {
+  addEmptySlot(level) {
     if (this.slots.length === 6) { return false }
     let slot = new Slot()
+    slot.level = level
     this.slots.push(slot)
     return true
   }

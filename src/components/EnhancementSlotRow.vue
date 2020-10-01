@@ -60,7 +60,7 @@ export default {
       if (this.power_set_type === PowerSetType.NO_POWER) {
         return ''
       }
-      const slotCount = this.getSlotCount + 2
+      const slotCount = this.getSlotCount + 1
       if (slot <= slotCount) {
         return ''
       }

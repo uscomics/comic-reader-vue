@@ -10,13 +10,13 @@ export default class Build {
       let level_1_kheldian = new PowerEntry()
       level_1_kheldian.level = 1
       level_1_kheldian.power_id = 'Inherent.Inherent.Energy_Flight'
-      level_1_kheldian.addEmptySlot()
+      level_1_kheldian.addEmptySlot(1)
       this.power_entries[PowerLevel.level_1_kheldian] = level_1_kheldian
     } else if (archetype === 'Class_Warshade') {
       let level_1_kheldian = new PowerEntry()
       level_1_kheldian.level = 1
       level_1_kheldian.power_id = 'Inherent.Inherent.Shadow_Step'
-      level_1_kheldian.addEmptySlot()
+      level_1_kheldian.addEmptySlot(1)
       this.power_entries[PowerLevel.level_1_kheldian] = level_1_kheldian
     }
     return build
@@ -28,21 +28,21 @@ export default class Build {
       let sprint = new PowerEntry()
       sprint.level = 2
       sprint.power_id = 'Inherent.Inherent.Sprint'
-      sprint.addEmptySlot()
+      sprint.addEmptySlot(2)
       power_entries.sprint = sprint
     }
     if (!power_entries.hurdle || 0 === power_entries.hurdle.level) {
       let hurdle = new PowerEntry()
       hurdle.level = 2
       hurdle.power_id = 'Inherent.Fitness.Hurdle'
-      hurdle.addEmptySlot()
+      hurdle.addEmptySlot(2)
       power_entries.hurdle = hurdle
     }
     if (!power_entries.swift || 0 === power_entries.swift.level) {
       let swift = new PowerEntry()
       swift.level = 2
       swift.power_id = 'Inherent.Fitness.Swift'
-      swift.addEmptySlot()
+      swift.addEmptySlot(2)
       power_entries.swift = swift
     }
   }
@@ -101,25 +101,25 @@ export default class Build {
     let brawl = new PowerEntry()
     brawl.level = 1
     brawl.power_id = 'Inherent.Inherent.Brawl'
-    brawl.addEmptySlot()
+    brawl.addEmptySlot(1)
     this.power_entries[PowerLevel.brawl] = brawl
 
     let health = new PowerEntry()
     health.level = 1
     health.power_id = 'Inherent.Fitness.Health'
-    health.addEmptySlot()
+    health.addEmptySlot(1)
     this.power_entries[PowerLevel.health] = health
 
     let stamina = new PowerEntry()
     stamina.level = 1
     stamina.power_id = 'Inherent.Fitness.Stamina'
-    stamina.addEmptySlot()
+    stamina.addEmptySlot(1)
     this.power_entries[PowerLevel.stamina] = stamina
 
     let prestige_power_slide = new PowerEntry()
     prestige_power_slide.level = 1
     prestige_power_slide.power_id = 'Inherent.Inherent.prestige_DVD_Glidep'
-    prestige_power_slide.addEmptySlot()
+    prestige_power_slide.addEmptySlot(1)
     this.power_entries[PowerLevel.prestige_power_slide] = prestige_power_slide
 
     this.power_entries[PowerLevel.level_1_primary] = new PowerEntry()

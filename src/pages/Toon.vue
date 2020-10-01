@@ -31,6 +31,7 @@ import Build from 'components/Build.vue'
 import { getPowerLevel } from '../enums/PowerLevel.js'
 import Messages from '../util/messages'
 import Queue from '../util/queue'
+import PowerEntry from '../util/power_entry'
 import PowerEntryGrid from 'components/PowerEntryGrid.vue'
 import PowerPicker from 'components/PowerPicker.vue'
 import PowerSetPicker from 'components/PowerSetPicker.vue'
@@ -150,15 +151,15 @@ export default {
       this.powerPickerVisible = false
     },
     doPowerPickerSelectClick: async function (powerSelection) {
-      let powerEntry = {
-        level: getPowerLevel(this.powerEntry.level),
-        power_id: powerSelection.power.id,
-        tag: false,
-        stat_include: true,
-        variable_value: 0,
-        slots: [],
-        sub_powers: []
-      }
+      let level = getPowerLevel(this.powerEntry.level)
+      let powerEntry = new PowerEntry()
+      powerEntry.level = level
+      powerEntry.power_id = powerSelection.power.id
+      powerEntry.slots = []
+      powerEntry.sub_powers = []
+      powerEntry.variable_value = 0
+      powerEntry.addEmptySlot(level)
+
       let payload = { buildPowerLevel: this.powerEntry.level, powerEntry: powerEntry }
       this.$store.commit('builder/toonSetPowerEntry', payload)
       this.powerPickerVisible = false

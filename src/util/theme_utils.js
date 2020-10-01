@@ -1,5 +1,13 @@
 const setThemeLight = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_pill_color', 'white')
+  style.setProperty('--theme_pill_background_color', '#6495ED')
+  style.setProperty('--theme_pill_alt_background_color', '#FF4500')
+  style.setProperty('--theme_pill_text_align', 'center')
+  style.setProperty('--theme_pill_overflow', 'hidden')
+  style.setProperty('--theme_pill_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_pill_font_size', 'x-small')
+
   style.setProperty('--theme_label_color', '#555555')
   style.setProperty('--theme_label_alt_color', '#000099')
   style.setProperty('--theme_label_disabled_color', '#999999')
@@ -87,7 +95,7 @@ const setThemeLight = () => {
   style.setProperty('--theme_primary_power_set', 'rgba(0,51,153,0.3)')
   style.setProperty('--theme_secondary_power_set', 'rgba(153,0,0,0.3)')
   style.setProperty('--theme_pool_power_set', 'rgba(255,153,0,0.3)')
-  style.setProperty('--theme_epic_power_set', 'rgba(153,0,0,0.3)')
+  style.setProperty('--theme_epic_power_set', 'rgba(255,255,0,0.3)')
   style.setProperty('--theme_inherent_power_set', 'rgba(51,102,0,0.3)')
   style.setProperty('--theme_power_set_background_color', '#DDDDDD')
   style.setProperty('--theme_power_set_text_color', '#555555')
@@ -95,6 +103,14 @@ const setThemeLight = () => {
 
 const setThemeDark = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_pill_color', 'white')
+  style.setProperty('--theme_pill_background_color', '#6495ED')
+  style.setProperty('--theme_pill_alt_background_color', '#FF4500')
+  style.setProperty('--theme_pill_text_align', 'center')
+  style.setProperty('--theme_pill_overflow', 'hidden')
+  style.setProperty('--theme_pill_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_pill_font_size', 'x-small')
+
   style.setProperty('--theme_label_color', '#EEEEEF')
   style.setProperty('--theme_label_alt_color', '#000099')
   style.setProperty('--theme_label_disabled_color', '#999999')
@@ -190,6 +206,14 @@ const setThemeDark = () => {
 
 const setThemeHero = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_pill_color', 'white')
+  style.setProperty('--theme_pill_background_color', '#6495ED')
+  style.setProperty('--theme_pill_alt_background_color', '#FF4500')
+  style.setProperty('--theme_pill_text_align', 'center')
+  style.setProperty('--theme_pill_overflow', 'hidden')
+  style.setProperty('--theme_pill_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_pill_font_size', 'x-small')
+
   style.setProperty('--theme_label_color', '#FFCC66')
   style.setProperty('--theme_label_alt_color', '#000099')
   style.setProperty('--theme_label_disabled_color', '#999999')
@@ -285,6 +309,14 @@ const setThemeHero = () => {
 
 const setThemeVillian = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_pill_color', 'white')
+  style.setProperty('--theme_pill_background_color', '#6495ED')
+  style.setProperty('--theme_pill_alt_background_color', '#FF4500')
+  style.setProperty('--theme_pill_text_align', 'center')
+  style.setProperty('--theme_pill_overflow', 'hidden')
+  style.setProperty('--theme_pill_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_pill_font_size', 'x-small')
+
   style.setProperty('--theme_label_color', '#f5efef')
   style.setProperty('--theme_label_alt_color', '#000099')
   style.setProperty('--theme_label_disabled_color', '#999999')
@@ -380,6 +412,14 @@ const setThemeVillian = () => {
 
 const setThemeGamma = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_pill_color', 'white')
+  style.setProperty('--theme_pill_background_color', '#6495ED')
+  style.setProperty('--theme_pill_alt_background_color', '#FF4500')
+  style.setProperty('--theme_pill_text_align', 'center')
+  style.setProperty('--theme_pill_overflow', 'hidden')
+  style.setProperty('--theme_pill_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_pill_font_size', 'x-small')
+
   style.setProperty('--theme_label_color', '#FFCF79')
   style.setProperty('--theme_label_alt_color', '#000099')
   style.setProperty('--theme_label_disabled_color', '#999999')
@@ -475,6 +515,14 @@ const setThemeGamma = () => {
 
 const setThemeNeumorphic = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_pill_color', 'white')
+  style.setProperty('--theme_pill_background_color', '#6495ED')
+  style.setProperty('--theme_pill_alt_background_color', '#FF4500')
+  style.setProperty('--theme_pill_text_align', 'center')
+  style.setProperty('--theme_pill_overflow', 'hidden')
+  style.setProperty('--theme_pill_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_pill_font_size', 'x-small')
+
   style.setProperty('--theme_label_color', '#3000FF')
   style.setProperty('--theme_label_alt_color', '#000099')
   style.setProperty('--theme_label_disabled_color', '#999999')
@@ -562,7 +610,7 @@ const setThemeNeumorphic = () => {
   style.setProperty('--theme_primary_power_set', 'rgba(0,51,153,0.3)')
   style.setProperty('--theme_secondary_power_set', 'rgba(153,0,0,0.3)')
   style.setProperty('--theme_pool_power_set', 'rgba(255,153,0,0.3)')
-  style.setProperty('--theme_epic_power_set', 'rgba(153,0,0,0.3)')
+  style.setProperty('--theme_epic_power_set', 'rgba(255,255,90,0.3)')
   style.setProperty('--theme_inherent_power_set', 'rgba(51,102,0,0.3)')
   style.setProperty('--theme_power_set_background_color', '#DDDDDD')
   style.setProperty('--theme_power_set_text_color', '#555555')
@@ -570,6 +618,14 @@ const setThemeNeumorphic = () => {
 
 const setThemeNeumorphicDark = () => {
   const style = document.documentElement.style
+  style.setProperty('--theme_pill_color', 'white')
+  style.setProperty('--theme_pill_background_color', '#6495ED')
+  style.setProperty('--theme_pill_alt_background_color', '#FF4500')
+  style.setProperty('--theme_pill_text_align', 'center')
+  style.setProperty('--theme_pill_overflow', 'hidden')
+  style.setProperty('--theme_pill_font_family', '"Roboto", sans-serif')
+  style.setProperty('--theme_pill_font_size', 'x-small')
+
   style.setProperty('--theme_label_color', '#7B68EE')
   style.setProperty('--theme_label_alt_color', '#000099')
   style.setProperty('--theme_label_disabled_color', '#999999')
