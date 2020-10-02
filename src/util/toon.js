@@ -21,6 +21,23 @@ export default class Toon {
     return toon
   }
 
+  static fromObject(obj) {
+    let toon = new Toon()
+    toon.version = obj.version
+    toon.name = obj.name
+    toon.level = obj.level
+    toon.archetype_id = obj.archetype_id
+    toon.current_build = obj.current_build
+    toon.notes = obj.notes
+    toon.builds = []
+    for (let buildIndex = 0; buildIndex < obj.builds.length; buildIndex++) {
+      const objBuild = obj.builds[buildIndex]
+      const build = Build.fromObject(objBuild)
+      toon.builds.push(build)
+    }
+    return toon
+  }
+
   getExtraSlotsRemaining() {
     const build = this.builds[this.current_build]
     if (!build) {

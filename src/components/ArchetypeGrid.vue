@@ -39,6 +39,7 @@
 <script>
 import ImageButton from './ImageButton.vue'
 import Link from './Link.vue'
+import Toon from '../util/toon'
 
 export default {
   name: 'ArchetypeGrid',
@@ -62,7 +63,8 @@ export default {
       input.addEventListener('change', (e) => {
         const reader = new FileReader()
         reader.onload = () => {
-          let toon = JSON.parse(reader.result)
+          const toonObj = JSON.parse(reader.result)
+          const toon = Toon.fromObject(toonObj)
           this.$store.commit('builder/toonSet', toon)
           this.$router.push('/Toon/' + toon.archetype_id + '/Existing')
         }

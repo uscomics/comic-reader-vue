@@ -11,14 +11,21 @@ export default class Build {
       level_1_kheldian.level = 1
       level_1_kheldian.power_id = 'Inherent.Inherent.Energy_Flight'
       level_1_kheldian.addEmptySlot(1)
-      this.power_entries[PowerLevel.level_1_kheldian] = level_1_kheldian
+      build.power_entries[PowerLevel.level_1_kheldian] = level_1_kheldian
     } else if (archetype === 'Class_Warshade') {
       let level_1_kheldian = new PowerEntry()
       level_1_kheldian.level = 1
       level_1_kheldian.power_id = 'Inherent.Inherent.Shadow_Step'
       level_1_kheldian.addEmptySlot(1)
-      this.power_entries[PowerLevel.level_1_kheldian] = level_1_kheldian
+      build.power_entries[PowerLevel.level_1_kheldian] = level_1_kheldian
     }
+    return build
+  }
+
+  static fromObject(obj) {
+    let build = new Build()
+    build.power_sets = obj.power_sets
+    build.power_entries = obj.power_entries
     return build
   }
 

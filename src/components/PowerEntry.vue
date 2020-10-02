@@ -134,6 +134,7 @@ export default {
       this.$emit('power-clicked', this.power_entry)
     },
     getSlotLevel: function (index) {
+      console.log(JSON.stringify(this.power_entry))
       if (!this.power_entry || !this.power_entry.power_entry || !this.power_entry.power_entry.slots || this.power_entry.power_entry.slots.length <= index) {
         return 0
       }

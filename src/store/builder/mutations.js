@@ -72,7 +72,7 @@ export function toonSelectBuild (state, buildNumber) {
         newBuild.power_sets[BuildPowerSets.secondary] = build.power_sets[BuildPowerSets.secondary]
 
         if (2 < toon.level) {
-        Build.addLevel2Powers(newBuild)
+            Build.addLevel2Powers(newBuild)
         }  
         toon.builds.push(newBuild)
     }
