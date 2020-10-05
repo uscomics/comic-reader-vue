@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @click.stop="doClick">
     <div class="SlotBadgeColumn">
         <div class="Pill" :class="getLevelBadgeClass">{{slot_level}}</div>
         <SVGCircleButton class="Slot"
@@ -68,11 +68,20 @@ export default {
       if (this.power_set_type === PowerSetType.NO_POWER || this.slot_state === SlotState.NO_POWER) {
         return ' '
       } else if (this.slot_state === SlotState.UNSLOTTED) {
-        let toon = this.$store.getters['builder/getToon']
+        const toon = this.$store.getters['builder/getToon']
         let slotsRemaining = toon.getExtraSlotsRemaining()
         return slotsRemaining.toString()
       } else {
         return ' '
+      }
+    }
+  },
+  methods: {
+    doClick: function (event) {
+      if (this.slot_state === SlotState.UNSLOTTED) {
+        this.$emit('add-slot', this.id)
+      } else {
+        this.$emit('set-power', this.id)
       }
     }
   }

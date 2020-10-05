@@ -344,6 +344,13 @@ export const getToonPowerEntryFromPowerId = (state, getters) => (powerId) => {
   return powerEntry
 }
 
+export const getToonPowerEntryFromLevel = (state, getters) => (powerEntryLevel) => {
+  let build = getters.getToonCurrentBuild
+  const powerEntries = build.power_entries
+  let powerEntry = powerEntries[powerEntryLevel]
+  return powerEntry
+}
+
 export const getToonSortedPowerEntries = state => {
   if (!state.toon) { return null }
   let toon = state.toon

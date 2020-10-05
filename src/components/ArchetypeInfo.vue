@@ -83,6 +83,7 @@ export default {
 
 .ExtrasLabel {
     padding-left: 5px;
+    background: var(--theme_background_color) !important;
 }
 
 .Chart {

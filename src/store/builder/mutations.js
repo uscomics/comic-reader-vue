@@ -56,6 +56,15 @@ export function setPowerName (state, powerIdAndName) {
     state.powerNames.push(powerIdAndName)
 }
 
+export function toonAddEmptySlot (state, payload) {
+    if (!state.toon)
+        return
+    const toon = state.toon
+    const build = toon.builds[toon.current_build]
+    const powerEntry = build.power_entries[payload.powerEntryLevel]
+    powerEntry.addEmptySlot(payload.slotLevel)
+}
+
 export function toonCreate (state, archetype_id) {
     let toon = Toon.fromArchetype(archetype_id)
     state.toon = toon

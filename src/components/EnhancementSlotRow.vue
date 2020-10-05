@@ -1,11 +1,11 @@
 <template>
   <div class="SlotRow">
-    <EnhancementSlot :class="getSlotClass(1)" :power_set_type="getPowerSetType" :slot_state="getSlotState(1)" :slot_level="slot1_slot_level" :enhancement_level="slot1_enhancement_level"></EnhancementSlot>
-    <EnhancementSlot :class="getSlotClass(2)" :power_set_type="getPowerSetType" :slot_state="getSlotState(2)" :slot_level="slot2_slot_level" :enhancement_level="slot2_enhancement_level"></EnhancementSlot>
-    <EnhancementSlot :class="getSlotClass(3)" :power_set_type="getPowerSetType" :slot_state="getSlotState(3)" :slot_level="slot3_slot_level" :enhancement_level="slot3_enhancement_level"></EnhancementSlot>
-    <EnhancementSlot :class="getSlotClass(4)" :power_set_type="getPowerSetType" :slot_state="getSlotState(4)" :slot_level="slot4_slot_level" :enhancement_level="slot4_enhancement_level"></EnhancementSlot>
-    <EnhancementSlot :class="getSlotClass(5)" :power_set_type="getPowerSetType" :slot_state="getSlotState(5)" :slot_level="slot5_slot_level" :enhancement_level="slot5_enhancement_level"></EnhancementSlot>
-    <EnhancementSlot :class="getSlotClass(6)" :power_set_type="getPowerSetType" :slot_state="getSlotState(6)" :slot_level="slot6_slot_level" :enhancement_level="slot6_enhancement_level"></EnhancementSlot>
+    <EnhancementSlot :class="getSlotClass(1)" :power_set_type="getPowerSetType" :slot_state="getSlotState(1)" :slot_level="slot1_slot_level" :enhancement_level="slot1_enhancement_level" @add-slot="addSlot" @set-power="setPower"></EnhancementSlot>
+    <EnhancementSlot :class="getSlotClass(2)" :power_set_type="getPowerSetType" :slot_state="getSlotState(2)" :slot_level="slot2_slot_level" :enhancement_level="slot2_enhancement_level" @add-slot="addSlot" @set-power="setPower"></EnhancementSlot>
+    <EnhancementSlot :class="getSlotClass(3)" :power_set_type="getPowerSetType" :slot_state="getSlotState(3)" :slot_level="slot3_slot_level" :enhancement_level="slot3_enhancement_level" @add-slot="addSlot" @set-power="setPower"></EnhancementSlot>
+    <EnhancementSlot :class="getSlotClass(4)" :power_set_type="getPowerSetType" :slot_state="getSlotState(4)" :slot_level="slot4_slot_level" :enhancement_level="slot4_enhancement_level" @add-slot="addSlot" @set-power="setPower"></EnhancementSlot>
+    <EnhancementSlot :class="getSlotClass(5)" :power_set_type="getPowerSetType" :slot_state="getSlotState(5)" :slot_level="slot5_slot_level" :enhancement_level="slot5_enhancement_level" @add-slot="addSlot" @set-power="setPower"></EnhancementSlot>
+    <EnhancementSlot :class="getSlotClass(6)" :power_set_type="getPowerSetType" :slot_state="getSlotState(6)" :slot_level="slot6_slot_level" :enhancement_level="slot6_enhancement_level" @add-slot="addSlot" @set-power="setPower"></EnhancementSlot>
   </div>
 </template>
 
@@ -56,6 +56,9 @@ export default {
     }
   },
   methods: {
+    addSlot: function () {
+      this.$emit('add-slot')
+    },
     getSlotClass: function (slot) {
       if (this.power_set_type === PowerSetType.NO_POWER) {
         return ''
@@ -77,6 +80,9 @@ export default {
         state = SlotState.UNSLOTTED
       }
       return state
+    },
+    setPower: function () {
+      this.$emit('set-power')
     }
   }
 }

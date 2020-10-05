@@ -19,8 +19,8 @@
       @power-picker-select="doPowerPickerSelectClick"
       @power-picker-cancel="doPowerPickerCancelClick"
       :availablePowerSets="availablePowerSets"
-      :powerLevel="powerLevel"
       :powerEntry="powerEntry"
+      :powerLevel="powerLevel"
     />
     </q-page>
 </template>
@@ -59,8 +59,8 @@ export default {
       primary_power_set_display_name: '',
       secondary_power_set_display_name: '',
       availablePowerSets: [],
-      powerLevel: 0,
       powerEntry: null,
+      powerLevel: null,
       showSpinner: false
     }
   },
@@ -136,11 +136,11 @@ export default {
     doNotes: function() {
       this.$router.push('/Notes')
     },
-    doPowerClicked: function (powerEntry) {
-      this.powerLevel = this.getPowerLevel(powerEntry)
-      this.powerEntry = powerEntry
+    doPowerClicked: function (powerEntryInfo) {
+      this.powerEntry = powerEntryInfo.powerEntry
+      this.powerLevel = powerEntryInfo.powerEntryLevel
 
-      this.availablePowerSets = this.$store.getters['builder/getToonAllowedPowerSets'](powerEntry.level)
+      this.availablePowerSets = this.$store.getters['builder/getToonAllowedPowerSets'](powerEntryInfo.powerEntryLevel)
       if (this.primary_power_set_display_name === '') {
         this.showPowerSetPicker()
       } else {
@@ -151,7 +151,7 @@ export default {
       this.powerPickerVisible = false
     },
     doPowerPickerSelectClick: async function (powerSelection) {
-      let level = getPowerLevel(this.powerEntry.level)
+      const level = getPowerLevel(this.powerLevel)
       let powerEntry = new PowerEntry()
       powerEntry.level = level
       powerEntry.power_id = powerSelection.power.id
@@ -160,7 +160,7 @@ export default {
       powerEntry.variable_value = 0
       powerEntry.addEmptySlot(level)
 
-      let payload = { buildPowerLevel: this.powerEntry.level, powerEntry: powerEntry }
+      let payload = { buildPowerLevel: this.powerLevel, powerEntry: powerEntry }
       this.$store.commit('builder/toonSetPowerEntry', payload)
       this.powerPickerVisible = false
     },

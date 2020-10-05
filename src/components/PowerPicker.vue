@@ -3,7 +3,7 @@
     <div class="Center">
     <div class="PowerPicker" >
       <div class="PowerPickerTitlebar">
-          <div class="PowerPickerTitle">Select Power For Level {{powerLevel}}</div>
+          <div class="PowerPickerTitle">Select Power For Level {{0}}</div>
           <SVGCircleButton class="PowerPickerInfoButton"></SVGCircleButton>
       </div>
       <div class="PowerPickerBody">
@@ -57,13 +57,11 @@ import VueDraggableResizable from 'vue-draggable-resizable'
 export default {
   components: { Button, SVGCircleButton, TextPicker, VueDraggableResizable },
   name: 'PowerPicker',
-  created: function () {
-  },
   props: {
     title: { type: String, default: '' },
     availablePowerSets: { type: Array, default: function () { return [] } },
-    powerLevel: { type: Number, default: 0 },
-    powerEntry: { type: Object, default: function () { return {} } }
+    powerEntry: { type: Object, default: function () { return {} } },
+    powerLevel: { type: String, default: '' }
   },
   data () {
     return {
@@ -80,7 +78,7 @@ export default {
   methods: {
     doPowerSetClicked: function(index) {
       this.selectedPowerSetIndex = index
-      let payload = { powerLevel: this.powerLevel, powerSetId: this.availablePowerSets[index].id }
+      let payload = { powerEntry: this.powerEntry, powerSetId: this.availablePowerSets[index].id }
       this.availablePowers = this.$store.getters['builder/getToonAllowedPowers'](payload)
     },
     doPowerClicked: function(index) {

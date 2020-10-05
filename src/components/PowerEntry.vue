@@ -4,7 +4,7 @@
         <PowerText
           :power_set_type="getPowerSetType"
           :power_name="getPowerName"
-          :power_level="getPowerLevel"
+          :power_level="getPowerLevel.toString()"
         />
         <SVGCircleButton :class="getPowerBarInfoButtonClass"></SVGCircleButton>
     </div>
@@ -18,6 +18,8 @@
       :slot4_slot_level="getSlot4Level"
       :slot5_slot_level="getSlot5Level"
       :slot6_slot_level="getSlot6Level"
+      @add-slot="addSlot"
+      @set-power="setPower"
     ></EnhancementSlotRow>
   </div>
 </template>
@@ -31,22 +33,18 @@ import SVGCircleButton from 'components/SVG/SVGCircleButton.vue'
 export default {
   components: { EnhancementSlotRow, PowerText, SVGCircleButton },
   name: 'PowerEntry',
-  created: async function() {
-  },
   props: {
-    power_entry: { type: Object, default: null }
+    powerEntryLevel: { type: String, default: '' }
   },
   computed: {
     getCurrentBuildNumber: function () {
       return this.$store.getters['builder/getToonCurrentBuildNumber']
     },
     getPower: function () {
-      if (!this.power_entry ||
-      !this.power_entry.power_entry ||
-      '' === this.power_entry.power_entry.power_id) {
+      if (!this.getPowerEntry || '' === this.getPowerEntry.power_id) {
         return null
       }
-      let power = this.$store.getters['builder/getPower'](this.power_entry.power_entry.power_id)
+      let power = this.$store.getters['builder/getPower'](this.getPowerEntry.power_id)
       return power
     },
     getPowerBarClass: function () {
@@ -76,16 +74,15 @@ export default {
       }
       return classes
     },
-    getPowerShortDescription: function () {
-      const power = this.getPower
-      if (!power) {
-        return ''
+    getPowerEntry: function () {
+      if (!this.powerEntryLevel) {
+        return null
       }
-      return power.description_short
+      let powerEntry = this.$store.getters['builder/getToonPowerEntryFromLevel'](this.powerEntryLevel)
+      return powerEntry
     },
-    getPowerLevel: function () {
-      if (!this.power_entry || !this.power_entry.level) { return '0' }
-      return getPowerLevel(this.power_entry.level).toString()
+    getPowerLevel: function() {
+      return getPowerLevel(this.powerEntryLevel)
     },
     getPowerName: function () {
       let power = this.getPower
@@ -105,6 +102,13 @@ export default {
       if (!powerSet) { return PowerSetType.NO_POWER }
       return powerSet.set_type
     },
+    getPowerShortDescription: function () {
+      const power = this.getPower
+      if (!power) {
+        return ''
+      }
+      return power.description_short
+    },
     getSlot1Level: function () {
       return this.getSlotLevel(0)
     },
@@ -123,22 +127,37 @@ export default {
     getSlot6Level: function () {
       return this.getSlotLevel(5)
     },
+    getToon: function () {
+      return this.$store.getters['builder/getToon']
+    },
     isNoPower: function () {
       return this.getPowerSetType === PowerSetType.NO_POWER
     }
   },
   methods: {
+    addSlot: function () {
+      if (this.getPowerEntry.slots.length === 6) {
+        return
+      }
+      const toon = this.getToon
+      const level = toon.getLowestLevelForExtraSlot(this.getPowerEntry.level)
+      this.$store.commit('builder/toonAddEmptySlot', { powerEntryLevel: this.powerEntryLevel, slotLevel: level })
+    },
     doClick: function (index) {
       let powerSetType = this.getPowerSetType
       if (powerSetType === PowerSetType.INHERENT) { return }
-      this.$emit('power-clicked', this.power_entry)
+      this.$emit('power-clicked', { powerEntry: this.getPowerEntry, powerEntryLevel: this.powerEntryLevel })
     },
     getSlotLevel: function (index) {
-      console.log(JSON.stringify(this.power_entry))
-      if (!this.power_entry || !this.power_entry.power_entry || !this.power_entry.power_entry.slots || this.power_entry.power_entry.slots.length <= index) {
+      if (!this.getPowerEntry || !this.getPowerEntry.slots || this.getPowerEntry.slots.length <= index) {
         return 0
       }
-      return this.power_entry.power_entry.slots[index].level
+      return this.getPowerEntry.slots[index].level
+    },
+    setPower: function () {
+      let powerSetType = this.getPowerSetType
+      if (powerSetType === PowerSetType.INHERENT) { return }
+      this.$emit('power-clicked', { powerEntry: this.getPowerEntry, powerEntryLevel: this.powerEntryLevel })
     }
   },
   watch: {
@@ -159,7 +178,7 @@ export default {
 .PowerEntry {
   @include column;
   width: 280px;
-  height: 78px;
+  height: 75px;
 }
 
 .PowerBar {

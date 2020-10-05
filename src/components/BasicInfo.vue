@@ -70,7 +70,7 @@ export default {
 .BasicInfo{
     @include column;
     width: 175px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 10px;
 }
 

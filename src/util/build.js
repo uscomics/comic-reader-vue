@@ -26,6 +26,12 @@ export default class Build {
     let build = new Build()
     build.power_sets = obj.power_sets
     build.power_entries = obj.power_entries
+    const keys = Object.keys(build.power_entries)
+    for (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {
+      let powerEntryObj = build.power_entries[keys[keyIndex]]
+      const powerEntry = PowerEntry.fromObject(powerEntryObj)
+      build.power_entries[keyIndex] = powerEntry
+    }
     return build
   }
 
@@ -85,6 +91,20 @@ export default class Build {
   ]
 
   static getExtraSlotCountForLevel(level) {
+    let extraSlotCount = 0
+    if (3 > level) {
+      return extraSlotCount
+    }
+    for (let slotIndex = 0; slotIndex < Build.EXTRA_SLOTS.length; slotIndex++) {
+      let slotInfo = Build.EXTRA_SLOTS[slotIndex]
+      if (slotInfo.level === level) {
+        return slotInfo.slots
+      }
+    }
+    return extraSlotCount
+  }
+
+  static getExtraSlotSumForLevel(level) {
     let extraSlotCount = 0
     if (3 > level) {
       return extraSlotCount
@@ -155,7 +175,7 @@ export default class Build {
     this.power_entries[PowerLevel.level_49] = new PowerEntry()
   }
 
-  getExtraSlotCount() {
+  getUsedExtraSlotCount() {
     let extraSlotCount = 0
     let powerEntries = Object.keys(this.power_entries)
     for (let powerEntryIndex = 0; powerEntryIndex < powerEntries.length; powerEntryIndex++) {
@@ -164,5 +184,20 @@ export default class Build {
       extraSlotCount = Math.max(0, powerEntry.slots.length - 1)
     }
     return extraSlotCount
+  }
+
+  getUsedExtraSlotCountForLevel(level) {
+    let usedSlots = 0
+    const keys = Object.keys(this.power_entries)
+    for (let keyIndex = 0; keyIndex < keys.length; keyIndex++) {
+      const powerEntry = this.power_entries[keys[keyIndex]]
+      for (let slotIndex = 1; slotIndex < powerEntry.slots.length; slotIndex++) {
+        const slot = powerEntry.slots[slotIndex]
+        if (slot.level === level) {
+          usedSlots++
+        }
+      }
+    }
+    return usedSlots
   }
 }

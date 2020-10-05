@@ -44,8 +44,32 @@ export default class Toon {
       return 0
     }
     const level = (this.level === 49) ? 50 : this.level
-    const slotsForLevel = Build.getExtraSlotCountForLevel(level)
-    const slotsUsed = build.getExtraSlotCount()
+    const slotsForLevel = Build.getExtraSlotSumForLevel(level)
+    const slotsUsed = build.getUsedExtraSlotCount()
     return slotsForLevel - slotsUsed
+  }
+
+  getLowestLevelForExtraSlot(powerLevel) {
+    if (this.level < powerLevel) {
+      return 0
+    }
+    if (this.getExtraSlotsRemaining() === 0) {
+      return 0
+    }
+    let level = powerLevel
+    const build = this.builds[this.current_build]
+    while (level <= 50) {
+      const slotsForLevel = Build.getExtraSlotCountForLevel(level)
+      if (0 === slotsForLevel) {
+        level++
+        continue
+      }
+      const usedForLevel = build.getUsedExtraSlotCountForLevel(level)
+      if (0 < slotsForLevel - usedForLevel) {
+        return level
+      }
+      level++
+    }
+    return 0
   }
 }

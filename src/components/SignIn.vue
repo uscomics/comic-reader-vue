@@ -99,7 +99,6 @@ export default {
       let url = this.$store.state.main.urlBase + 'user/' + username + '/info'
       let result = await Account.getUserInfoFromServer(url)
       if (HTTP.hasErrors(result)) return
-      console.log(JSON.stringify(result.body))
       this.$store.commit('main/SET_ACCOUNT', JSON.parse(result.body))
     },
     async getUserPurchases (message) {

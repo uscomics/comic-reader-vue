@@ -7,7 +7,7 @@
                         class="PowerEntry"
                         v-if="((n-1) * getPowerEntriesPerColumn) + (m-1) < getPowerEntryCount"
                         @power-clicked="doPowerClicked"
-                        :power_entry="getPowerEntry(((n-1) * getPowerEntriesPerColumn) + (m-1))"
+                        :powerEntryLevel="getPowerEntryLevel(((n-1) * getPowerEntriesPerColumn) + (m-1))"
                     />
                 </span>
             </span>
@@ -49,12 +49,12 @@ export default {
     }
   },
   methods: {
-    getPowerEntry(index) {
+    getPowerEntryLevel(index) {
       let powerEntries = this.$store.getters['builder/getToonSortedPowerEntries']
-      return powerEntries[index]
+      return powerEntries[index].level
     },
-    doPowerClicked: function (powerEntry) {
-      this.$emit('power-clicked', powerEntry)
+    doPowerClicked: function (powerEntryInfo) {
+      this.$emit('power-clicked', powerEntryInfo)
     }
   },
   watch: {
